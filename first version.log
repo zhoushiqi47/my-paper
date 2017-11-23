@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  22 NOV 2017 20:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  23 NOV 2017 18:41
 entering extended mode
 **"./first version.tex"
 ("first version.tex"
@@ -199,116 +199,85 @@ uting the
  []
 
 [2]
-Overfull \hbox (8.24463pt too wide) in alignment at lines 218--228
+Overfull \hbox (8.24463pt too wide) in alignment at lines 213--223
  [] [] [] [] 
  []
 
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 325--327
+[3] [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 407--410
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 348--351
 
- []
+LaTeX Warning: Reference `es_dgreen1' on page 6 undefined on input line 411.
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 386--390
+Underfull \hbox (badness 10000) in paragraph at lines 469--472
 
  []
 
-[7] [8] [9] [10]
-Overfull \hbox (14.33205pt too wide) in alignment at lines 583--589
- [] [] [] [] 
- []
-
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 648--651
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 477--480
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 656--659
-
- []
-
-[13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 739--742
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 560--563
 
  []
 
-[15] [16]
-
-LaTeX Warning: Reference `lem4.2' on page 17 undefined on input line 795.
-
-[17] [18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 941--945
+[10] [11] [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 732--734
 
  []
 
-Missing character: There is no Â in font cmr12!
-Missing character: There is no £ in font cmr12!
-Missing character: There is no Â in font cmr12!
-Missing character: There is no ­ in font cmr12!
-
-Overfull \hbox (40.89989pt too wide) in alignment at lines 966--971
- [] [] [] [] 
- []
-
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 971--974
-
- []
-
-[21] [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1073
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 753--754
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1085--1087
+Underfull \hbox (badness 10000) in paragraph at lines 770--773
 
  []
 
-[23]
 
-LaTeX Warning: Reference `f_estimate' on page 24 undefined on input line 1113.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1147--1150
+Underfull \hbox (badness 10000) in paragraph at lines 787--789
 
  []
 
-[24]
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 844--847
 
-LaTeX Warning: Reference `es_ngreen' on page 25 undefined on input line 1182.
+ []
 
-[25]
+[16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 920--923
 
-LaTeX Warning: Reference `fapsf' on page 26 undefined on input line 1216.
+ []
 
-[26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1270--1272
+[18] [19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 1053--1055
 
  []
 
 ("first version.bbl"
 Missing character: There is no ¨ in font cmr10!
+ [21]
 Missing character: There is no ¨ in font cmr10!
- [28]) [29] ("first version.aux")
+) [22] ("first version.aux")
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 2436 strings out of 495237
- 28583 string characters out of 3182726
- 97546 words of memory out of 3000000
- 5672 multiletter control sequences out of 15000+200000
+ 2435 strings out of 495237
+ 28640 string characters out of 3182726
+ 95505 words of memory out of 3000000
+ 5671 multiletter control sequences out of 15000+200000
  14448 words of font info for 55 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,12n,26p,775b,239s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,12n,26p,651b,239s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmbx8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:
@@ -323,9 +292,9 @@ s/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTE
 X/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/CTEX/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/latxf
 ont/lasy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "first version.pdf" (29 pages, 387974 bytes).
+Output written on "first version.pdf" (22 pages, 354296 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
+ 149 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

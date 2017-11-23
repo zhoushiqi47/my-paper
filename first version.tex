@@ -24,7 +24,7 @@
 \@addtoreset{equation}{section}
 \makeatother  % `@' is restored as "non-letter"
 \renewcommand\theequation{{\thesection}.{\arabic{equation}}}
-\title[RTM in the Elastic Medium Half Space]{Reverse Time Migration for Extended Obstacles in the Half Space: Elastic Waves}
+\title[]{Reverse Time Migration for Extended Obstacles in the Half Space: Elastic Waves}
 \author{ Zhiming Chen, Shiqi Zhou }
 \address{LSEC, Institute of Computational Mathematics, Academy of
 	Mathematics and Systems Science, Chinese Academy of Sciences,
@@ -154,10 +154,10 @@ assume the incident wave is emitted by a point source located at $x_s$, explosiv
 \ee
 together with the constitutive relation (Hookes law)
 \ben
-\sigma(u_q) = 2\mu\varepsilon(u_q) + \lambda\div u_q \I \\
-\varepsilon(u_q)=\frac{1}{2}(\na u_q +(\na u_q)^T)
+\sigma(u) = 2\mu\varepsilon(u) + \lambda\div u \I \\
+\varepsilon(u)=\frac{1}{2}(\na u +(\na u)^T)
 \een
-where $\omega$ is the circular frequency, $u_q(x)\in\C^2$ denotes the displacement fields and $\sigma$ is the stress tensor. We also need to define the surface traction $T_x^n (\cdot)$ on the normal direction n,
+where $\omega$ is the circular frequency, $u(x)\in\C^2$ denotes the displacement fields and $\sigma(u)$ is the stress tensor. We also need to define the surface traction $T_x^n (\cdot)$ on the normal direction n,
 \ben
 T_x^n u(x) := \sigma\cdot n = 2\mu\frac{\pa u}{\pa n}+\lambda n\div u + \mu n \times \curl u
 \een
@@ -169,10 +169,10 @@ The equation (\ref{eq1.1}) is understood as the limit when $x_s\in\R_+^2\bks \ba
 
 The reverse time migration (RTM) method, which consists of back-propagating
 the complex conjugated data into the background medium and computing the crosscorrelation between the incident wave field and the backpropagated field to output the
-final imaging profile, is nowadays widely used in exploration geophysics \cite{berkhout2012seismic,bleistein2013mathematics,claerbout1985imaging}. In \cite{chen2013reverse_acou,chen2013reverse_elec},
-the RTM method for reconstructing extended targets using acoustic and electromagnetic
+final imaging profile, is nowadays widely used in exploration geophysics \cite{baysal1983reverse,berkhout2012seismic,bleistein2013mathematics,chang1987elastic,claerbout1985imaging}. In \cite{chen2013reverse_acou,chen2013reverse_elec,chen2015reverse_elas},
+the RTM method for reconstructing extended targets using acoustic, electromagnetic and elastic
 waves at a fixed frequency in the free space is proposed and studied. The resolution
-analysis in \cite{chen2013reverse_acou,chen2013reverse_elec} is achieved without using the small inclusion or geometrical optics
+analysis in \cite{chen2013reverse_acou,chen2013reverse_elec,chen2015reverse_elas} is achieved without using the small inclusion or geometrical optics
 assumption previously made in the literature (e.g. \cite{ammari2013mathematical,bleistein2013mathematics}). In \cite{chen2015reverse_planar}, a new RTM algorithm
 is developed for finding extended targets in a planar waveguide which is motivated by
 the generalized Helmholtz-Kirchhoff identity for scattering problems in waveguides.
@@ -204,17 +204,12 @@ where $\de_y(x)$ is the Dirac source at $y \in R^2_+$ and $N(x,y)$, $D(x,y)$ are
 \be
 & & \hat N(\xi,x_2;y_2)= \int^{+\infty}_{-\infty}N(x_1,x_2;y) e^{-\i (x_1-y_1)\xi} dx_1
 \ee
-By taking the Fourier transform of (\ref{eq_n1}-\ref{eq_n2}), we obtain ODEs for $x_2$ in $R_+$
-\be
-& & \mu \frac{d^2\hat N_1}{dx_2^2}+\i(\lambda+\mu)\xi\frac{d\hat N_2}{dx_2}+(\omega^2-(\lambda+2\mu)\xi^2)\hat N_1 = [-\de_{y_2}(x_2) , 0] \label{pp3}\\
-& & (\lambda+2 \mu)\frac{d^2\hat N_2}{dx_2^2}+\i(\lambda+\mu)\xi\frac{d\hat N_1}{dx_2}+(\omega^2-\mu \xi^2)\hat N_2 = [0 , -\de_{y_2}(x_2)] \label{pp4}
+Throughout the paper, we will assume that for $z\in\mathbb{C}$, $z^{1/2}$ is the analytic branch of $\sqrt{z}$ such that $\Im (z^{1/2})\geq0$. This corresponds to the rigt half real axis as the branch cut in the complex plane. For $z=z_1+\mathrm{i}z_2,z_1,z_2\in\mathbb{R}$, we have
+\be \label{convention_1}
+z^{1/2}=sgn(z_2)\sqrt{\frac{|z|+z_1}{2}}+\mathrm{i}\sqrt{\frac{|z|-z_1}{2}}
 \ee
-where $\hat N_i = e_i^T \hat N$ and the boundary coditions on $x_2=0$ are
-\be
-& & \mu\frac{d\hat N_1}{dx_2}+\i\mu\xi\hat N_2 = [0 , 0] \label{pp5}\\
-& & (\lambda+\mu)\frac{d\hat N_2}{dx_2}+\i\lambda\xi\hat N_1 = [0 , 0] \label{pp6}
-\ee
-For simplicity, the ordinary differential operator and boundary condition in (\ref{pp3}-\ref{pp6}) are denoted as $\mathbb{A}_\xi$ and $\mathbb{B}_\xi$. Now, we recall that
+For $z$ on the right half real axis, we take $z^{1/2}$ as the limit of $(z+\i\varepsilon)^{1/2}$ as $\varepsilon \to 0^+$.
+We recall that
 \ben \hspace{-2.5cm}
 \hat{\Phi}(\xi,x_2;y_2)=\frac{\i}{2\omega^2}
 \Bigg[ \Bigg( \begin{array}{cc}
@@ -226,45 +221,11 @@ For simplicity, the ordinary differential operator and boundary condition in (\r
 \xi\frac{x_2-y_2}{|x_2-y_2|} & \mu_p
 \end{array} \Bigg) e^{\i\mu_p|x_2-y_2|} \Bigg]
 \een
-Denote $U = \hat N - \hat \Phi$ and it satisifies the following 2-order homogeneous ordinary differential equations with constant coefficients
-\be
-\mathbb{A}_\xi U^i = 0 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \mbox{in} \ \  \R^2_+ \label{pp7} \\
- \mathbb{B}_\xi U^i= \mathbb{B}_\xi \hat \Phi \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{on} \ \ x_2=0 \label{pp8}
-\ee
-where $U^i = U e_i$.
-
-Throughout the paper, we will assume that for $z\in\mathbb{C}$, $z^{1/2}$ is the analytic branch of $\sqrt{z}$ such that $\Im (z^{1/2})\geq0$. This corresponds to the rigt half real axis as the branch cut in the complex plane. For $z=z_1+\mathrm{i}z_2,z_1,z_2\in\mathbb{R}$, we have
-\be \label{q1}
-z^{1/2}=sgn(z_2)\sqrt{\frac{|z|+z_1}{2}}+\mathrm{i}\sqrt{\frac{|z|-z_1}{2}}
-\ee
-For $z$ on the right half real axis, we take $z^{1/2}$ as the limit of $(z+\i\varepsilon)^{1/2}$ as $\varepsilon \to 0^+$.
-
-
-By the standard arguement in ODEs, solutions of (\ref{pp7}) are linear combinations of vectors of the form
-\be
-\r(x_2) = \v e^{\i\nu x_2}
-\ee
-where $\mathbf{v} = (v_1,v_2)^T \in \mathbb{C}^2$ and $\nu \in \mathbb{C}$. It is well kown that the admissible values of $\nu$ are in $\Lambda:= \{\pm\mu_p,\pm\mu_s\}$ and where
+where
 \be
 \mu_\alpha=(k_\alpha^2-\xi^2)^{1/2} \ \ \ \ \ \ \ \ \ \mbox{for} \ \ \ \ \alpha= s,p
 \ee
-
-Associated with each value of admissible $\nu\in\Lambda$ there is an eigenvector $\v$. The respective eigenvectors are
-\ben
- \v^+_s = \left[ \begin{array}{cc} \i\mu_s \\ -\i\xi \end{array} \right] , \ \ \v^+_p = \left[ \begin{array}{cc} \i\xi \\ \i\mu_p \end{array} \right], \ \ \v^-_s = \left[ \begin{array}{cc} \i\mu_s \\ \i\xi \end{array} \right] ,\  \ \v^-_p = \left[ \begin{array}{cc} -\i\xi \\ \i\mu_p \end{array} \right]
-\een
-We denote by $\hat{\sigma}(\r)e_2=\u e^{\i\nu x_2}$ the traction of such a vector in the Fourier domain, then we obtain the respective expression for $\v$
-\ben\hspace{-1cm}
- \u^+_s = \left[ \begin{array}{cc} -\mu\beta \\ 2\mu\xi\mu_s \end{array} \right] , \  \u^+_p = \left[ \begin{array}{cc} -2\mu\xi\mu_p \\ -\mu\beta \end{array} \right], \  \u^-_s = \left[ \begin{array}{cc} \mu\beta \\ 2\mu\xi\mu_s \end{array} \right] ,\  \u^-_p = \left[ \begin{array}{cc} -2\mu\xi\mu_p \\ \mu\beta \end{array} \right]
-\een
-where $\beta=k_s^2-2\xi^2$.
-By allowing only bounded Fourier modes for the Green function, we must choose $V_S = \v^+_s e^{\i\mu_s x_2}$ and $V_p = \v^+_p e^{\i\mu_p x_2}$. Thus $U_i$ must be written as the linear combination,
-\be
-U_i = \alpha_i V_s +\beta_i V_p \ \ \ \ \mbox{for} \ \ i=1,2
-\ee
-Combining (\ref{pp8}) with the linear independence of $V_s , V_p$, then we can obtain $\alpha_i,\beta_i$.
-
-Therefore, the Green Tensor in half-space can be deduced as
+By the standard arguement in ODEs, the Green Tensor in half-space can be deduced as
 \be
 \hat N(\xi,x_2;y_2) = \hat \Phi(\xi,x_2;y_2)  -\hat \Phi(\xi,x_2;-y_2) + \hat N_c(\xi,x_2;y_2)
 \ee
@@ -302,28 +263,7 @@ The desired Green function should be obtained by taking the inverse Fourier tran
 \begin{lem} \label{lem2.1}
 	Let \emph{Lam\'{e}} constant $\lambda, \mu \in \R^+$, then the Rayleigh equation $\delta(\xi) = 0$ has only two roots denoted by $\pm k_R$ in complex plane. Morever, $k_R > k_s > k_p, \ k_R\in\R$ and $k_R$ is called Rayleigh wave number.
 \end{lem}
-\debproof
-For the sake of completeness, we include a proof here. It is well known that
-\be
-\delta(\xi)=(k_s^2-2\xi^2)^2+4\xi^2(k_s^2-\xi^2)^{1/2}(k_p^2-\xi^2)^{1/2}
-\ee
-However, $\delta(\xi)$ is rendered single-valued by selecting
-branch cuts along $k_p<\Re(\xi)<k_s,\Im(\xi)=0$ which is consistent with the convention (\ref{q1}). A simple computation show that $\delta(\pm k_s)>0$ and $\delta(\pm\infty+0\i)<0$. By the continuity of $\delta(\xi)$, we can obtain that it has at least two real zero points which denoted by $\pm k_R$.
 
-Now it turn to proof that $\delta(\xi)$ has only two roots in the complex plane by the principle of arguement which follows as a theorem of the theory of complex variables\cite{Ahlfors1979Complex}. Now consider the contour $C$ consisting of $\Ga$, and $C_l$ and $C_r$ where $C_r=[k_p+\i0^+,k_s+\i0^+]\cup[k_p+\i0^-,k_s+\i0^-]$ that surround $[k_p,k_s]$, $C_l=[-k_s+\i0^+,-k_p+\i0^+]\cup[-k_s+\i0^-,-k_p+\i0^-]$ that surround $[-k_s,-k_p]$ and $\Ga$ denotes a circle with enough large radius. Since the function $\delta(\xi)$ clears does not have poles in the complex $\xi$-plane and we find that within the contour $C=\Ga\cup C_r\cup C_l$ the number of zeros is given by
-\be \label{zero}
-Z=\frac{1}{2\pi\i}\int_C \frac{d\delta}{d\xi}\frac{d\xi}{\delta(\xi)}
-\ee
-The counting of the number of zeros is carried out by mapping the $\xi$-plane on the $\eta$-plane through the relation $\eta:=\delta(\xi)$.
-If $C_\eta$ is the mapping of $C$ in the $\eta$-plane, the integral (\ref{zero})
-in the $\eta$-plane becomes
-\be
-Z=\frac{1}{2\pi\i}\int_{C_\eta} \frac{d\eta}{\eta}
-\ee
-The latter integral has a simple pole at $\eta=0$, and $Z$ is simply the number of times the image contour $C_\eta$ encircles the origin in the $\eta$-plane in the counter-clockwise direction. To determine the number of zeros in the $\xi$-plane we thus carefully trace the mapping of the contour $C$ into th $\eta$-plane.
-
-Since $\delta(\xi)=\delta(-\xi)$ the images of $C_r$ and $C_l$ are the same, and one of them, say $C_r$, needs to be considered. We have $\delta(k_p)=(k_s^2-2k_p^2)^2$ and along $C_r$: $\delta(\xi)=(k_s^2-\xi^2)^2\mp\i4\xi^2\sqrt{k_s^2-\xi^2}\sqrt{\xi^2-k_p^2}$, and $\delta(k_s)=k_s^4$ where the minus sign applies above the cut, and the plus sign applies below the cut. Note that along $C_r$ we have $\Re(\delta(\xi))>0$ and the mapping into the $\eta$-plane do not surround the origin. For $|\xi|$ large, we find $\delta(\xi)=A\xi^2+O(1)$, thus the mapping of $\Ga$ encircles the origin twice. Then we obtain $Z=2$. This completes the proof.
-\finproof
 
 In order to overcome the ambiguity above, loss is assumed in the medium so that $k_{\alpha,\varepsilon}:=k_\alpha(1+\i\varepsilon)$.
 When $\varepsilon>0$, the branch point of $\mu_{\alpha,\varepsilon}$ are $\pm k_{\alpha,\varepsilon}$ and the branch cut are denoted by the equation $\xi_1\xi_2=k_\alpha \varepsilon,-k_\alpha\leq \xi \leq k_\alpha$. In this case, the poles singularities are now located off the real axis and the Fouerier inverse transform becomes meaningful. In order to express lemma \ref{lem2.2} concisely, we define
@@ -334,61 +274,7 @@ When $\varepsilon>0$, the branch point of $\mu_{\alpha,\varepsilon}$ are $\pm k_
 	If the elastic medium has loss that $k_{\alpha,\varepsilon}:=k_\alpha(1+\i\varepsilon),0<\ep<1$ for $\alpha=p,s$, we assert that $\delta_\varepsilon(\xi)=0$ has only two roots in domain $\Omega^c \subset \mathbb{C}$ and exactly they are $\pm k_{R,\varepsilon}$.
 \end{lem}
 
-\begin{lem}\label{lem2.3}
-Let $0<\ep<1$ and $z=R e^{\i\phi}$, $(1+\i\varepsilon)=r e^{\i\psi}$, where $0\leq\phi<2\pi$, $0<\psi<\pi/2$ and $R,r>0$. Then the equality
-\be
- z^{1/2}=(1+\i\varepsilon)(\frac{z}{{1+\i\varepsilon}^2})^{1/2}
-\ee
-holds only when  $2\psi\leq\phi<2\pi$
-\end{lem}
-\debproof
-Let $z_\ep=z/(1+\i\ep)^2:=r_\ep e^{\i\phi_\ep}$, then $\phi_\ep=\phi-2\psi$ when $2\psi\leq\phi<2\pi$.So it is easy to see that
-\ben
-z^{1/2}=\sqrt{R}e^{\i\phi/2}=\sqrt{R/r}\sqrt{r}e^{\i(\phi/2-\psi)+\i\psi}=(1+\i\ep)z_\ep^{1/2}
-\een
-Similarly, when $0\leq\phi<2\psi$, we have $\phi_\ep=\phi-2\psi+2\pi$ and then $z^{1/2}=-(1+\i\ep)z_\ep^{1/2}$. This completes the proof.
-\finproof
-
-\noindent {\bf Proof of lemma \ref{lem2.2}.}
-The lemma now follow lemma\ref{lem2.1} and lemma\ref{lem2.3} easily. Denote by $\mu_\ep=(k^2(1+\i\ep)^2-\xi^2)^{1/2},k\in\R^+$ and write $\xi=\xi_1+\i\xi_2,\xi_1,\xi_2\in\R$ and $(1+\i\varepsilon)=r e^{\i\psi}$. It is easy to see that
-\be
-\mu_\ep^2 = k^2(1-\ep^2)-\xi_1^2+\xi_2^2+\i(2k^2\ep-2\xi_1\xi_2):=Re^{\i\Theta} := a_1+\i a_2
-\ee
-Let $\Delta:=\{ \xi | 2\psi\leq\Theta<2\pi \} $, then we have $ \mu_\ep = (k^2-\xi_\ep^2)^{1/2} (1+\i\ep)$ when $\xi \in\Delta$ and $ \mu_\ep = - (k^2-\xi_\ep^2)^{1/2} (1+\i\ep)$ when $\xi \notin\Delta$ by lemma\ref{lem2.3}. Now we divide the set $\Delta$ into three parts
-\be
-\hspace{-2cm}
-\Delta = \{ \xi | a_1 \leq 0 \} \cup \{ \xi | a_2 \leq 0 \} \cup \{ \xi | a_1 >0,a_2 >0 \ \ \mbox{and} \ \ \tan\Theta \geq \tan(2\psi) \} \\ \nn
-:= \Delta_1 \cup \Delta_2 \cup \Delta_3
-\ee
-Our goal now is to show where domain $\Delta$ occupies. A simple computation show that
-\be
-\Delta_1 = \{ \xi | \xi_1^2-\xi_2^2 \geq k^2(1-\ep^2) \}  \\
-\Delta_2 = \{ \xi | \xi_1\xi_2 \geq k^2\ep \}
-\ee
-and
-\be
-\hspace{-2cm}
-\Delta_3 = \{ \xi | \xi_1^2-\xi_2^2 \leq k^2(1-\ep^2), \xi_1\xi_2 \leq k^2\ep ,
-\frac{k^2\ep-\xi_1\xi_2}{k^2(1-\ep^2)-(\xi_1^2-\xi_2^2)} \geq \frac{\ep}{1-\ep^2} \}
-\ee
-The domains denote by $\Delta_1,\Delta_2$ are obvious in complex plane. To locate $\Delta_3$ in complex plane, we divide $\Delta_3$ into tree parts $\Delta_3=\Delta_{31}\cup\Delta_{32}\cup\Delta_{33}$
-where
-\ben
-\Delta_{31} &=& \{ \xi_1\xi_2 \leq 0, 0\leq\xi_1^2-\xi_2^2 \leq k^2(1-\ep^2) \} \\
-\Delta_{32} &=& \{ 0 \leq \xi_1\xi_2 \leq k^2\ep, 0\leq\xi_1^2-\xi_2^2 \leq k^2(1-\ep^2), \frac{\xi_1\xi_2}{\xi_1^2-\xi_2^2} \leq \frac{\ep}{1-\ep^2} \} \\
-            &=& \{ 0 \leq \xi_1\xi_2 \leq k^2\ep, 0\leq\xi_1^2-\xi_2^2 \leq k^2(1-\ep^2), \frac{\xi_2}{\xi_1} \leq \ep \} \\
-\Delta_{33} &=& \{ \xi_1\xi_2 \leq 0, \xi_1^2-\xi_2^2 \leq 0 ,\frac{\xi_1\xi_2}{\xi_1^2-\xi_2^2} \geq \frac{\ep}{1-\ep^2} \} \\
-            &=& \{ \xi_1\xi_2 \leq 0, \xi_1^2-\xi_2^2 \leq 0 ,-\frac{\xi_1}{\xi_2} \geq \ep \}
-\een
-Substituting $k_s,k_p$ into $\mu_\ep$ and let $\Delta_s,\Delta_p$ denote their corresponding areas, we have
-\be
-\C\bks\Omega = (\Delta_s \cap \Delta_p )\cup (\C\backslash(\Delta_s \cup \Delta_p))
-\ee
-Moreover, when $\xi\in\Omega$ it is easy to see $\delta_\ep(\xi)=\delta(\xi)(1-\i\ep)^4 $.
-This complete the proof by lemma \ref{lem2.1}
-\finproof
-
-Let $\xi = \xi_1+\i\xi_2 \in \mathbb{C}$, $\xi_1 ,\xi_2 \in \mathbb{R}$, and the hyperbolic curve $\Gamma$ defined by the equation $\xi_1^2-\xi_2^2 = k_s^2$. Denote $\Gamma^+_r,\Gamma^-_r$ respectively the parts of right branch of $\Gamma$ in the upper-half complex plane and the lower-half complex plane. Similarily, we can define $\Gamma^-_l,\Gamma^-_l$.Now, we can define a new integral path in the complex plane
+Let $\xi = \xi_1+\i\xi_2 \in \mathbb{C}$, $\xi_1 ,\xi_2 \in \mathbb{R}$, and the hyperbolic curve $\Gamma$ defined by the equation $\xi_1^2-\xi_2^2 = k_s^2$. Denote $\Gamma^+_r,\Gamma^-_r$ respectively the parts of right branch of $\Gamma$ in the upper-half complex plane and the lower-half complex plane. Similarily, we can define $\Gamma^-_l,\Gamma^-_l$. Now, we can define a new integral path in the complex plane
 \be
 NP=\left\{
 \begin{array}{ll} \Gamma^+_l \cup \Gamma^+_r \cup [-k_s,k_s] \ \ \ \ \ \ \ \mbox{when} \ \ \ \ x_1-y_1>0 \\ \Gamma^-_l \cup \Gamma^-_r \cup [-k_s,k_s] \ \ \ \ \ \ \ \mbox{when} \ \ \ \ x_1-y_1<0	 \end{array} \right.
@@ -400,17 +286,17 @@ N_\varepsilon(x,y)=\frac{1}{2\pi}\int^{+\infty}_{-\infty}\hat N_\varepsilon(\xi,
 \\
 =\frac{1}{2\pi}\int_{NP}\hat N_\varepsilon(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi\pm\i \mathit{Res}_{\xi=\pm k_R^\eps} N_\varepsilon(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi}
 \ee
-As the perturbation $\varepsilon$ have nothing to do with the integration path $NP$, so we could take the limitation $\varepsilon\to0$. Thus, we have the representation of Green Tensor
+As the perturbation $\varepsilon$ have nothing to do with the integration path $NP$, we could take the limitation $\varepsilon\to0$. Thus, we get the representation of Green Tensor
 \be
 N(x,y)&=&\Phi(x,y)-\Phi(x,y')+\frac{1}{2\pi}\int_{NP}\hat N_c(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi}d\xi\\ \nn
 && \pm \i  {\mathit{Res}}_{\xi=\pm\kappa_r}  \hat N_c(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi}
 \ee
 where $\pm$ are corresponding $sgn(x_1-y_1)$.
-Specially, $N(x,y)$ has a simple form when $x_2=0$ that
+Specially, $N(x,y)$ has a simple form when $x_2=0$:
 \be \label{pp12}
 \hspace{-2cm}
-N(x,y)&=&\frac{1}{2\pi}\int_{NP}\hat N(\xi,0;y) e^{\i(x_1-y_1)\xi}d\xi
- \pm \i  {\mathit{Res}}_{\xi=\pm\kappa_r}  \hat N(\xi,x_2;y) e^{\i(x_1-y_1)\xi}
+N(x,y)&=&\frac{1}{2\pi}\int_{NP}\hat N(\xi,0;y_2) e^{\i(x_1-y_1)\xi}d\xi
+ \pm \i  {\mathit{Res}}_{\xi=\pm\kappa_r}  \hat N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi}
 \ee
 where
 \be \label{ngreen}
@@ -464,7 +350,7 @@ Thus, we get the representation of Green Tensor by inverse Fourier transform
 \be
 D(x,y)&=&\Phi(x,y)-\Phi(x,y')+\frac{1}{2\pi}\int_{\R}\hat M(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi}d\xi
 \ee
-Let $T_D(x,y)$ denote the traction of $D(x,y)$ in direction $e_2$ to variable $x$ that $T_D(x,y)e_i=T_x^{e_2}(D(x,y))e_i=T_x^{e_2}(D(x,y)e_i)$. Then we can get the representation of $T_D(x,y)$ by a trivial calculation.
+Let $T_D(x,y)$ denote the traction of $D(x,y)$ in direction $e_2$ with respect to $x$ such that $T_D(x,y)e_i=T_x^{e_2}(D(x,y))e_i=T_x^{e_2}(D(x,y)e_i)$. Then we can get the representation of $T_D(x,y)$ by a trivial calculation.
 \be
 T_D(x,y)&=&T(x,y)-T(x,y')+\frac{1}{2\pi}\int_{\R}\hat T_M(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi}d\xi
 \ee
@@ -487,7 +373,7 @@ where
 			-\xi\mu_s\beta  & -\xi^2\beta
 		\end{array} \right)
 \een
-Specially, $T_D(x,y)$ has a simple form when $x_2=0$ that
+Specially, $T_D(x,y)$ has a simple form when $x_2=0$:
 \be
 \hat
     T_D(\xi,0;y_2)=\frac{1}{\gamma(\xi)}\Bigg[\Bigg(   \begin{array}{cc}
@@ -504,7 +390,7 @@ and
 T_D(x_1,0;y_1,y_2)=\frac{1}{2\pi}\int_{\R}\hat T_D(\xi,0;y_2) e^{\i(x_1-y_1)\xi}d\xi
 \ee
 
-We need the following slight generalization of Van der Corput lemma for the oscillatory integral \cite[P.152]{grafakos}.
+To analysis the point spread function in the section 5, we should give asymptotic anslysis for $N(x_1,0,y)$ and $T_D(x_1,0;y)$. We need the following slight generalization of Van der Corput lemma for the oscillatory integral \cite[P.152]{grafakos}.
 \begin{lem}\label{van}
 	Let $-\infty<a<b<\infty$, and $u$ is a $C^k$ function $u$ in $(a,b)$. \\
  1. If $|u'(t)|\ge 1$ for $t\in (a,b)$ and $u'$ is monotone in (a,b), then for any $\phi(t)$ in $(a,b)$ with integrable derivatives
@@ -521,85 +407,20 @@ We need the following slight generalization of Van der Corput lemma for the osci
 \debproof
 The assertion can be proved by extending the Van der Corptut lemma in \cite{grafakos}. Here we omit the details.
 \finproof
-We also have following more explicit estimation:
-\begin{lem}\label{es_dgreen1}
-Let $f(\xi,\mu_s,\mu_p)=g(\xi,\mu_s,\mu_p)/\gamma(\xi,\mu_s,\mu_p)$ where g(x,y,z) is a homogeneous quadratic polynomial with respect to x,y,z. Let $a,b>0$ and $\rho=\sqrt{a^2+b^2}$. Assume $a/\rho >(1+\kappa)/2$, $b/\rho < \kappa/2$, $\kappa=k_p/k_s$ and $k_s\rho >1$, then we have
-\be \label{ap_estimation}
-\Big|\int_\R f(\xi,\mu_s,\mu_p) e^{\i(\mu_s b +\xi a)}d\xi \Big| \leq C(\frac{k_s b}{\rho(k_s\rho)^{1/2}}+\frac{k_s a}{\rho(k_s\rho)^{3/2}})
-\ee
-and
-\be
-\Big|\int_\R f(\xi,\mu_s,\mu_p) e^{\i(\mu_p b +\xi a)} d\xi\Big| \leq C(\frac{k_s b}{\rho(k_s\rho)^{1/2}}+\frac{k_s a}{\rho(k_s\rho)^{3/2}})
-\ee
-where C is only dependent on $\kappa$.
-\end{lem}
-\debproof
-Let I(a,b) denote the integral in the left side of inequality (\ref{ap_estimation}). To simplify the integral, the standard substitution $\xi=k_s\sin t$ is made, taking the $\xi$-plane to a strip $-\pi/2<\Re t <\pi/2$ in the t-plane, and the real axis in the $\xi$-plane onto the path L from $-\pi/2+\i\infty\rightarrow-\pi/2\rightarrow\pi/2\rightarrow\pi/2-\i\infty$ in the t-plane. The integral I(a,b) then becomes(Let a=$\rho \sin\phi$  and b=$\rho\cos\phi$, $0<\phi<\pi/4$)
-\be
- k_s \int_L f(\sin t,\cos t,(\kappa^2-\sin^2 t)^{1/2})\cos t \ e^{\i k_s\rho(\cos (t-\phi))} dt
-\ee
-Taking the shift transformation of t and using cauchy integral theorem, we can obtain the representation of I(a,b):
-\ben \hspace{-1.5cm}
-k_s\int_L f(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})\cos (t+\phi) e^{\i k_s\rho(\cos t)} dt \\\hspace{-2cm}
-=k_s \cos \phi \int_L f(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})\cos t \ e^{\i k_s\rho(\cos t)} dt \\\hspace{-2cm}
--k_s \sin \phi \int_L f(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})\sin t \ e^{\i k_s\rho(\cos t)} dt \\\hspace{-2cm}
-:=k_s (\cos\phi \ I_1+\sin\phi \ I_2)
-\een
-The lemma will be proved if we can show $|I_1|\leq C/(k_s\rho)^{1/2}$ and $|I_2|\leq C/(k_s\rho)^{3/2}$.
 
-For $I_1$, we split the integral path L into $L_1=(-\pi/2,\pi/2)$ and $L_2=(-\pi/2+\i\infty,-\pi/2)\cup(\pi/2,\pi/2-\i\infty)$, then we have corresponding representation: $I_1=I_{11}+I_{12}$. A simple calculation gives that $f$ and $\pa f/\pa t$ are both integrable on path $L_1$. Further more, $\cos t>1/2$ for any $t\in(-\pi/4,\pi/4)$  while $|\sin t|>1/2$ for any $t\in (-\pi/2,-\pi/4)\cup(\pi/4,\pi/2)$. Then we have $|I_{11}|\leq C/(k_s\rho)^{1/2}$ following the lemma \ref{van}.
-
-Moreover, because $f$ and $\pa f/\pa t$ has no singularity on $L_2$ and $\i\cos t \to -\infty$ as $t\to \infty$ along $L_2$, it is easy to see that $|I_{12}|\leq C/(k_s\rho)$ via integration by parts.
-
-For $I_2$, using integration by parts on path $L$ first, we have
-\be \hspace{-2cm}
-I_2=\frac{1}{\i k_s\rho} \int_L f(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2}) d \ e^{\i(k_s\rho \cos t)} \\ \hspace{-1.5cm}
-=-\frac{1}{\i k_s\rho} \int_{L_1 \cup L_2} \frac{\pa f(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})}{\pa t
-} \  e^{\i(k_s\rho \cos t)} dt \\ \hspace{-1.5cm}
-=-\frac{1}{\i k_s\rho}(I_{21}+I_{22})
-\ee
-Then $|I_{22}|\leq C/(k_s\rho)$ can be proved by the same method used above. Following a tedious computation, we obtain a simple form of $\pa f/\pa t$:
-\be
-\frac{\pa f}{\pa t}&=&\frac{(\gamma\pa_t g  -g \pa_t \gamma)(\kappa^2-\sin^2 t)^{1/2}}{(\sin^2 t +\cos t (\kappa^2-\sin^2 t)^{1/2})^2}\frac{1}{(\kappa^2-\sin^2 t)^{1/2}} \\
-&:=&\frac{h(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})}{(\kappa^2-\sin^2 t)^{1/2}}
-\ee
-where $h$ and $\pa h/\pa t$ are integrable on path $L_1$. By the assumption above, there exist $0<\delta<\pi/4$ only dependent on $\kappa$ such that $|\sin(t+\phi)|>(1+\kappa)/2, |\cos(t+\phi)|<\kappa/2$ for any $t\in(-\delta,\delta)$ while $|\cos(t+\phi)|>(1+\kappa)/2, |\sin(t+\phi)|<\kappa/2$ for any $t\in(-\pi/2,-\pi/2+\delta)\cup(\pi/2-\delta,\pi/2)$. Let define $t_1,t_2\in \chi_1=(-\pi/2+\delta,-\delta)\cup(\delta,\pi/2-\delta)$ which satisfy $\kappa^2 = \sin^2 (t_i+\phi)$, $i=1,2$. Moreover, for any $0<\lambda_1<1$ and $1<\lambda_2<1/\kappa$, there exists $\sigma>0$, which satisfy that $\chi_2=(t_1-\sigma,t_1+\sigma)\cup(t_2-\sigma,t_2+\sigma)\subset\chi_1$ and is only dependent on $\lambda_1,\lambda_2,\kappa$, such that
-\be \label{assume1}
-\lambda_1\kappa<|\sin (t+\phi)|<\lambda_2\kappa.
-\ee
-for any $t\in\chi_2$. We are now in a position to estimate $I_{21}$. Similarly, we split the path $L_1$ into $\chi_2$ and $L_1\bks \chi_2$, then we have the corresponding representation: $I_{21}=I_{\chi_2}+I_{L_1\bks{\chi_2}}$.
-
-For $I_{\chi_2}$, we only analysis the integral on $\chi_{21}=(t_1-\sigma,t_1+\sigma)$ denoted by $I^1_{\chi_2}$, the procedure of the another is same. Without loss of generality, we assume that $\sin (t_1-\sigma+\phi)<\kappa<\sin (t_1+\sigma+\phi)$. It is easy to see that $\sin (t+\phi)$ is monotonic increasing in $\chi_{21}$. Let $\sin (t+\phi) = \kappa \sin \theta$ and the implicit mapping from $\theta$ to $t$ is denoted by $t(\theta)$ while the inverse mapping by $\theta(t)$, taking the interval $\chi_{21}$ onto $L_\theta : \theta_1\rightarrow\pi/2\rightarrow\pi/2-\i\theta_2$ where $\sin(t_1-\sigma+\phi)=\kappa\sin \theta_1,\sin(t_1+\sigma+\phi)=\kappa\sin(\pi/2-\i\theta_2)$. By substituting $t(\theta)$ into $I^1_{\chi_2}$, we have
-\be
-I^1_{\chi_2}=\int_{L_\theta}\frac{ h(\kappa\sin\theta,(1-\kappa^2\sin^2\theta)^{1/2},\kappa\cos\theta)}{(1-\kappa^2\sin^2\theta)^{1/2}} \ e^{\i
-k_s\rho(\cos(t(\theta)))} d\theta
-\ee
-Because of inequality \ref{assume1}, we assert that $h$ and $\pa h/\pa\theta$ are integrable on the path $L_\theta$. A simple computation show that
-\ben
-\frac{dt(\theta)}{d\theta}=\frac{\kappa\cos\theta}{\cos(t+\phi)} \ \
-\frac{d^2 t(\theta)}{dt^2}=\frac{\kappa^2\cos^2\theta\sin(t+\phi)-\kappa\sin\theta\cos^2(t+\phi)}{\cos^3(t+\phi)}
-\een
-Then we can obtain
-\ben
-\frac{d\cos t}{d\theta}&=&\frac{-\kappa\sin t\cos\theta}{\cos(t+\phi)} \\
-\frac{d^2\cos t}{d\theta^2}&=&\frac{d^2\cos t}{dt^2}(\frac{dt}{d\theta})^2+\frac{d\cos t}{dt}\frac{d^2t}{d\theta^2} \\
-&=&\frac{-\kappa^2\cos^2\theta\cos t}{\cos^2(t+\phi)}+\frac{\kappa\sin\theta\cos^2(t+\phi)\sin t -\kappa^2\cos^2\theta\sin(t+\phi)\sin t}{\cos^3(t+\phi)} \\
-&=&\frac{-\kappa^2\cos^2\theta\cos\phi+\kappa\sin\theta\cos^2(t+\phi)\sin t}{\cos^3(t+\phi)} \\
-&=&\frac{(\sin^2(t+\phi)-\kappa^2)\cos\phi+\cos^2(t+\phi)\sin(t+\phi)\sin t}{\cos^3(t+\phi)}
-\een
-It is simple to see that $\theta=\pi/2$ is the only stationary point of $\cos(t(\theta))$ and we can obtain
-\be
-\Bigg|\frac{d^2\cos t}{d\theta^2}(\pi/2)\Bigg|=\frac{(1-\kappa^2)\kappa}{(1-\kappa^2)^{3/2}}|\sin t|>\frac{(1-\kappa^2)\kappa}{(1-\kappa^2)^{3/2}}\sin \delta
-\ee
-Therefore, we can choose appropriate $\lambda_1,\lambda_2$, only dependent on $\kappa$, such that $|\frac{d^2\cos t}{d\theta^2}|>\frac{(1-\kappa^2)\kappa}{(1-\kappa^2)^{3/2}}\sin \delta$ for any $\theta\in \theta(\chi_{21})$. Therefore, we can decompose $\theta(\chi_{21})$ into several intervals such that in each either $|\pa \cos(t(\theta))/\pa\theta|$ or $|\pa^2 \cos(t(\theta))/\pa\theta^2|$ has positive lower bound and $|\pa \cos(t(\theta))/\pa\theta|$ is monotonous. Since the amplitude function of integrand in $I^1_{\chi_2}$ and its derivative with respect to $\theta$ are both integrable on $L_\theta$, the estimation $|I^1_{\chi_2}|\leq C/(k_s\rho)^{1/2}$ can be obtained immediately by lemma \ref{van}.
-Finally, an argument similar to the estimation of $I_{11}$ used shoes that $|I_{L_1\bks{\chi_2}}|\leq C/(k_s\rho)^{1/2}$. This completes the proof.
-
-\finproof
-Now, another more sophisticated estimation of $T_D(x_1,0;y_1,y_2)$ is a direct consequence of lemma \ref{es_dgreen1}.
-\begin{lem}\label{es_dgreen2}
+Therefore, the estimate of $T_D(x_1,0;y_1,y_2)$ is now a direct consequence of lemma \ref{es_dgreen1}.
+\begin{lem}\label{es_dgreen}
 	For every $x\in\Gamma_0$, $y\in\R_+^2$ that $|x_1-y_1|/|x-y|>(1+\kappa)/2$, $y_2/|x-y|<\kappa/2$ and $k_s |x-y|>1$, we have
-	\be
-	|T_D(x,y)|\leq C(\frac{k_s y_2}{|x-y|}\frac{1}{(k_s|x-y|)^{1/2}}+\frac{k_s |x_1-y_1|}{|x-y|}\frac{1}{(k_s|x-y|)^{3/2}})
+	\be\hspace{-1.5cm}
+	|T_D(x,y)|\leq C\Bigg(\frac{k_s y_2}{|x-y|}\frac{1}{(k_s|x-y|)^{1/2}}+\frac{k_s |x_1-y_1|}{|x-y|}\frac{1}{(k_s|x-y|)^{3/2}}\Bigg)
+	\ee
+	where C is only dependent on $\kappa$.
+\end{lem}
+
+\begin{lem}\label{es_ngreen}
+	For every $x\in\Gamma_0$, $y\in\R_+^2$ that $|x_1-y_1|/|x-y|>(1+\kappa)/2$, $y_2/|x-y|<\kappa/2$ and $k_s |x-y|>1$, we have
+	\be\hspace{-2.5cm}
+	|N(x,y)|\leq \frac{C}{\mu}\Bigg(\frac{k_s y_2}{|x-y|}\frac{1}{(k_s|x-y|)^{1/2}}+\frac{k_s |x_1-y_1|}{|x-y|}\frac{1}{(k_s|x-y|)^{3/2}}+e^{-\sqrt{k_R^2-k_s^2}y_2}\Bigg)
 	\ee
 	where C is only dependent on $\kappa$.
 \end{lem}
@@ -725,7 +546,7 @@ and $u_\epsilon=v_\epsilon$ by the same arguement in lemma \ref{newton2} which i
 \finproof
 It is remain to prove the uniqueness in theorem \ref{eu1}. Actually, it can be obtained following the existence of solution with any $g\in H^{1/2}(\Ga_D)$.
 
-{\it prove of Theorem \ref{eu1}}
+{\it \bf proof of Theorem \ref{eu1}}
 By the linearity of the problem, it is sufficient to prove that any $u_0$  satisfies the system (\ref{es1}-\ref{es3}) with the corresponding homogeneous boundary-value vanishes identically in $\R^2_+\bks \bar D$. For any $y\in \R^2_+\bks \bar D$, there exists $U^s(x,y)$ sataifies (\ref{es1}-\ref{es3}) with $g(x)=-N(x,y)$ on $\Ga_D$ following the lemma \ref{ext} and we define $U(x,y)=N(x,y)+U^s(x,y)$. It is easy to see that $U(x,y)$ satifies the generalized radiation condition (\ref{rc1}). Thus by the integral representaion of $u_0$, we have
 \ben
 \lim_{r\to\infty}  \int_{S_r^+} (\sigma(U(x,y)e_i)\nu)\cdot u_0(x) - (U(x,y)e_i)\cdot (\sigma(u_0)\nu)ds(x)=0
@@ -788,11 +609,11 @@ By scaling argument and trace theorem we know that there exists a constant $C>0$
 \ee
 
 The point spread function measures the resolution for finding point source\cite{ammari2013mathematical}. In \cite{RTMhalf_aco}, the point spread function has been defined in the case of acoustic wave. We now define elastic point spread function $J(z,y)$, a $\mathbb{C}^{2\times2}$ matrix, which back-propagate the conjugated data $\overline{N(x,y)}$ as the Dirichlet boundary condition. Thus, for any $z,y \in \R_+^2$
-\be
+\be\label{fullpsf}
 J(z,y)&=&\int_{\Gamma_0} \ (T_D(x,z))^T \overline{N(x,y)} ds(x) \\
 &=&\int_\R \ (T_D(x_1,0;z_1,z_2))^T \overline{N(x_1,0;y_1,y_2)} dx_1
 \ee
-The estimate in (\ref{lem4.2}) show that the integral above exists.
+The estimate in lemma \ref{es_dgreen}-\ref{es_ngreen} show that the integral above exists.
 Now, we define functions
 \be \label{theta}
 \hspace{-2cm}
@@ -805,12 +626,13 @@ Now, we define functions
 \end{array} \Bigg)e^{\mathrm{i}\mu_p y_2}
 \Bigg]	e^{\i\xi y_1}
 \ee
-It is easy to see that, $\Theta=\overline{\hat T_D e^{-\i\xi -y_1}}$ when $\xi \in \R\bks [-k_s,k_s]$.
+Let $\hat N (\xi;y)=\hat N (\xi;y_2)e^{-\i\xi y_1}$ and $\hat T_D (\xi;y)=\hat T_D (\xi;y_2)e^{-\i\xi y_1}$. It is easy to see that $\Theta=\overline{\hat T_D (\xi;y)}$ when $\xi \in \R\bks [-k_s,k_s]$.
 
 We split the spectral terms into components associated with pressure and shearing waves.
 \ben
 \hat{T_D}=\hat{T_D^p}+\hat{T_D^s} \ \ \
-\hat{N}=\hat{N^p}+\hat{N^s}
+\hat{N}=\hat{N^p}+\hat{N^s} \ \ \
+\Theta=\Theta^p+\Theta^s
 \een
 Thus, we define
 \be\hspace{-1cm}
@@ -822,65 +644,43 @@ It's esay to see
 J(z,y)=\sum_{\alpha=p,s}^{\eta=p,s} \ J^{\alpha\eta}(z,y)
 \een
 In order to analysis the PSF, loss is assumed in the medium that $k_{\alpha,\varepsilon}:=k_\alpha(1+\i\varepsilon)$. Then by Parseval identity and lemma \ref{lem2.2}, we carry out
-\ben
+\ben\hspace{-1.5cm}
 J^{ss}(z,y)&=&\lim_{\varepsilon\to 0^+} \ \int_R \  ({T}^s_D (x_1,0;z_1,z_2))^T \overline{{N}^{s,\varepsilon} (x_1,0;y_1,y_2)} dx_1 \\
 &=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_R \  (\hat{T}^s_D (\xi,0;z))^T \overline{\hat{N}^{s,\varepsilon} (\xi,0;y)} d\xi \\
 &=& \frac{1}{2\pi}\int^{k_s}_{-k_s} \  (\hat{T}^s_D (\xi,0;z))^T \overline{\hat{N}^{s,\varepsilon} (\xi,0;y)} d\xi \\
 &+&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_s,k_s]} \  (\hat{T}_D (\xi,0;z))^T \overline{\hat{N}^{s,\varepsilon} (\xi,0;y)} d\xi \\
 &:=&F^{ss}(z,y)+R^{ss}(z,y)
 \een
-\ben
-J^{pp}(z,y)&=&\lim_{\varepsilon\to 0^+} \ \int_R \  ({T}^p_D (x_1,0;z_1,z_2))^T \overline{{N}^{p,\varepsilon} (x_1,0;y_1,y_2)} dx_1 \\
-&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_R \  (\hat{T}^p_D (\xi,0;z))^T \overline{\hat{N}^{p,\varepsilon} (\xi,0;y)} d\xi \\
-&=& \frac{1}{2\pi}\int^{k_p}_{-k_p} \  (\hat{T}^p_D (\xi,0;z))^T \overline{\hat{N}^{p,\varepsilon} (\xi,0;y)} d\xi \\
-&+&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  (\hat{T}^p_D (\xi,0;z))^T \overline{\hat{N}^{p,\varepsilon} (\xi,0;y)} d\xi \\
-&:=&F^{pp}(z,y)+R^{pp}(z,y)
+and for $(\alpha,\eta)\neq(s,s)$
+
+\ben\hspace{-1.5cm}
+J^{\alpha\eta}(z,y)&=&\lim_{\varepsilon\to 0^+} \ \int_R \  ({T}^\alpha_D (x_1,0;z_1,z_2))^T \overline{{N}^{p,\varepsilon} (x_1,0;y_1,y_2)} dx_1 \\
+&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_R \  (\hat{T}^\alpha_D (\xi,0;z))^T \overline{\hat{N}^{\eta,\varepsilon} (\xi,0;y)} d\xi \\
+&=& \frac{1}{2\pi}\int^{k_p}_{-k_p} \  (\hat{T}^s_D (\xi,0;z))^T \overline{\hat{N}^{\eta,\varepsilon} (\xi,0;y)} d\xi \\
+&+&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  (\hat{T}^\alpha_D (\xi,0;z))^T \overline{\hat{N}^{\eta,\varepsilon} (\xi,0;y)} d\xi \\
+&:=&F^{\alpha\eta}(z,y)+R^{\alpha\eta}(z,y)
 \een
-\ben
-J^{sp}(z,y)&=&\lim_{\varepsilon\to 0^+} \ \int_R \  ({T}^s_D (x_1,0;z_1,z_2))^T \overline{{N}^{p,\varepsilon} (x_1,0;y_1,y_2)} dx_1 \\
-&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_R \  (\hat{T}^s_D (\xi,0;z))^T \overline{\hat{N}^{p,\varepsilon} (\xi,0;y)} d\xi \\
-&=& \frac{1}{2\pi}\int^{k_p}_{-k_p} \  (\hat{T}^s_D (\xi,0;z))^T \overline{\hat{N}^{p,\varepsilon} (\xi,0;y)} d\xi \\
-&+&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  (\hat{T}^s_D (\xi,0;z))^T \overline{\hat{N}^{p,\varepsilon} (\xi,0;y)} d\xi \\
-&:=&F^{sp}(z,y)+R^{sp}(z,y)
-\een
-\ben
-J^{ps}(z,y)&=&\lim_{\varepsilon\to 0^+} \ \int_R \  ({T}^p_D (x_1,0;z_1,z_2))^T \overline{{N}^{s,\varepsilon} (x_1,0;y_1,y_2)} dx_1 \\
-&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_R \  (\hat{T}^p_D (\xi,0;z))^T \overline{\hat{N}^{s,\varepsilon} (\xi,0;y)} d\xi \\
-&=& \frac{1}{2\pi}\int^{k_p}_{-k_p} \  (\hat{T}^p_D (\xi,0;z))^T \overline{\hat{N}^{s,\varepsilon} (\xi,0;y)} d\xi \\
-&+&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  (\hat{T}^p_D (\xi,0;z))^T \overline{\hat{N}^{s,\varepsilon} (\xi,0;y)} d\xi \\
-&:=&F^{ps}(z,y)+R^{ps}(z,y)
-\een
-and using Cauchy integral theorem, we get
-\ben
+Using Cauchy integral theorem, we get
+\ben\hspace{-1.5cm}
 \overline{R^{ss}(y,z)}&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_s,k_s]} \  \overline{(\hat{T}^s_D (\xi,0;z))^T} \hat{N}^{s,\varepsilon} (\xi,0;y) d\xi \\
 &=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_s,k_s]} \  (\Theta^s (\xi;z))^T \hat{N}^{s,\varepsilon} (\xi,0;y) d\xi  \\
 &=& \ \frac{1}{2\pi}\int_{\Gamma^\pm_l \cup \Gamma^\pm_r} \  (\Theta^s (\xi;z))^T \hat{N}^{s} (\xi,0;y) d\xi + Residue Part \\
 &:=&{\MyRoman{1}}^{ss}(z,y)+{\MyRoman{2}}^{ss}(z,y)
 \een
-\ben
-\overline{R^{pp}(y,z)}&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  \overline{(\hat{T}^p_D (\xi,0;z))^T} \hat{N}^{p,\varepsilon} (\xi,0;y) d\xi \\
-&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  (\Theta^p (\xi;z))^T \hat{N}^{p,\varepsilon} (\xi,0;y) d\xi  \\
-&=& \ \frac{1}{2\pi}\int_{\Gamma^\pm_l \cup \Gamma^\pm_r} \  (\Theta^p (\xi;z))^T \hat{N}^{p} (\xi,0;y) d\xi \\
-&+& \frac{1}{2\pi}\int_{(-k_s,-k_p)\cup(k_p,k_s)} \  \overline{(T^p (\xi;z))^T} \hat{N}^{p} (\xi,0;y) d\xi+Residue Part \\
-&:=&{\MyRoman{1}}^{pp}(z,y)+{\MyRoman{2}}^{pp}(z,y)+{\MyRoman{3}}^{pp}(z,y)
-\een
-\ben
-\overline{R^{sp}(y,z)}&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  \overline{(\hat{T}^s_D (\xi,0;z))^T} \hat{N}^{p,\varepsilon} (\xi,0;y) d\xi \\
-&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  (\Theta^s (\xi;z))^T \hat{N}^{p,\varepsilon} (\xi,0;y) d\xi  \\
-&=& \ \frac{1}{2\pi}\int_{\Gamma^\pm_l \cup \Gamma^\pm_r} \  (\Theta^s (\xi;z))^T \hat{N}^{p} (\xi,0;y) d\xi \\
-&+& \frac{1}{2\pi}\int_{(-k_s,-k_p)\cup(k_p,k_s)} \  \overline{(T^s (\xi;z))^T} \hat{N}^{p} (\xi,0;y) d\xi+Residue Part \\
-&:=&{\MyRoman{1}}^{sp}(z,y)+{\MyRoman{2}}^{sp}(z,y)+{\MyRoman{3}}^{sp}(z,y)
-\een
-\ben
-\overline{R^{ps}(y,z)}&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  \overline{(\hat{T}^p_D (\xi,0;z))^T} \hat{N}^{s,\varepsilon} (\xi,0;y) d\xi \\
-&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  (\Theta^p (\xi;z))^T \hat{N}^{s,\varepsilon} (\xi,0;y) d\xi  \\
-&=& \ \frac{1}{2\pi}\int_{\Gamma^\pm_l \cup \Gamma^\pm_r} \  (\Theta^p (\xi;z))^T \hat{N}^{s} (\xi,0;y) d\xi \\
-&+& \frac{1}{2\pi}\int_{(-k_s,-k_p)\cup(k_p,k_s)} \  \overline{(T^p (\xi;z))^T} \hat{N}^{s} (\xi,0;y) d\xi+Residue Part \\
-&:=&{\MyRoman{1}}^{ps}(z,y)+{\MyRoman{2}}^{ps}(z,y)+{\MyRoman{3}}^{ps}(z,y)
+and for $(\alpha,\eta)\neq(s,s)$
+\ben\hspace{-1.5cm}
+\overline{R^{\alpha\eta}(y,z)}&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_s,k_s]} \  \overline{(\hat{T}^\alpha_D (\xi,0;z))^T} \hat{N}^{\eta,\varepsilon} (\xi,0;y) d\xi \\
+&=&\lim_{\varepsilon\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  (\Theta^\alpha (\xi;z))^T \hat{N}^{\eta,\varepsilon} (\xi,0;y) d\xi  \\
+&+& \frac{1}{2\pi}\int_{(-k_s,-k_p)\cup(k_p,k_s)} \  \overline{(T^\alpha (\xi;z))^T} \hat{N}^{\eta} (\xi,0;y) d\xi \\
+&=& \ \frac{1}{2\pi}\int_{\Gamma^\pm_l \cup \Gamma^\pm_r} \  (\Theta^\alpha (\xi;z))^T \hat{N}^{\eta} (\xi,0;y) d\xi +Residue Part\\
+&+& \frac{1}{2\pi}\int_{(-k_s,-k_p)\cup(k_p,k_s)} \  \overline{(T^\alpha (\xi;z))^T} \hat{N}^{\eta} (\xi,0;y) d\xi \\
+&:=&{\MyRoman{1}}^{\alpha\eta}(z,y)+{\MyRoman{2}}^{\alpha\eta}(z,y)+{\MyRoman{3}}^{\alpha\eta}(z,y)
 \een
 where $\pm$ are corresponding $sgn(z_1-y_1)$. In the sequel, $A^{ij}$ denotes the $(i,j)$ element of a $2\times2$ matrix.
-\begin{thm}
-For any $z,y\in\Om$, J(z,y)=F(z,y)+R(z,y), where
+
+ Our goal now is to show the main contribution to the point spread funciton when $k_s h\gg1$. Put $n_*=\min\{N|\kappa^{2N-1}<1/c_3,N\in \Z_+ \}$. Then we claim the primary theorem in this section:
+\begin{thm}\label{thm_psf}
+Let $k_s h>1$. For any $z,y\in\Om$, J(z,y)=F(z,y)+R(z,y), where
 \be
 F(z,y)=F_{ss}(z,y)+F_{pp}(z,y) \\
 R(z,y)=R^{ss}(z,y)+R^{pp}(z,y)+J^{sp}(z,y)+J^{ps}(z,y) 
@@ -891,93 +691,74 @@ Moreover,
 \ee
  uniformly for $z,y\in\Om$. Here the constant C may dependent on $k_s d_D$ and $\kappa:=k_p/k_s$, but is independent of k, h, $d_D$.
 \end{thm}
+The proof of Theorem \ref{thm_psf} depends on several lemmas that follow.
+
+Without loss of generality. we assume $z_1-y_1\geq0$ in this section. Otherwise, we can take substitution $\xi=-\xi$.
+Notice that the parameterization of hyperbolic curve passing $(\pm1,0)$ is:
+\ben
+\xi_1=\pm\sqrt{t^2+1} \ \ \ \ \xi_2= t
+\een
+where $t\in\R$. We only consider the curve in the upper halp plane, denoted by $\Gamma^+$ here. Substituting $\xi=\xi_1+\i\xi_2\in\Gamma^+$ into $\mu(\xi):=(1-\xi^2)^{1/2}$ and $\mu_\kappa(\xi):=(\kappa^2-\xi^2)^{1/2}$, we arrive at
+\be\label{mu_1}
+\Im\mu(\xi)&=&\Im(1-(\xi_1^2-\xi_2^2+\i2\xi_1\xi_2))^{1/2}\\ \nn
+&=&\Im(-2t\sqrt{t^2+1}\i)^{1/2}=t^{1/2}(t^2+1)^{1/4}
+\ee
+\be \nn
+\Im\mu_\kappa(\xi)&=&\Im(\kappa^2-(\xi_1^2-\xi_2^2+\i2\xi_1\xi_2))^{1/2}\\ \label{mu_2}
+&=&\Im(\kappa^2-1-2t\sqrt{t^2+1}\i)^{1/2}\\ \nn &=&\sqrt{\frac{\sqrt{(1-\kappa^2)^2+4t^2(t^2+1)}+1-\kappa^2}{2}}\\ \nn
+&\geq&t^{1/2}(t^2+1)^{1/4}
+\ee 
+\begin{lem}\label{crossterm}
+	For $\xi\in\Gamma_0$, let $f(\xi)$ is a complex valued function in $L^1(\Gamma^+)$ such that $|f(\xi)|\leq C(1+\xi^k)$, $k\in \Z_+$. Then for $a,b,c>0$, we have
+	\ben
+	|I(a,b,c):=\int_{\Gamma^+}f(\xi)  \ e^{\i\xi a+\i\mu(\xi)b+\i\mu_\kappa(\xi)c} \ d\xi| \\
+	\leq C(\frac{1}{b+c}+\frac{1}{(b+c)^{k+1}})
+	\een
+\end{lem}
+\debproof
+Ovserve that
+\ben
+\frac{d\xi(t)}{dt}=\frac{t}{\sqrt{t^2+1}}+\i
+\een
+By (\ref{mu_1}-\ref{mu_2}), it follows that
+\ben
+|e^{\i\xi a+\i\mu(\xi)b+\i\mu_\kappa(\xi)c}|\leq e^{-ta-t^{1/2}(t^2+1)^{1/4}b-t^{1/2}(t^2+1)^{1/4}c}\leq e^{-t(b+c)} 
+\een 
+Finally, substituting $\xi(t)$ into $I(a,b,c)$, we have
+\ben
+|I(a,b,c)|&=&\Big|\int_{0}^{\infty}|f(\xi(t))\frac{d\xi(t)}{dt}e^{\i\xi(t) a+\i\mu(\xi(t))b+\i\mu_\kappa(\xi(t))c}dt \Big| \\
+&\leq&C\int_{0}^{\infty}(1+t^k) e^{-t(b+c)} dt\\
+&\leq& C(\frac{1}{b+c}+\frac{1}{(b+c)^{k+1}})
+\een
+\finproof
 \begin{lem} \label{r_estimate1}
 	For any $z,y\in \R^2_+$,
 	\be\label{re1}
-	|{\MyRoman{1}}^{\alpha\beta}_{ij}(x,y)|\le\frac{C}{\mu }\sum_{j=1}^{4}(k_s(y_2+z_2))^{-j}, \ \alpha,\beta=s,p
+	|{\MyRoman{1}}^{\alpha\beta}_{ij}(z,y)|\le\frac{C}{\mu }\sum_{j=1}^{4}(k_s(y_2+z_2))^{-j}, \ \alpha,\beta=s,p
 	\ee
-	where $C$ is only dependent on $\kappa:=k_p/k_s$.
+	where $C$ is may only dependent on $\kappa$.
 \end{lem}
 \debproof
-Substituting (\ref{theta}) and (\ref{ngreen}) into ${\MyRoman{1}}^{ss}$, we have
+Notice that
 \ben
-\hspace{-2cm}
-{\MyRoman{1}}^{ss}(z,y)=\frac{1}{2\pi}\int_{\Gamma^\pm_l \cup \Gamma^\pm_r} \frac{\i(k_s^2-4\xi^2)}{\mu\gamma(\xi)\delta(\xi)}
-\Bigg(
-  \begin{array}{cc}
-	\mu_s^2\mu_p & \xi\mu_s\mu_p \\
-	-\xi\mu_s\mu_p & -\xi^2\mu_p
-\end{array}		\Bigg)e^{\mathrm{i}\mu_s (z_2+y_2) +\i\xi(z_1-y_1)} \\
-=A_l+A_r
+\frac{1}{\delta(\xi)}&=&\frac{1}{(k_s^2-2\xi^2)+4\xi^2(k_s^2-\xi^2)^{1/2}(k_p^2-\xi^2)^{1/2}} \\
+&=&\frac{(k_s^2-2\xi^2)^2-4\xi^2(k_s^2-\xi^2)^{1/2}(k_p^2-\xi^2)^{1/2}}{(4k_p^2-28k_s^2)\xi^6+O(\xi^4)}=O(\frac{1}{\xi^2}) 
 \een
-where $A_r, A_l$ are respected the integrantion on the $\Gamma^+_r,\Gamma^+_l$.
-Now, we turn to estimation of $\MyRoman{1}^{ss}$.
- The integration path $\Gamma_r^+$ can be parameterized by $\xi:=k_s q(t)=k_s \sqrt{t^2+1} + \mathrm{i} k_s t$, with $0<t<+\infty$. We define $\gamma_p(t):=(\kappa^2-q(t)^2)^{1/2}$, $\gamma_s(t)=(1-q(t)^2)^{1/2}$, and $\tau(t):=1-2t^2$. It is well know that $\mu_\alpha=k_s\gamma_\alpha(t)$, $ \beta(\xi)=k_s^2\tau(t)$, $\gamma(\xi)=k_s^2(q(t)^2+\gamma_p(t)\gamma_s(t))$ and $\delta(\xi)=k_s^4(\tau(t)^2+4q(t)^2\gamma_p(t)\gamma_s(t))$ when $\xi$ on $\Gamma_r^+$. Now, substituting the parameterized representation of $\xi$ on $\Gamma^+_r$, we obtain
- \be
- A_r^{11}=\int_{0}^{+\infty} \frac{A(t)}{\mu}e^{\i k_s[\gamma_s(t)(z_2+y_2)+q(t)(z_1-y_1)]} dt
- \ee
- where $A(t)=\frac{\i(1-4q(t)^2)\gamma_s(t)^2\gamma_p(t)(\i+t/\sqrt{1+t^2})}{2\pi (q(t)^2+\gamma_p(t)\gamma_s(t))(\tau(t)^2+4q(t)^2\gamma_p(t)\gamma_s(t))}$.
+\ben
+\frac{1}{\gamma(\xi)}&=&\frac{1}{\xi^2+(k_s^2-\xi^2)^{1/2}(k_p^2-\xi^2)^{1/2}} \\
+&=&\frac{\xi^2-(k_s^2-\xi^2)^{1/2}(k_p^2-\xi^2)^{1/2}}{(k_s^2+k_p^2)\xi^2-k_s^2 k_p^2}=O(1)
+\een
+as $\xi\to\infty$. Therefore, a simple computation show that the amplitude function of ${\MyRoman{1}}^{\alpha\beta}_{ij}(z,y)$ denote by $A(\xi)$ can be written as $A(\xi)=\mu/{k_s^3}O(\xi^3)$. Now substituing $\xi=k_s t$ in the integral, the lemma now follows immediately from lemma (\ref{crossterm}). This completes the proof.
 
- A simple computation show that  $A(t)=O(t^3), \  t\to+\infty$. It is obvious that there exit $T,C>0$ which only dependent on $\kappa$
- \be
- |A(t)|\leq Ct^3
- \ee
- when $t>T$. By the convention in (\ref{q1}), it is easy to see
- \be
- \gamma_s(t)=(1+t^2)^{1/4}t^{1/2}(-1+\i)
- \ee
- Cause $\delta(\xi)$ and $\gamma(\xi)$ have no zero point on $\Gamma^+_r$, we have
- \ben
- \hspace{-2.2cm}
- |A_r|\le\frac{1}{\mu}\int_{0}^{+\infty} |A(t)|e^{-ks \Im\gamma_s(t)(z_2+y_2)} dt \\
- \hspace{-1.3cm}
- \le \frac{1}{\mu}\int_{0}^{T} \max_{[0,T]}A(t) e^{-ks \Im\gamma_s(t)(z_2+y_2)} dt + \frac{C}{\mu}\int_T^{+\infty} t^3 e^{-ks \Im\gamma_s(t)(z_2+y_2)} dt \\
- \hspace{-1.3cm}
- =\frac{\max_{[0,T]}A(t)}{\mu}\int_{0}^{T}  e^{-ks (1+t^2)^{1/4}t^{1/2}(z_2+y_2)} dt + \frac{C}{\mu}\int_T^{+\infty} t^3 e^{-ks (1+t^2)^{1/4}t^{1/2}(z_2+y_2)} dt\\
- \hspace{-1.3cm}
- \le\frac{\max_{[0,T]}A(t)}{\mu}\int_{0}^{T}  e^{-ks t(z_2+y_2)} dt + \frac{C}{\mu}\int_T^{+\infty} t^3 e^{-ks t(z_2+y_2)} dt\\
- \hspace{-1.3cm}
- \le \frac{C}{\mu } \sum_{j=1}^{4}(k_s(y_2+z_2))^{-j}
- \een
-where we use integration by parts for last inequatily. The estimate of $A_l$ and the case of $y_1-z_1<0$ can be proved similarly. Thus, we obtain (\ref{re1}) when $i=j=1,\alpha=\beta=s$. The estimation of other term ${\MyRoman{1}}_{\alpha\beta}^{ij}(z,y)$ can be proved similarly via integration by parts argument and the fact that $
-\Im \gamma_s(t) \le \Im \gamma_p(t), \ t>0 $. This completes the proof.
 \finproof
+
 \begin{lem} \label{r_estimate2}
 	For any $z,y\in \R^2_+$,
-	\be\label{re2}
-	|{\MyRoman{2}}^{pp}_{ij}(x,y)|\le\frac{C}{\mu k_s(y_2+z_2)} \\
-	|{\MyRoman{2}}^{sp}_{ij}(x,y)|\le\frac{C}{\mu k_s y_2} \\
-	|{\MyRoman{2}}^{ps}_{ij}(x,y)|\le\frac{C}{\mu k_s z_2}
-	\ee
-	where $C$ is only dependent on $\kappa:=k_p/k_s$.
-\end{lem}
-\debproof
-Substituting (\ref{theta}) and (\ref{ngreen}) into ${\MyRoman{2}}^{pp}$, we have
-\ben
-\hspace{-2cm}
-{\MyRoman{2}}^{pp}(z,y)=\frac{1}{2\pi}\int_{(-k_s,-k_p)\cup(k_p,k_s)} \frac{£­\i k_s^2}{\mu\overline{\gamma(\xi)}\delta(\xi)}
-\Bigg(
-\begin{array}{cc}
-	\xi^2\mu_s & -\xi\mu_s\mu_p \\
-	\xi\mu_s\mu_p & -\mu_s\mu_p^2
-\end{array}		\Bigg)e^{\mathrm{i}\mu_p (z_2+y_2) +\i\xi(z_1-y_1)}
-\een
-let $\xi=k_s t$, we have
-\ben
-\hspace{-3cm}
-|{\MyRoman{2}}^{pp}_{11}|\leq \int_{\kappa}^{1}\frac{\sqrt{(1-t^2)}t^2}{\pi\mu|t^2-\i\sqrt{(t^2-\kappa^2)}\sqrt{(1-t^2)}|(1-2t^2)^2+\i4t^2\sqrt{(t^2-\kappa^2)}\sqrt{(1-t^2)}|}e^{-k_s\sqrt{t^2-\kappa^2}(z_2+y_2)}dt \\
-\leq \frac{C}{\mu}\int_{0}^{1-\kappa}e^{t(z_2+y_2)}dt\leq
-\frac{C}{\mu k_s(y_2+z_2)}
-\een
-where we use the fact that $\gamma(\xi),\delta(\xi)$ have no roots on interval $[k_p,k_s]$, then we can get supremum of amplitude function. The method of estimating other terms are actually same, here we omit detials. This completes the proof.
-\finproof
-\begin{lem} \label{r_estimate3}
-	For any $z,y\in \R^2_+$,
-	\be\label{re3}
-	|{\MyRoman{2}}^{ss}_{ij}(x,y)|\le\frac{C}{\mu}e^{-\sqrt{k_R^2-k_s^2}(y_2+z_2)} \\
-	|{\MyRoman{3}}^{pp}_{ij}(x,y)|\le\frac{C}{\mu}e^{-\sqrt{k_R^2-k_p^2}(y_2+z_2)}\\
-	|{\MyRoman{3}}^{sp}_{ij}(x,y)|\le\frac{C}{\mu}e^{-\sqrt{k_R^2-k_s^2}z_2-\sqrt{k_R^2-k_p^2}y_2}\\
-	|{\MyRoman{3}}^{ps}_{ij}(x,y)|\le\frac{C}{\mu}e^{-\sqrt{k_R^2-k_p^2}z_2-\sqrt{k_R^2-k_s^2}y_2}
+	\be\label{re3}\hspace{-2cm}
+	|{\MyRoman{2}}^{ss}_{ij}(x,y)|\le\frac{C}{\mu}e^{-\sqrt{k_R^2-k_s^2}(y_2+z_2)} \ \ \
+	|{\MyRoman{2}}^{sp}_{ij}(x,y)|\le\frac{C}{\mu}e^{-\sqrt{k_R^2-k_s^2}z_2+\sqrt{k_R^2-k_p^2}y_2}\\ \hspace{-2cm}
+	|{\MyRoman{2}}^{pp}_{ij}(x,y)|\le\frac{C}{\mu}e^{-\sqrt{k_R^2-k_p^2}(y_2+z_2)}\ \ \
+	|{\MyRoman{2}}^{ps}_{ij}(x,y)|\le\frac{C}{\mu}e^{-\sqrt{k_R^2-k_p^2}z_2+\sqrt{k_R^2-k_s^2}y_2}
 	\ee
 	where $C$ is only dependent on $\kappa:=k_p/k_s$.
 \end{lem}
@@ -987,9 +768,37 @@ When $z_1-y_1>0$, we have
 {\MyRoman{2}}^{ss}_{11}&=&-\frac{1}{\mu} Res_{\xi=k_R} \frac{(k_s^2-4\xi^2)\mu_s^2\mu_p}{\gamma(\xi)\delta(\xi)}e^{\i\mu_s (z_2+y_2) +\i\xi(z_1-y_1)} \\
 &=&- \frac{(k_s^2-4\xi^2)\mu_s^2\mu_p}{\mu(\gamma(\xi)\delta(\xi))'}e^{\i\mu_s (z_2+y_2) +\i\xi(z_1-y_1)} |_{\xi=k_R}
 \een
-Eliminating $k_s$ in fraction, we can obtain estimation (\ref{re3}). The other terms can be estimated similarly. This completes the proof.
+Eliminating $k_s$ in fraction, we can obtain estimation (\ref{re3}). The other terms can be estimated similarly, here we omit detials. This completes the proof.
 \finproof
-Now, it turn to estimate $F^{sp}(z,y)$ and $F^{ps}(z,y)$.
+
+\begin{lem}\label{medi_term}
+	Let $f(\xi)$ is a bounded complex valued function in $L^1((\kappa,1))$. Then we have
+	\ben
+	|I(a,b):=\int_{\kappa}^{1}|f(\xi)e^{\i\xi a+\i\mu_\kappa(\xi)b}d\xi|\\
+	\leq C\frac{1}{b}\|f\|_{L^\infty(\kappa,1)}
+	\een
+\end{lem}
+\debproof
+It is simple to see that
+\ben
+|I(a,b)|&\leq& C \int_{\kappa}^{1}e^{-b\sqrt{\xi^2-\kappa^2}}d\xi \\
+&\leq& C\int_{0}^{\sqrt{1-\kappa^2}}\frac{t}{\sqrt{t^2+\kappa^2}}e^{-bt}dt \\
+&\leq& C\frac{1}{b}\|f\|_{L^\infty(\kappa,1)}
+\een
+\finproof
+\begin{lem} \label{r_estimate3}
+	For any $z,y\in \R^2_+$,
+	\be\label{re2}\hspace{-2cm}
+	|{\MyRoman{3}}^{pp}_{ij}(x,y)|\le\frac{C}{\mu k_s(y_2+z_2)} \ \ \
+	|{\MyRoman{3}}^{sp}_{ij}(x,y)|\le\frac{C}{\mu k_s y_2} \ \ \
+	|{\MyRoman{3}}^{ps}_{ij}(x,y)|\le\frac{C}{\mu k_s z_2}
+	\ee
+	where $C$ is only dependent on $\kappa$.
+\end{lem}
+\debproof
+Taking substitution $\xi=k_s t$ and using the fact that $\gamma(\xi),\delta(\xi)$ have no roots on interval $[k_p,k_s]$, then we can get supremum of amplitude function. By lemma \ref{medi_term} with $b=k_s(y+z),k_sy,k_s z$, we can get the estimate immediately. This completes the proof.
+\finproof
+It turn to estimate $F^{sp}(z,y)$ and $F^{ps}(z,y)$.
 \begin{lem}
 	For $0<\kappa<1$, let $F(\lambda)=\int_{0}^{\kappa}f(t)e^{\i\lambda(\sqrt{1-t^2}-\tau\sqrt{\kappa^2-t^2}+\alpha t)}dt$, where $\tau\geq c_0>0$ and $\alpha\in\R$, then we have
 	\ben
@@ -1035,58 +844,23 @@ Therefore, $\psi^{(2N_*)}(t,\tau)$ is monotone increasing in $[0,\kappa)$. By (\
 \ee
 The lemma is now a direct consequence of lemma (\ref{van}).
 \finproof
-The parameterization of hyperbolic curve passing $(\pm1,0)$ is:
-\ben
-\xi_1=\pm\sqrt{t^2+1} \ \ \ \ \xi_2= t
-\een
-where $t\in\R$. Substituting $\xi=\xi_1+\i\xi_2$ into $\mu(\xi):=(1-\xi^2)^{1/2}$ and $\mu_\kappa(\xi):=(\kappa^2-\xi^2)^{1/2}$, we get
-\ben
-\Im\mu(\xi)&=&\Im(1-(\xi_1^2-\xi_2^2+\i2\xi_1\xi_2))^{1/2}\\&=&\Im(-2t\sqrt{t^2+1}\i)^{1/2}=t^{1/2}(t^2+1)^{1/4}
-\een
-\ben
-\Im\mu_\kappa(\xi)&=&\Im(\kappa^2-(\xi_1^2-\xi_2^2+\i2\xi_1\xi_2))^{1/2}\\&=&\Im(\kappa^2-1-2t\sqrt{t^2+1}\i)^{1/2}\\ &=&\sqrt{\frac{\sqrt{(1-\kappa^2)^2+4t(t^2+1)}+1-\kappa^2}{2}}\\
-&\geq&t^{1/2}(t^2+1)^{1/4}
-\een
-where we only consider the branch, denoted by $\Gamma^+$, in the first quadrant here. For $a>0,b>0$, we have
-\ben
-|e^{\i\xi a+\i\mu(\xi)b+\i\mu_\kappa(\xi)c}|\leq e^{-ta-t^{1/2}(t^2+1)^{1/4}b-t^{1/2}(t^2+1)^{1/4}c}\leq e^{-t(b+c)} 
-\een 
-\begin{lem}
-	For $\xi\in\Gamma_0$, let $f(\xi)$ is a complex valued function in $L^1(\Gamma^+)$ such that $|f(\xi)|\leq C(1+\xi^k)$, $k\in \Z_+$. Then we have
-	\ben
-	|I(a,b,c):=\int_{\Gamma^+}f(\xi)  \ e^{\i\xi a+\i\mu(\xi)b+\i\mu_\kappa(\xi)c} \ d\xi| \\
-	\leq C(\frac{1}{b+c}+\frac{1}{(b+c)^k})
-	\een
+\begin{lem} \label{r_estimate4}
+	For any $z,y\in \Om$,
+	\be
+	|F^{sp}_{ij}(x,y)|\le\frac{C}{\mu }\frac{1}{(k_s h)^{\frac{1}{2n^*}}} \ \ \
+	|F^{ps}_{ij}(x,y)|\le\frac{C}{\mu }\frac{1}{(k_s h)^{\frac{1}{2n^*}}}
+	\ee
+	where $C$ is only dependent on $\kappa$.
 \end{lem}
 \debproof
-\ben
-\frac{d\xi(t)}{dt}=\frac{t}{\sqrt{t^2+1}}+\i
-\een
-Substituting $\xi(t)$ into $I(a,b,c)$, we hvae
-\ben
-|I(a,b,c)|&=&\Big|\int_{0}^{\infty}|f(\xi(t))\frac{d\xi(t)}{dt}e^{\i\xi(t) a+\i\mu(\xi(t))b+\i\mu_\kappa(\xi(t))c}dt \Big| \\
-&\leq&C\int_{0}^{\infty}(1+t^k) e^{-t(b+c)} dt\\
-&\leq& C(\frac{1}{b+c}+\frac{1}{(b+c)^k})
-\een
+
 \finproof
-\begin{lem}
-	Let $f(\xi)$ is a bounded complex valued function in $L^1((\kappa,1))$. Then we have
-	\ben
-	|I(a,b):=\int_{\kappa}^{1}|f(\xi)e^{\i\xi a+\i\mu_\kappa(\xi)b}d\xi|\\
-	\leq C\frac{1}{b}
-	\een
-\end{lem}
-\debproof
-It is simple to see that
-\ben
-|I(a,b)|&\leq& C \int_{\kappa}^{1}e^{-b\sqrt{\xi^2-\kappa^2}}d\xi \\
-&\leq& C\int_{0}^{\sqrt{1-\kappa^2}}\frac{t}{\sqrt{t^2+\kappa^2}}e^{-bt}dt \\
-&\leq& C\frac{1}{b}
-\een
-\finproof
+Now we are in the position to prove the main theorem of this section.
+
+{\it \bf proof of Theorem \ref{thm_psf}}. The theorem now follows from lemma \ref{r_estimate1}, lemma \ref{r_estimate2}, lemma \ref{r_estimate3} and lemma
 
 
-To complete the analysis of the point spread function, Let $F(z,y)=F_{ss}(z,y)+F_{pp}(z,y)$, where
+To complete the analysis of the point spread function, Substitute (\ref{theta}) and (\ref{ngreen}) into  $F_{ss}(z,y),F_{pp}(z,y)$:
 \ben
 \hspace{-2cm}
 F^{pp}(z,y)=-\frac{1}{2\pi}\int_{(-k_p,-k_p)} \frac{\i k_s^2\mu_s}{\mu\gamma(\xi)\delta(\xi)}
@@ -1110,8 +884,7 @@ F^{ss}(z,y)=-\frac{1}{2\pi}\int_{(-k_p,-k_p)} \frac{\i k_s^2\mu_p}{\mu\gamma(\xi
 \end{array}		\Bigg)e^{\mathrm{i}\mu_s (z_2-y_2) +\i\xi(y_1-z_1)} \\
 :=F^{ss1}(z,y)+F^{ss2}(z,y)
 \een
-and $R(z,y)=R^{ss}(z,y)+R^{pp}(z,y)+J^{sp}(z,y)+J^{ps}(z,y)$. Then we have $J(z,y)=F(z,y)+R(z,y)$. By the lemma \ref{r_estimate1}-\ref{r_estimate3} and lemma \ref{f_estimate}, the main contribution to the point spread
-function is from $F(z,y)$ when $z,y$ far away from $\Gamma_0$. Based on the above argument, we know that $R(z,y)$ becomes small when z,y move away from $\Gamma_0$. Our goal is to show $F(z,y)$ has the similar decay to the elastic fundamental solution $\Im\Phi(z,y)$ as $|z-y|\to\infty$.
+Based on the above argument, we know that $R(z,y)$ becomes small when z,y move away from $\Gamma_0$. Our goal is to show $F(z,y)$ has the similar decay to the elastic fundamental solution $\Im\Phi(z,y)$ as $|z-y|\to\infty$.
 
 \begin{lem} \label{festimate1}
 	For any $z,y\in \R_+^2$, when $z=y$
@@ -1148,8 +921,8 @@ F^{pp}(z,y)=\frac{1}{\mu}\int_{0}^{\pi} A(\theta,\kappa) e^{\i k_s |z-y| \cos(\t
 The phase function $f(\theta)=\cos(\theta-\phi)$ satisfies $f'(\theta)=-\sin(\theta-\phi),f''(\theta)=-\cos(\theta-\phi)$. For any given $0\le\phi\le2\pi$, we can decompose $[0,\pi]$ into several intervals such that in each either $|f''(\theta)|\ge 1/2$ or $|f'(\theta)|\ge 1/2$ and $f'(\theta)$ is monotonous. The amplitude function $A(\theta,\kappa)$ and their derirates are integrable on $[0,\pi]$. Then the estimate for $F_{pp}(z,y)$ follows by using lemma \ref{van}. The estimation of $F^{ss}(z,y)$ can be proved similarly. This completes the proof.
 \finproof
 
-By (\ref{q0}), we arrive at the following consequence of Lemma 3.1 and Lemma 3.3 whcih will be used in the next section.
-\begin{cor}
+By (\ref{q0}), we obtain the following consequence of Lemma 3.1 and Lemma 3.3 whcih will be used in the next section.
+\begin{cor}\label{cor_psf}
 	There exists a constant C independent of $k_s$, h such that
 	\ben\hspace{-2cm}
 	\|F(z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(F(z,\cdot))\cdot\nu\|_{H^{1/2}(\Gamma_D)}
@@ -1179,7 +952,7 @@ where $\rho=\sqrt{(x_1-z_1)^2+z_2^2}$ and $z\in\Omega,x\in \Gamma_0\bks(-d,d)$.
 	where the constant C is only dependent on $\kappa$.
 \end{thm}
 \debproof
-By lemma \ref{es_ngreen}, lemma \ref{es_dgreen2} and $k_s h\geq 1$, we have
+By lemma \ref{es_ngreen}, lemma \ref{es_dgreen} and $k_s h\geq 1$, we have
 \ben
 \Bigg| \int_{d}^{\infty} (T_D(x_1,0;z_1,z_2))^T\overline{N(x_1,0;y_1,y_2)}dx_1
 \Bigg| \\
@@ -1193,11 +966,11 @@ By lemma \ref{es_ngreen}, lemma \ref{es_dgreen2} and $k_s h\geq 1$, we have
 Here we have used the first inequeality in (\ref{om_bound}). Similarly, we can prove that the estimate for te integral in $[-\infty,-d]$. This shows the estimate for $J(z,y)-J_d(z,y)$. The estimate for $\nabla_y(J(z,y)-J_d(z,y))$ can be proved similarly.
 \finproof
 By (\ref{q0}) we obtain the following corollary
-\begin{cor}
-	There exists a constant C independent of $k_s$, h such that
+\begin{cor}\label{cor_dpsf}
+		Assume $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$ and $k_s h\geq 1$. There exists a constant C independent of $k_s$, h such that
 	\ben\hspace{-2cm}
 	\|J(z,\cdot)-J_d (z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(J(z,\cdot)-J_d (z,\cdot))\cdot\nu\|_{H^{1/2}(\Gamma_D)} \\
-	\leq \frac{C}{\mu} ((\frac{h}{d})^{2}+\frac{(k_s h)^{1/2}}{ e^{\sqrt{k_r^2-k_s^2}h}}(\frac{h}{d})^{1/2})(1+kd_D)
+	\leq \frac{C}{\mu} ((\frac{h}{d})^{2}+\frac{(k_s h)^{1/2}}{ e^{\sqrt{k_r^2-k_s^2}h}}(\frac{h}{d})^{1/2})(1+k_sd_D)
 	\een
 	uniformly for $z\in\Om$, where $d_D$ is the diameter of the obstacle D.	
 \end{cor}
@@ -1205,7 +978,17 @@ By (\ref{q0}) we obtain the following corollary
 \section{The resolution analysis}
 In this section we study the imaging resolution of the RTM for the Dirichlet boundary obstacle in the half space.
 \begin{thm}
-For any $z\in\Omega$
+For any $z\in\Omega$, let $\Phi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
+\ben
+& & \Delta_e \Phi(y,z) + \omega^2\Phi= 0 \ \ \ \ \mbox{in }\R_+^2\bks \bar{D}\\
+& &\Phi(y,z)= -\overline{F(z,y)} \ \ \ \ \ \ \ \mbox{on} \ \Ga_D  \\ 
+& & \sigma_y(\Phi(y,z))\cdot e_2=0 \ \ \ \ \ \ \ \mbox{on} \ \Ga_0
+\een
+Then, we have
+\be
+\hat{I}_d(z)=\Im\mathbf{tr}\{\int_{\Ga_D} [T^{\nu}_y(\overline{F(z,y)}+\Phi(y,z)]\overline{F(z,y)}ds(y)\}+W_{\hat{I}}(z)
+\ee
+where $|W_{\hat{I}}(z)|\leq C(1+k_s d_D)()$ uniformly for z in $\Om$.
 \end{thm}
 \debproof
 By the integral representation, we have,
@@ -1213,7 +996,7 @@ By the integral representation, we have,
 u^s_k(x_r,x_s)=\int_{\Gamma_D}(T^{\nu}_y N(y,x_r))^Tu^s_k(y,x_s)-G(x_r,y)(T^{\nu}_y u^s_k(y,x_s)) ds(y)
 \ee
 where $u^s_k(x,x_s)+N(x,x_s)e_k=0$.
-From (\ref{fapsf}) we get for any $z\in\Omega$,
+From (\ref{fullpsf}) we get for any $z\in\Omega$,
 \ben\hspace{-1cm}
 v_k(z,x_s)&=&\int_{\Gamma_0^d}(T^{e_2}_{x_r}D(x_r,z))^T\overline{u^s_k(x_r,x_s)}ds(x_r) \\
 &=&\int_{\Gamma_D}ds(y)\Big(\int_{\Gamma_0^d}(T^{e_2}_{x_r}D(x_r,z))^T\overline{(T^{\nu}_y N(y,x_r))^T}ds(x_r)\Big)\overline{ u^s_k(y,x_s) }\\
@@ -1233,9 +1016,9 @@ where we use the fact $(\sigma_x(A(x))\nu)B=\sigma_x(A(x)B)\nu$ above. By the de
 &=&\Im\int_{\Gamma_D} ds(y)\sum_{k=1}^{2}\mathbf{tr}\Big((T^{\nu}_y J^T_d(z,y))^T\int_{\Gamma_0^d}
 \overline{ u^s_k(y,x_s) } e_k^T T^{e_2}_{x_s}D(x_s,z)\\
 & &-J_d(z,y)\int_{\Gamma_0^d}\overline{(T^{\nu}_y u^s_k(y,x_s))} e_k^T T^{e_2}_{x_s}D(x_s,z)\Big) \\
-&=&\Im\int_{\Gamma_d} ds(y)\mathbf{tr}\Big((T^{\nu}_y J^T_d(z,y))^T \sum_{k=1}^{2} W_k(y,z)\\
+&=&\Im\int_{\Gamma_D} ds(y)\mathbf{tr}\Big((T^{\nu}_y J^T_d(z,y))^T \sum_{k=1}^{2} W_k(y,z)\\
 & &-J_d(z,y)(T^{\nu}_y \sum_{k=1}^{2}W_k(y,z))\Big) \\
-&=&\Im\int_{\Gamma_d} \mathbf{tr}\Big((T^{\nu}_y J^T_d(z,y))^T W(y,z)-J_d(z,y)(T^{\nu}_y W(y,z))\Big)ds(y)
+&=&\Im\int_{\Gamma_D} \mathbf{tr}\Big((T^{\nu}_y J^T_d(z,y))^T W(y,z)-J_d(z,y)(T^{\nu}_y W(y,z))\Big)ds(y)
 \een
 where
 \be
@@ -1262,14 +1045,15 @@ W(y,z)&=&\sum_{k=1}^{2}\int_{\Gamma_0^d}
  & & \sigma_y(W_d(y,z))\cdot e_2=0 \ \ \mbox{on} \ \Ga_0
  \ee
 \be\hspace{-1.5cm}
-\hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_d}(T^{\nu}_y J^T_d(z,y))^T \overline{\Psi(y,z)}-J_d(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+R_{\hat{I}}(z)
+\hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y J^T_d(z,y))^T \overline{\Psi(y,z)}-J_d(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+R_{\hat{I}}(z)
 \ee
 where
 \be\hspace{-1.5cm}
-R_{\hat{I}}(z)=\Im\mathbf{tr}\int_{\Gamma_d}(T^{\nu}_y J^T_d(z,y))^T W_d(y,z)-J_d(z,y)(T^{\nu}_y W_d(y,z))ds(y)
+R_{\hat{I}}(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y J^T_d(z,y))^T W_d(y,z)-J_d(z,y)(T^{\nu}_y W_d(y,z))ds(y)
 \ee
 \finproof
-
+\section{Extensions}
+\section{Numerical experiments}
 \section*{References}
 \bibliography{eee}
 \end{document}
