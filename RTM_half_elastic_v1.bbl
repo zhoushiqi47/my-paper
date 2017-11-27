@@ -78,6 +78,12 @@ Jon~F Claerbout.
 \newblock Imaging the earth's interior.
 \newblock 1985.
 
+\bibitem{colton-kress}
+David Colton and Rainer Kress.
+\newblock {\em Inverse acoustic and electromagnetic scattering theory},
+  volume~93.
+\newblock Springer Science and Business Media, 2012.
+
 \bibitem{Yves1988}
 Yves Dermenjian and Jean~Claude Guillot.
 \newblock Scattering of elastic waves in a perturbed isotropic half space with
@@ -91,11 +97,6 @@ Mario Dur{\'a}n, Ignacio Muga, and Jean-Claude N{\'e}d{\'e}lec.
   boundary.
 \newblock {\em SIAM Journal on Applied Mathematics}, 71(2):443--464, 2011.
 
-\bibitem{Evans2010}
-Lawrence~C Evans.
-\newblock {\em Partial differential equations. 2nd ed}.
-\newblock Marcel Dekker, 2010.
-
 \bibitem{grafakos}
 Loukas Grafakos.
 \newblock {\em Classical and modern Fourier analysis}.
@@ -105,6 +106,12 @@ Loukas Grafakos.
 Johng. Harris.
 \newblock {\em Linear elastic waves}.
 \newblock Cambridge University Press, 2001.
+
+\bibitem{kupradze1963progress}
+Viktor~D Kupradze.
+\newblock {\em Progress in solid mechanics. 3. Dynamical problems in
+  elasticity}.
+\newblock North-Holland Publishing Company, 1963.
 
 \bibitem{leis}
 Rolf Leis.
@@ -121,17 +128,17 @@ Mourad Sini.
 \newblock Absence of positive eigenvalues for the linearized elasticity system.
 \newblock {\em Integral Equations and Operator Theory}, 49(2):255--277, 2004.
 
-\bibitem{Zhang08}
-J.~Sun, Y.~Zhang, J.~Sun, and Y.~Zhang.
-\newblock Practical issues of reverse time migration: true amplitude gathers,
-  noise removal and harmonic-source encoding.
-\newblock {\em Aseg Extended Abstracts}, 2009(3):397--398, 2008.
-
 \bibitem{wilcox1975}
 Calvin~H. Wilcox.
 \newblock {\em Scattering Theory for the d'Alembert Equation in Exterior
   Domains}.
 \newblock PhD thesis, Springer Berlin Heidelberg, 1975.
+
+\bibitem{Zhang08}
+Yu. Zhang and James. Sun.
+\newblock Practical issues of reverse time migration: true amplitude gathers,
+  noise removal and harmonic-source encoding.
+\newblock {\em Aseg Extended Abstracts}, 2009(3):397--398, 2008.
 
 \bibitem{Zhang2007}
 Yu~Zhang, Sheng Xu, Norman Bleistein, and Guanquan Zhang.
