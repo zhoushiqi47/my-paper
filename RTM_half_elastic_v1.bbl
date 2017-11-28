@@ -73,6 +73,12 @@ Zhiming Chen and Guanghui Huang.
   half space.
 \newblock {\em Inverse Problems}, 31(5):055007, 2015.
 
+\bibitem{chung2012implementation}
+Wookeen Chung, Sukjoon Pyun, Ho~Seuk Bae, Changsoo Shin, and Kurt~J Marfurt.
+\newblock Implementation of elastic reverse-time migration using wavefield
+  separation in the frequency domain.
+\newblock {\em Geophysical Journal International}, 189(3):1611--1625, 2012.
+
 \bibitem{claerbout1985imaging}
 Jon~F Claerbout.
 \newblock Imaging the earth's interior.
@@ -83,6 +89,12 @@ David Colton and Rainer Kress.
 \newblock {\em Inverse acoustic and electromagnetic scattering theory},
   volume~93.
 \newblock Springer Science and Business Media, 2012.
+
+\bibitem{denli2008elastic}
+H~Denli and L~Huang.
+\newblock Elastic-wave reverse-time migration with a wavefield-separation
+  imaging condition: 78th annual international meeting, seg, expanded
+  abstracts, 2346--2350, 2008.
 
 \bibitem{Yves1988}
 Yves Dermenjian and Jean~Claude Guillot.

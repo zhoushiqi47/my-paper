@@ -35,8 +35,8 @@
 	obstacles in the half space with finite aperture data using elastic waves at a fixed
 	frequency. We prove the resolution of the reconstruction method in terms of the
 	aperture and the depth of the obstacle embedded in the half space. The resolution
-	analysis implies that the imaginary part of the cross-correlation imaging function
-	always peaks on the illuminated boundary of the obstacle. Numerical experiments
+	analysis studied by virtue of point spread function implies that the imaginary part of the cross-correlation imaging function
+	always peaks on the boundary of the obstacle. Numerical experiments
 	are included to illustrate the powerful imaging quality and to confirm our resolution
 	results. 
 \end{abstract}
@@ -171,6 +171,8 @@ For simplicity, let's introduce \emph{Lam\'{e}} operator $\Delta_e$ as
 \een
 The equation (\ref{elastic_eq}) is understood as the limit when $x_s\in\R_+^2\bks \bar{D}$ tends to $\Ga_0$ whose precise meaning will be given below after we introduce the Neumann Green Tensor and the definition of the radiation condition.
 
+
+
 The reverse time migration (RTM) method, which consists of back-propagating
 the complex conjugated data into the background medium and computing the crosscorrelation between the incident wave field and the backpropagated field to output the
 final imaging profile, is nowadays widely used in exploration geophysics \cite{baysal1983reverse,berkhout2012seismic,bleistein2013mathematics,chang1987elastic,claerbout1985imaging}. In \cite{chen2013reverse_acou,chen2013reverse_elec,chen2015reverse_elas},
@@ -180,6 +182,14 @@ analysis in \cite{chen2013reverse_acou,chen2013reverse_elec,chen2015reverse_elas
 assumption previously made in the literature (e.g. \cite{ammari2013mathematical,bleistein2013mathematics}). In \cite{chen2015reverse_planar}, a new RTM algorithm
 is developed for finding extended targets in a planar waveguide which is motivated by
 the generalized Helmholtz-Kirchhoff identity for scattering problems in waveguides.
+
+For the isotropic elastic media, one can process the elastic data either by separating P-wave and S-wave using Helmholtz decomposition and migrating each mode using methods based on acoustic
+wave theory \cite{chung2012implementation,denli2008elastic}, or by migrating the whole elastic data set based on full elastic wave
+equation in the geophysical exploration community. In this paper, we adapt the cross-correlation between all the component of the source
+and receiver displacement wavefield, which is a mixture of P-wave and S-wave. And
+this kind condition can be easily extended to inhomogeneous elastic medium and
+even anisotropic elastic wave imaging. The purpose of this paper is to provide a new mathematical understanding of the RTM method by extending \cite{RTMhalf_aco} where RTM method for extended targets in the half space using acoustic wave is considered.  Compared to the scalar acoustic
+wave imaging, the vector elastic wave imaging is more complex due to a mixture of P-wave and S-wave mode. However, the virtue of the latter method is no longer need to separate the scalar and vector potentials  prior to the imaging condition.
 
 The layout of the paper is as follows. In section 2 we study the two Green Tensor for
 the scattering problem in the half space satisfying the homogeneous Neumann condition and Dirichlet condition on $\Ga_0$. We recall the derivation of the Green
@@ -317,7 +327,7 @@ where
 			\mu_s\beta & \xi\beta \\
 			2\xi\mu_s\mu_p & 2\xi^2\mu_p
 		\end{array} \Bigg)e^{\i\mu_s y_2} \Bigg] \\
-	  &=&\Np(\xi)e^{\i\mu_p y_2}+\Ns(\xi)e^{\i\mu_s y_2}
+	  &:=&\Np(\xi)e^{\i\mu_p y_2}+\Ns(\xi)e^{\i\mu_s y_2}
 \ee
 and let $N_r(x_1;y_1,y_2)$ denote the first part of $N$ and $N_s(x_1;y_1,y_2)$ denote the second part of $N$ in (\ref{Ngreen}).
 
@@ -394,7 +404,7 @@ where
 	-\xi\mu_s & \mu_p\mu_s
 	\end{array} \Bigg)e^{\i\mu_p y_2}
 	\Bigg]	\\
-	 &=&\Tp(\xi)e^{\i\mu_p y_2}+\Ts(\xi)e^{\i\mu_s y_2}
+	 &:=&\Tp(\xi)e^{\i\mu_p y_2}+\Ts(\xi)e^{\i\mu_s y_2}
 \ee
 
 To analysis the point spread function in the section 5, we should give asymptotic anslysis for $N(x_1,0,y)$ and $T_D(x_1,0;y)$. We need the following slight generalization of Van der Corput lemma for the oscillatory integral \cite[P.152]{grafakos}.
@@ -576,7 +586,7 @@ In this section we introduce the following stability estimate of the forward ela
 	\|u\|_{H^{1}(\mathcal O)}\le C\|g\|_{H^{-1/2}(\Ga_D)}
 	\ee
 \end{thm}
-The existence of the solution can be proved by the method of limiting absorption principle. The argument is standard and we give several lemmas below, see e.g. \cite{leis} for the consideration for Helmholtz equation. For any $z=1+\i\ep,\ep>0$, $f\in H^{1}(\R^2_+)'$ with compact support in $B_R=\{x||x|^2<R^2,x\in\R^2_+\}\subsetneq\R_+^2$ where $B_R$ is a disk of radius R , we consider the problem
+The existence of the solution can be proved by the method of limiting absorption principle. The argument is standard and we give several lemmas below, see e.g. \cite{leis} for the consideration for Helmholtz equation. For any $z=1+\i\ep,\ep>0$, $f\in H^{1}(\R^2_+)'$ with compact support in $B_R=\{x||x|^2<R^2,x\in\R^2_+\}\subsetneq\R_+^2$ where $B_R$ is an half disc of radius R , we consider the problem
 \be \label{elastic_eqz}
 \Delta_e u_z +z\omega^2 u =-f \qquad\mbox{\rm in } \R^2_+ \\
 \sigma(u_z)e_2=0 \ \ \ \ \mbox{\rm on} \ \ \ \  \Ga_0 \label{elastic_b0}
@@ -650,7 +660,7 @@ for any $g \in H^{1/2}(\Ga_D)$ and $\eps >0$. If it were false, there would exis
 \ee
 Then $\|u_{\eps_m}\|_{H^{1,-s} ( \R^2_+ \backslash \bar{D})}\le C $, and thus there is a subsequence of $\{\eps_m\}$, which is
 still denoted by $\{\eps_m\}$, such that $\eps_m \to \eps' \in [0,1]$, and a subsequence of $\{u_{\eps_m}\}$,
-which is still denoted by $\{u_{\eps_m}\}$, such that it converges to some $u_{\eps'}$ in ${H^{1,-s'} ( \R^2_+ \backslash \bar{D})}$ by choosing $s'>s$. This is a consequence of Korn's inequality and Rellich theorem. So $u_{\eps'} \in H^{1,-s'}(\R^2_+ \backslash \bar D)$ satisfies (\ref{elas_z1}-\ref{elas_zb0}) with $g=0$ and $\eps=\eps'$.
+which is still denoted by $\{u_{\eps_m}\}$, such that it converges to some $u_{\eps'}$ in ${H^{1,-s'} ( \R^2_+ \backslash \bar{D})}$ by choosing $s'>s$. This is a consequence of Korn's inequality and lemma \ref{relli_embed}. So $u_{\eps'} \in H^{1,-s'}(\R^2_+ \backslash \bar D)$ satisfies (\ref{elas_z1}-\ref{elas_zb0}) with $g=0$ and $\eps=\eps'$.
 
 By the integral representation satistied by $u_{\eps_m}$, we know that for $y\in \R^2_+\backslash\bar B_{R_1}$ and $i=1,2$
 \be \ \hspace{-2cm} \label{green_rep}
@@ -674,7 +684,7 @@ Thus there is a subsequence of $\{\mu_n\}$, which is still denoted by $\{\mu_n\}
 \|u_{\mu_n}-u_\epsilon\|_{H^{1,-s'}(\R^2_+ \bks \bar D)} \to 0 \\
 \|u_{\nu_n}-v_\epsilon\|_{H^{1,-s'}(\R^2_+ \bks \bar D)} \to 0
 \een
-and $u_\epsilon=v_\epsilon$ by the same arguement in lemma \ref{global_elas_bd} which is contradict a contradiction. Thus we have proved $u_\eps$ is uniformly continuously for $\eps \in (0,1)$. Then it is easy to see $u_\eps$ has a limitation in ${H^{1,-s}(\R^2_+ \bks \bar D)} $ and the estimation of $u_0$ can be obtained by (\ref{elas_ineq5}). This completes the proof.
+and $u_\epsilon=v_\epsilon$ by the same arguement in lemma \ref{global_elas_bd} which leads to a contradiction. Thus we have proved $u_\eps$ is uniformly continuously for $\eps \in (0,1)$. Then it is easy to see $u_\eps$ has a limitation in ${H^{1,-s}(\R^2_+ \bks \bar D)} $ and the estimation of $u_0$ can be obtained by (\ref{elas_ineq5}). This completes the proof.
 \finproof
 It is remain to prove the uniqueness in theorem \ref{elastic_eq2}. Actually, it can be obtained following the existence of solution with any $g\in H^{1/2}(\Ga_D)$.
 
@@ -701,7 +711,7 @@ In this section we introduce RTM method for inverse elastic scattering problems 
 |x_2|\leq c_3 h    \ \ \ \forall x,y \in \Omega
 \ee
 
-Our RTM algorithm consists of two steps \cite{Zhang08,Zhang2007}. The first step \cite{ela_reverse} is the back-propagation in which we back-propagate the complex conjugated data $\overline{u^s(x_r,x_s)}$ as the Dirichlet boundary condition into the domain. The second step is the cross-correlation in which we compute the imaginary part of the cross-correlation of the back-propagated field and the incoming wave which uses the source as the boundary codition on $\Gamma_0$.
+Our RTM algorithm consists of two steps \cite{ela_reverse,Zhang08,Zhang2007}. The first step is the back-propagation in which we back-propagate the complex conjugated data $\overline{u^s(x_r,x_s)}$ as the Dirichlet boundary condition into the domain. The second step is the cross-correlation in which we compute the imaginary part of the cross-correlation of the back-propagated field and the incoming wave which uses the source as the boundary codition on $\Gamma_0$.
 \begin{alg}{\sc (Reverse time migration algorithm)}\\
 Given the data $u_k^s(x_r,x_s)$, $k=1,2$ which is the measurement of the scattered field at $x_r$ when the source is emitted at $x_s$ in the  polarized direction $e_k$, $s=1,\dots, N_s$ and $r=1,\dots,N_r$. \\	
 $1^\circ$ Back-propagation: For $s=1,\dots,N_s$ and k=1,2, compute the back-propagation field
@@ -841,7 +851,7 @@ where $t\in\R$. We only consider the curve in the upper halp plane, denoted by $
 &\geq&t^{1/2}(t^2+1)^{1/4}
 \ee 
 \begin{lem}\label{hyer_term}
-	For $\xi\in\Gamma_0$, let $f(\xi)$ is a complex valued function in $L^1(\Gamma^+)$ such that $|f(\xi)|\leq C(1+\xi^k)$, $k\in \Z_+$. Then for $a,b,c>0$, we have
+	For $\xi\in\Gamma_0$, let $f(\xi)$ be a complex valued function in $L^1(\Gamma^+)$ such that $|f(\xi)|\leq C(1+\xi^k)$, $k\in \Z_+$. Then for $a,b,c>0$, we have
 	\ben
 	|I(a,b,c):=\int_{\Gamma^+}f(\xi)  \ e^{\i\xi a+\i\mu(\xi)b+\i\mu_\kappa(\xi)c} \ d\xi| \\
 	\leq C(\frac{1}{b+c}+\frac{1}{(b+c)^{k+1}})
@@ -910,7 +920,7 @@ Eliminating $k_s$ in fraction, we can obtain estimation (\ref{re3}). The other t
 \finproof
 
 \begin{lem}\label{medi_term}
-	Let $f(\xi)$ is a bounded complex valued function in $L^1((\kappa,1))$. Then we have
+	Let $f(\xi)$ be a bounded complex valued function in $L^1((\kappa,1))$. Then we have
 	\ben
 	|I(a,b):=\int_{\kappa}^{1}|f(\xi)e^{\i\xi a+\i\mu_\kappa(\xi)b}d\xi|\\
 	\leq C\frac{1}{b}\|f\|_{L^\infty(\kappa,1)}
@@ -1194,7 +1204,7 @@ On the boundary of the obstacle $\Gamma_D$, we have
  \ee
  By theorem \ref{elastic_eq2} and Corollaries \ref{cor_psf}-\ref{cor_dpsf} we have
 \be\nn
- 	\|\sigma(W_d(\cdot,z))\cdot\nu\|_{H^{1/2}(\Gamma_D)}&\leq& 	\|F(z,\cdot)-J_d^T(z,\cdot)\|_{H^{1/2}(\Gamma_D)}\\ \label{W_ineq}
+ 	\|\sigma(W_d(\cdot,z))\cdot\nu\|_{H^{1/2}(\Gamma_D)}&\leq& 	\|F^T(z,\cdot)-J_d^T(z,\cdot)\|_{H^{1/2}(\Gamma_D)}\\ \label{W_ineq}
  	&\leq&  C(1+k_s d_D)(\epsilon_1(k_s h)+\epsilon_2(k_s h))
 \ee
 \be\hspace{-1.5cm}\label{I_d}
