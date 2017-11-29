@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  28 NOV 2017 19:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  29 NOV 2017 11:40
 entering extended mode
 **./RTM_half_elastic_v1.tex
 (RTM_half_elastic_v1.tex
@@ -202,22 +202,22 @@ uting the
  []
 
 [2] [3]
-Overfull \hbox (8.24463pt too wide) in alignment at lines 228--238
+Overfull \hbox (8.24463pt too wide) in alignment at lines 225--235
  [] [] [] [] 
  []
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 424--427
+Underfull \hbox (badness 10000) in paragraph at lines 421--424
 
  []
 
 [6] [7]
-Overfull \hbox (14.33205pt too wide) in alignment at lines 496--502
+Overfull \hbox (14.33205pt too wide) in alignment at lines 493--499
  [] [] [] [] 
  []
 
 [8]
-Underfull \hbox (badness 2573) in paragraph at lines 520--522
+Underfull \hbox (badness 2573) in paragraph at lines 517--519
 \OT1/cmr/m/n/12 Therefore, the estimate of $\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12
  (\OML/cmm/m/it/12 x[]; \OT1/cmr/m/n/12 0; \OML/cmm/m/it/12 y[]; y[]\OT1/cmr/m/
 n/12 )$ and $\OML/cmm/m/it/12 N\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; \OT1/cmr/
@@ -225,79 +225,81 @@ m/n/12 0; \OML/cmm/m/it/12 y[]; y[]\OT1/cmr/m/n/12 )$ are now direct
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 554--559
+Underfull \hbox (badness 10000) in paragraph at lines 551--556
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--570
+Underfull \hbox (badness 10000) in paragraph at lines 564--567
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 611--614
+Underfull \hbox (badness 10000) in paragraph at lines 608--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 619--622
+Underfull \hbox (badness 10000) in paragraph at lines 616--619
 
  []
 
 [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 702--705
+Underfull \hbox (badness 10000) in paragraph at lines 699--702
 
  []
 
 [13] [14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 874--876
+Underfull \hbox (badness 10000) in paragraph at lines 873--875
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 897--898
-
- []
-
-
-LaTeX Warning: Reference `re3' on page 18 undefined on input line 919.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 918--921
+Underfull \hbox (badness 10000) in paragraph at lines 896--897
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 935--937
+Underfull \hbox (badness 10000) in paragraph at lines 917--920
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--936
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 995--998
+Underfull \hbox (badness 10000) in paragraph at lines 994--997
 
  []
 
 [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1078--1081
+Underfull \hbox (badness 10000) in paragraph at lines 1077--1080
 
  []
 
-[22] [23] [24]
-Overfull \hbox (1.49817pt too wide) in alignment at lines 1222--1226
+[22]
+Overfull \hbox (19.03502pt too wide) in alignment at lines 1128--1131
+ [] [] [] [] 
+ []
+
+[23] [24]
+Overfull \hbox (1.49817pt too wide) in alignment at lines 1221--1225
  [] [] [] [] 
  []
 
 
-Overfull \hbox (26.1054pt too wide) in alignment at lines 1229--1231
+Overfull \hbox (26.1054pt too wide) in alignment at lines 1228--1230
  [] [] [] [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1235--1237
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1236
 
  []
 
-[25] (RTM_half_elastic_v1.bbl
+(RTM_half_elastic_v1.bbl
 Missing character: There is no ¨ in font cmr10!
  [26]
 Underfull \hbox (badness 1810) in paragraph at lines 77--81
@@ -306,35 +308,32 @@ Kurt J Marfurt.
  []
 
 Missing character: There is no ¨ in font cmr10!
-) [27] (RTM_half_elastic_v1.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) [27] (RTM_half_elastic_v1.aux) ) 
 Here is how much of TeX's memory you used:
- 2529 strings out of 495237
- 29921 string characters out of 3182726
- 99541 words of memory out of 3000000
- 5761 multiletter control sequences out of 15000+200000
+ 2528 strings out of 495237
+ 29917 string characters out of 3182726
+ 101541 words of memory out of 3000000
+ 5760 multiletter control sequences out of 15000+200000
  14784 words of font info for 57 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,14n,26p,769b,241s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmbx8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:
-/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmmi6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/CTEX/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pf
-b><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTE
-X/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/CTEX/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-tt10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/latxfont/lasy10.pfb><C:/CT
-EX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on RTM_half_elastic_v1.pdf (27 pages, 409385 bytes).
+ 38i,14n,26p,769b,239s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/CTEX/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmcsc10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cme
+x10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/CTEX/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.
+pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/ams
+fonts/latxfont/lasy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb>
+Output written on RTM_half_elastic_v1.pdf (27 pages, 409149 bytes).
 PDF statistics:
  169 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

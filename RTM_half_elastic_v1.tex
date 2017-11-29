@@ -185,11 +185,8 @@ the generalized Helmholtz-Kirchhoff identity for scattering problems in waveguid
 
 For the isotropic elastic media, one can process the elastic data either by separating P-wave and S-wave using Helmholtz decomposition and migrating each mode using methods based on acoustic
 wave theory \cite{chung2012implementation,denli2008elastic}, or by migrating the whole elastic data set based on full elastic wave
-equation in the geophysical exploration community. In this paper, we adapt the cross-correlation between all the component of the source
-and receiver displacement wavefield, which is a mixture of P-wave and S-wave. And
-this kind condition can be easily extended to inhomogeneous elastic medium and
-even anisotropic elastic wave imaging. The purpose of this paper is to provide a new mathematical understanding of the RTM method by extending \cite{RTMhalf_aco} where RTM method for extended targets in the half space using acoustic wave is considered.  Compared to the scalar acoustic
-wave imaging, the vector elastic wave imaging is more complex due to a mixture of P-wave and S-wave mode. However, the virtue of the latter method is no longer need to separate the scalar and vector potentials  prior to the imaging condition.
+equation in the geophysical exploration community. In this paper, we adopt the cross-correlation between all the component of the source
+and receiver displacement wavefield, which is a mixture of P-wave and S-wave. Furthermore this kind condition can be easily extended to inhomogeneous elastic medium and even anisotropic elastic wave imaging. The purpose of this paper is to provide a new mathematical understanding of the RTM method by extending \cite{RTMhalf_aco} where RTM method for extended targets in the half space using acoustic wave is considered.  Compared to the scalar acoustic wave imaging, the vector elastic wave imaging is more complex due to a mixture of P-wave and S-wave mode. However, the virtue of the latter method is no longer need to separate the scalar and vector potentials  prior to the imaging condition.
 
 The layout of the paper is as follows. In section 2 we study the two Green Tensor for
 the scattering problem in the half space satisfying the homogeneous Neumann condition and Dirichlet condition on $\Ga_0$. We recall the derivation of the Green
@@ -591,13 +588,13 @@ The existence of the solution can be proved by the method of limiting absorption
 \Delta_e u_z +z\omega^2 u =-f \qquad\mbox{\rm in } \R^2_+ \\
 \sigma(u_z)e_2=0 \ \ \ \ \mbox{\rm on} \ \ \ \  \Ga_0 \label{elastic_b0}
 \ee
-By Lax-Milgrim lemma we know that (\ref{elastic_eqz}-\ref{elastic_b0}) has a unique solution $u_z\in H^1(\R^2_+)$. For any domain $\mathcal D \subset \R^2_+$, we define the weighted space $L^{2,s}(\mathcal D),s \in \R$, by
+By Lax-Milgrim lemma we know that (\ref{elastic_eqz}-\ref{elastic_b0}) has a unique solution $u_z\in H^1(\R^2_+)$. For any domain $ D \subset \R^2_+$, we define the weighted space $L^{2,s}(D),s \in \R$, by
 \ben
-L^{2,s}(\mathcal D)=\{v \in L^2_{\rm loc}(\mathcal D): (1+|x|^2)^{s/2}v \in L^2(\mathcal D) \}
+L^{2,s}(D)=\{v \in L^2_{\rm loc}(D): (1+|x|^2)^{s/2}v \in L^2(D) \}
 \een
-with the norm $\| v \|_{ L^{2,s}(\mathcal D)} = (\int_{\mathcal D}(1+|x|^2)^{s}|v|^2 dx )^{1/2}$. The weighted Sobolev space $H^{1,s}(\mathcal D),s \in \R$,
-is defined as the set of functions in $L^{2,s}(\mathcal D)$ whose first derivative is also in $L^{2,s}(\mathcal D)$. The norm
-$\| v \|_{ H^{1,s}(\mathcal D)} = (\| v \|^2_{ L^{2,s} (\mathcal D)} + \| \nabla v \|^2_{ L^{2,s}(\mathcal D)})^{1/2}$.
+with the norm $\| v \|_{ L^{2,s}(\mathcal D)} = (\int_{\mathcal D}(1+|x|^2)^{s}|v|^2 dx )^{1/2}$. The weighted Sobolev space $H^{1,s}(D),s \in \R$,
+is defined as the set of functions in $L^{2,s}(D)$ whose first derivative is also in $L^{2,s}(D)$. The norm
+$\| v \|_{ H^{1,s}(D)} = (\| v \|^2_{ L^{2,s} (D)} + \| \nabla v \|^2_{ L^{2,s}(D)})^{1/2}$.
 
 We need the following sligt generalization of Rellich Theorem:
 \begin{lem}\label{relli_embed}
@@ -700,7 +697,7 @@ u_0(y)e_i&=\int_{\R^2_+\bks\bar D} -(\Delta_e (N(x,y)e_i)+\omega^2 N(x,y)e_i)\cd
 -\Delta_e (N(x,y)e_i)\cdot u_0(x) \\
 &=\int_{\Ga_D} (\sigma(U(x,y)e_i)\nu)\cdot u_0(x) - (U(x,y)e_i)\cdot (\sigma(u_0)\nu)ds(x)=0
 \een
-Then the desired unique exsitence follows with lemma \ref{elas_exis}. This completes the proof of theorem \ref{elastic_eq2}.
+Then the desired unique exsitence follows lemma \ref{elas_exis}. This completes the proof of theorem \ref{elastic_eq2}.
 \finproof
 
 
@@ -713,7 +710,7 @@ In this section we introduce RTM method for inverse elastic scattering problems 
 
 Our RTM algorithm consists of two steps \cite{ela_reverse,Zhang08,Zhang2007}. The first step is the back-propagation in which we back-propagate the complex conjugated data $\overline{u^s(x_r,x_s)}$ as the Dirichlet boundary condition into the domain. The second step is the cross-correlation in which we compute the imaginary part of the cross-correlation of the back-propagated field and the incoming wave which uses the source as the boundary codition on $\Gamma_0$.
 \begin{alg}{\sc (Reverse time migration algorithm)}\\
-Given the data $u_k^s(x_r,x_s)$, $k=1,2$ which is the measurement of the scattered field at $x_r$ when the source is emitted at $x_s$ in the  polarized direction $e_k$, $s=1,\dots, N_s$ and $r=1,\dots,N_r$. \\	
+Given the data $u_k^s(x_r,x_s)$, $k=1,2$ which is the measurement of the scattered field at $x_r$ when the source is emitted at $x_s$ along the  polarized direction $e_k$, $s=1,\dots, N_s$ and $r=1,\dots,N_r$. \\	
 $1^\circ$ Back-propagation: For $s=1,\dots,N_s$ and k=1,2, compute the back-propagation field
 \be
 v_k(z,x_s)=\frac{|\Gamma_0^d|}{N_r}\sum^{N_r}_{r=1}(T^{e_2}_{x_r}D(x_r,z))^T\overline{u^s_k(x_r,x_s)}, \ \ \ \ \ \forall z\in\Omega
@@ -743,7 +740,7 @@ where $d_U$ is the diameter of $U$ and
 \ben
 |v|_{\frac 12,\Ga}=\left(\int_\Ga\int_\Ga\frac{|v(x)-v(y)|^2}{|x-y|^2}ds(x)ds(y)\right)^{1/2}.
 \een
-By scaling argument and trace theorem we know that there exists a constant $C>0$ independent of $d_D$ such that for any $\phi\in H^1(U)$ \cite[corollary 3.1]{RTMhalf_aco},
+By scaling argument and trace theorem we know that there exists a constant $C>0$ independent of $d_D$ such that for any $\phi\in C^1(\bar{U})$ \cite[corollary 3.1]{RTMhalf_aco},
 \be\label{q0}
 \|\phi\|_{H^{1/2}(\Ga_U)}+\|\sigma(\phi)\cdot\nu\|_{H^{-1/2}(\Ga_U)}\le C\max_{x\in U}(|\phi(x)|+d_U|\na\phi(x)|)
 %C_1\frac{|U|^{\frac 12}}{|\Ga|}\|v\|_{H^{1/2}(\Ga)}\le
@@ -776,7 +773,7 @@ We split the spectral terms into components associated with pressure and shearin
 \hat{N}=\hat{N^p}+\hat{N^s} \ \ \
 \Theta=\Theta^p+\Theta^s
 \een
-Thus, we define
+And we define
 \be\hspace{-1cm}
 J^{\alpha\eta}(z,y)= \int_R \  ({T_D^\alpha}(x_1,0;z))^T \overline{{N^\eta}(x_1,0;y)} dx_1,
  \ \ \ \  \alpha=s,p \ \ \eta=s,p
@@ -785,7 +782,7 @@ It's esay to see
 \ben
 J(z,y)=\sum_{\alpha=p,s}^{\eta=p,s} \ J^{\alpha\eta}(z,y)
 \een
-In order to analysis the PSF, loss is assumed in the medium that $k_{\alpha,\ep}:=k_\alpha(1+\i\ep)$. Then by Parseval identity and lemma \ref{root_De2}, we carry out
+In order to analysis the PSF, loss is assumed in the medium that $k_{\alpha,\ep}:=k_\alpha(1+\i\ep)$. Then by Parseval identity, we carry out
 \ben\hspace{-1.5cm}
 J^{ss}(z,y)&=&\lim_{\ep\to 0^+} \ \int_R \  ({T}^s_D (x_1,0;z_1,z_2))^T \overline{{N}^{s,\ep} (x_1,0;y_1,y_2)} dx_1 \\
 &=&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_R \  (\hat{T}^s_D (\xi,0;z))^T \overline{\hat{N}^{s,\ep} (\xi,0;y)} d\xi \\
@@ -802,11 +799,12 @@ J^{\alpha\eta}(z,y)&=&\lim_{\ep\to 0^+} \ \int_R \  ({T}^\alpha_D (x_1,0;z_1,z_2
 &+&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  (\hat{T}^\alpha_D (\xi,0;z))^T \overline{\hat{N}^{\eta,\ep} (\xi,0;y)} d\xi \\
 &:=&F^{\alpha\eta}(z,y)+R^{\alpha\eta}(z,y)
 \een
-Using Cauchy integral theorem, we get
+By lemma \ref{root_De2}, lemma \ref{root_Ga} and using Cauchy integral theorem, we get
 \ben\hspace{-1.5cm}
 \overline{R^{ss}(y,z)}&=&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_s,k_s]} \  \overline{(\hat{T}^s_D (\xi,0;z))^T} \hat{N}^{s,\ep} (\xi,0;y) d\xi \\
 &=&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_s,k_s]} \  (\Theta^s (\xi;z))^T \hat{N}^{s,\ep} (\xi,0;y) d\xi  \\
-&=& \ \frac{1}{2\pi}\int_{\Gamma^\pm_l \cup \Gamma^\pm_r} \  (\Theta^s (\xi;z))^T \hat{N}^{s} (\xi,0;y) d\xi + Residue Part \\
+&=& \ \frac{1}{2\pi}\int_{\Gamma^\pm_l \cup \Gamma^\pm_r} \  (\Theta^s (\xi;z))^T \hat{N}^{s} (\xi,0;y) d\xi \pm \\
+& & \i \lim_{\xi\to k_R} (\xi-k_R)(\Theta^s (\xi;z))^T \hat{N}^{s} (\xi,0;y) \\
 &:=&{\MyRoman{1}}^{ss}(z,y)+{\MyRoman{2}}^{ss}(z,y)
 \een
 and for $(\alpha,\eta)\neq(s,s)$
@@ -814,13 +812,14 @@ and for $(\alpha,\eta)\neq(s,s)$
 \overline{R^{\alpha\eta}(y,z)}&=&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_s,k_s]} \  \overline{(\hat{T}^\alpha_D (\xi,0;z))^T} \hat{N}^{\eta,\ep} (\xi,0;y) d\xi \\
 &=&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_p,k_p]} \  (\Theta^\alpha (\xi;z))^T \hat{N}^{\eta,\ep} (\xi,0;y) d\xi  \\
 &+& \frac{1}{2\pi}\int_{(-k_s,-k_p)\cup(k_p,k_s)} \  \overline{(T^\alpha (\xi;z))^T} \hat{N}^{\eta} (\xi,0;y) d\xi \\
-&=& \ \frac{1}{2\pi}\int_{\Gamma^\pm_l \cup \Gamma^\pm_r} \  (\Theta^\alpha (\xi;z))^T \hat{N}^{\eta} (\xi,0;y) d\xi +Residue Part\\
-&+& \frac{1}{2\pi}\int_{(-k_s,-k_p)\cup(k_p,k_s)} \  \overline{(T^\alpha (\xi;z))^T} \hat{N}^{\eta} (\xi,0;y) d\xi \\
+&=& \ \frac{1}{2\pi}\int_{\Gamma^\pm_l \cup \Gamma^\pm_r} \  (\Theta^\alpha (\xi;z))^T \hat{N}^{\eta} (\xi,0;y) d\xi \pm \\
+& & \i \lim_{\xi\to k_R} (\xi-k_R)(\Theta^\alpha (\xi;z))^T \hat{N}^{\eta} (\xi,0;y)+ \\
+& & \frac{1}{2\pi}\int_{(-k_s,-k_p)\cup(k_p,k_s)} \  \overline{(T^\alpha (\xi;z))^T} \hat{N}^{\eta} (\xi,0;y) d\xi \\
 &:=&{\MyRoman{1}}^{\alpha\eta}(z,y)+{\MyRoman{2}}^{\alpha\eta}(z,y)+{\MyRoman{3}}^{\alpha\eta}(z,y)
 \een
 where $\pm$ are corresponding $sgn(z_1-y_1)$. In the sequel, $A^{ij}$ denotes the $(i,j)$ element of a $2\times2$ matrix.
 
- Our goal now is to show the main contribution to the point spread funciton when $k_s h\gg1$. Put $n_*=\min\{N|\kappa^{2N-1}<1/c_3,N\in \Z_+ \}$. Then we claim the primary theorem in this section:
+ Our goal now is to show which is the main contribution to the point spread funciton when $k_s h\gg1$. Put $n_*=\min\{N|\kappa^{2N-1}<1/c_3,N\in \Z_+ \}$. Then we claim the primary theorem in this section:
 \begin{thm}\label{thm_psf}
 Let $k_s h>1$. For any $z,y\in\Om$, J(z,y)=F(z,y)+R(z,y), where
 \be
@@ -829,9 +828,9 @@ R(z,y)=R^{ss}(z,y)+R^{pp}(z,y)+J^{sp}(z,y)+J^{ps}(z,y)
 \ee
 Moreover, 
 \be\hspace{-2cm}
-|R^{ij}(z,y)|+k_s^{-1}|\na_y R^{ij}(z,y)|\leq \frac{C}{\mu}(\frac{1}{(k_s h)^{\frac{1}{2n^*}}}+e^{-\sqrt{k_R^2-k_s^2}h}):=\frac{C}{\mu} \epsilon_1(k_s h)
+|R^{ij}(z,y)|+k_s^{-1}|\na_y R^{ij}(z,y)|\leq \frac{C}{\mu}(\frac{1}{(k_s h)^{\frac{1}{2n^*}}}+e^{-k_s h\sqrt{\kappa_R^2-1}}):=\frac{C}{\mu} \epsilon_1(k_s h)
 \ee
- uniformly for $z,y\in\Om$. Here the constant C may dependent on $k_s d_D$ and $\kappa:=k_p/k_s$, but is independent of $k_s$, $k_p$, h, $d_D$.
+ uniformly for $z,y\in\Om$. Here $\kappa_R:=k_R/k_s$ and the constant C may dependent on $k_s d_D$ and $\kappa:=k_p/k_s$, but is independent of $k_s$, $k_p$, h, $d_D$.
 \end{thm}
 The proof of Theorem \ref{thm_psf} depends on several lemmas that follow.
 
@@ -840,18 +839,18 @@ Notice that the parameterization of hyperbolic curve passing $(\pm1,0)$ is:
 \ben
 \xi_1=\pm\sqrt{t^2+1} \ \ \ \ \xi_2= t
 \een
-where $t\in\R$. We only consider the curve in the upper halp plane, denoted by $\Gamma^+$ here. Substituting $\xi=\xi_1+\i\xi_2\in\Gamma^+$ into $\mu(\xi):=(1-\xi^2)^{1/2}$ and $\mu_\kappa(\xi):=(\kappa^2-\xi^2)^{1/2}$, we arrive at
+where $t\in\R$. We only consider the curve in the upper half plane, denoted by $\Gamma^+$ here. Substituting $\xi=\xi_1+\i\xi_2\in\Gamma^+$ into $\mu(\xi):=(1-\xi^2)^{1/2}$ and $\mu_\kappa(\xi):=(\kappa^2-\xi^2)^{1/2}$, we arrive at
 \be\label{mu_1}
 \Im\mu(\xi)&=&\Im(1-(\xi_1^2-\xi_2^2+\i2\xi_1\xi_2))^{1/2}\\ \nn
-&=&\Im(-2t\sqrt{t^2+1}\i)^{1/2}=t^{1/2}(t^2+1)^{1/4}
+&=&\Im(\mp2t\sqrt{t^2+1}\i)^{1/2}=t^{1/2}(t^2+1)^{1/4}
 \ee
 \be \nn
 \Im\mu_\kappa(\xi)&=&\Im(\kappa^2-(\xi_1^2-\xi_2^2+\i2\xi_1\xi_2))^{1/2}\\ \label{mu_2}
-&=&\Im(\kappa^2-1-2t\sqrt{t^2+1}\i)^{1/2}\\ \nn &=&\sqrt{\frac{\sqrt{(1-\kappa^2)^2+4t^2(t^2+1)}+1-\kappa^2}{2}}\\ \nn
+&=&\Im(\kappa^2-1\mp2t\sqrt{t^2+1}\i)^{1/2}\\ \nn &=&\sqrt{\frac{\sqrt{(1-\kappa^2)^2+4t^2(t^2+1)}+1-\kappa^2}{2}}\\ \nn
 &\geq&t^{1/2}(t^2+1)^{1/4}
 \ee 
-\begin{lem}\label{hyer_term}
-	For $\xi\in\Gamma_0$, let $f(\xi)$ be a complex valued function in $L^1(\Gamma^+)$ such that $|f(\xi)|\leq C(1+\xi^k)$, $k\in \Z_+$. Then for $a,b,c>0$, we have
+\begin{lem}\label{hyper_term}
+	For $\xi\in\Gamma^+$, let $f(\xi)$ be a complex valued function in $L^1(\Gamma^+)$ such that $|f(\xi)|\leq C(1+\xi^k)$, $k\in \Z_+$. Then for $a,b,c>0$, we have
 	\ben
 	|I(a,b,c):=\int_{\Gamma^+}f(\xi)  \ e^{\i\xi a+\i\mu(\xi)b+\i\mu_\kappa(\xi)c} \ d\xi| \\
 	\leq C(\frac{1}{b+c}+\frac{1}{(b+c)^{k+1}})
@@ -868,7 +867,7 @@ By (\ref{mu_1}-\ref{mu_2}), it follows that
 \een 
 Finally, substituting $\xi(t)$ into $I(a,b,c)$, we have
 \ben
-|I(a,b,c)|&=&\Big|\int_{0}^{\infty}|f(\xi(t))\frac{d\xi(t)}{dt}e^{\i\xi(t) a+\i\mu(\xi(t))b+\i\mu_\kappa(\xi(t))c}dt \Big| \\
+|I(a,b,c)|
 &\leq&C\int_{0}^{\infty}(1+t^k) e^{-t(b+c)} dt\\
 &\leq& C(\frac{1}{b+c}+\frac{1}{(b+c)^{k+1}})
 \een
@@ -892,7 +891,7 @@ Notice that
 \frac{1}{\gamma(\xi)}&=&\frac{1}{\xi^2+(k_s^2-\xi^2)^{1/2}(k_p^2-\xi^2)^{1/2}} \\
 &=&\frac{\xi^2-(k_s^2-\xi^2)^{1/2}(k_p^2-\xi^2)^{1/2}}{(k_s^2+k_p^2)\xi^2-k_s^2 k_p^2}=O(1)
 \een
-as $\xi\to\infty$. Therefore, a simple computation show that the amplitude function of ${\MyRoman{1}}^{\alpha\beta}_{ij}(z,y)$ denote by $A(\xi)$ can be written as $A(\xi)=\mu/{k_s^3}O(\xi^3)$. Now substituing $\xi=k_s t$ in the integral, the lemma now follows immediately from lemma (\ref{hyer_term}). This completes the proof.
+as $\xi\to\infty$. Therefore, a simple computation show that the amplitude function of ${\MyRoman{1}}^{\alpha\beta}_{ij}(z,y)$ denote by $A(\xi)$ can be written as $A(\xi)=\frac{\mu}{k_s^3}O(\xi^3)$. Now substituing $\xi=k_s t$ in the integral, the lemma now follows immediately from lemma (\ref{hyper_term}). This completes the proof.
 
 \finproof
 
@@ -916,7 +915,7 @@ When $z_1-y_1>0$, we have
 {\MyRoman{2}}^{ss}_{11}&=&-\frac{1}{\mu} Res_{\xi=k_R} \frac{(k_s^2-4\xi^2)\mu_s^2\mu_p}{\gamma(\xi)\delta(\xi)}e^{\i\mu_s (z_2+y_2) +\i\xi(z_1-y_1)} \\
 &=&- \frac{(k_s^2-4\xi^2)\mu_s^2\mu_p}{\mu(\gamma(\xi)\delta(\xi))'}e^{\i\mu_s (z_2+y_2) +\i\xi(z_1-y_1)} |_{\xi=k_R}
 \een
-Eliminating $k_s$ in fraction, we can obtain estimation (\ref{re3}). The other terms can be estimated similarly, here we omit detials. This completes the proof.
+Eliminating $k_s$ in fraction, we can obtain estimate immediately. The other terms can be proved similarly, here we omit detials. This completes the proof.
 \finproof
 
 \begin{lem}\label{medi_term}
@@ -1097,15 +1096,15 @@ Now we consider the finite aperture point spread function $J_d(z,y)$:
 \ee
 Our aim is to estimate the difference $J(z,y)-J_d(z,y)$. It is easy to see that
 
-\be
-\frac{(x_1-z_1)^2}{\rho^2}=\frac{1}{1+\frac{z_2^2}{(x_1-z_1)^2}}\geq \frac{1}{1+\frac{c_3^2 h^2}{(1-c_1)^2 d^2}}:=m(h/d)
+\be\hspace{-2cm}
+\frac{(x_1-z_1)^2}{\rho^2}=\frac{1}{1+\frac{z_2^2}{(x_1-z_1)^2}}\geq \frac{1}{1+\frac{c_3^2 h^2}{(1-c_1)^2 d^2}}=\frac{(1-c_1)^2}{(1-c_1)^2+c_3^2 (h/d)^2}:=m(h/d)
 \ee
 where $\rho=\sqrt{(x_1-z_1)^2+z_2^2}$ and $z\in\Omega,x\in \Gamma_0\bks(-d,d)$.
 \begin{thm} \label{ap_psf}
 	Assume $m(h/d)>(1+\kappa)^2/4$ and $k_s h\geq 1$. Then for $z,y\in\Omega$, we have
 	\be 
 	|J(z,y)-J_d(z,y)|+k_s^{-1}|\nabla_y(J(z,y)-J_d(z,y))|\\
-	\leq \frac{C}{\mu} (\frac{h}{ d}+\frac{(k_s h)^{1/2}}{ e^{\sqrt{k_r^2-k_s^2}h}}(\frac{h}{d})^{1/2}):=\frac{C}{\mu} \epsilon_2(k_s h)
+	\leq \frac{C}{\mu} ((\frac{h}{d})^{2}+\frac{(k_s h)^{1/2}}{ e^{k_s h\sqrt{\kappa_R^2-1}}}(\frac{h}{d})^{1/2}):=\frac{C}{\mu} \epsilon_2(k_s h,h/d)
 	\ee
 	where the constant C is only dependent on $\kappa$.
 \end{thm}
@@ -1116,9 +1115,9 @@ By lemma \ref{es_ngreen}, lemma \ref{es_dgreen} and $k_s h\geq 1$, we have
 \Bigg| \\
 \leq
 \frac{C}{\mu}\int_{d}^{\infty}\frac{k_s z_2}{|x-z|}\frac{1}{(k_s|x-z|)^{1/2}}\bigg(
-\frac{ y_2}{|x-y|}\frac{1}{(k_s|x-y|)^{1/2}}+e^{-\sqrt{k_r^2-k_s^2}y_2}\bigg) dx_1\\
+\frac{ y_2}{|x-y|}\frac{1}{(k_s|x-y|)^{1/2}}+e^{-\sqrt{k_R^2-k_s^2}y_2}\bigg) dx_1\\
 \leq
-\frac{C}{\mu}\int_{(1-c_1)d/h}^{\infty}\frac{1}{(1+t^2)^{3/2}}+\frac{(k_s h)^{1/2}}{(1+t^2)^{3/4}} e^{-\sqrt{k_r^2-k_s^2}h}  dt\\
+\frac{C}{\mu}\int_{(1-c_1)d/h}^{\infty}\frac{1}{(1+t^2)^{3/2}}+\frac{(k_s h)^{1/2}}{(1+t^2)^{3/4}} e^{-\sqrt{k_R^2-k_s^2}h}  dt\\
 \leq \frac{C}{\mu} ((\frac{h}{d})^{2}+\frac{(k_s h)^{1/2}}{ e^{\sqrt{k_R^2-k_s^2}h}}(\frac{h}{d})^{1/2})
 \een
 Here we have used the first inequeality in (\ref{convention_2}). Similarly, we can prove that the estimate for te integral in $[-\infty,-d]$. This shows the estimate for $J(z,y)-J_d(z,y)$. The estimate for $\nabla_y(J(z,y)-J_d(z,y))$ can be proved similarly.
@@ -1128,7 +1127,7 @@ By (\ref{q0}) we obtain the following corollary
 		Assume $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$ and $k_s h\geq 1$. There exists a constant C independent of $k_s$, h such that
 	\ben\hspace{-2cm}
 	\|J(z,\cdot)-J_d (z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(J(z,\cdot)-J_d (z,\cdot))\cdot\nu\|_{H^{1/2}(\Gamma_D)} 
-	\leq \frac{C}{\mu} \epsilon_2(k_s h)(1+k_sd_D)
+	\leq \frac{C}{\mu} \epsilon_2(k_s h,h/d)(1+k_sd_D)
 	\een
 	uniformly for $z\in\Om$, where $d_D$ is the diameter of the obstacle D.	
 \end{cor}
@@ -1146,7 +1145,7 @@ Then, we have
 \be\hspace{-1cm}
 \hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\overline{F^T(z,y)}+\Psi(y,z))^T \overline{F^T(z,y)}ds(y)+W_{\hat{I}}(z)
 \ee
-where $|W_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h))$ uniformly for z in $\Om$.
+where $|W_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$.
 \end{thm}
 \debproof
 By the integral representation, we have,
@@ -1205,7 +1204,7 @@ On the boundary of the obstacle $\Gamma_D$, we have
  By theorem \ref{elastic_eq2} and Corollaries \ref{cor_psf}-\ref{cor_dpsf} we have
 \be\nn
  	\|\sigma(W_d(\cdot,z))\cdot\nu\|_{H^{1/2}(\Gamma_D)}&\leq& 	\|F^T(z,\cdot)-J_d^T(z,\cdot)\|_{H^{1/2}(\Gamma_D)}\\ \label{W_ineq}
- 	&\leq&  C(1+k_s d_D)(\epsilon_1(k_s h)+\epsilon_2(k_s h))
+ 	&\leq&  C(1+k_s d_D)(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
 \ee
 \be\hspace{-1.5cm}\label{I_d}
 \hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y J^T_d(z,y))^T \overline{\Psi(y,z)}-J_d(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+R_{\hat{I}}(z)
@@ -1216,7 +1215,7 @@ R_{\hat{I}}(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y J^T_d(z,y))^T W_d(y,z)-J_
 \ee
 By (\ref{W_ineq}) and Corollaries \ref{cor_psf}-\ref{cor_dpsf} it is easy to see that
 \be
-|R_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h))
+|R_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
 \ee
 Finally, by (\ref{I_d}) and $\Psi(y,z)= -\overline{F^T(z,y)}$
 \ben\hspace{-1cm}
@@ -1231,7 +1230,7 @@ w_{\hat{I}}(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (J^T_d(z,y)-F^T(z,y))^T \
 \een
 By Corollaries \ref{cor_psf}-\ref{cor_dpsf} we have
 \be
-|w_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h))
+|w_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
 \ee
 \finproof
 
