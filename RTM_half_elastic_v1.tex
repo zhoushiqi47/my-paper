@@ -275,7 +275,35 @@ The desired Green function should be obtained by taking the inverse Fourier tran
 \begin{lem} \label{root_De1}
 	Let \emph{Lam\'{e}} constant $\lambda, \mu \in \R^+$, then the Rayleigh equation $\delta(\xi) = 0$ has only two roots denoted by $\pm k_R$ in complex plane. Morever, $k_R > k_s > k_p, \ k_R\in\R$ and $k_R$ is called Rayleigh wave number.
 \end{lem}
+\debproof
+For the sake of completeness, we include a proof here. It is well known that
+\be
+\delta(\xi)=(k_s^2-2\xi^2)^2+4\xi^2(k_s^2-\xi^2)^{1/2}(k_p^2-\xi^2)^{1/2}
+\ee
+However, $\delta(\xi)$ is rendered single-valued by selecting
+branch cuts along $k_p<\Re(\xi)<k_s,\Im(\xi)=0$ which is consistent with the convention (\ref{q1}). A simple computation show that $\delta(\pm k_s)>0$ and $\delta(\pm\infty+0\i)<0$. By the continuity of $\delta(\xi)$, we can obtain that it has at least two real zero points which denoted by $\pm k_R$.
 
+Now it turn to proof that $\delta(\xi)$ has only two roots in the complex plane by the principle of arguement which follows as a theorem of the theory of complex variables\cite{Ahlfors1979Complex}. Now consider the contour $C$ consisting of $\Ga$, and $C_l$ and $C_r$ where $C_r=[k_p+\i0^+,k_s+\i0^+]\cup[k_p+\i0^-,k_s+\i0^-]$ that surround $[k_p,k_s]$, $C_l=[-k_s+\i0^+,-k_p+\i0^+]\cup[-k_s+\i0^-,-k_p+\i0^-]$ that surround $[-k_s,-k_p]$ and $\Ga$ denotes a circle with enough large radius. Since the function $\delta(\xi)$ clears does not have poles in the complex $\xi$-plane and we find that within the contour $C=\Ga\cup C_r\cup C_l$ the number of zeros is given by
+\be \label{zero}
+Z=\frac{1}{2\pi\i}\int_C \frac{d\delta}{d\xi}\frac{d\xi}{\delta(\xi)}
+\ee
+Since $\delta(\xi)=\delta(-\xi)$ the images of $C_r$ and $C_l$ are the same, and one of them, say $C_r$, needs to be considered. We have $\delta(k_p)=(k_s^2-2k_p^2)^2$ and along $C_r$: $\delta^{\pm}(\xi)=(k_s^2-\xi^2)^2\mp\i4\xi^2\sqrt{k_s^2-\xi^2}\sqrt{\xi^2-k_p^2}$, and $\delta(k_s)=k_s^4$ where the plus sign applies above the cut, and the minus sign applies below the cut for $\delta(\xi)$. Let $f_1(\xi)=(k_s^2-\xi^2)^2$ and $f_2(\xi)=4\xi^2\sqrt{k_s^2-\xi^2}\sqrt{\xi^2-k_p^2}$. Then we have
+\be
+& &\int_{C_r} \frac{d\delta}{d\xi}\frac{d\xi}{\delta(\xi)}\\
+&=&\int_{k_p}^{k_s}\frac{{\delta'}_{+} (\xi)}{\delta_{+}(\xi)}-\frac{{\delta'}_{-} (\xi)}{\delta_{-}(\xi)} d\xi \\
+&=&2\i\int_{k_p}^{k_s}\Im(\frac{{\delta'}_{+} (\xi)}{\delta_{+}(\xi)})d\xi\\
+&=&2\i\int_{k_p}^{k_s}\Im\frac{(f_1'(\xi)-\i f_2'(\xi))f_1(\xi)+\i f_2(\xi))}{(f_1(\xi)-\i f_2(\xi))(f_1(\xi)+\i f_2(\xi))} d\xi \\
+&=&2\i\int_{k_p}^{k_s}\frac{f_1'(\xi) f_2(\xi)-f_1(\xi) f_2'(\xi)}{f_1^2(\xi)+ f_2^2(\xi)} d\xi\\
+&=&2\i\int_{k_p}^{k_s}\frac{f_1^2(\xi)}{f_1^2(\xi)+ f_2^2(\xi)} \frac{f_1'(\xi) f_2(\xi)-f_1(\xi) f_2'(\xi)}{f_1^2(\xi)}d\xi\\
+&=&-2\i\int_{k_p}^{k_s}\frac{f_1^2(\xi)}{f_1^2(\xi)+ f_2^2(\xi)} d\frac{f_2(\xi)}{f_1(\xi)}\\
+&=&-2\i\arctan \frac{f_2(\xi)}{f_1(\xi)}\Bigg|^{k_s}_{k_p}=0
+\ee 
+For $|\xi|$ large, we find $\delta(\xi)=A\xi^2+O(1)$, thus it is easy to see that 
+\ben
+\int_\Gamma \frac{d\delta}{d\xi}\frac{d\xi}{\delta(\xi)}=4\pi
+\een
+ Then we obtain $Z=2$. This completes the proof.
+\finproof
 
 In order to overcome the ambiguity above, loss is assumed in the medium so that $k_{\alpha,\ep}:=k_\alpha(1+\i\ep)$.
 When $\ep>0$, the branch point of $\mu_{\alpha,\ep}$ are $\pm k_{\alpha,\ep}$ and the branch cut are denoted by the equation $\xi_1\xi_2=k_\alpha \ep,-k_\alpha\leq \xi \leq k_\alpha$. In this case, the poles singularities are now located off the real axis and the Fouerier inverse transform becomes meaningful. In order to express lemma \ref{root_De2} concisely, we define
@@ -1020,14 +1048,14 @@ Now we are in the position to prove the main theorem of this section.
 To complete the analysis of the point spread function, Substitute (\ref{theta}) and (\ref{ngreen}) into  $F_{ss}(z,y),F_{pp}(z,y)$:
 \be
 \hspace{-2cm}\label{F_p}
-F^{pp}(z,y)=-\frac{1}{2\pi}\int_{(-k_p,-k_p)} \frac{\i k_s^2\mu_s}{\mu\gamma(\xi)\delta(\xi)}
+F^{pp}(z,y)=-\frac{1}{2\pi}\int_{(-k_p,k_p)} \frac{\i k_s^2\mu_s}{\mu\gamma(\xi)\delta(\xi)}
 \Bigg(
 \begin{array}{cc}
 	\xi^2 & -\xi\mu_p \\
 	-\xi\mu_p & \mu_p^2
 \end{array}		\Bigg)e^{\i\mu_p (z_2-y_2) +\i\xi(y_1-z_1)} \\
 \hspace{-2cm}\label{F_s}
-F^{ss}(z,y)=-\frac{1}{2\pi}\int_{(-k_p,-k_p)} \frac{\i k_s^2\mu_p}{\mu\gamma(\xi)\delta(\xi)}
+F^{ss}(z,y)=-\frac{1}{2\pi}\int_{(-k_p,k_p)} \frac{\i k_s^2\mu_p}{\mu\gamma(\xi)\delta(\xi)}
 \Bigg(
 \begin{array}{cc}
 	\mu_s^2 & \xi\mu_s \\
