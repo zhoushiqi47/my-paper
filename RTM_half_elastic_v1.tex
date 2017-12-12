@@ -1274,9 +1274,90 @@ with the Green function $N(x; y)$ as the kernel and discretizing the integral eq
 standard $Nystr\ddot{o}m$ methods \cite{colton-kress}. The boundary integral equations on $\Ga_D$ are solved on
 a uniform mesh over the boundary with ten points per probe wavelength. The sources
 and receivers are both placed on the surface $\Ga_d^0$ with equal-distribution, where d is the
-aperture. In all our numerical examples we choose h = 10 and d = 50. The boundaries
-of the obstacles used in our numerical experiments are parameterized as follows, where
-$\theta\in[0,2\pi]$,
+aperture. In all our numerical examples we choose h = 10, d = 50 and \emph{Lam\'{e}} constant $\lambda=1/2$, $\mu=1/4$. The boundaries
+of the obstacles used in our numerical experiments are parameterized as follows, 
+\ben
+\mbox{Circle:}\ \ \ \ &&x_1=\rho\cos(\theta),\ \ x_2=\rho\sin(\theta),\ \ \\
+\mbox{Kite:}\ \ \ \ &&x_1=\cos(\theta) + 0.65\cos(2\theta) - 0.65,\ \ x_2=1.5 \sin (\theta),\ \ \\
+\mbox{$p$-leaf:}\ \ \ \ &&r(\theta)=1+0.2\cos(p\theta), \\
+\mbox{peanut:}\ \ \ \ &&x1 = \cos \theta + 0:2 \cos 3\theta; x2 = \sin \theta + 0:2 \sin 3\theta, \\
+\mbox{square:}\ \ \ \ &&x1 = \cos3 \theta + \cos \theta; x2 = \sin3\theta + \sin \theta.
+\een
+where
+$\theta\in[0,2\pi]$.
+
+\bigskip
+\textbf{Example 1}. We consider the imaging of clamped obstacles with different shapes including circle, peanut, p-leaf and rounded square. The imaging domain is $\om = (−2; 2) \times (8; 12)$ with the sampling grid $201 \times 201$ and $N_s = N_r = 401$. The angular frequency is $\om = 3\pi,4\pi$ for the sigle frequency and $\om=\pi\times[2:0.5:8]$ for the test of multiple frequencies..
+
+The imaging results are shown in Figure \ref{figure_1}. It demonstrates clearly that our RTM
+algorithm can effectively image the upper boundary illuminated by the sources and
+receivers distributed along the boundary $\Ga_0$ for clamped obstacles. The imaging
+values decrease on the shadow part of the obstacles and at the points away from the
+boundary of the obstacle.
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.32\textwidth]{./graphic/circle_3pi.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/circle_5pi.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/circle.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/peanut_3pi.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/peanut_5pi.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/peanut.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/p_leaf_3pi.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/p_leaf_5pi.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/p_leaf.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/rectangle_3pi.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/rectangle_5pi.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/rectangle.eps}
+	
+	\caption{Example 1: Imaging results of clamped obstacles
+		with different shapes from top to below. The left row is imaged with single frequency data where $\om=3\pi$, The middle row is imaged with single frequency data where $\om=5\pi$ and The left row is imaged with multi frequency data}\label{figure_1}
+\end{figure}
+
+\bigskip
+\textbf{Example 2} We consider the imaging of two sound soft obstacles. The first model
+consists of two circles along horizontal direction and the second one is a circle and a
+peanut along the vertical direction. The angular frequency is $\om=3\pi$ for the test of the single frequency and $\om=\pi\times[2:0.5:8]$ for the test of multiple frequencies. Figure \ref{figure_2} shows the imaging result of the first model. The
+imaging domain is $[−4, 4] \times [8,12]$ with mesh size $401 \times 201$ and $N_s = N_r = 301$. Figure
+ shows the imaging result of the second model. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_2pi.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_4pi.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle.eps}
+	
+	\caption{Example 2:From left to right,  the imaging result
+		with single frequency data where $\om=2\pi,4\pi$, the imaging result with multiple frequency data.}\label{figure_2}
+\end{figure}
+
+\bigskip
+\textbf{Example 3}
+In this example we consider the stability of our half space RTM imaging
+function with respect to the complex additive Gaussian random noise. We introduce
+the additive Gaussian noise as follows
+\ben
+u_{\rm noise}=u_s+\nu_{\rm noise}
+\een
+where $u_s$ is the synthesized data and $\nu_{\rm noise}$ is the Gaussian noise with mean zero and standard deviation $\mu$ times the maximum of  the data $|u_s|$, i.e. $\nu_{\rm noise}=\frac{\mu \max |u_s|}{\sqrt{2}}(\ep_1+\i\ep_2)$ and  $\ep_i
+\thicksim \mathcal{N}(0,1)$.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_4pi_error2.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_4pi_error4.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_4pi_error6.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_multi_2_8_error2.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_multi_2_8_error4.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_multi_2_8_error6.eps}
+	
+	\caption{Example 3: Imaging results of a clamped obstacle with noise levels $\mu =  0.2; 0.3; 0.4$ (from left to
+		right). The top row is imaged with single frequency data where $\om=4\pi$, and the
+		bottom row is imaged with multi-frequency data.}\label{figure_3}
+\end{figure}
+
+Figure \ref{figure_3} shows the imaging results using single frequency data added with additive
+Gaussian noise. The imaging quality can be improved by using multi-frequency data.
+as illustrated 
 \section*{References}
 \bibliography{eee}
 \end{document}
