@@ -1287,13 +1287,28 @@ where
 $\theta\in[0,2\pi]$.
 
 \bigskip
-\textbf{Example 1}. We consider the imaging of clamped obstacles with different shapes including circle, peanut, p-leaf and rounded square. The imaging domain is $\om = (−2; 2) \times (8; 12)$ with the sampling grid $201 \times 201$ and $N_s = N_r = 401$. The angular frequency is $\om = 3\pi,4\pi$ for the sigle frequency and $\om=\pi\times[2:0.5:8]$ for the test of multiple frequencies..
+\textbf{Example 1}.
+We consider imaging of a Dirichlet, a Neumann, a Robin bounday, and a penetrable obstacle. The imaging domain
+ $\om = (−2; 2) \times (8; 12)$ with the sampling grid $201 \times 201$ and $N_s = N_r = 401$. The angular frequency is $\om=2\pi$.
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=0.24\textwidth]{./graphic/circle_2pi.eps}
+ 	\includegraphics[width=0.24\textwidth]{./graphic/circle_2pi_neumann.eps}
+ 	\includegraphics[width=0.24\textwidth]{./graphic/circle_2pi_impedance.eps}
+ 	\includegraphics[width=0.24\textwidth]{./graphic/circle_2pi_transmission.eps}
+ 	\caption{Example 1: From left to right: imaging results of a Neumann, a Robin bounday with impedance $\eta(x)=1$, and a penetrable obstacle with diffractive index $n(x)=0.25$}\label{figure_1}
+ \end{figure}
+ 
+ The imaging results are shown in Figure \ref{figure_1}. It demonstrates clearly that our RTM
+ algorithm can effectively image the upper boundary illuminated by the sources and
+ receivers distributed along the boundary $\Ga_0$ for non-penetrable obstacles. The imaging
+ values decrease on the shadow part of the obstacles and at the points away from the
+ boundary of the obstacle.
 
-The imaging results are shown in Figure \ref{figure_1}. It demonstrates clearly that our RTM
-algorithm can effectively image the upper boundary illuminated by the sources and
-receivers distributed along the boundary $\Ga_0$ for clamped obstacles. The imaging
-values decrease on the shadow part of the obstacles and at the points away from the
-boundary of the obstacle.
+\bigskip
+\textbf{Example 2}. We consider the imaging of clamped obstacles with different shapes including circle, peanut, p-leaf and rounded square. The imaging domain is $\om = (−2; 2) \times (8; 12)$ with the sampling grid $201 \times 201$ and $N_s = N_r = 401$. The angular frequency is $\om = 3\pi,4\pi$ for the sigle frequency and $\om=\pi\times[2:0.5:8]$ for the test of multiple frequencies.
+
+
 
 
 \begin{figure}
@@ -1311,14 +1326,14 @@ boundary of the obstacle.
 	\includegraphics[width=0.32\textwidth]{./graphic/rectangle_5pi.eps}
 	\includegraphics[width=0.32\textwidth]{./graphic/rectangle.eps}
 	
-	\caption{Example 1: Imaging results of clamped obstacles
-		with different shapes from top to below. The left row is imaged with single frequency data where $\om=3\pi$, The middle row is imaged with single frequency data where $\om=5\pi$ and The left row is imaged with multi frequency data}\label{figure_1}
+	\caption{Example 2: Imaging results of clamped obstacles
+		with different shapes from top to below. The left row is imaged with single frequency data where $\om=3\pi$, The middle row is imaged with single frequency data where $\om=5\pi$ and The left row is imaged with multi frequency data}\label{figure_2}
 \end{figure}
 
 \bigskip
-\textbf{Example 2} We consider the imaging of two sound soft obstacles. The first model
+\textbf{Example 3} We consider the imaging of two sound soft obstacles. The first model
 consists of two circles along horizontal direction and the second one is a circle and a
-peanut along the vertical direction. The angular frequency is $\om=3\pi$ for the test of the single frequency and $\om=\pi\times[2:0.5:8]$ for the test of multiple frequencies. Figure \ref{figure_2} shows the imaging result of the first model. The
+peanut along the vertical direction. The angular frequency is $\om=3\pi$ for the test of the single frequency and $\om=\pi\times[2:0.5:8]$ for the test of multiple frequencies. Figure \ref{figure_3} shows the imaging result of the first model. The
 imaging domain is $[−4, 4] \times [8,12]$ with mesh size $401 \times 201$ and $N_s = N_r = 301$. Figure
  shows the imaging result of the second model. 
 \begin{figure}
@@ -1327,12 +1342,12 @@ imaging domain is $[−4, 4] \times [8,12]$ with mesh size $401 \times 201$ and 
 	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_4pi.eps}
 	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle.eps}
 	
-	\caption{Example 2:From left to right,  the imaging result
-		with single frequency data where $\om=2\pi,4\pi$, the imaging result with multiple frequency data.}\label{figure_2}
+	\caption{Example 3:From left to right,  the imaging result
+		with single frequency data where $\om=2\pi,4\pi$, the imaging result with multiple frequency data.}\label{figure_3}
 \end{figure}
 
 \bigskip
-\textbf{Example 3}
+\textbf{Example 4}
 In this example we consider the stability of our half space RTM imaging
 function with respect to the complex additive Gaussian random noise. We introduce
 the additive Gaussian noise as follows
@@ -1350,12 +1365,12 @@ where $u_s$ is the synthesized data and $\nu_{\rm noise}$ is the Gaussian noise 
 	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_multi_2_8_error4.eps}
 	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_multi_2_8_error6.eps}
 	
-	\caption{Example 3: Imaging results of a clamped obstacle with noise levels $\mu =  0.2; 0.3; 0.4$ (from left to
+	\caption{Example 4: Imaging results of a clamped obstacle with noise levels $\mu =  0.2; 0.3; 0.4$ (from left to
 		right). The top row is imaged with single frequency data where $\om=4\pi$, and the
-		bottom row is imaged with multi-frequency data.}\label{figure_3}
+		bottom row is imaged with multi-frequency data.}\label{figure_4}
 \end{figure}
 
-Figure \ref{figure_3} shows the imaging results using single frequency data added with additive
+Figure \ref{figure_4} shows the imaging results using single frequency data added with additive
 Gaussian noise. The imaging quality can be improved by using multi-frequency data.
 as illustrated 
 \section*{References}
