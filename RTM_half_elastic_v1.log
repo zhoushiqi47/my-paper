@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.30)  26 DEC 2017 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.30)  28 DEC 2017 21:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -101,7 +101,11 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 144.
 )
-(./RTM_half_elastic_v1.aux)
+(./RTM_half_elastic_v1.aux
+
+LaTeX Warning: Label `figure_1' multiply defined.
+
+)
 \openout1 = `RTM_half_elastic_v1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -116,8 +120,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
-
-(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
 \scratchdimen=\dimen109
@@ -342,16 +345,12 @@ Package epstopdf Info: Source file: <./graphic/circle_3pi_neumann.eps>
 (epstopdf)                    size: 55603 bytes
 (epstopdf)             Output file: <./graphic/circle_3pi_neumann-eps-converted
 -to.pdf>
+(epstopdf)                    date: 2017-12-26 14:58:29
+(epstopdf)                    size: 21176 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphic/circle_3pi_neuma
 nn-eps-converted-to.pdf ./graphic/circle_3pi_neumann.eps>
 (epstopdf)             \includegraphics on input line 1296.
-runsystem(repstopdf --outfile=./graphic/circle_3pi_neumann-eps-converted-to.pdf
- ./graphic/circle_3pi_neumann.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <./graphic/circle_3pi_neumann-eps-converted
--to.pdf>
-(epstopdf)                    date: 2017-12-26 14:58:29
-(epstopdf)                    size: 21176 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <./graphic/circle_3pi_neumann-eps-converted-to.pdf, id=105, 418.56375pt x 314.1
 7375pt>
@@ -366,16 +365,12 @@ Package epstopdf Info: Source file: <./graphic/circle_3pi_impedance.eps>
 (epstopdf)                    size: 54411 bytes
 (epstopdf)             Output file: <./graphic/circle_3pi_impedance-eps-convert
 ed-to.pdf>
+(epstopdf)                    date: 2017-12-26 14:58:30
+(epstopdf)                    size: 21333 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphic/circle_3pi_imped
 ance-eps-converted-to.pdf ./graphic/circle_3pi_impedance.eps>
 (epstopdf)             \includegraphics on input line 1297.
-runsystem(repstopdf --outfile=./graphic/circle_3pi_impedance-eps-converted-to.p
-df ./graphic/circle_3pi_impedance.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <./graphic/circle_3pi_impedance-eps-convert
-ed-to.pdf>
-(epstopdf)                    date: 2017-12-26 14:58:30
-(epstopdf)                    size: 21333 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <./graphic/circle_3pi_impedance-eps-converted-to.pdf, id=106, 418.56375pt x 314
 .17375pt>
@@ -390,16 +385,12 @@ Package epstopdf Info: Source file: <./graphic/circle_3pi_transmission.eps>
 (epstopdf)                    size: 50124 bytes
 (epstopdf)             Output file: <./graphic/circle_3pi_transmission-eps-conv
 erted-to.pdf>
+(epstopdf)                    date: 2017-12-26 14:58:30
+(epstopdf)                    size: 20017 bytes
 (epstopdf)             Command: <repstopdf --outfile=./graphic/circle_3pi_trans
 mission-eps-converted-to.pdf ./graphic/circle_3pi_transmission.eps>
 (epstopdf)             \includegraphics on input line 1298.
-runsystem(repstopdf --outfile=./graphic/circle_3pi_transmission-eps-converted-t
-o.pdf ./graphic/circle_3pi_transmission.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <./graphic/circle_3pi_transmission-eps-conv
-erted-to.pdf>
-(epstopdf)                    date: 2017-12-26 14:58:30
-(epstopdf)                    size: 20017 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <./graphic/circle_3pi_transmission-eps-converted-to.pdf, id=107, 418.56375pt x 
 314.17375pt>
@@ -814,6 +805,721 @@ ype pdf)
 Package pdftex.def Info: ./graphic/bi_circle_multi_2_8_error6-eps-converted-to.
 pdf used on input line 1366.
 (pdftex.def)             Requested size: 142.85126pt x 107.47847pt.
+Package epstopdf Info: Source file: <./graphic/peanut_2pi.eps>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 54028 bytes
+(epstopdf)             Output file: <./graphic/peanut_2pi-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 18265 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_2pi-eps-c
+onverted-to.pdf ./graphic/peanut_2pi.eps>
+(epstopdf)             \includegraphics on input line 1379.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_2pi-eps-converted-to.pdf, id=131, 418.56375pt x 314.17375pt>
+File: ./graphic/peanut_2pi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphic/peanut_2pi-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_2pi-eps-converted-to.pdf used on inpu
+t line 1379.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_2pi_neumann.eps>
+(epstopdf)                    date: 2017-12-21 21:39:55
+(epstopdf)                    size: 57333 bytes
+(epstopdf)             Output file: <./graphic/peanut_2pi_neumann-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:42:40
+(epstopdf)                    size: 21622 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_2pi_neuma
+nn-eps-converted-to.pdf ./graphic/peanut_2pi_neumann.eps>
+(epstopdf)             \includegraphics on input line 1380.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_2pi_neumann-eps-converted-to.pdf, id=132, 418.56375pt x 314.1
+7375pt>
+File: ./graphic/peanut_2pi_neumann-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./graphic/peanut_2pi_neumann-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_2pi_neumann-eps-converted-to.pdf used
+ on input line 1380.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_2pi_impedance_1.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 55457 bytes
+(epstopdf)             Output file: <./graphic/peanut_2pi_impedance_1-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:42:40
+(epstopdf)                    size: 20507 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_2pi_imped
+ance_1-eps-converted-to.pdf ./graphic/peanut_2pi_impedance_1.eps>
+(epstopdf)             \includegraphics on input line 1381.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_2pi_impedance_1-eps-converted-to.pdf, id=133, 418.56375pt x 3
+14.17375pt>
+File: ./graphic/peanut_2pi_impedance_1-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use ./graphic/peanut_2pi_impedance_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_2pi_impedance_1-eps-converted-to.pdf 
+used on input line 1381.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_2pi_transmission.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 49607 bytes
+(epstopdf)             Output file: <./graphic/peanut_2pi_transmission-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:42:40
+(epstopdf)                    size: 19644 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_2pi_trans
+mission-eps-converted-to.pdf ./graphic/peanut_2pi_transmission.eps>
+(epstopdf)             \includegraphics on input line 1382.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_2pi_transmission-eps-converted-to.pdf, id=134, 418.56375pt x 
+314.17375pt>
+File: ./graphic/peanut_2pi_transmission-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./graphic/peanut_2pi_transmission-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_2pi_transmission-eps-converted-to.pdf
+ used on input line 1382.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_3pi.eps>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 58482 bytes
+(epstopdf)             Output file: <./graphic/peanut_3pi-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 19981 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_3pi-eps-c
+onverted-to.pdf ./graphic/peanut_3pi.eps>
+(epstopdf)             \includegraphics on input line 1383.
+Package epstopdf Info: Output file is already uptodate.
+File: ./graphic/peanut_3pi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphic/peanut_3pi-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_3pi-eps-converted-to.pdf used on inpu
+t line 1383.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_3pi_neumann.eps>
+(epstopdf)                    date: 2017-12-21 21:39:55
+(epstopdf)                    size: 59342 bytes
+(epstopdf)             Output file: <./graphic/peanut_3pi_neumann-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:42:13
+(epstopdf)                    size: 23117 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_3pi_neuma
+nn-eps-converted-to.pdf ./graphic/peanut_3pi_neumann.eps>
+(epstopdf)             \includegraphics on input line 1384.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_3pi_neumann-eps-converted-to.pdf, id=135, 418.56375pt x 314.1
+7375pt>
+File: ./graphic/peanut_3pi_neumann-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./graphic/peanut_3pi_neumann-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_3pi_neumann-eps-converted-to.pdf used
+ on input line 1384.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_3pi_impedance_1.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 58248 bytes
+(epstopdf)             Output file: <./graphic/peanut_3pi_impedance_1-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:42:14
+(epstopdf)                    size: 21957 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_3pi_imped
+ance_1-eps-converted-to.pdf ./graphic/peanut_3pi_impedance_1.eps>
+(epstopdf)             \includegraphics on input line 1385.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf, id=136, 418.56375pt x 3
+14.17375pt>
+File: ./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use ./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf 
+used on input line 1385.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_3pi_transmission.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 53258 bytes
+(epstopdf)             Output file: <./graphic/peanut_3pi_transmission-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:42:14
+(epstopdf)                    size: 21134 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_3pi_trans
+mission-eps-converted-to.pdf ./graphic/peanut_3pi_transmission.eps>
+(epstopdf)             \includegraphics on input line 1386.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_3pi_transmission-eps-converted-to.pdf, id=137, 418.56375pt x 
+314.17375pt>
+File: ./graphic/peanut_3pi_transmission-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./graphic/peanut_3pi_transmission-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_3pi_transmission-eps-converted-to.pdf
+ used on input line 1386.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_4pi.eps>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 59290 bytes
+(epstopdf)             Output file: <./graphic/peanut_4pi-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 21433 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_4pi-eps-c
+onverted-to.pdf ./graphic/peanut_4pi.eps>
+(epstopdf)             \includegraphics on input line 1387.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_4pi-eps-converted-to.pdf, id=138, 418.56375pt x 314.17375pt>
+File: ./graphic/peanut_4pi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphic/peanut_4pi-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_4pi-eps-converted-to.pdf used on inpu
+t line 1387.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_4pi_neumann.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 61260 bytes
+(epstopdf)             Output file: <./graphic/peanut_4pi_neumann-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:45:19
+(epstopdf)                    size: 24399 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_4pi_neuma
+nn-eps-converted-to.pdf ./graphic/peanut_4pi_neumann.eps>
+(epstopdf)             \includegraphics on input line 1388.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_4pi_neumann-eps-converted-to.pdf, id=139, 418.56375pt x 314.1
+7375pt>
+File: ./graphic/peanut_4pi_neumann-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./graphic/peanut_4pi_neumann-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_4pi_neumann-eps-converted-to.pdf used
+ on input line 1388.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_4pi_impedance_1.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 59524 bytes
+(epstopdf)             Output file: <./graphic/peanut_4pi_impedance_1-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:45:19
+(epstopdf)                    size: 23069 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_4pi_imped
+ance_1-eps-converted-to.pdf ./graphic/peanut_4pi_impedance_1.eps>
+(epstopdf)             \includegraphics on input line 1389.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_4pi_impedance_1-eps-converted-to.pdf, id=140, 418.56375pt x 3
+14.17375pt>
+File: ./graphic/peanut_4pi_impedance_1-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use ./graphic/peanut_4pi_impedance_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_4pi_impedance_1-eps-converted-to.pdf 
+used on input line 1389.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/peanut_4pi_transmission.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 54834 bytes
+(epstopdf)             Output file: <./graphic/peanut_4pi_transmission-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:45:20
+(epstopdf)                    size: 21777 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_4pi_trans
+mission-eps-converted-to.pdf ./graphic/peanut_4pi_transmission.eps>
+(epstopdf)             \includegraphics on input line 1390.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/peanut_4pi_transmission-eps-converted-to.pdf, id=141, 418.56375pt x 
+314.17375pt>
+File: ./graphic/peanut_4pi_transmission-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./graphic/peanut_4pi_transmission-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/peanut_4pi_transmission-eps-converted-to.pdf
+ used on input line 1390.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_2pi.eps>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 44685 bytes
+(epstopdf)             Output file: <./graphic/rectangle_2pi-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 15432 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_2pi-ep
+s-converted-to.pdf ./graphic/rectangle_2pi.eps>
+(epstopdf)             \includegraphics on input line 1391.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_2pi-eps-converted-to.pdf, id=142, 418.56375pt x 314.17375p
+t>
+File: ./graphic/rectangle_2pi-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graphic/rectangle_2pi-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_2pi-eps-converted-to.pdf used on i
+nput line 1391.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_2pi_neumann.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 40343 bytes
+(epstopdf)             Output file: <./graphic/rectangle_2pi_neumann-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:46:57
+(epstopdf)                    size: 16870 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_2pi_ne
+umann-eps-converted-to.pdf ./graphic/rectangle_2pi_neumann.eps>
+(epstopdf)             \includegraphics on input line 1392.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_2pi_neumann-eps-converted-to.pdf, id=143, 418.56375pt x 31
+4.17375pt>
+File: ./graphic/rectangle_2pi_neumann-eps-converted-to.pdf Graphic file (type p
+df)
+ <use ./graphic/rectangle_2pi_neumann-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_2pi_neumann-eps-converted-to.pdf u
+sed on input line 1392.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_2pi_impedance_1.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 42623 bytes
+(epstopdf)             Output file: <./graphic/rectangle_2pi_impedance_1-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:46:57
+(epstopdf)                    size: 17419 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_2pi_im
+pedance_1-eps-converted-to.pdf ./graphic/rectangle_2pi_impedance_1.eps>
+(epstopdf)             \includegraphics on input line 1393.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_2pi_impedance_1-eps-converted-to.pdf, id=144, 418.56375pt 
+x 314.17375pt>
+File: ./graphic/rectangle_2pi_impedance_1-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./graphic/rectangle_2pi_impedance_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_2pi_impedance_1-eps-converted-to.p
+df used on input line 1393.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_2pi_transmission.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 40102 bytes
+(epstopdf)             Output file: <./graphic/rectangle_2pi_transmission-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:46:57
+(epstopdf)                    size: 16799 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_2pi_tr
+ansmission-eps-converted-to.pdf ./graphic/rectangle_2pi_transmission.eps>
+(epstopdf)             \includegraphics on input line 1394.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_2pi_transmission-eps-converted-to.pdf, id=145, 418.56375pt
+ x 314.17375pt>
+File: ./graphic/rectangle_2pi_transmission-eps-converted-to.pdf Graphic file (t
+ype pdf)
+
+<use ./graphic/rectangle_2pi_transmission-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_2pi_transmission-eps-converted-to.
+pdf used on input line 1394.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_3pi.eps>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 46426 bytes
+(epstopdf)             Output file: <./graphic/rectangle_3pi-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 16083 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_3pi-ep
+s-converted-to.pdf ./graphic/rectangle_3pi.eps>
+(epstopdf)             \includegraphics on input line 1395.
+Package epstopdf Info: Output file is already uptodate.
+File: ./graphic/rectangle_3pi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphic/rectangle_3pi-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_3pi-eps-converted-to.pdf used on i
+nput line 1395.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_3pi_neumann.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 48260 bytes
+(epstopdf)             Output file: <./graphic/rectangle_3pi_neumann-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:48:21
+(epstopdf)                    size: 18731 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_3pi_ne
+umann-eps-converted-to.pdf ./graphic/rectangle_3pi_neumann.eps>
+(epstopdf)             \includegraphics on input line 1396.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_3pi_neumann-eps-converted-to.pdf, id=146, 418.56375pt x 31
+4.17375pt>
+File: ./graphic/rectangle_3pi_neumann-eps-converted-to.pdf Graphic file (type p
+df)
+ <use ./graphic/rectangle_3pi_neumann-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_3pi_neumann-eps-converted-to.pdf u
+sed on input line 1396.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_3pi_impedance_1.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 46443 bytes
+(epstopdf)             Output file: <./graphic/rectangle_3pi_impedance_1-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:48:21
+(epstopdf)                    size: 18229 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_3pi_im
+pedance_1-eps-converted-to.pdf ./graphic/rectangle_3pi_impedance_1.eps>
+(epstopdf)             \includegraphics on input line 1397.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_3pi_impedance_1-eps-converted-to.pdf, id=147, 418.56375pt 
+x 314.17375pt>
+File: ./graphic/rectangle_3pi_impedance_1-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./graphic/rectangle_3pi_impedance_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_3pi_impedance_1-eps-converted-to.p
+df used on input line 1397.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_3pi_transmission.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 41633 bytes
+(epstopdf)             Output file: <./graphic/rectangle_3pi_transmission-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:48:21
+(epstopdf)                    size: 17426 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_3pi_tr
+ansmission-eps-converted-to.pdf ./graphic/rectangle_3pi_transmission.eps>
+(epstopdf)             \includegraphics on input line 1398.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_3pi_transmission-eps-converted-to.pdf, id=148, 418.56375pt
+ x 314.17375pt>
+File: ./graphic/rectangle_3pi_transmission-eps-converted-to.pdf Graphic file (t
+ype pdf)
+
+<use ./graphic/rectangle_3pi_transmission-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_3pi_transmission-eps-converted-to.
+pdf used on input line 1398.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_4pi.eps>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 49043 bytes
+(epstopdf)             Output file: <./graphic/rectangle_4pi-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 16751 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_4pi-ep
+s-converted-to.pdf ./graphic/rectangle_4pi.eps>
+(epstopdf)             \includegraphics on input line 1399.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_4pi-eps-converted-to.pdf, id=149, 418.56375pt x 314.17375p
+t>
+File: ./graphic/rectangle_4pi-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./graphic/rectangle_4pi-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_4pi-eps-converted-to.pdf used on i
+nput line 1399.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_4pi_neumann.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 48486 bytes
+(epstopdf)             Output file: <./graphic/rectangle_4pi_neumann-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:48:22
+(epstopdf)                    size: 19094 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_4pi_ne
+umann-eps-converted-to.pdf ./graphic/rectangle_4pi_neumann.eps>
+(epstopdf)             \includegraphics on input line 1400.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_4pi_neumann-eps-converted-to.pdf, id=150, 418.56375pt x 31
+4.17375pt>
+File: ./graphic/rectangle_4pi_neumann-eps-converted-to.pdf Graphic file (type p
+df)
+ <use ./graphic/rectangle_4pi_neumann-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_4pi_neumann-eps-converted-to.pdf u
+sed on input line 1400.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_4pi_impedance_1.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 48989 bytes
+(epstopdf)             Output file: <./graphic/rectangle_4pi_impedance_1-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:48:22
+(epstopdf)                    size: 18814 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_4pi_im
+pedance_1-eps-converted-to.pdf ./graphic/rectangle_4pi_impedance_1.eps>
+(epstopdf)             \includegraphics on input line 1401.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_4pi_impedance_1-eps-converted-to.pdf, id=151, 418.56375pt 
+x 314.17375pt>
+File: ./graphic/rectangle_4pi_impedance_1-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./graphic/rectangle_4pi_impedance_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_4pi_impedance_1-eps-converted-to.p
+df used on input line 1401.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/rectangle_4pi_transmission.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 40250 bytes
+(epstopdf)             Output file: <./graphic/rectangle_4pi_transmission-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:48:22
+(epstopdf)                    size: 17119 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_4pi_tr
+ansmission-eps-converted-to.pdf ./graphic/rectangle_4pi_transmission.eps>
+(epstopdf)             \includegraphics on input line 1402.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/rectangle_4pi_transmission-eps-converted-to.pdf, id=152, 418.56375pt
+ x 314.17375pt>
+File: ./graphic/rectangle_4pi_transmission-eps-converted-to.pdf Graphic file (t
+ype pdf)
+
+<use ./graphic/rectangle_4pi_transmission-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/rectangle_4pi_transmission-eps-converted-to.
+pdf used on input line 1402.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_2pi.eps>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 55441 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_2pi-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 18802 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_2pi-eps-c
+onverted-to.pdf ./graphic/p_leaf_2pi.eps>
+(epstopdf)             \includegraphics on input line 1403.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/p_leaf_2pi-eps-converted-to.pdf, id=153, 418.56375pt x 314.17375pt>
+File: ./graphic/p_leaf_2pi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphic/p_leaf_2pi-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_2pi-eps-converted-to.pdf used on inpu
+t line 1403.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_2pi_neumann.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 57054 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_2pi_neumann-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:49:26
+(epstopdf)                    size: 21573 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_2pi_neuma
+nn-eps-converted-to.pdf ./graphic/p_leaf_2pi_neumann.eps>
+(epstopdf)             \includegraphics on input line 1404.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/p_leaf_2pi_neumann-eps-converted-to.pdf, id=154, 418.56375pt x 314.1
+7375pt>
+File: ./graphic/p_leaf_2pi_neumann-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./graphic/p_leaf_2pi_neumann-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_2pi_neumann-eps-converted-to.pdf used
+ on input line 1404.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_2pi_impedance_1.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 56201 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_2pi_impedance_1-eps-conve
+rted-to.pdf>
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_2pi_imped
+ance_1-eps-converted-to.pdf ./graphic/p_leaf_2pi_impedance_1.eps>
+(epstopdf)             \includegraphics on input line 1405.
+runsystem(repstopdf --outfile=./graphic/p_leaf_2pi_impedance_1-eps-converted-to
+.pdf ./graphic/p_leaf_2pi_impedance_1.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <./graphic/p_leaf_2pi_impedance_1-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:52:11
+(epstopdf)                    size: 20952 bytes.
+
+<./graphic/p_leaf_2pi_impedance_1-eps-converted-to.pdf, id=155, 418.56375pt x 3
+14.17375pt>
+File: ./graphic/p_leaf_2pi_impedance_1-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use ./graphic/p_leaf_2pi_impedance_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_2pi_impedance_1-eps-converted-to.pdf 
+used on input line 1405.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_2pi_transmission.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 49683 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_2pi_transmission-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:50:21
+(epstopdf)                    size: 19203 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_2pi_trans
+mission-eps-converted-to.pdf ./graphic/p_leaf_2pi_transmission.eps>
+(epstopdf)             \includegraphics on input line 1406.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/p_leaf_2pi_transmission-eps-converted-to.pdf, id=156, 418.56375pt x 
+314.17375pt>
+File: ./graphic/p_leaf_2pi_transmission-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./graphic/p_leaf_2pi_transmission-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_2pi_transmission-eps-converted-to.pdf
+ used on input line 1406.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_3pi.eps>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 58693 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_3pi-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 20429 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_3pi-eps-c
+onverted-to.pdf ./graphic/p_leaf_3pi.eps>
+(epstopdf)             \includegraphics on input line 1407.
+Package epstopdf Info: Output file is already uptodate.
+File: ./graphic/p_leaf_3pi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphic/p_leaf_3pi-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_3pi-eps-converted-to.pdf used on inpu
+t line 1407.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_3pi_neumann.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 60043 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_3pi_neumann-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:50:21
+(epstopdf)                    size: 23390 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_3pi_neuma
+nn-eps-converted-to.pdf ./graphic/p_leaf_3pi_neumann.eps>
+(epstopdf)             \includegraphics on input line 1408.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/p_leaf_3pi_neumann-eps-converted-to.pdf, id=157, 418.56375pt x 314.1
+7375pt>
+File: ./graphic/p_leaf_3pi_neumann-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./graphic/p_leaf_3pi_neumann-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_3pi_neumann-eps-converted-to.pdf used
+ on input line 1408.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_3pi_impedance_1.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 58998 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_3pi_impedance_1-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:50:22
+(epstopdf)                    size: 22553 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_3pi_imped
+ance_1-eps-converted-to.pdf ./graphic/p_leaf_3pi_impedance_1.eps>
+(epstopdf)             \includegraphics on input line 1409.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/p_leaf_3pi_impedance_1-eps-converted-to.pdf, id=158, 418.56375pt x 3
+14.17375pt>
+File: ./graphic/p_leaf_3pi_impedance_1-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use ./graphic/p_leaf_3pi_impedance_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_3pi_impedance_1-eps-converted-to.pdf 
+used on input line 1409.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_3pi_transmission.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 56316 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_3pi_transmission-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:50:22
+(epstopdf)                    size: 21411 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_3pi_trans
+mission-eps-converted-to.pdf ./graphic/p_leaf_3pi_transmission.eps>
+(epstopdf)             \includegraphics on input line 1410.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/p_leaf_3pi_transmission-eps-converted-to.pdf, id=159, 418.56375pt x 
+314.17375pt>
+File: ./graphic/p_leaf_3pi_transmission-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./graphic/p_leaf_3pi_transmission-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_3pi_transmission-eps-converted-to.pdf
+ used on input line 1410.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_4pi.eps>
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 59817 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_4pi-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2017-12-12 14:48:11
+(epstopdf)                    size: 21615 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_4pi-eps-c
+onverted-to.pdf ./graphic/p_leaf_4pi.eps>
+(epstopdf)             \includegraphics on input line 1411.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/p_leaf_4pi-eps-converted-to.pdf, id=160, 418.56375pt x 314.17375pt>
+File: ./graphic/p_leaf_4pi-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphic/p_leaf_4pi-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_4pi-eps-converted-to.pdf used on inpu
+t line 1411.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_4pi_neumann.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 61324 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_4pi_neumann-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:50:23
+(epstopdf)                    size: 24601 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_4pi_neuma
+nn-eps-converted-to.pdf ./graphic/p_leaf_4pi_neumann.eps>
+(epstopdf)             \includegraphics on input line 1412.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/p_leaf_4pi_neumann-eps-converted-to.pdf, id=161, 418.56375pt x 314.1
+7375pt>
+File: ./graphic/p_leaf_4pi_neumann-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./graphic/p_leaf_4pi_neumann-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_4pi_neumann-eps-converted-to.pdf used
+ on input line 1412.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_4pi_impedance_1.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 59823 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_4pi_impedance_1-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:50:23
+(epstopdf)                    size: 23803 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_4pi_imped
+ance_1-eps-converted-to.pdf ./graphic/p_leaf_4pi_impedance_1.eps>
+(epstopdf)             \includegraphics on input line 1413.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/p_leaf_4pi_impedance_1-eps-converted-to.pdf, id=162, 418.56375pt x 3
+14.17375pt>
+File: ./graphic/p_leaf_4pi_impedance_1-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use ./graphic/p_leaf_4pi_impedance_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_4pi_impedance_1-eps-converted-to.pdf 
+used on input line 1413.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+Package epstopdf Info: Source file: <./graphic/p_leaf_4pi_transmission.eps>
+(epstopdf)                    date: 2017-12-28 18:50:28
+(epstopdf)                    size: 57278 bytes
+(epstopdf)             Output file: <./graphic/p_leaf_4pi_transmission-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2017-12-28 21:50:23
+(epstopdf)                    size: 22304 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_4pi_trans
+mission-eps-converted-to.pdf ./graphic/p_leaf_4pi_transmission.eps>
+(epstopdf)             \includegraphics on input line 1414.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphic/p_leaf_4pi_transmission-eps-converted-to.pdf, id=163, 418.56375pt x 
+314.17375pt>
+File: ./graphic/p_leaf_4pi_transmission-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./graphic/p_leaf_4pi_transmission-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphic/p_leaf_4pi_transmission-eps-converted-to.pdf
+ used on input line 1414.
+(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+
+
+LaTeX Warning: Float too large for page by 111.25883pt on input line 1418.
 
 (./RTM_half_elastic_v1.bbl [28 <./graphic/circle_3pi-eps-converted-to.pdf> <./g
 raphic/circle_3pi_neumann-eps-converted-to.pdf> <./graphic/circle_3pi_impedance
@@ -837,18 +1543,43 @@ Kurt J Marfurt.
 4pi_error4-eps-converted-to.pdf> <./graphic/bi_circle_4pi_error6-eps-converted-
 to.pdf> <./graphic/bi_circle_multi_2_8_error2-eps-converted-to.pdf> <./graphic/
 bi_circle_multi_2_8_error4-eps-converted-to.pdf> <./graphic/bi_circle_multi_2_8
-_error6-eps-converted-to.pdf>]
+_error6-eps-converted-to.pdf>] [31 <./graphic/peanut_2pi-eps-converted-to.pdf> 
+<./graphic/peanut_2pi_neumann-eps-converted-to.pdf> <./graphic/peanut_2pi_imped
+ance_1-eps-converted-to.pdf> <./graphic/peanut_2pi_transmission-eps-converted-t
+o.pdf> <./graphic/peanut_3pi_neumann-eps-converted-to.pdf> <./graphic/peanut_3p
+i_impedance_1-eps-converted-to.pdf> <./graphic/peanut_3pi_transmission-eps-conv
+erted-to.pdf> <./graphic/peanut_4pi-eps-converted-to.pdf> <./graphic/peanut_4pi
+_neumann-eps-converted-to.pdf> <./graphic/peanut_4pi_impedance_1-eps-converted-
+to.pdf> <./graphic/peanut_4pi_transmission-eps-converted-to.pdf> <./graphic/rec
+tangle_2pi-eps-converted-to.pdf> <./graphic/rectangle_2pi_neumann-eps-converted
+-to.pdf> <./graphic/rectangle_2pi_impedance_1-eps-converted-to.pdf> <./graphic/
+rectangle_2pi_transmission-eps-converted-to.pdf> <./graphic/rectangle_3pi_neuma
+nn-eps-converted-to.pdf> <./graphic/rectangle_3pi_impedance_1-eps-converted-to.
+pdf> <./graphic/rectangle_3pi_transmission-eps-converted-to.pdf> <./graphic/rec
+tangle_4pi-eps-converted-to.pdf> <./graphic/rectangle_4pi_neumann-eps-converted
+-to.pdf> <./graphic/rectangle_4pi_impedance_1-eps-converted-to.pdf> <./graphic/
+rectangle_4pi_transmission-eps-converted-to.pdf> <./graphic/p_leaf_2pi-eps-conv
+erted-to.pdf> <./graphic/p_leaf_2pi_neumann-eps-converted-to.pdf> <./graphic/p_
+leaf_2pi_impedance_1-eps-converted-to.pdf> <./graphic/p_leaf_2pi_transmission-e
+ps-converted-to.pdf> <./graphic/p_leaf_3pi_neumann-eps-converted-to.pdf> <./gra
+phic/p_leaf_3pi_impedance_1-eps-converted-to.pdf> <./graphic/p_leaf_3pi_transmi
+ssion-eps-converted-to.pdf> <./graphic/p_leaf_4pi-eps-converted-to.pdf> <./grap
+hic/p_leaf_4pi_neumann-eps-converted-to.pdf> <./graphic/p_leaf_4pi_impedance_1-
+eps-converted-to.pdf> <./graphic/p_leaf_4pi_transmission-eps-converted-to.pdf>]
 Missing character: There is no ¨ in font cmr10!
-) [31] (./RTM_half_elastic_v1.aux)
+) [32] (./RTM_half_elastic_v1.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 2677 strings out of 493014
- 37091 string characters out of 6133350
- 106505 words of memory out of 5000000
- 6139 multiletter control sequences out of 15000+600000
+ 2842 strings out of 493014
+ 45242 string characters out of 6133350
+ 106544 words of memory out of 5000000
+ 6271 multiletter control sequences out of 15000+600000
  18118 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,14n,26p,767b,370s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -873,10 +1604,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2016/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/local/texlive/20
 16/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on RTM_half_elastic_v1.pdf (31 pages, 900709 bytes).
+Output written on RTM_half_elastic_v1.pdf (32 pages, 1428195 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
- 259 compressed objects within 3 object streams
+ 684 PDF objects out of 1000 (max. 8388607)
+ 480 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 words of extra memory for PDF output out of 10000 (max. 10000000)
 
