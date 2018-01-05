@@ -19,11 +19,12 @@
 \def\debproof{\noindent {\bf Proof.} }
 \def\finproof{\hfill {\small $\Box$} \\}
 %\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
-
+%\tableofcontents
 \makeatletter % `@' now normal "letter"
 \@addtoreset{equation}{section}
 \makeatother  % `@' is restored as "non-letter"
 \renewcommand\theequation{{\thesection}.{\arabic{equation}}}
+
 \title[]{Reverse Time Migration for Extended Obstacles in the Half Space: Elastic Waves}
 \author{ Zhiming Chen, Shiqi Zhou }
 \address{LSEC, Institute of Computational Mathematics, Academy of
@@ -985,7 +986,7 @@ It turn to estimate $F^{sp}(z,y)$ and $F^{ps}(z,y)$.
 	where $N_*=\min\{N|\kappa^{2N-1}<c_0,N\in \Z_+ \}$.
 \end{lem}
 \debproof
-Put $\phi(t)=-\sqrt{1-t^2}$ and $\psi(t,\tau)=\tau\phi(t/\kappa)-\phi(t)+\alpha t$. For easy of notations, we denote the $n$-th partial derivative of $g(t)$ with respect to $t$ by $g^{(n)}(t)$. Then, it is to see that, for $n>1$
+Put $\phi(t)=-\sqrt{1-t^2}$ and $\psi(t,\tau)=\tau\kappa\phi(t/\kappa)-\phi(t)+\alpha t$. For easy of notations, we denote the $n$-th partial derivative of $g(t)$ with respect to $t$ by $g^{(n)}(t)$. Then, it is to see that, for $n>1$
 \ben
 \psi^{(n)}(t,\tau)=\frac{\tau}{\kappa^{n-1}}\phi^{(n)}(\frac{t}{\kappa})-\phi^{(n)}(t)
 \een
