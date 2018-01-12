@@ -323,7 +323,7 @@ NP=\left\{
 The new integration path is depicted in Figure \ref{figure_newpath}.
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{./graphic/new_path.png}
+	\includegraphics[width=0.8\textwidth]{./graphic/new_path.png}
 	\caption{New Integration Path in the $\xi$-plane}\label{figure_newpath}
 \end{figure}
 Using Cauchy integral theorem and lemma \ref{root_De2}, we carry out:
@@ -595,7 +595,7 @@ This completes the proof.
 	where C is only dependent on $\kappa$.
 \end{lem}
 \debproof
-The proof is similar to lemma \ref{es_dgreen}. Here we only point out the different parts. Notice that, in this case, the substitution $\xi=k_s \sin t$ , taking $\Gamma_r^+$ in the $\xi$-plane onto $L_r:=\{t=t_1+\i t_2|\cos(2t_1)\cosh(2t_2)=-1,\frac{\pi}{2}\leq t_1<\frac{3\pi}{4},t_2\leq 0\}$ in the $t$-plane and  $\Gamma_l^+$ in the $\xi$-plane onto $L_l:=\{t=t_1+\i t_2|\cos(2t_1)\cosh(2t_2)=-1,-\frac{\pi}{2}\leq t_1<-\frac{1\pi}{4},t_2\geq 0\}$ in the $t$-plane.   To see this transformation, observe that since 
+The proof is similar to lemma \ref{es_dgreen}. Here we only point out the different parts. Notice that, in the present case, the substitution $\xi=k_s \sin t$ , taking $\Gamma_r^+$ in the $\xi$-plane onto $L_r:=\{t=t_1+\i t_2|\cos(2t_1)\cosh(2t_2)=-1,\frac{\pi}{2}\leq t_1<\frac{3\pi}{4},t_2\leq 0\}$ in the $t$-plane and  $\Gamma_l^+$ in the $\xi$-plane onto $L_l:=\{t=t_1+\i t_2|\cos(2t_1)\cosh(2t_2)=-1,-\frac{\pi}{2}\leq t_1<-\frac{1\pi}{4},t_2\geq 0\}$ in the $t$-plane.   To see this transformation, observe that since 
 \ben
 \sin t =\cosh t_2\sin t_1+\i \sinh t_2 \cos t_1 \\
 \cos t=\cosh t_2\cos t_1-\i \sinh t_2 \sin t_1
@@ -609,7 +609,7 @@ L_r&=&\{t=t_1+\i t_2 \ | \ \cosh^2 t_2\sin^2 t_1 - \sinh^2 t_2 \cos^2 t_1=1,\fra
 The same procedure is adopted for $L_l$. The geometry now is depicted in Figure \ref{figure_trans}.
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{./graphic/transformation.png}
+	\includegraphics[width=0.8\textwidth]{./graphic/transformation.png}
 	\caption{Transform from $\Gamma_l^+\cup(-k_s,k_s)\cup\Gamma_r^+$ to $L_l\cup (-\pi/2,\pi/2)\cup L_r$}\label{figure_trans}
 \end{figure}
 Put
@@ -784,7 +784,7 @@ In this section we introduce RTM method for inverse elastic scattering problems 
 \ee
 
 Our RTM algorithm consists of two steps \cite{ela_reverse,Zhang08,Zhang2007}. The first step is the back-propagation in which we back-propagate the complex conjugated data $\overline{u^s(x_r,x_s)}$ as the Dirichlet boundary condition into the domain. The second step is the cross-correlation in which we compute the imaginary part of the cross-correlation of the back-propagated field and the incoming wave which uses the source as the boundary codition on $\Gamma_0$.
-\begin{alg}{\sc (Reverse time migration algorithm)}\\
+\begin{alg}{\sc (Reverse time migration algorithm)}\label{alg_rtm}\\
 Given the data $u_k^s(x_r,x_s)$, $k=1,2$ which is the measurement of the scattered field at $x_r$ when the source is emitted at $x_s$ along the  polarized direction $e_k$, $s=1,\dots, N_s$ and $r=1,\dots,N_r$. \\	
 $1^\circ$ Back-propagation: For $s=1,\dots,N_s$ and k=1,2, compute the back-propagation field
 \be
@@ -1445,7 +1445,7 @@ incident wave $\overline{F^T(z,\cdot)}$. By lemma \ref{festimate1} we konw that 
 boundary $\Ga_D$ outside the scatterer $D$ if $k_s h \gg 1$ and $d\gg h$.
 
 To understand the behavior of the imaging fuction when $z$ is close to the boundary of the scatterer, we extend the concept of the scattering coefficient fo incident plane waves\cite{RTMhalf_aco}.
-\begin{definition}
+\begin{definition}\label{scarr_con}
 	For any unit vector $d\in \R^2$, let $u^i_p =d e^{\i k_p x\cdot d}$ or $u^i_s= d^\perp e^{\i k_s x\cdot d}$ be the incident wave and $u^s_\alpha = u^s_\alpha(x;d)$ be the radiation solution of the Navier equation:
 	\be
 	u^s_\alpha + \om^2u^s_\alpha = 0\ \ \mbox{in} \ \  \R^2\bks\bar{D} \\
@@ -1455,7 +1455,7 @@ To understand the behavior of the imaging fuction when $z$ is close to the bound
 	\ben
 	\sigma(u^s_\alpha+u^i_\alpha)\cdot \nu= \i k_\alpha R_\alpha(x;d)e^{\i k_\alpha x\cdot d}  \ \ \ \mbox{on}\ \ \pa D
 	\een
-	where $\alpha=p,s$.
+	where $\alpha=p,s$, $d=(d^1,d^2)^T$ is unit vectors, $d^\perp=(d^2,-d^1)^T$ .
 \end{definition}
 In the case of high frequency approximation, the scattering coecient can be approximated by
 \ben
@@ -1484,7 +1484,71 @@ A_1=2(d,\nu)(d,\nu^\perp)\\
 A_2=1/\kappa-\gamma(d,\nu)\\
 \alpha=(d,\nu),\gamma=1/\kappa\alpha-\sqrt{(1/\kappa)^2\alpha^2-(1/\kappa)^2+1}
 \een
+Now we consider the physical interpretation of the imaging function $\hat{I}_d(z)$ when $z\in\Ga_D$. By (\ref{F_p}) and (\ref{F_s}), we have
+\ben\hspace{-2cm}
+\overline{F(z,y)}=\i\int_{0}^{\pi}A_p(\theta)\eta_\theta e^{\i k_p (y-z)\cdot \eta_\theta}+A_s(\theta)\eta_\theta^\perp e^{\i k_s (y-z)\cdot \eta_\theta}d\theta, \ \ \ \ \eta_\theta:=(\cos\theta,\sin\theta)^T
+\een
+where 
+\ben
+A_p(\theta)=\frac{ k_s^2k_p^3 \mu_s(k_p\cos\theta)\sin\theta}{2\pi\mu\gamma(k_p\cos\theta)\delta(k_p\cos\theta)}(\cos\theta,\sin\theta)
+\een
+and
+\ben\hspace{-2cm}
+A_s(\theta)=\left\{ \begin{array}{ll}
+	\frac{ k_s^5\mu_p(k_s\cos\theta)\sin\theta}{2\pi\mu\gamma(k_s\cos\theta)\delta(k_s\cos\theta)}(\sin\theta,-\cos\theta) \ \ \ \ \ \ \ \ \ \theta\in(\arccos(k_p),\arccos(-k_p)) \\
+	\frac{ k_s^5(1-4\cos^2\theta)\overline{\mu_p(k_s\cos\theta)}\sin\theta}{2\pi\overline{\gamma(k_s\cos\theta)}\delta(k_s\cos\theta)}(\sin\theta,-\cos\theta) \ \ \theta\in(0,\pi)\bks[\arccos(k_p),\arccos(-k_p)]
+\end{array}\right.
+\een
+Then we obtain from Theorem \ref{resolution2} and Definition \ref{scarr_con} that
+\ben\hspace{-3cm}
+\hat{I}_d(z)\approx-\Im\mathbf{tr} \int_{\Ga_D}\int_{0}^{\pi}(k_pA_p(\theta)R_p(y,\eta_\theta) e^{\i k_p (y-z)\cdot \eta_\theta}+k_sA_s(\theta)R_s(y,\eta_\theta) e^{\i k_s (y-z)\cdot \eta_\theta})^T\overline{F(z,y)}d\theta ds(y)
+\een
+By the same procedure that used in \cite[p11,12]{RTMhalf_aco}, we can carry out that 
+\ben\hspace{-1cm}
+\hat{I}_d(z)&\approx&\sqrt{8\pi k_p}\Im\mathbf{tr} \int_{0}^{\pi}((\lambda+2\mu)A_p(\theta)\eta_\theta e^{\i k_p (y_-(\eta_\theta)-z)\cdot \eta_\theta-\i\frac{\pi}{4}})^T\frac{\overline{F(z,y_-(\eta_\theta))}}{\sqrt{\vartheta(y_-(\eta_\theta))}}d\theta \\
+&+&\sqrt{8\pi k_s}\Im\mathbf{tr} \int_{0}^{\pi}(\mu A_s(\theta)\eta_\theta^\perp e^{\i k_s (y_-(\eta_\theta)-z)\cdot \eta_\theta-\i\frac{\pi}{4}})^T\frac{\overline{F(z,y_-(\eta_\theta))}}{\sqrt{\vartheta(y_-(\eta_\theta))}}d\theta
+\een
+where $\nu(y_-(\eta_\theta))=-\eta_\theta$ and $\vartheta(y)$ is the curvature of $\Ga_D$.
+By above formula and lemma \ref{festimate1}, we can explain that one cannot image the back part of the obstacle with only the data collected on $\Ga_0$. This confirmed in our numerical examples.
+
 \section{Extensions}
+In this section we consider the reconstraction of non-penetrable obstacles with the impedance boundary condition and penetrable obstacle in the half space by the RTM algorithm \ref{alg_rtm}. For non-penetrable obstacles with the impedance boundary condition on the obstacle, the measured data $u^s_k(x_r.x_s)=u_k(x_r,x_s)-N(x_r,x_s)e_k$, $k=1,2$, where $u^s_k(x_r.x_s)$ is the radiation solution of the following problem:
+\be
+\Delta_e u^s_k(x) + \omega^2 u^s_k(x) =0 \qquad\mbox{\rm in } \R^2_+\bks \bar{D}, \label{elas_4}\ \ \
+\\ (T^{\nu}_x+\i\eta(x)) u^s_k(x)=-(T^{\nu}_x+\i\eta(x))N(x_r,x_s)e_k\ \ \ \ \mbox{\rm on } \Ga_D, \label{elas_bd2} \\
+\sigma(u^s_k)e_2=0 \ \ \ \ \mbox{\rm on} \Ga_0, \label{elas_b02} 
+\ee
+By modifying the argument in Theorem \ref{resolution2}, we can show the following result whose proof is omitted.
+\begin{thm}\label{resolution2}
+	For any $z\in\Omega$, let $\Phi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
+	\ben
+	& & \Delta_e \Phi(y,z) + \omega^2\Phi= 0 \ \ \ \ \mbox{in }\R^2\bks \bar{D}\\
+	& &T^{\nu}_y\Phi(y,z)+\i\eta(y)\Phi(y,z)= -(T^{\nu}_y+\i\eta(y))\overline{F(z,y)} \ \ \ \ \ \ \ \mbox{on} \ \Ga_D  \\ 
+	\een
+	Then, we have
+	\be\hspace{-1cm}
+	\hat{I}_d(z)=-\Im\mathbf{tr}\int_{\Gamma_D} (\overline{F(z,y)}+\Phi(y,z))^T ((T^{\nu}_y+\i\eta(y))\overline{F(z,y)})ds(y)+W_{\hat{I}}(z)
+	\ee
+	where $|W_{\hat{I}}(z)|\leq C(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$, $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$.
+\end{thm}
+
+For the penetrable obstacle , the measured data $u^s_k(x_r.x_s)=u_k(x_r,x_s)-N(x_r,x_s)e_k$, $k=1,2$, where $u^s_k(x_r.x_s)$ is the radiation solution of the following problem:
+\be
+\Delta_e u^s_k(x) + \omega^2n(x) u^s_k(x) =-\om^2(n(x)-1)N(x,x_s)e_k \qquad\mbox{\rm in } \R^2 \label{elas_5}\ \ \ \\
+\sigma(u^s_k)e_2=0 \ \ \ \ \mbox{\rm on} \Ga_0, \label{elas_b03} 
+\ee
+where $n(x)\in L^{\infty}_{\R^2}$ is a positive function which is equel to 1 outside $D$. By modifying the argument in Theorem \ref{resolution2}, the following theorem can be proved.
+\begin{thm}\label{resolution2}
+	For any $z\in\Omega$, let $\Phi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
+	\ben
+	& & \Delta_e \Phi(y,z) + \omega^2n(y)\Phi= -\omega^2(n(y)-1)\overline{F(z,y)} \ \ \ \ \mbox{in }\R^2
+	\een
+	Then, we have
+	\be\hspace{-1cm}
+	\hat{I}_d(z)=-\Im\mathbf{tr}\int_{D}\omega^2(1-n(y)) (\overline{F(z,y)}+\Phi(y,z))^T \overline{F(z,y)})dy+W_{\hat{I}}(z)
+	\ee
+	where $|W_{\hat{I}}(z)|\leq C(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$, $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$.
+\end{thm}
 \section{Numerical experiments}
 In this section we present several numerical examples to show the effectiveness of our
 RTM method. To synthesize the scattering data we compute the solution $u^s(x_r; x_s)$ of
@@ -1507,15 +1571,14 @@ $\theta\in[0,2\pi]$.
 
 \bigskip
 \textbf{Example 1}.
-We consider imaging of a Dirichlet, a Neumann, a Robin bounday, and a penetrable obstacle. The imaging domain
- $\om = (−2; 2) \times (8; 12)$ with the sampling grid $201 \times 201$ and $N_s = N_r = 401$. The angular frequency is $\om=2\pi$.
+We consider imaging of a Dirichlet, a Neumann, a Robin bounday, and a penetrable obstacle. The imaging domain is $(−2; 2) \times (8; 12)$ with the sampling grid $201 \times 201$ and $N_s = N_r = 401$. The angular frequency is $\om=2\pi$.
  \begin{figure}
  	\centering
- 	\includegraphics[width=0.24\textwidth]{./graphic/circle_3pi.eps}
- 	\includegraphics[width=0.24\textwidth]{./graphic/circle_3pi_neumann.eps}
- 	\includegraphics[width=0.24\textwidth]{./graphic/circle_3pi_impedance.eps}
- 	\includegraphics[width=0.24\textwidth]{./graphic/circle_3pi_transmission.eps}
- 	\caption{Example 1: From left to right: imaging results of a Neumann, a Robin bounday with impedance $\eta(x)=1$, and a penetrable obstacle with diffractive index $n(x)=0.25$}\label{figure_1}
+ 	\includegraphics[width=0.24\textwidth]{./graphic/peanut_3pi.eps}
+ 	\includegraphics[width=0.24\textwidth]{./graphic/peanut_3pi_neumann.eps}
+ 	\includegraphics[width=0.24\textwidth]{./graphic/peanut_3pi_impedance_1.eps}
+ 	\includegraphics[width=0.24\textwidth]{./graphic/peanut_3pi_transmission.eps}
+ 	\caption{Example 1: From left to right: imaging results of a Dirichlet, a Neumann, a Robin bounday with impedance $\eta(x)=1$, and a penetrable obstacle with diffractive index $n(x)=0.25$}\label{figure_1}
  \end{figure}
  
  The imaging results are shown in Figure \ref{figure_1}. It demonstrates clearly that our RTM
@@ -1525,7 +1588,7 @@ We consider imaging of a Dirichlet, a Neumann, a Robin bounday, and a penetrable
  boundary of the obstacle.
 
 \bigskip
-\textbf{Example 2}. We consider the imaging of clamped obstacles with different shapes including circle, peanut, p-leaf and rounded square. The imaging domain is $\om = (−2; 2) \times (8; 12)$ with the sampling grid $201 \times 201$ and $N_s = N_r = 401$. The angular frequency is $\om = 3\pi,4\pi$ for the sigle frequency and $\om=\pi\times[2:0.5:8]$ for the test of multiple frequencies.
+\textbf{Example 2}. We consider the imaging of clamped obstacles with different shapes including circle, peanut, p-leaf and rounded square. The imaging domain is $ = (−2; 2) \times (8; 12)$ with the sampling grid $201 \times 201$ and $N_s = N_r = 401$. The angular frequency is $\om = 3\pi,4\pi$ for the sigle frequency and $\om=\pi\times[2:0.5:8]$ for the test of multiple frequencies.
 
 
 
