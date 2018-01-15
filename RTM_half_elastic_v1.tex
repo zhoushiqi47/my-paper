@@ -1503,7 +1503,7 @@ Then we obtain from Theorem \ref{resolution2} and Definition \ref{scarr_con} tha
 \ben\hspace{-3cm}
 \hat{I}_d(z)\approx-\Im\mathbf{tr} \int_{\Ga_D}\int_{0}^{\pi}(k_pA_p(\theta)R_p(y,\eta_\theta) e^{\i k_p (y-z)\cdot \eta_\theta}+k_sA_s(\theta)R_s(y,\eta_\theta) e^{\i k_s (y-z)\cdot \eta_\theta})^T\overline{F(z,y)}d\theta ds(y)
 \een
-By the same procedure that used in \cite[p11,12]{RTMhalf_aco}, we can carry out that 
+By the same procedure which used in \cite[p11,12]{RTMhalf_aco}, we can carry out that 
 \ben\hspace{-1cm}
 \hat{I}_d(z)&\approx&\sqrt{8\pi k_p}\Im\mathbf{tr} \int_{0}^{\pi}((\lambda+2\mu)A_p(\theta)\eta_\theta e^{\i k_p (y_-(\eta_\theta)-z)\cdot \eta_\theta-\i\frac{\pi}{4}})^T\frac{\overline{F(z,y_-(\eta_\theta))}}{\sqrt{\vartheta(y_-(\eta_\theta))}}d\theta \\
 &+&\sqrt{8\pi k_s}\Im\mathbf{tr} \int_{0}^{\pi}(\mu A_s(\theta)\eta_\theta^\perp e^{\i k_s (y_-(\eta_\theta)-z)\cdot \eta_\theta-\i\frac{\pi}{4}})^T\frac{\overline{F(z,y_-(\eta_\theta))}}{\sqrt{\vartheta(y_-(\eta_\theta))}}d\theta
@@ -1552,7 +1552,7 @@ where $n(x)\in L^{\infty}_{\R^2}$ is a positive function which is equel to 1 out
 \section{Numerical experiments}
 In this section we present several numerical examples to show the effectiveness of our
 RTM method. To synthesize the scattering data we compute the solution $u^s(x_r; x_s)$ of
-the scattering problem by representing the ansatz solution as the double layer potential
+the scattering problem by representing the ansatz solution as the single layer potential
 with the Green function $N(x; y)$ as the kernel and discretizing the integral equation by
 standard $Nystr\ddot{o}m$ methods \cite{colton-kress}. The boundary integral equations on $\Ga_D$ are solved on
 a uniform mesh over the boundary with ten points per probe wavelength. The sources
@@ -1615,17 +1615,28 @@ We consider imaging of a Dirichlet, a Neumann, a Robin bounday, and a penetrable
 \bigskip
 \textbf{Example 3} We consider the imaging of two sound soft obstacles. The first model
 consists of two circles along horizontal direction and the second one is a circle and a
-peanut along the vertical direction. The angular frequency is $\om=3\pi$ for the test of the single frequency and $\om=\pi\times[2:0.5:8]$ for the test of multiple frequencies. Figure \ref{figure_3} shows the imaging result of the first model. The
-imaging domain is $[−4, 4] \times [8,12]$ with mesh size $401 \times 201$ and $N_s = N_r = 301$. Figure
- shows the imaging result of the second model. 
+peanut along the vertical direction. The angular frequency is $\om=3\pi$ for the test of the single frequency and $\om=\pi\times[2:0.5:8]$ for the test of multiple frequencies. Figure \ref{figure_31} shows the imaging result of the first model. The
+imaging domain is $[−4, 4] \times [8,12]$ with mesh size $401 \times 201$ and $N_s = N_r = 301$. Figure \ref{figure_32}
+ shows the imaging result of the second model. The
+ imaging domain is $[−4, 4] \times [8,12]$ with mesh size $401 \times 401$ and $N_s = N_r = 301$. The multi-frequency RTM imaging results in Figure \ref{figure_31} and Figure \ref{figure_32} are obtained by adding the inmaging results from different frequencies. We observe from these two figures that imaging results can be greatly improved by stacking the multiple single frequency imaging results. 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_2pi.eps}
-	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_4pi.eps}
+	\includegraphics[width=0.32\textwidth,height=0.16\textheight]{./graphic/bi_circle_profile.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle_3pi.eps}
 	\includegraphics[width=0.32\textwidth]{./graphic/bi_circle.eps}
 	
-	\caption{Example 3:From left to right,  the imaging result
-		with single frequency data where $\om=2\pi,4\pi$, the imaging result with multiple frequency data.}\label{figure_3}
+	\caption{Example 3:From left to right,  true obstacle model with two circles. the imaging result
+		with single frequency data where $\om=3\pi$, the imaging result with multiple frequency data.}\label{figure_31}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.32\textwidth,height=0.16\textheight]{./graphic/circle_0_4_peanut_1_profile.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/circle_0_4_peanut_1_3pi_1.eps}
+	\includegraphics[width=0.32\textwidth]{./graphic/circle_0_4_peanut_1_multi_1.eps}
+	
+	\caption{Example 3:From left to right,  true obstacle model with one circle and one peanut, the imaging result
+		with single frequency data where $\om=3\pi$, the imaging result with multiple frequency data.}\label{figure_32}
 \end{figure}
 
 \bigskip
@@ -1656,48 +1667,6 @@ Figure \ref{figure_4} shows the imaging results using single frequency data adde
 Gaussian noise. The imaging quality can be improved by using multi-frequency data.
 as illustrated 
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_2pi.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_2pi_neumann.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_2pi_impedance_1.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_2pi_transmission.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_3pi.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_3pi_neumann.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_3pi_impedance_1.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_3pi_transmission.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_4pi.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_4pi_neumann.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_4pi_impedance_1.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/peanut_4pi_transmission.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_2pi.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_2pi_neumann.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_2pi_impedance_1.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_2pi_transmission.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_3pi.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_3pi_neumann.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_3pi_impedance_1.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_3pi_transmission.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_4pi.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_4pi_neumann.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_4pi_impedance_1.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/rectangle_4pi_transmission.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_2pi.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_2pi_neumann.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_2pi_impedance_1.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_2pi_transmission.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_3pi.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_3pi_neumann.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_3pi_impedance_1.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_3pi_transmission.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_4pi.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_4pi_neumann.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_4pi_impedance_1.eps}
-	\includegraphics[width=0.24\textwidth]{./graphic/p_leaf_4pi_transmission.eps}
-	
-	
-	\caption{Example 1: From left to right: imaging results of a Neumann, a Robin bounday with impedance $\eta(x)=1$, and a penetrable obstacle with diffractive index $n(x)=0.25$}\label{figure_1}
-\end{figure}
 \section*{References}
 \bibliography{eee}
 \end{document}
