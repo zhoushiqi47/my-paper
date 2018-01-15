@@ -1201,7 +1201,7 @@ Here we have used the first inequeality in (\ref{convention_2}). Similarly, we c
 By (\ref{q0}) we obtain the following corollary
 \begin{cor}\label{cor_dpsf}
 		Assume $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$ and $k_s h\geq 1$. There exists a constant C independent of $k_s$, h such that
-	\ben\hspace{-2cm}
+	\ben\hspace{-2.5cm}
 	\|J(z,\cdot)-J_d (z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(J(z,\cdot)-J_d (z,\cdot))\cdot\nu\|_{H^{1/2}(\Gamma_D)} 
 	\leq \frac{C}{\mu} \epsilon_2(k_s h,h/d)(1+k_sd_D)
 	\een
@@ -1222,9 +1222,10 @@ and
 \Delta_e u_2 + \omega^2 u_2=0 \qquad\mbox{\rm in } \R^2\bks \bar{D}\\
 u_2 = g \ \ \ \ \mbox{\rm on } \Ga_D  \label{elas_rbd2}
 \ee
-Then there exits a constant C such that
+Then there exits a constant C independant of $k_s$, $k_p$, such that
 \be\hspace{-2cm}
-\|T_x^\nu(u_1-u_2)\|_{H^{-1/2}(\Gamma_D)}&\leq& \frac{C}{\mu}(1+k_s d_D)^2((k_s h)^{-1/2}+e^{-\sqrt{k_R^2-k_s^2}h})\|g\|_{ H^{1/2}(\Ga_D)}
+\|T_x^\nu(u_1-u_2)\|_{H^{-1/2}(\Gamma_D)}&\leq& \frac{C}{\mu}(1+k_s d_D)^2((k_s h)^{-1/2}+e^{-\sqrt{k_R^2-k_s^2}h})\|g\|_{ H^{1/2}(\Ga_D)} \\
+&\leq& \frac{C}{\mu}(1+k_s d_D)^2\epsilon_1(k_s h)\|g\|_{ H^{1/2}(\Ga_D)}
 \ee
 \end{thm}
 Before proving theorem \ref{diff_solu}, we need the following lemma.
@@ -1331,12 +1332,11 @@ The following theorem is the main result of this section.
 For any $z\in\Omega$, let $\Psi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
 \ben
 & & \Delta_e \Psi(y,z) + \omega^2\Psi= 0 \ \ \ \ \mbox{in }\R_+^2\bks \bar{D}\\
-& &\Psi(y,z)= -\overline{F^T(z,y)} \ \ \ \ \ \ \ \mbox{on} \ \Ga_D  \\ 
-& & \sigma_y(\Psi(y,z))\cdot e_2=0 \ \ \ \ \ \ \ \mbox{on} \ \Ga_0
+& &\Psi(y,z)= -\overline{F(z,y)} \ \ \ \ \ \ \ \mbox{on} \ \Ga_D  \\ 
 \een
 Then, we have
 \be\hspace{-1cm}
-\hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\overline{F^T(z,y)}+\Psi(y,z))^T \overline{F^T(z,y)}ds(y)+W_{\hat{I}}(z)
+\hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\overline{F(z,y)}+\Psi(y,z))^T \overline{F(z,y)}ds(y)+W_{\hat{I}}(z)
 \ee
 where $|W_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$, $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$.
 \end{thm}
@@ -1359,7 +1359,7 @@ v_k(z,x_s)&=&\int_{\Gamma_0^d}(T^{e_2}_{x_r}D(x_r,z))^T\overline{u^s_k(x_r,x_s)}
 -J_d(z,y)\overline{(T^{\nu}_y u^s_k(y,x_s))}\Big)
 \een
 where we use the fact $(\sigma_x(A(x))\nu)B=\sigma_x(A(x)B)\nu$ above. By the definition of the imaging function $\hat{I}_d(z)$, we have
-\ben\hspace{-1cm}
+\be\hspace{-1cm}
 \hat{I}_d(z)&=&\Im\sum_{k=1}^{2}\int_{\Gamma_0^d}(T^{e_2}_{x_s}D(x_s,z))^Te_k\cdot v_k(z,x_s) ds(x_s)\\
 &=&\int_{\Gamma_D} ds(y)\sum_{k=1}^{2}\int_{\Gamma_0^d}(T^{e_2}_{x_s}D(x_s,z))^Te_k\cdot\Big((T^{\nu}_y J^T_d(z,y))^T \overline{ u^s_k(y,x_s) } \\
 & &-J_d(z,y)\overline{(T^{\nu}_y u^s_k(y,x_s))}\Big) \\
@@ -1367,9 +1367,9 @@ where we use the fact $(\sigma_x(A(x))\nu)B=\sigma_x(A(x)B)\nu$ above. By the de
 \overline{ u^s_k(y,x_s) } e_k^T T^{e_2}_{x_s}D(x_s,z)\\
 & &-J_d(z,y)\int_{\Gamma_0^d}\overline{(T^{\nu}_y u^s_k(y,x_s))} e_k^T T^{e_2}_{x_s}D(x_s,z)\Big) \\
 &=&\Im\int_{\Gamma_D} ds(y)\mathbf{tr}\Big((T^{\nu}_y J^T_d(z,y))^T \sum_{k=1}^{2} W_k(y,z)\\
-& &-J_d(z,y)(T^{\nu}_y \sum_{k=1}^{2}W_k(y,z))\Big) \\
+& &-J_d(z,y)(T^{\nu}_y \sum_{k=1}^{2}W_k(y,z))\Big) \\ \label{resolu_1}
 &=&\Im\int_{\Gamma_D} \mathbf{tr}\Big((T^{\nu}_y J^T_d(z,y))^T W(y,z)-J_d(z,y)(T^{\nu}_y W(y,z))\Big)ds(y)
-\een
+\ee
 where
 \be
 W(y,z)=\sum_{k=1}^{2} W_k(y,z) \\
@@ -1388,38 +1388,45 @@ On the boundary of the obstacle $\Gamma_D$, we have
  &=&-\int_{\Gamma_0^d}N(y,x_s) T^{e_2}_{x_s}\overline{D(x_s,z)}ds(x_s) \\
  &=&-\overline{J_d^T(z,y)}
  \een
- Moreover, $T_y^{e_2}\overline{W_k(y,z)}=0$ on $\Gamma_0$ since $T_y^{e_2}u^s_k(y,x_s)=0$ on $\Gamma_0$. Let $W_d(y,z)=\overline{W(y,z)}-\Psi(y,z)$ and it follows that $W_d(y,z)$ is the scattering solution of the problem
+ Moreover, $T_y^{e_2}\overline{W_k(y,z)}=0$ on $\Gamma_0$ since $T_y^{e_2}u^s_k(y,x_s)=0$ on $\Gamma_0$. Let $W_d(y,z)$ be the scattering solution of the problem
  \be
  & & \Delta_e W_d(y,z) + \omega^2 W_d(y,z)= 0 \ \ \ \ \mbox{in }\R_+^2\bks \bar{D}\\
- & &W_d(y,z)= \overline{F^T(z,y)}-\overline{J_d^T(z,y)} \ \ \mbox{on} \ \Ga_D  \\ 
- & & \sigma_y(W_d(y,z))\cdot e_2=0 \ \ \mbox{on} \ \Ga_0
+ & &W_d(y,z)= \overline{F(z,y)}-\overline{J_d^T(z,y)} \ \ \mbox{on} \ \Ga_D  \\ 
+ & & T_y^{e_2}(W_d(y,z))=0 \ \ \mbox{on} \ \Ga_0
  \ee
  By theorem \ref{elastic_eq2} and Corollaries \ref{cor_psf}-\ref{cor_dpsf} we have
 \be\nn
- 	\|\sigma(W_d(\cdot,z))\cdot\nu\|_{H^{1/2}(\Gamma_D)}&\leq& 	\|F^T(z,\cdot)-J_d^T(z,\cdot)\|_{H^{1/2}(\Gamma_D)}\\ \label{W_ineq}
+ 	\|T_y^{\nu}(W_d(y,z))\|_{H^{1/2}(\Gamma_D)}&\leq& 	\|F(z,\cdot)-J_d^T(z,\cdot)\|_{H^{1/2}(\Gamma_D)}\\ \label{W_ineq}
  	&\leq&  C(1+k_s d_D)(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
 \ee
+Let $ V(y,z):=\overline{ W(y,z)}-W_d(y,z)-\Phi(y,z)$. Since $\overline{ W(y,z)}-W_d(y,z)$ satisfy the half-space scattering problem \ref{elas_r1} with $g(y)=-\overline{F(z,y)}$, by using Theorem \ref{diff_solu} and Corollary \ref{cor_psf}
+\be
+\|T_y^{\nu}V(y,z)\|_{H^{1/2}(\Gamma_D)}&\leq& C(1+k_s d_D)^2\epsilon_1(k_s h)\|F(z,\cdot)\|_{H^{1/2}(\Gamma_D)}\\
+&\leq&C(1+k_s d_D)^3\epsilon_1(k_s h)
+\ee
+Now we substitute $\overline{ W(y,z)}=V(y,z)+W_d(y,z)+\Phi(y,z)$ into (\ref{resolu_1}) to obtain
 \be\hspace{-1.5cm}\label{I_d}
 \hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y J^T_d(z,y))^T \overline{\Psi(y,z)}-J_d(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+R_{\hat{I}}(z)
 \ee
 where
 \be\hspace{-1.5cm}
-R_{\hat{I}}(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y J^T_d(z,y))^T W_d(y,z)-J_d(z,y)(T^{\nu}_y W_d(y,z))ds(y)
+R_{\hat{I}}(z)=&-&\Im\mathbf{tr}\int_{\Gamma_D}J_d(z,y)(T^{\nu}_y V(y,z)ds(y)\\
+&+&\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y J^T_d(z,y))^T W_d(y,z)-J_d(z,y)(T^{\nu}_y W_d(y,z))ds(y)
 \ee
 By (\ref{W_ineq}) and Corollaries \ref{cor_psf}-\ref{cor_dpsf} it is easy to see that
 \be
-|R_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
+|R_{\hat{I}}(z)|\leq C(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
 \ee
-Finally, by (\ref{I_d}) and $\Psi(y,z)= -\overline{F^T(z,y)}$
+Finally, by (\ref{I_d}) and $\Psi(y,z)= -\overline{F(z,y)}$
 \ben\hspace{-1cm}
-\hat{I}_d(z)&=&\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (F^T(z,y))^T \overline{\Psi(y,z)}-F(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+w_{\hat{I}}(z) \\
-&=&-\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (F^T(z,y))^T F^T(z,y)+F(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+w_{\hat{I}}(z)\\
-&=&\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\overline{F^T(z,y)}+\Psi(y,z))^T \overline{F^T(z,y)}ds(y)+w_{\hat{I}}(z)
+\hat{I}_d(z)&=&\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (F(z,y))^T \overline{\Psi(y,z)}-F(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+w_{\hat{I}}(z) \\
+&=&-\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (F(z,y))^T F(z,y)+F(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+w_{\hat{I}}(z)\\
+&=&\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\overline{F(z,y)}+\Psi(y,z))^T \overline{F(z,y)}ds(y)+w_{\hat{I}}(z)
 \een
 
 where
 \ben\hspace{-2cm}
-w_{\hat{I}}(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (J^T_d(z,y)-F^T(z,y))^T \overline{\Psi(y,z)}-(J_d(z,y)-F(z,y))(T^{\nu}_y\overline{\Psi(y,z)})ds(y)
+w_{\hat{I}}(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (J^T_d(z,y)-F(z,y))^T \overline{\Psi(y,z)}-(J_d(z,y)-F(z,y))(T^{\nu}_y\overline{\Psi(y,z)})ds(y)
 \een
 By Corollaries \ref{cor_psf}-\ref{cor_dpsf} we have
 \be
@@ -1427,26 +1434,13 @@ By Corollaries \ref{cor_psf}-\ref{cor_dpsf} we have
 \ee
 \finproof
 
-Now, by the theorem \ref{diff_solu},\ref{resolution1}, we have more simpler theorem: 
-\begin{thm}\label{resolution2}
-	For any $z\in\Omega$, let $\Phi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
-	\ben
-	& & \Delta_e \Phi(y,z) + \omega^2\Phi= 0 \ \ \ \ \mbox{in }\R^2\bks \bar{D}\\
-	& &\Phi(y,z)= -\overline{F(z,y)} \ \ \ \ \ \ \ \mbox{on} \ \Ga_D  \\ 
-	\een
-	Then, we have
-	\be\hspace{-1cm}
-	\hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\overline{F(z,y)}+\Phi(y,z))^T \overline{F(z,y)}ds(y)+W_{\hat{I}}(z)
-	\ee
-	where $|W_{\hat{I}}(z)|\leq C(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$, $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$.
-\end{thm}
-By (\ref{F_p})-(\ref{F_s}) we know that for any fixed $z\in\Om$, $\overline{F^T(z,\cdot)}$ satisfies the Elastic wave equation. Thus $\Phi(y,z)$ can be viewed as the scattering solution of the Elastic equation with the
-incident wave $\overline{F^T(z,\cdot)}$. By lemma \ref{festimate1} we konw that $\overline{F^T(z,\cdot)}$ decays as $|y-z|$ becomes large. Therefore the imaging function $\hat{I}_d(z)$ becomes small when z moves away from the
+By (\ref{F_p})-(\ref{F_s}) we know that for any fixed $z\in\Om$, $\overline{F(z,\cdot)}$ satisfies the Elastic wave equation. Thus $\Phi(y,z)$ can be viewed as the scattering solution of the Elastic equation with the
+incident wave $\overline{F(z,\cdot)}$. By lemma \ref{festimate1} we konw that $\overline{F(z,\cdot)}$ decays as $|y-z|$ becomes large. Therefore the imaging function $\hat{I}_d(z)$ becomes small when z moves away from the
 boundary $\Ga_D$ outside the scatterer $D$ if $k_s h \gg 1$ and $d\gg h$.
 
 To understand the behavior of the imaging fuction when $z$ is close to the boundary of the scatterer, we extend the concept of the scattering coefficient fo incident plane waves\cite{RTMhalf_aco}.
 \begin{definition}\label{scarr_con}
-	For any unit vector $d\in \R^2$, let $u^i_p =d e^{\i k_p x\cdot d}$ or $u^i_s= d^\perp e^{\i k_s x\cdot d}$ be the incident wave and $u^s_\alpha = u^s_\alpha(x;d)$ be the radiation solution of the Navier equation:
+	For any unit vector $d\in \R^2$, let $u^i_p =d e^{\i k_p x\cdot d}$ or $u^i_s= d^\perp e^{\i k_s x\cdot d}$ be the incident wave and $u^s_\alpha = u^s_\alpha(x;d)$ be the corresponding radiation solution of the Navier equation:
 	\be
 	u^s_\alpha + \om^2u^s_\alpha = 0\ \ \mbox{in} \ \  \R^2\bks\bar{D} \\
 	u^s_\alpha =-u^i_\alpha \ \ \mbox{on} \ \ \pa D 
@@ -1461,7 +1455,7 @@ In the case of high frequency approximation, the scattering coecient can be appr
 \ben
 R_\alpha(x;d)=\left\{ \begin{array}{ll}
 	RF_\alpha(d;\nu(x))    \ \  \  \mbox{if} \ \ x \in \pa D^{-}_d=\{x\in \pa D, \nu(x)\cdot d<0\},\\ 
-	0 \ \ \ \ \ \ \ \  \ \ \ \ \ \ \ \ \ \mbox{if} \ \ x \in \pa D^{-}_d=\{x\in \pa D, \nu(x)\cdot d\geq0\}.
+	0 \ \ \ \ \ \ \ \  \ \ \ \ \ \ \  \ \ \ \mbox{if} \ \ x \in \pa D^{+}_d=\{x\in \pa D, \nu(x)\cdot d\geq0\}.
 \end{array} \right.
 \een
 where 
@@ -1516,14 +1510,14 @@ In this section we consider the reconstraction of non-penetrable obstacles with 
 \be
 \Delta_e u^s_k(x) + \omega^2 u^s_k(x) =0 \qquad\mbox{\rm in } \R^2_+\bks \bar{D}, \label{elas_4}\ \ \
 \\ (T^{\nu}_x+\i\eta(x)) u^s_k(x)=-(T^{\nu}_x+\i\eta(x))N(x_r,x_s)e_k\ \ \ \ \mbox{\rm on } \Ga_D, \label{elas_bd2} \\
-\sigma(u^s_k)e_2=0 \ \ \ \ \mbox{\rm on} \Ga_0, \label{elas_b02} 
+\sigma(u^s_k)e_2=0 \ \ \ \ \mbox{\rm on} \ \ \ \Ga_0, \label{elas_b02} 
 \ee
 By modifying the argument in Theorem \ref{resolution2}, we can show the following result whose proof is omitted.
 \begin{thm}\label{resolution2}
 	For any $z\in\Omega$, let $\Phi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
 	\ben
-	& & \Delta_e \Phi(y,z) + \omega^2\Phi= 0 \ \ \ \ \mbox{in }\R^2\bks \bar{D}\\
-	& &T^{\nu}_y\Phi(y,z)+\i\eta(y)\Phi(y,z)= -(T^{\nu}_y+\i\eta(y))\overline{F(z,y)} \ \ \ \ \ \ \ \mbox{on} \ \Ga_D  \\ 
+	& & \Delta_e \Phi(y,z) + \omega^2\Phi= 0 \ \ \ \ \mbox{\rm in }\R^2\bks \bar{D}\\
+	& &T^{\nu}_y\Phi(y,z)+\i\eta(y)\Phi(y,z)= -(T^{\nu}_y+\i\eta(y))\overline{F(z,y)} \ \ \ \ \ \ \ \mbox{\rm on} \ \Ga_D  \\ 
 	\een
 	Then, we have
 	\be\hspace{-1cm}
@@ -1535,13 +1529,13 @@ By modifying the argument in Theorem \ref{resolution2}, we can show the followin
 For the penetrable obstacle , the measured data $u^s_k(x_r.x_s)=u_k(x_r,x_s)-N(x_r,x_s)e_k$, $k=1,2$, where $u^s_k(x_r.x_s)$ is the radiation solution of the following problem:
 \be
 \Delta_e u^s_k(x) + \omega^2n(x) u^s_k(x) =-\om^2(n(x)-1)N(x,x_s)e_k \qquad\mbox{\rm in } \R^2 \label{elas_5}\ \ \ \\
-\sigma(u^s_k)e_2=0 \ \ \ \ \mbox{\rm on} \Ga_0, \label{elas_b03} 
+\sigma(u^s_k)e_2=0 \ \ \ \ \mbox{\rm on} \ \ \ \Ga_0, \label{elas_b03} 
 \ee
-where $n(x)\in L^{\infty}_{\R^2}$ is a positive function which is equel to 1 outside $D$. By modifying the argument in Theorem \ref{resolution2}, the following theorem can be proved.
+where $n(x)\in L^{\infty}({\R^2})$ is a positive function which is equel to 1 outside $D$. By modifying the argument in Theorem \ref{resolution2}, the following theorem can be proved.
 \begin{thm}\label{resolution2}
 	For any $z\in\Omega$, let $\Phi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
 	\ben
-	& & \Delta_e \Phi(y,z) + \omega^2n(y)\Phi= -\omega^2(n(y)-1)\overline{F(z,y)} \ \ \ \ \mbox{in }\R^2
+	& & \Delta_e \Phi(y,z) + \omega^2n(y)\Phi= -\omega^2(n(y)-1)\overline{F(z,y)} \ \ \ \ \mbox{\rm in }\R^2
 	\een
 	Then, we have
 	\be\hspace{-1cm}
