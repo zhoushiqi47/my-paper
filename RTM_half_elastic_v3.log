@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  4 APR 2018 19:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  4 APR 2018 19:54
 entering extended mode
 **./RTM_half_elastic_v3.tex
 (RTM_half_elastic_v3.tex
@@ -311,7 +311,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1175--1178
  []
 
 [25]
-Overfull \hbox (4.80864pt too wide) in alignment at lines 1227--1230
+Overfull \hbox (0.60881pt too wide) in alignment at lines 1227--1230
  [] [] [] [] 
  []
 
@@ -346,7 +346,7 @@ Overfull \hbox (8.60733pt too wide) in alignment at lines 1513--1518
  []
 
 
-Overfull \hbox (30.90125pt too wide) in alignment at lines 1520--1522
+Overfull \hbox (28.99646pt too wide) in alignment at lines 1520--1522
  [] [] [] [] 
  []
 
@@ -963,7 +963,7 @@ ublic/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
 /fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmtt10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/latxfont/lasy
 10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on RTM_half_elastic_v3.pdf (39 pages, 1137049 bytes).
+Output written on RTM_half_elastic_v3.pdf (39 pages, 1136797 bytes).
 PDF statistics:
  420 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
