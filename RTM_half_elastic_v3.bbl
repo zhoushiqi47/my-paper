@@ -1,0 +1,167 @@
+\begin{thebibliography}{10}
+
+\bibitem{achenbach1980}
+Jan Achenbach.
+\newblock {\em Wave Propagation in Elastic Solids}.
+\newblock North-Holland, 1980.
+
+\bibitem{Ahlfors1979Complex}
+Lars~V Ahlfors.
+\newblock {\em Complex Analysis: An introduction to the theory of analytic
+  functions of one complex variable}.
+\newblock McGraw-Hill, 1979.
+
+\bibitem{ammari2013mathematical}
+Habib Ammari, Josselin Garnier, Wenjia Jing, Hyeonbae Kang, Mikyoung Lim, Knut
+  S{\o}lna, and Han Wang.
+\newblock {\em Mathematical and statistical methods for multistatic imaging},
+  volume 2098.
+\newblock Springer, 2013.
+
+\bibitem{arens1999}
+T.~Arens.
+\newblock A new integral equation formulation for the scattering of plane
+  elastic waves by diffraction gratings.
+\newblock {\em Journal of Integral Equations and Applications}, 11(3):232¨C245,
+  1999.
+
+\bibitem{baysal1983reverse}
+Edip Baysal, Dan~D Kosloff, and John~WC Sherwood.
+\newblock Reverse time migration.
+\newblock {\em Geophysics}, 48(11):1514--1524, 1983.
+
+\bibitem{berkhout2012seismic}
+Augustinus~Johannes Berkhout.
+\newblock {\em Seismic migration: Imaging of acoustic energy by wave field
+  extrapolation}, volume~12.
+\newblock Elsevier, 2012.
+
+\bibitem{bleistein2013mathematics}
+Norman Bleistein, Jack~K Cohen, W~John~Jr, et~al.
+\newblock {\em Mathematics of multidimensional seismic imaging, migration, and
+  inversion}, volume~13.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem{ela_reverse}
+Wen~Fong Chang.
+\newblock Elastic reverse-time migration.
+\newblock {\em Geophysical Prospecting}, 37(3):243--256, 1987.
+
+\bibitem{chang1987elastic}
+Wen-Fong Chang and George~A McMechan.
+\newblock Elastic reverse-time migration.
+\newblock {\em Geophysics}, 52(10):1365--1375, 1987.
+
+\bibitem{chen2013reverse_acou}
+Junqing Chen, Zhiming Chen, and Guanghui Huang.
+\newblock Reverse time migration for extended obstacles: acoustic waves.
+\newblock {\em Inverse Problems}, 29(8):085005, 2013.
+
+\bibitem{chen2013reverse_elec}
+Junqing Chen, Zhiming Chen, and Guanghui Huang.
+\newblock Reverse time migration for extended obstacles: electromagnetic waves.
+\newblock {\em Inverse Problems}, 29(8):085006, 2013.
+
+\bibitem{chen2015reverse_elas}
+Zhiming CHEN and GuangHui HUANG.
+\newblock Reverse time migration for extended obstacles: Elastic waves.
+\newblock {\em SCIENTIA SINICA Mathematica}, 45(8):1103--1114, 2015.
+
+\bibitem{chen2015reverse_planar}
+Zhiming Chen and GuangHui Huang.
+\newblock Reverse time migration for reconstructing extended obstacles in
+  planar acoustic waveguides.
+\newblock {\em Science China Mathematics}, 58(9):1811--1834, 2015.
+
+\bibitem{RTMhalf_aco}
+Zhiming Chen and Guanghui Huang.
+\newblock Reverse time migration for reconstructing extended obstacles in the
+  half space.
+\newblock {\em Inverse Problems}, 31(5):055007, 2015.
+
+\bibitem{chung2012implementation}
+Wookeen Chung, Sukjoon Pyun, Ho~Seuk Bae, Changsoo Shin, and Kurt~J Marfurt.
+\newblock Implementation of elastic reverse-time migration using wavefield
+  separation in the frequency domain.
+\newblock {\em Geophysical Journal International}, 189(3):1611--1625, 2012.
+
+\bibitem{claerbout1985imaging}
+Jon~F Claerbout.
+\newblock Imaging the earth's interior.
+\newblock 1985.
+
+\bibitem{colton-kress}
+David Colton and Rainer Kress.
+\newblock {\em Inverse acoustic and electromagnetic scattering theory},
+  volume~93.
+\newblock Springer Science and Business Media, 2012.
+
+\bibitem{denli2008elastic}
+H~Denli and L~Huang.
+\newblock Elastic-wave reverse-time migration with a wavefield-separation
+  imaging condition: 78th annual international meeting, seg, expanded
+  abstracts, 2346--2350, 2008.
+
+\bibitem{Yves1988}
+Yves Dermenjian and Jean~Claude Guillot.
+\newblock Scattering of elastic waves in a perturbed isotropic half space with
+  a free boundary. the limiting absorption principle.
+\newblock {\em Mathematical Methods in the Applied Sciences}, 10(2):87¨C124,
+  1988.
+
+\bibitem{nedelec2011}
+Mario Dur{\'a}n, Ignacio Muga, and Jean-Claude N{\'e}d{\'e}lec.
+\newblock The outgoing time-harmonic elastic wave in a half-plane with free
+  boundary.
+\newblock {\em SIAM Journal on Applied Mathematics}, 71(2):443--464, 2011.
+
+\bibitem{grafakos}
+Loukas Grafakos.
+\newblock {\em Classical and modern Fourier analysis}.
+\newblock Prentice Hall, 2004.
+
+\bibitem{Harris2001Linear}
+Johng. Harris.
+\newblock {\em Linear elastic waves}.
+\newblock Cambridge University Press, 2001.
+
+\bibitem{kupradze1963progress}
+Viktor~D Kupradze.
+\newblock {\em Progress in solid mechanics. 3. Dynamical problems in
+  elasticity}.
+\newblock North-Holland Publishing Company, 1963.
+
+\bibitem{leis}
+Rolf Leis.
+\newblock {\em Initial Boundary Value Problems in Mathematical Physics}.
+\newblock J. Wiley, 1986.
+
+\bibitem{Guzina2006}
+Andrew~I. Madyarov and Bojan~B. Guzina.
+\newblock A radiation condition for layered elastic media.
+\newblock {\em Journal of Elasticity}, 82(1):73--98, 2006.
+
+\bibitem{sini2004}
+Mourad Sini.
+\newblock Absence of positive eigenvalues for the linearized elasticity system.
+\newblock {\em Integral Equations and Operator Theory}, 49(2):255--277, 2004.
+
+\bibitem{wilcox1975}
+Calvin~H. Wilcox.
+\newblock {\em Scattering Theory for the d'Alembert Equation in Exterior
+  Domains}.
+\newblock PhD thesis, Springer Berlin Heidelberg, 1975.
+
+\bibitem{Zhang08}
+Yu. Zhang and James. Sun.
+\newblock Practical issues of reverse time migration: true amplitude gathers,
+  noise removal and harmonic-source encoding.
+\newblock {\em Aseg Extended Abstracts}, 2009(3):397--398, 2008.
+
+\bibitem{Zhang2007}
+Yu~Zhang, Sheng Xu, Norman Bleistein, and Guanquan Zhang.
+\newblock True-amplitude, angle-domain, common-image gathers from one-way
+  wave-equation migrations.
+\newblock {\em Geophysics}, 72(1):S49--S58, 2007.
+
+\end{thebibliography}
