@@ -562,46 +562,17 @@ Finally, combining above inequality, we arrive at the estimate. This completes t
 \finproof
 Therefore, the estimate of $T_D(x_1,0;y_1,y_2)$ and $N(x_1,0;y_1,y_2)$ are now direct consequence of lemma \ref{es_integral}.
 \begin{lem}\label{es_dgreen}
-	For every $x\in\Gamma_0$, $y\in\R_+^2$ such that $|x_1-y_1|/|x-y|>(1+\kappa)/2$, $y_2/|x-y|<\kappa/2$ and $k_s |x-y|>1$, we have
+	For every $x\in\Gamma_0$, $y\in\R_+^2$ and $k_s|x-y|>1$, we have
 	\be\hspace{-1.5cm}
-	|T_D(x,y)|\leq C\Bigg(\frac{k_s y_2}{|x-y|}\frac{1}{(k_s|x-y|)^{1/2}}+\frac{k_s |x_1-y_1|}{|x-y|}\frac{1}{(k_s|x-y|)^{3/2}}\Bigg)
+	|T_D(x,y)|\leq C\Bigg(\frac{k_s y_2}{|x-y|}\frac{1}{(k_s|x-y|)^{1/2}}+\frac{k_s |x_1-y_1|}{|x-y|}\frac{1}{(k_s|x-y|)^{5/4}}\Bigg)
 	\ee
 	where C is only dependent on $\kappa$.
 \end{lem}
-\debproof
-Put
-\be
-I(|x_1-y_1|,y_2)=\int_\R \Ts(\xi) e^{\i(\mu_s y_2 + \xi |x_1-y_1|) } d\xi \\
-J(|x_1-y_1|,y_2)=\int_\R \Tp(\xi) e^{\i(\mu_p y_2 + \xi |x_1-y_1|) } d\xi
-\ee
-To simplify the integral $I$, the standard substitution $\xi=k_s\sin t$ is made, taking the $\xi$-plane to a strip $-\pi<\Re t <\pi$ in the t-plane, and the real axis in the $\xi$-plane onto the path L from $-\pi/2+\i\infty\rightarrow-\pi/2\rightarrow\pi/2\rightarrow\pi/2-\i\infty$ in the t-plane. The integral $I(|x_1-y_1|,y_2)$ then becomes (Let $|x_1-y_1|=\rho \sin\phi$  and $y_2=\rho\cos\phi$, $0<\phi<\pi/4$):
-\be
-k_s \int_L F(\sin t,\cos t,(\kappa^2-\sin^2 t)^{1/2})\cos t \ e^{\i k_s\rho(\cos (t-\phi))} dt
-\ee
-where $ F(\sin t,\cos t,(\kappa^2-\sin^2 t)^{1/2})=\Ts(k_s \sin t) $.
-Taking the shift transformation of t and using cauchy integral theorem, we can get the representation of I:
-\ben \hspace{-1.5cm}
-k_s\int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})\cos (t+\phi) e^{\i k_s\rho(\cos t)} dt \\\hspace{-2cm}
-=k_s \cos \phi \int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})\cos t \ e^{\i k_s\rho(\cos t)} dt \\\hspace{-2cm}
--k_s \sin \phi \int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})\sin t \ e^{\i k_s\rho(\cos t)} dt \\\hspace{-2cm}
-:=k_s (\cos\phi \ I_1+\sin\phi \ I_2)
-\een
-For $I_1$, we split the integral path L into $L_1=(-\pi/2,\pi/2)$ and $L_2=(-\pi/2+\i\infty,-\pi/2)\cup(\pi/2,\pi/2-\i\infty)$, then we have corresponding representation: $I_1=I_{11}+I_{12}$. Since $F(t)\cos t$ satisfy (\ref{assume1}), we can obtain $|I_{11}|\leq 1/(k_s\rho)^{1/2}$ by lemma \ref{es_integral}. Using integration by parts, it follows that $|I_{12}|\leq 1/(k_s\rho)$.
-For $I_2$, using integration by parts on path $L$ first, we have
-\be \hspace{-2cm}
-I_2=\frac{1}{\i k_s\rho} \int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2}) d \ e^{\i(k_s\rho \cos t)} \\ \hspace{-1.5cm}
-=-\frac{1}{\i k_s\rho} \int_{L_1 \cup L_2} \frac{\pa F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})}{\pa t
-} \  e^{\i(k_s\rho \cos t)} dt \\ \hspace{-1.5cm}
-=-\frac{1}{\i k_s\rho}(I_{21}+I_{22})
-\ee
-Similarly, we have $|I_{21}+I_{22}|\leq 1/(k_s\rho)^{1/2}$ by lemma \ref{es_integral}.
-The estimate of $J(|x_1-y_1|,y_2)$ can be proved by the same method as employed above.
-This completes the proof.
-\finproof
+
 \begin{lem}\label{es_ngreen}
-	For every $x\in\Gamma_0$, $y\in\R_+^2$ such that $|x_1-y_1|/|x-y|>(1+\kappa)/2$, $y_2/|x-y|<\kappa/2$ and $k_s |x-y|>1$, we have
+	For every $x\in\Gamma_0$, $y\in\R_+^2$ and $k_s|x-y|>1$, we have
 	\be\hspace{-2.5cm}
-	|N(x,y)|\leq \frac{C}{\mu}\Bigg(\frac{ y_2}{|x-y|}\frac{1}{(k_s|x-y|)^{1/2}}+\frac{ |x_1-y_1|}{|x-y|}\frac{1}{(k_s|x-y|)^{3/2}}+e^{-\sqrt{k_R^2-k_s^2}y_2}\Bigg)
+	|N(x,y)|\leq \frac{C}{\mu}\Bigg(\frac{ y_2}{|x-y|}\frac{1}{(k_s|x-y|)^{1/2}}+\frac{ |x_1-y_1|}{|x-y|}\frac{1}{(k_s|x-y|)^{5/4}}+e^{-\sqrt{k_R^2-k_s^2}y_2}\Bigg)
 	\ee
 	where C is only dependent on $\kappa$.
 \end{lem}
@@ -1192,13 +1163,7 @@ Now we consider the finite aperture point spread function $J_d(z,y)$:
 \be
 \int_{-d}^{d} (T_D(x_1,0;z_1,z_2))^T\overline{N(x_1,0;y_1,y_2)}dx_1
 \ee
-Our aim is to estimate the difference $J(z,y)-J_d(z,y)$. It is easy to see that
-
-\be\hspace{-2cm}
-\frac{(x_1-z_1)^2}{\rho^2}=\frac{1}{1+\frac{z_2^2}{(x_1-z_1)^2}}\geq \frac{1}{1+\frac{c_3^2 h^2}{(1-c_1)^2 d^2}}=\frac{(1-c_1)^2}{(1-c_1)^2+c_3^2 (h/d)^2}:=m(h/d)\\
-\frac{z_2^2}{\rho^2}=\frac{1}{1+\frac{(x_1-z_1)^2}{z_2^2}}\leq \frac{1}{1+\frac{(1-c_1)^2 d^2}{c_3^2h^2}}=\frac{c_3^2}{(1-c_1)^2(h/d)+c_3^2 }:=M(h/d)
-\ee
-where $\rho=\sqrt{(x_1-z_1)^2+z_2^2}$ and $z\in\Omega,x\in \Gamma_0\bks(-d,d)$.
+Our aim is to estimate the difference $J(z,y)-J_d(z,y)$. 
 \begin{thm} \label{ap_psf}
 	Assume $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$ and $k_s h\geq 1$. Then for $z,y\in\Omega$, we have
 	\be 
@@ -1223,7 +1188,7 @@ Here we have used the first inequeality in (\ref{convention_2}). Similarly, we c
 \finproof
 By (\ref{q0}) we obtain the following corollary
 \begin{cor}\label{cor_dpsf}
-		Assume $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$ and $k_s h\geq 1$. There exists a constant C independent of $k_s$, h such that
+	 There exists a constant C only be depandent on $\kappa$ such that
 	\ben\hspace{-2.5cm}
 	\|\J(z,\cdot)-\J_d (z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(\J(z,\cdot)-\J_d (z,\cdot))\cdot\nu\|_{H^{1/2}(\Gamma_D)} 
 	\leq \frac{C}{\mu} \epsilon_2(k_s h,h/d)(1+k_sd_D)
@@ -1474,33 +1439,15 @@ To understand the behavior of the imaging fuction when $z$ is close to the bound
 	\een
 	where $\alpha=p,s$, $d=(d^1,d^2)^T$ is unit vectors, $d^\perp=(d^2,-d^1)^T$ .
 \end{definition}
-In the case of high frequency approximation, the scattering coecient can be approximated by
+For the high frequence, ie. for small wavelength, a convex object $D$ locally may be cosidered at each point $x$ as a plane with normal $\nu(x)$. Then the scattering coecient can be approximated by
 \ben
 R_\alpha(x;d)=\left\{ \begin{array}{ll}
 	RF_\alpha(d;\nu(x))    \ \  \  \mbox{if} \ \ x \in \pa D^{-}_d=\{x\in \pa D, \nu(x)\cdot d<0\},\\ 
 	0 \ \ \ \ \ \ \ \  \ \ \ \ \ \ \  \ \ \ \mbox{if} \ \ x \in \pa D^{+}_d=\{x\in \pa D, \nu(x)\cdot d\geq0\}.
 \end{array} \right.
 \een
-where 
-\ben
-RF_p(d;\nu)=  (\lambda\nu+2\mu(d,\nu)d)+ A_1/A_0 (\lambda\nu+2\mu(d_1,\nu)d_1)\\+\kappa A_2/A_0 \mu((d_2,\nu)d_2^\perp+(d_2^\perp,\nu)d_2) \\
-d_1= d- 2\alpha\nu\\
-d_2= \kappa d- \beta\nu\\
-A_0=\kappa(d,\nu)^2-\kappa(d,\nu^\perp)^2-\beta(d,\nu)\\
-A_1=\kappa-\beta(d,\nu)\\
-A_2=-2(d,\nu)(d,\nu^\perp)\\
-\alpha=(d,\nu),\beta=\kappa\alpha-\sqrt{\kappa^2\alpha^2-\kappa^2+1}
-\een 
-and
-\ben
-RF_s(d;\nu)= \mu((d,\nu)d^\perp+(d^\perp,\nu)d)+1/\kappa A_1/A_0 (\lambda\nu+2\mu(d_1,\nu)d_1)\\+ A_2/A_0\mu((d_2,\nu)d_2^\perp+(d_2^\perp,\nu)d_2) \\
-d_1 =1/\kappa d_0- \gamma\nu \\
-d_2 =d_0- 2\alpha\nu\\
-A_0=1/\kappa(d,\nu)^2-1/\kappa(d,\nu^\perp)^2-\gamma(d,\nu)\\
-A_1=2(d,\nu)(d,\nu^\perp)\\
-A_2=1/\kappa-\gamma(d,\nu)\\
-\alpha=(d,\nu),\gamma=1/\kappa\alpha-\sqrt{(1/\kappa)^2\alpha^2-(1/\kappa)^2+1}
-\een
+where $RF_\alpha(d;\nu),\alpha=s,p$ is the scattering coecient for a plane wave with incident derection $d$ at a plane $\Ga:=\{x\in,x\cdot\nu=0\}$.
+
 Now we consider the physical interpretation of the imaging function $\hat{I}_d(z)$ when $z\in\Ga_D$. By (\ref{F_p}) and (\ref{F_s}), we have
 \ben\hspace{-2cm}
 \overline{F(z,y)}=\i\int_{0}^{\pi}A_p(\theta)\eta_\theta e^{\i k_p (y-z)\cdot \eta_\theta}+A_s(\theta)\eta_\theta^\perp e^{\i k_s (y-z)\cdot \eta_\theta}d\theta, \ \ \ \ \eta_\theta:=(\cos\theta,\sin\theta)^T
