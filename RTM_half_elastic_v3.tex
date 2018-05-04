@@ -349,7 +349,7 @@ As the perturbation $\ep$ have nothing to do with the integration path $NP$, we 
 && \pm \i  {\mathit{Res}}_{\xi=\pm\kappa_r}  \hat \N_c(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi}
 \ee
 where $\pm$ are corresponding $sgn(x_1-y_1)$.
-Specially, $N(x,y)$ has a simple form when $x_2=0$:
+Specially, $\N(x,y)$ has a simple form when $x_2=0$:
 \be \label{Ngreen}
 \hspace{-2cm}
 \N(x,y)&=&\frac{1}{2\pi}\int_{NP}\hat \N(\xi,0;y_2) e^{\i(x_1-y_1)\xi}d\xi
@@ -527,6 +527,8 @@ We only analysis the integral on $\chi_{1}=(t_1-\sigma,t_1+\sigma)\cap[-\pi/2,\p
 \be
 H_{\chi_1}&=&\int_{t_1-\sigma}^{t_1+\sigma}\frac{g(t,\phi)}{(\kappa^2-\sin^2(t+\phi))^{1/2}} e^{\i\rho\cos t}\\
 &=&\int_{L_\theta}\frac{g(t(\theta),\phi)}{(1-\kappa^2\sin^2\theta)^{1/2}}e^{\i
+	\rho(\cos(t(\theta)))} d\theta  \\
+&:=&\int_{L_\theta}h(\theta)e^{\i
 	\rho(\cos(t(\theta)))} d\theta 
 \ee
 Observe that $h(\theta)$ and $\pa h/\pa\theta$ are integrable on the path $L_\theta$ by (\ref{convention_1}). A simple computation show that
