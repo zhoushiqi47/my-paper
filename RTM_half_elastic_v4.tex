@@ -455,101 +455,68 @@ To analysis the point spread function in the section 5, we should give asymptoti
 \debproof
 The assertion can be proved by extending the Van der Corptut lemma in \cite{grafakos}. Here we omit the details.
 \finproof
-\begin{lem}\label{es_integral}
-	Assume that $0<\kappa:=\sin\phi_\kappa<1,0<\phi_\kappa<\pi/2$, $0\leq\phi\leq\pi/2$. Let 
-	\be
-	f(t,\phi):=F(\sin(t+\phi),\cos(t+\phi),(\kappa^2-\sin^2(t+\phi))^{1/2})
-	\ee
-	be a complexed function in $C([-\pi/2,\pi/2]\times[0,\pi/2])$. Moreover, its partial derivative with respect to $t$ can be represented as
-	\be\label{assume1}
-	\frac{\pa f(t,\phi)}{\pa t}=g(t,\phi)(\kappa^2-\sin^2(t+\phi))^{-1/2}
-	\ee 
-	where $g(t,\phi)$ and $\pa g(t,\phi)/\pa t $ are uniformly bounded. Then for any $\rho\geq1$ and $\phi>\phi^*>\phi_\kappa$, we have
-	\be\label{es_integral_1}
-	\bigg|I(\rho,\phi):=\int_{-\pi/2}^{\pi/2}f(t,\phi)e^{\i\rho\cos t}dt\bigg| 
-	\leq C\frac{1}{\rho^{1/2}}
-	\ee	
-	\be\label{es_integral_2}
-	\bigg|H(\rho,\phi):=\int_{-\pi/2}^{\pi/2}\frac{\pa f(t,\phi)}{\pa t}e^{\i\rho\cos t}dt\bigg| 
-	\leq C\frac{1}{\rho^{1/2}}
-	\ee	
-	where C is only dependent on $\kappa$ and $\phi^*$.
+\begin{lem}\label{singular_term}
+   Assume that $0<\kappa<1$ and  $f(t)\in C([-\frac{\pi}{2},\frac{\pi}{2}])\cap W^{1,1}([-\frac{\pi}{2},\frac{\pi}{2}])$. Then for any $\rho> 1$ and $\phi\geq\phi^*>\arcsin \kappa:=\phi_\kappa$, we have
+   \be\label{es_singular}\hspace{-1.5cm}
+   \bigg|\int_{-\pi/2}^{\pi/2}f(t)(\kappa^2-\sin^2(t+\phi))^{-1/2}e^{\i\rho\cos t}dt\bigg| 
+   \leq C\frac{1}{\rho^{1/2}}(|f(0)|+\int_{-\pi/2}^{\pi/2}|f'(t)|dt)
+   \ee
+   where C only depend on $\phi^*$ and $\kappa$.
 \end{lem}
 \debproof
-Since $\phi>\phi^*>\phi_\kappa$,  there exists $0<\delta<\pi/4$ such that
-\be
-|(\kappa^2-\sin^2(t+\phi))^{1/2}|>\frac{1}{2}|(\kappa^2-\sin^2\phi)^{1/2}|
-\ee
-for any $t\in(-\delta,\delta)$. Then we can divide $I$ into two parts such that
-\ben
-I=\int_{-\delta}^{\delta} f(t)e^{\i \rho\cos t} dt +
-\int_{(-\frac{\pi}{2},\frac{\pi}{2})\bks[-\delta,\delta]} f(t) e^{\i \rho\cos t} dt  \\ 
-=: I_{1} + I_{2}
-\een
-Similarly, we have $H=H_1+H_2$.
-Let phase function $p(t)=\cos t$. It is easy to see that $|p''(t)|\geq \cos\delta$ for $t\in(-\delta,\delta)$ and $|p'(t)|\geq \sin\delta$. By lemma \ref{van}, we obtain
-\be\hspace{-1.5cm}
- |I_1|&\leq& C\frac{1}{\rho^{1/2}}\left[|f(\delta,\phi)|+\int^\delta_{-\delta}|\frac{\pa f(t,\phi)}{\pa t}|dt\right]\leq C\frac{1}{\rho^{1/2}} \\  \hspace{-1.5cm}
- |I_2|&\leq& C \frac{1}{\rho} \left[|f(\frac{\pi}{2},\phi)|+|f(-\delta,\phi)|+\int_{(-\frac{\pi}{2},\frac{\pi}{2})\bks[-\delta,\delta]}|\frac{\pa f(t,\phi)}{\pa t}|dt\right]\leq C\frac{1}{\rho} \\ \hspace{-1.5cm}
- |H_1|&\leq& C\frac{1}{\rho^{1/2}}\left[|\frac{\pa f(\delta,\phi)}{\pa t}|+\int^\delta_{-\delta}|\frac{\pa^2 f(t,\phi)}{\pa^2 t}|dt\right]\leq C\frac{1}{\rho^{1/2}}
-\ee
-For $H_2(\rho,\phi)$, we can not use lemma \ref{van} again since ${\pa^2 f(t,\phi)}/{\pa^2 t}$ is not integrable on $(-\frac{\pi}{2},\frac{\pi}{2})\bks[-\delta,\delta]$. 
 	Solving the following equation:
 \ben
 \kappa^2-\sin^2(t+\phi)=0
 \een
-we have, if $0<\phi<\pi/2-\phi_\kappa$,
-\ben
-t_1(\phi)=\phi_\kappa-\phi \ \ \ \ \ t_2(\phi)=-\phi_\kappa-\phi
+we have, $t_1=\phi_\kappa-\phi$ and  $t_2=-\phi_\kappa-\phi$ or $t_2=\pi-\phi_\kappa-\phi$ depending on whether $\phi+\phi_\kappa\leq \pi/2$ or $\phi+\phi_\kappa> \pi/2$. Without loss of generality, we assume the later case and thus $t_2=\pi-\phi_\kappa-\phi$. Let $d=\min\{\frac{\phi^*-\phi_\kappa}{2},\frac{\phi_\kappa}{2}\}$, then we can divide $[-\pi/2,\pi/2]$ into four intervals:
+\ben\hspace{-1.5cm}
+I_1=[-d,d], I_2=[t_1-d,t_2+d],I_3=[t_2-d,t_3+d] ,I_4=[-\frac{\pi}{2},\frac{\pi}{2}]/I_1\cup I_2\cup I_3
 \een
-and if $\pi/2-\phi_\kappa\leq\phi<\pi/2$,
-\ben
-t_1(\phi)=\phi_\kappa-\phi  \ \ \ \ \ t_2(\phi)=\pi-\phi_\kappa-\phi
-\een
-However,  for any $0<\lambda_1<1$ and $1<\lambda_2<1/\kappa$, there exists $\sigma>0$, such that $\chi:=((t_1-\sigma,t_1+\sigma)\cup(t_2-\sigma,t_2+\sigma))\subset (-\frac{\pi}{2},\frac{\pi}{2})\bks[-\delta,\delta]$, dependent on $\lambda_1,\lambda_2$ and
-\be \label{assume2}
-\lambda_1\kappa<|\sin (t+\phi)|<\lambda_2\kappa.
+We remark that if $t_2+d>\pi/2$, then let $I_3=[t_2-d,\pi/2]\cup[-\pi/2,t_2+d-\pi]$. A simple computation show that
+\be\label{es_I1}
+\sin(t+\phi)>\sin(\phi^*-d) >\kappa \ \ \ \ \ t\in I_1 \\ \label{es_I2}
+\sin(\phi_\kappa-d)\leq|\sin(t+\phi)|\leq \sin(\phi_\kappa+d), \ \ \ \ \ t\in I_2\cup I_3 \\ \label{es_I_4}
+|\sin(t+\phi)|\leq\sin(\phi_\kappa-d)\ \mbox{or} \  |\sin(t+\phi)|\geq\sin(\phi_\kappa+d), \ \ \ \ \ t\in I_4
 \ee
-for any $t\in\chi$. 
-
-We only analysis the integral on $\chi_{1}=(t_1-\sigma,t_1+\sigma)\cap[-\pi/2,\pi/2]$ here, which denoted by $H_{\chi_1}$, the proof of $H_{\chi_2}$ is similar. It is easy to see that $\sin (t+\phi)$ is monotonic in $\chi_1$. Without loss of generality, we assume that $\sin (t_1-\sigma+\phi)<\kappa<\sin (t_1+\sigma+\phi)$. Let $\sin (t+\phi) = \kappa \sin \theta$ and the implicit mapping from $\theta$ to $t$ is denoted by $t(\theta)$ while the inverse mapping by $\theta(t)$, taking the interval $\chi_1$ onto $L_\theta : \theta_1\rightarrow\pi/2\rightarrow\pi/2-\i\theta_2$ where $\sin(t_1-\sigma+\phi)=\kappa\sin \theta_1,\sin(t_1+\sigma+\phi)=\kappa\sin(\pi/2-\i\theta_2)$. By substituting $t(\theta)$ into $H_{\chi_1}$, we have
-\be
-H_{\chi_1}&=&\int_{t_1-\sigma}^{t_1+\sigma}\frac{g(t,\phi)}{(\kappa^2-\sin^2(t+\phi))^{1/2}} e^{\i\rho\cos t}\\
-&=&\int_{L_\theta}\frac{g(t(\theta),\phi)}{(1-\kappa^2\sin^2\theta)^{1/2}}e^{\i
-	\rho(\cos(t(\theta)))} d\theta 
-\ee
-Observe that $h(\theta)$ and $\pa h/\pa\theta$ are integrable on the path $L_\theta$ by (\ref{convention_1}). A simple computation show that
-\ben\hspace{-0.5cm}
-\frac{dt(\theta)}{d\theta}=\frac{\kappa\cos\theta}{\cos(t+\phi)} \ \ \ \ \ \
-\frac{d^2 t(\theta)}{dt^2}=\frac{\kappa^2\cos^2\theta\sin(t+\phi)-\kappa\sin\theta\cos^2(t+\phi)}{\cos^3(t+\phi)}
-\een
-Then we can obtain
+By lemma \ref{van} and inequelity (\ref{es_I1}), we can obtain:
 \ben
-\frac{d\cos t}{d\theta}&=&\frac{-\kappa\sin t\cos\theta}{\cos(t+\phi)} \\
-\frac{d^2\cos t}{d\theta^2}&=&\frac{d^2\cos t}{dt^2}(\frac{dt}{d\theta})^2+\frac{d\cos t}{dt}\frac{d^2t}{d\theta^2} \\
-&=&\frac{-\kappa^2\cos^2\theta\cos t}{\cos^2(t+\phi)}+\frac{\kappa\sin\theta\cos^2(t+\phi)\sin t -\kappa^2\cos^2\theta\sin(t+\phi)\sin t}{\cos^3(t+\phi)} \\
-&=&\frac{-\kappa^2\cos^2\theta\cos\phi+\kappa\sin\theta\cos^2(t+\phi)\sin t}{\cos^3(t+\phi)} \\
-&=&\frac{(\sin^2(t+\phi)-\kappa^2)\cos\phi+\cos^2(t+\phi)\sin(t+\phi)\sin t}{\cos^3(t+\phi)}
-\een
-Since $|\sin t|>|\sin\delta|$ and $1-\lambda_2^2\kappa^2<\cos^2(t+\phi)<1-\lambda_1^2\kappa^2$ for $t\in\chi_1$, it follows that $\theta=\pi/2$ is the only stationary point of $\cos(t(\theta))$ and 
-\be
-\Bigg|\frac{d^2\cos t}{d\theta^2}(\pi/2)\Bigg|=\frac{(1-\kappa^2)\kappa}{(1-\kappa^2)^{3/2}}|\sin t|>\frac{(1-\kappa^2)\kappa}{(1-\kappa^2)^{3/2}}\sin \delta
-\ee
-Therefore, we can choose appropriate $\lambda_1,\lambda_2$ such that 
-\be
-|\frac{d^2\cos t}{d\theta^2}|>\frac{(1-\kappa^2)\kappa}{(1-\kappa^2)^{3/2}}\sin \delta
-\ee
-for any 
-$\theta\in \theta(\chi_1)$. According to lemma (\ref{van}), we obtian $|H_{\chi_1}|\leq C\frac{1}{\rho^{1/2}}$, and also $|H_{\chi_2}|\leq C\frac{1}{\rho^{1/2}}$. Using integration by parts, we get
+  \bigg|\int_{I_1}f(t)(\kappa^2-\sin^2(t+\phi))^{-1/2}e^{\i\rho\cos t}dt\bigg|  \\
+  \leq \frac{C}{\cos d}\rho^{-1/2}\Big(|f(d)||\kappa^2-\sin^2(d+\phi)|^{-1/2}+\int_{I_1}|f'(t)||\kappa^2-\sin^2(t+\phi)|^{-1/2}dt\\
+  \int_{I_1}|f(t)||\kappa^2-\sin^2(t+\phi)|^{-3/2}dt\Big)\\
+  \leq C(\phi^*,\kappa)\rho^{-1/2}\big(|f(0)|+\int_{I_1}|f'(t)|dt\big)
+ \een
+and similarly we have
 \ben
-\Bigg|\int_{[-\pi/2,\pi/2]\bks((-\delta,\delta)\cup\chi)}\frac{\pa f(t,\phi)}{\pa t} e^{\i \rho\cos t} dt\Bigg| 
-\leq C\frac{1}{\rho}
+\bigg|\int_{I_4}f(t)(\kappa^2-\sin^2(t+\phi))^{-1/2}e^{\i\rho\cos t}dt\bigg| \\
+\leq C(\phi^*,\kappa)\rho^{-1}\big(|f(0)|+\int_{I_1}|f'(t)|dt\big)
 \een
-Finally, combining above inequality, we arrive at the estimate. This completes the proof.
-
-
+For interval $I_2$, we only analysis the integral on $[t_1-d,t_1]$. The integral on the other side can be estimated in the same method. Let $0<\delta < d$, then by lemma \ref{van} we can get 
+\ben\hspace{-1.5cm}
+\bigg|\int_{t_1-d}^{t_1-\delta}f(t)(\kappa^2-\sin^2(t+\phi))^{-1/2}e^{\i\rho\cos t}dt\bigg| \\ \hspace{-2cm}
+\leq \frac{C}{|\sin(t_1-d)|}\rho^{-1}\Big(|f(t_1-\delta)||\kappa^2-\sin^2(\phi_\kappa-\delta)|^{-1/2}+\int_{-d}^{-\delta}|f'(t_1+t)||\kappa^2-\sin^2 (\phi_\kappa+t)|^{-1/2}dt\\ \hspace{-2cm}
++\int_{-d}^{-\delta}|f(t_1+t)||\kappa^2-\sin^2 (\phi_\kappa+t)|^{-3/2}dt\Big) \\ \hspace{-2cm}
+\leq C\frac{\cos^{-3/2}(\phi_\kappa+d)}{\sin d}\rho^{-1}\Big(|f(t_1-\delta)|((\kappa+\sin(\phi_\kappa-d))\delta)^{-1/2}+\int_{-d}^{-\delta}|f'(t_1+t)|((\kappa+\sin(\phi_\kappa-d))\delta)^{-1/2}dt\\ \hspace{-2cm}
++\int_{-d}^{-\delta}|f(t_1+t)|(-(\kappa+\sin(\phi_\kappa-d))t)^{-3/2}dt\Big)\\
+\hspace{-2cm}
+\leq C(\phi^*,\kappa)(1+\delta^{-1/2})\rho^{-1}\big(|f(0)|+\int_{-\pi/2}^{\pi/2}|f'(t)|dt\big)
+\een
+Now, we turn to estimate the residual part of $[t_1-d,t_1]$. By inequality \ref{es_I2}, we have
+\ben
+\bigg|\int_{t_1-\delta}^{t_1}f(t)(\kappa^2-\sin^2(t+\phi))^{-1/2}e^{\i\rho\cos t}dt\bigg| \\
+\leq \|f\|_{L^{\infty}}(\kappa + \sin(\phi_\kappa-d))\int_{-\delta}^{0}(\kappa -\sin(\phi_\kappa+t))dt\\
+\leq \|f\|_{L^{\infty}}(\kappa + \sin(\phi_\kappa-d))\int_{-\delta}^{0}(\kappa -\sin(\phi_\kappa+t))^{-1/2}\frac{\cos t}{\cos d}\\
+\leq C(d,\kappa) \|f\|_{L^{\infty}}(\kappa-\sin(\phi_\kappa-\delta))^{1/2}
+\leq C(\phi^*,\kappa)\|f\|_{L^{\infty}}\delta^{1/2}
+\een
+Cosequently,  let $\delta$ be equal to $d*\rho^{-1}$, we can obtain
+\ben
+\bigg|\int_{I_2}f(t)(\kappa^2-\sin^2(t+\phi))^{-1/2}e^{\i\rho\cos t}dt\bigg| \\
+\leq C(\phi^*,\kappa)\rho^{-1/2}\big(|f(0)|+\int_{I_1}|f'(t)|dt\big)
+\een
+Similarly, we can etimate the integral on $I_3$. This completes the proof.
 \finproof
-Therefore, the estimate of $T_D(x_1,0;y_1,y_2)$ and $N(x_1,0;y_1,y_2)$ are now direct consequence of lemma \ref{es_integral}.
+
+Therefore, the estimate of $T_D(x_1,0;y_1,y_2)$ and $N(x_1,0;y_1,y_2)$ are now direct consequence of lemma \ref{singular_term}.
 \begin{lem}\label{es_dgreen}
 	For every $x\in\Gamma_0$, $y\in\R_+^2$ such that $|x_1-y_1|/|x-y|>(1+\kappa)/2$, $y_2/|x-y|<\kappa/2$ and $k_s |x-y|>1$, we have
 	\be\hspace{-1.5cm}
@@ -575,7 +542,7 @@ k_s\int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})\cos (t
 -k_s \sin \phi \int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})\sin t \ e^{\i k_s\rho(\cos t)} dt \\\hspace{-2cm}
 :=k_s (\cos\phi \ I_1+\sin\phi \ I_2)
 \een
-For $I_1$, we split the integral path L into $L_1=(-\pi/2,\pi/2)$ and $L_2=(-\pi/2+\i\infty,-\pi/2)\cup(\pi/2,\pi/2-\i\infty)$, then we have corresponding representation: $I_1=I_{11}+I_{12}$. Since $F(t)\cos t$ satisfy (\ref{assume1}), we can obtain $|I_{11}|\leq 1/(k_s\rho)^{1/2}$ by lemma \ref{es_integral}. Using integration by parts, it follows that $|I_{12}|\leq 1/(k_s\rho)$.
+For $I_1$, we split the integral path L into $L_1=(-\pi/2,\pi/2)$ and $L_2=(-\pi/2+\i\infty,-\pi/2)\cup(\pi/2,\pi/2-\i\infty)$, then we have corresponding representation: $I_1=I_{11}+I_{12}$. Since $F(t)\cos t\in W^{1,1}([-\frac{\pi}{2},\frac{\pi}{2}])$, we can obtain $|I_{11}|\leq 1/(k_s\rho)^{1/2}$ by lemma \ref{van}. Using integration by parts, it follows that $|I_{12}|\leq 1/(k_s\rho)$.
 For $I_2$, using integration by parts on path $L$ first, we have
 \be \hspace{-2cm}
 I_2=\frac{1}{\i k_s\rho} \int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2}) d \ e^{\i(k_s\rho \cos t)} \\ \hspace{-1.5cm}
@@ -583,7 +550,7 @@ I_2=\frac{1}{\i k_s\rho} \int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (
 } \  e^{\i(k_s\rho \cos t)} dt \\ \hspace{-1.5cm}
 =-\frac{1}{\i k_s\rho}(I_{21}+I_{22})
 \ee
-Similarly, we have $|I_{21}+I_{22}|\leq 1/(k_s\rho)^{1/2}$ by lemma \ref{es_integral}.
+Similarly, we have $|I_{21}+I_{22}|\leq 1/(k_s\rho)^{1/2}$ by lemma \ref{singular_term}.
 The estimate of $J(|x_1-y_1|,y_2)$ can be proved by the same method as employed above.
 This completes the proof.
 \finproof
@@ -639,142 +606,6 @@ Similarly, we can also obtain
 \een
 Therefore, the proof of this lemma can be completed  by the same method as employed in the lemma \ref{es_dgreen}. Here we omit the details.
 \finproof
-
-\section{The forward scattering problem}
-
-In this section we introduce the following stability estimate of the forward elastic scattering problem in the half space which can be proved by the limiting absorption principle by extending the classical argument in \cite{leis,wilcox1975,Yves1988}.
-\begin{thm} \label{elastic_eq2}
-	Let $g \in H^{1/2}(\Ga_D)$, then the scattering problem of elastic equation in the half space
-	\be
-	\Delta_e u + \omega^2 u =0 \qquad\mbox{\rm in } \R^2_+\bks \bar{D}, \label{elas_1}\ \ \
-	\\ u= g \ \ \ \ \mbox{\rm on } \Ga_D, \label{elas_bd} \\
-	\sigma(u)e_2=0 \ \ \ \ \mbox{\rm on} \Ga_0, \label{elas_b0} \\
-	u \ \mbox{satisfies the generalized radiation codition\cite{Guzina2006} such that} \nn \\\label{rc}
-	\lim_{r\to\infty}  \int_{S_r^+} (\sigma(N(x,y)e_i)\hat{r})\cdot u(x) - (N(x,y)e_i)\cdot (\sigma(u)\hat{r})ds(x)=0
-	\ee
-	where $S_r^+:=\{x\in \R^2_+ \ | \ \|x\|=r^2\}$, $\hat{r}=x/r$ and $y\in \R_+^2$. Then the problem (\ref{elas_1})-(\ref{rc})
-	admits a unique solution $u \in H^{1}_{\rm loc}(\R^2_+ \backslash \bar D)$. Moreover, for any bounded open set $\mathcal O\subset \R^2_+\bks\bar D$ there exists a constant $C>0$ such that
-	\be \label{elas_ineq}
-	\|u\|_{H^{1}(\mathcal O)}\le C\|g\|_{H^{-1/2}(\Ga_D)}
-	\ee
-\end{thm}
-The existence of the solution can be proved by the method of limiting absorption principle. The argument is standard and we give several lemmas below, see e.g. \cite{leis} for the consideration for Helmholtz equation. For any $z=1+\i\ep,\ep>0$, $f\in H^{1}(\R^2_+)'$ with compact support in $B_R=\{x||x|^2<R^2,x\in\R^2_+\}\subsetneq\R_+^2$ where $B_R$ is an half disc of radius R , we consider the problem
-\be \label{elastic_eqz}
-\Delta_e u_z +z\omega^2 u =-f \qquad\mbox{\rm in } \R^2_+ \\
-\sigma(u_z)e_2=0 \ \ \ \ \mbox{\rm on} \ \ \ \  \Ga_0 \label{elastic_b0}
-\ee
-By Lax-Milgrim lemma we know that (\ref{elastic_eqz}-\ref{elastic_b0}) has a unique solution $u_z\in H^1(\R^2_+)$. For any domain $ D \subset \R^2_+$, we define the weighted space $L^{2,s}(D),s \in \R$, by
-\ben
-L^{2,s}(D)=\{v \in L^2_{\rm loc}(D): (1+|x|^2)^{s/2}v \in L^2(D) \}
-\een
-with the norm $\| v \|_{ L^{2,s}(\mathcal D)} = (\int_{\mathcal D}(1+|x|^2)^{s}|v|^2 dx )^{1/2}$. The weighted Sobolev space $H^{1,s}(D),s \in \R$,
-is defined as the set of functions in $L^{2,s}(D)$ whose first derivative is also in $L^{2,s}(D)$. The norm
-$\| v \|_{ H^{1,s}(D)} = (\| v \|^2_{ L^{2,s} (D)} + \| \nabla v \|^2_{ L^{2,s}(D)})^{1/2}$.
-
-We need the following sligt generalization of Rellich Theorem:
-\begin{lem}\label{relli_embed}
-	Let $\Omega$ be an open Lipschitz domain, then the sobolev space $H^{1,-s}(\Omega)$ is compactly embeded in $L^{2,-s'}(\Omega)$ for every $s'>s>0$.
-\end{lem}
-
-\begin{lem}{\label{global_es}}
-	Let  $ f  \in L^2 (\R^2_+) $ with compact support in $B_R$. For any $z=1+\i\ep$, $0<\ep<1$, we have, for any $s>1/2$,
-	$\|u_z\|_{H^{1,-s}(\R^2_+)}\le C\|f\|_{L^2(\R^2_+)}$ for some constant independent of $\ep, u_z$, and $f$.
-\end{lem}
-\debproof
-Let $R_z$ denote the map from $L^2_c(\R^2_+)$ to $H^{1,-s}(\R^2_+)$ such that $R_z(f)=u_z$ where $L^2_c(\R^2_+)$ is denoted by all $ f  \in L^2 (\R^2_+) $ with compact support in $B_R$, then it is easy to see that $R_z$ is a linear bounded operator. It follows from theorem 3.7 in \cite{Yves1988} that $R_z$ is a uniformly continuous operator continues valued function on $z=1+\i\ep$, $0<\ep<1$ with value in $B(L^2_c(\R^2_+),H^{1,-s}(\R^2_+))$. Then, we can obtain that $R_z$ is uniformly bounded in $B(L^2_c(\R^2_+),H^{1,-s}(\R^2_+))$. This complete the proof by the defintion of the operator norm.
-\finproof
-
-We next recall the following lemma which states the absence of positive eigenvalues for the linear elasticity system in half space \cite{sini2004}.
-\begin{lem} \label{elas_unique}
-	Let $u\in L^2(\R^2_+ \backslash \bar D)$ such that $u$ satisfies (\ref{elas_1}) and (\ref{elas_b0}), than we assert that $u=0$ in $\R^2_+ \backslash \bar D$
-\end{lem}
-\debproof
-The asserting above can be proved by extending \cite[theorem 3.1]{sini2004}, here we omit the details.
-\finproof
-
-For any $0<\ep<1$, we consider the problem
-\be {\label{elas_z1}}
-\Delta_e u_\ep + (1+\i\ep)\omega^2 u_\ep=0 \qquad\mbox{\rm in } \R^2_+\bks \bar{D}\\
-u_\ep= g \ \ \ \ \mbox{\rm on } \Ga_D  \label{elas_zbd}\\
-\sigma(u_\eps)e_2=0 \ \ \ \ \mbox{\rm on} \Ga_0 \label{elas_zb0}
-\ee
-We know that the above problem has a unique solution $u_{\ep} \in H^1(\R^2_+ \backslash \bar D)$ by the Lax-Milgram Lemma. Thus, we have next lemma
-\begin{lem}{\label{global_elas_bd}}
-	Let  $ g  \in H^{1/2} (\Ga_D) $ . For any $0<\ep<1$, we have, for any $s>1/2$,
-	$\|u_{\eps}\|_{H^{1,-s}(\R^2_+ \backslash \bar D)} \leq C \|g\|_{H^{1/2}(\Ga_D)}$ for some constant independent of $\ep, u_\eps$, and $g$.
-\end{lem}
-\debproof
-Because $h=dist(D,\Ga_0)>0$, we can find three concentric circles $B_{R_1},B_{R_2},B_{R_3}$ such that $D\subsetneq B_{R_1}\subsetneq B_{R_2} \subsetneq B_{R_3} \subsetneq \R^2_+$. Let $\chi \in C_{0}^{\infty}(\R^2_+)$ be the cut-off function such that $0 \leq \chi \leq 1$, $\chi=0$ in $B_{R_1}$, and $\chi=1$ outside of $B_{R_2}$.
-Let $v_\eps=\chi u_\eps$.
-Then $v_\eps$ satisfies (\ref{elastic_eqz}) with
-$z=1+\i\eps$ and $q=\sigma(u_\eps)\na\chi+(\lambda+\mu)(\na^2 \chi u_\eps+ \na u_\eps \na\chi)+\mu\Delta\chi u_\eps +\mu\div u_\eps\na\chi$, where $\na^2 \chi$ is the Hessian matrix of $\chi$. Clearly $q$ has compact support. By lemma \ref{global_es} we can obtain
-\be \label{elas_ineq2}
-\|v_\eps\|_{H^{1,-s}(\R^2_+)}\le C\|u_{\eps}\|_{H^1(B_{R_2}\backslash \bar{D})}
-\ee
-for some constant $C$ independent of $\eps>0$. Now let $\chi_1 \in C_{0}^{\infty}(\R^2_+)$
-be the cut-off function with that  $0 \leq \chi_1 \leq 1$, $\chi_1=1$ in $B_{R_2}$, and $\chi_1=0$
-outside of $B_{R_3}$. For $g\in H^{1/2}(\Ga_D)$, let $u_g \in H^{1}(\R^2_+ \backslash \bar{D})$ be the lifting function such that $  u_{g}=g \mbox{ on } \Ga_D$ and $\|u_{g}\|_{H^{1}(\R^2_+ \backslash \bar{D})}\le C\|g\|_{H^{1/2}(\Ga_D)}$. By testing \ref{elas_z1} with
-$\chi_1^2 ( \overline{u_{\eps}-u_{g}} )$ and using the standard argument we have
-\be \label{elas_ineq3}
-\|u_{\eps}\|_{H^{1}(B_{R_2} \backslash \bar{D})}\le C( \|u_{\eps}\|_{L^{2}(B_{R_3} \backslash \bar{D})} + \|g\|_{H^{1/2}(\Ga_D)} ).
-\ee
-A combination of (\ref{elas_ineq2}) and the above estimate yields
-\be \label{elas_ineq4}
-\|u_{\eps}\|_{H^{1,-s} ( \R^2_+ \backslash \bar{D})}\le C( \|u_{\eps}\|_{L^{2}(B_{R_3} \backslash \bar{D})} + \|g\|_{H^{1/2}(\Ga_D)} ).
-\ee
-Now we claim
-\be \label{elas_ineq5}
-\|u_{\eps}\|_{L^2(B_{R_3} \backslash \bar D)} \leq C \|g\|_{H^{1/2}(\Ga_D)} ,
-\ee
-for any $g \in H^{1/2}(\Ga_D)$ and $\eps >0$. If it were false, there would exist sequences $\{g_m\} \subset H^{1/2}(\Ga_D)$ and $\{\eps_m\} \subset (0,1)$, and $\{u_{\eps_m}\}$ be the corresponding solution of (\ref{elas_z1})-(\ref{elas_zb0}) such that
-\be {\label{contradict}}
-\|u_{\eps_m}\|_{L^2(B_{R_3} \backslash \bar D)} = 1 \ {\rm{ and }} \ \|g_m\|_{H^{-1/2}(\Ga_D)} \leq \frac{1}{m}.
-\ee
-Then $\|u_{\eps_m}\|_{H^{1,-s} ( \R^2_+ \backslash \bar{D})}\le C $, and thus there is a subsequence of $\{\eps_m\}$, which is
-still denoted by $\{\eps_m\}$, such that $\eps_m \to \eps' \in [0,1]$, and a subsequence of $\{u_{\eps_m}\}$,
-which is still denoted by $\{u_{\eps_m}\}$, such that it converges to some $u_{\eps'}$ in ${H^{1,-s'} ( \R^2_+ \backslash \bar{D})}$ by choosing $s'>s$. This is a consequence of Korn's inequality and lemma \ref{relli_embed}. So $u_{\eps'} \in H^{1,-s'}(\R^2_+ \backslash \bar D)$ satisfies (\ref{elas_z1}-\ref{elas_zb0}) with $g=0$ and $\eps=\eps'$.
-
-By the integral representation satistied by $u_{\eps_m}$, we know that for $y\in \R^2_+\backslash\bar B_{R_1}$ and $i=1,2$
-\be \ \hspace{-2cm} \label{green_rep}
-u_{\eps'}(y)\cdot e^i=\int_{\pa B_{R_1}} (\sigma(N_{\eps'}(x,y)e_i)\nu)\cdot u_{\eps'}(x) - (N_{\eps'}(x,y)e_i)\cdot (\sigma(u_{\eps'})_{\eps'}\nu)ds(x)
-\ee
-If $\eps'>0$, we deduce  from (\ref{green_rep}) that $u_{\eps'}$ decays exponentially and thus $u_{\eps'} \in H^{1}(\R^2_+\backslash \bar D) $, then $u_{\eps'} =0$ by the uniqueness of the solution in $H^{1}(\R^2_+ \backslash \bar D) $ with positive absorption.
-If $\eps'=0$, by the \cite[theorem 5.2]{Yves1988}, we have $u_{\eps'}\in L^2(\R^2_+\bks\bar D)$. Then we conclude $u_{\eps'}=0$ by the lemma \ref{elas_unique}
-Therefore, in any case $u_{\epsilon'}=0$, which , however contradicts to \ref{contradict}. This complete the proof.
-\finproof
-Now we are in the position to prove the exsitence of Theorem \ref{elastic_eq2}.
-\begin{lem} \label{elas_exis}
-	For any $s>1/2$, $u_\eps:(0,1)\to H^{1,-s}(\R^2_+ \bks \bar D)$ is a uniformly continuous operator valued function. Immediately, $u_{\eps}$ converges to some $u_0$ in $H^{1,-s}(\R^2_+ \bks \bar D)$ and $u_0$ is a solution of (\ref{elas_1}-\ref{elas_ineq}).
-\end{lem}
-\debproof
-We also give a indirect prove here. Let $\delta_0>0$ and $\{\mu_n\}$ and $\{\nu_n\}$ be sequences in $ (0,1) $ such that
-\be
-|\mu_n-\nu_n|\le 1/n \qquad \mbox{and} \qquad \|u_{\mu_n}-u_{\nu_n}\|_{H^{1,-s}(\R^2_+ \bks \bar D)} \ge \delta_0
-\ee
-Thus there is a subsequence of $\{\mu_n\}$, which is still denoted by $\{\mu_n\}$, such that $\{\mu_n\}\to \epsilon\in[0,1]$ and also $\{\nu_n\}\to \epsilon$. Then using lemma \ref{global_elas_bd} and the procedure proving it, we get the $u_\epsilon,v_\epsilon \in H^{1,-s'} (\R^2_+ \bks \bar D)$, by choosing $s'>s$, such that
-\ben
-\|u_{\mu_n}-u_\epsilon\|_{H^{1,-s'}(\R^2_+ \bks \bar D)} \to 0 \\
-\|u_{\nu_n}-v_\epsilon\|_{H^{1,-s'}(\R^2_+ \bks \bar D)} \to 0
-\een
-and $u_\epsilon=v_\epsilon$ by the same arguement in lemma \ref{global_elas_bd} which leads to a contradiction. Thus we have proved $u_\eps$ is uniformly continuously for $\eps \in (0,1)$. Then it is easy to see $u_\eps$ has a limitation in ${H^{1,-s}(\R^2_+ \bks \bar D)} $ and the estimation of $u_0$ can be obtained by (\ref{elas_ineq5}). This completes the proof.
-\finproof
-It is remain to prove the uniqueness in theorem \ref{elastic_eq2}. Actually, it can be obtained following the existence of solution with any $g\in H^{1/2}(\Ga_D)$.
-
-{\it \bf proof of Theorem \ref{elastic_eq2}}
-By the linearity of the problem, it is sufficient to prove that any $u_0$  satisfies the system (\ref{elas_1}-\ref{elas_b0}) with the corresponding homogeneous boundary-value vanishes identically in $\R^2_+\bks \bar D$. For any $y\in \R^2_+\bks \bar D$, there exists $U^s(x,y)$ sataifies (\ref{elas_1}-\ref{elas_b0}) with $g(x)=-N(x,y)$ on $\Ga_D$ following the lemma \ref{elas_exis} and we define $U(x,y)=N(x,y)+U^s(x,y)$. It is easy to see that $U(x,y)$ satifies the generalized radiation condition (\ref{rc}). Thus by the integral representaion of $u_0$, we have
-\ben
-\lim_{r\to\infty}  \int_{S_r^+} (\sigma(U(x,y)e_i)\nu)\cdot u_0(x) - (U(x,y)e_i)\cdot (\sigma(u_0)\nu)ds(x)=0
-\een
-Finally, combining $U(x,y)=0,u_0(x)=0$ on $\Ga_D$ and the Green integral theorem we find that
-\ben
-u_0(y)e_i&=\int_{\R^2_+\bks\bar D} -(\Delta_e (N(x,y)e_i)+\omega^2 N(x,y)e_i)\cdot u_0(x) dx\\
-&=\int_{\R^2_+\bks\bar D} \Delta u_0(x)\cdot (N(x,y)e_i)
--\Delta_e (N(x,y)e_i)\cdot u_0(x) \\
-&=\int_{\Ga_D} (\sigma(U(x,y)e_i)\nu)\cdot u_0(x) - (U(x,y)e_i)\cdot (\sigma(u_0)\nu)ds(x)=0
-\een
-Then the desired unique exsitence follows lemma \ref{elas_exis}. This completes the proof of theorem \ref{elastic_eq2}.
-\finproof
-
 
 \section{Reverse time migration method}
 In this section we introduce RTM method for inverse elastic scattering problems in the half space. Assume that there $N_s$ sources and $N_r$ receivers uniformly distributed on $\Gamma^d_0$, where $\Gamma^d_0=\{(x_1,x_2)^T\in\Gamma_0:x_1\in[-d,d]\},d>0$ is aperture. We denote by $\Omega$ the sampling domain in which the obstacle is sought. Let $h=dist(\Omega,\Gamma_0)$ be the distance of $\Omega$ to $\Gamma_0$. We assume the obstacle $D\subset\Omega$ and there exist constants $0<c_1<1,c_2>0,c_3>0$ such that
@@ -1660,7 +1491,140 @@ where $u_s$ is the synthesized data and $\nu_{\rm noise}$ is the Gaussian noise 
 Figure \ref{figure_4} shows the imaging results using single frequency data added with additive
 Gaussian noise. The imaging quality can be improved by using multi-frequency data.
 as illustrated 
+\section{Appendix: The forward scattering problem}
 
+In this section we introduce the following stability estimate of the forward elastic scattering problem in the half space which can be proved by the limiting absorption principle by extending the classical argument in \cite{leis,wilcox1975,Yves1988}.
+\begin{thm} \label{elastic_eq2}
+	Let $g \in H^{1/2}(\Ga_D)$, then the scattering problem of elastic equation in the half space
+	\be
+	\Delta_e u + \omega^2 u =0 \qquad\mbox{\rm in } \R^2_+\bks \bar{D}, \label{elas_1}\ \ \
+	\\ u= g \ \ \ \ \mbox{\rm on } \Ga_D, \label{elas_bd} \\
+	\sigma(u)e_2=0 \ \ \ \ \mbox{\rm on} \Ga_0, \label{elas_b0} \\
+	u \ \mbox{satisfies the generalized radiation codition\cite{Guzina2006} such that} \nn \\\label{rc}
+	\lim_{r\to\infty}  \int_{S_r^+} (\sigma(N(x,y)e_i)\hat{r})\cdot u(x) - (N(x,y)e_i)\cdot (\sigma(u)\hat{r})ds(x)=0
+	\ee
+	where $S_r^+:=\{x\in \R^2_+ \ | \ \|x\|=r^2\}$, $\hat{r}=x/r$ and $y\in \R_+^2$. Then the problem (\ref{elas_1})-(\ref{rc})
+	admits a unique solution $u \in H^{1}_{\rm loc}(\R^2_+ \backslash \bar D)$. Moreover, for any bounded open set $\mathcal O\subset \R^2_+\bks\bar D$ there exists a constant $C>0$ such that
+	\be \label{elas_ineq}
+	\|u\|_{H^{1}(\mathcal O)}\le C\|g\|_{H^{-1/2}(\Ga_D)}
+	\ee
+\end{thm}
+The existence of the solution can be proved by the method of limiting absorption principle. The argument is standard and we give several lemmas below, see e.g. \cite{leis} for the consideration for Helmholtz equation. For any $z=1+\i\ep,\ep>0$, $f\in H^{1}(\R^2_+)'$ with compact support in $B_R=\{x||x|^2<R^2,x\in\R^2_+\}\subsetneq\R_+^2$ where $B_R$ is an half disc of radius R , we consider the problem
+\be \label{elastic_eqz}
+\Delta_e u_z +z\omega^2 u =-f \qquad\mbox{\rm in } \R^2_+ \\
+\sigma(u_z)e_2=0 \ \ \ \ \mbox{\rm on} \ \ \ \  \Ga_0 \label{elastic_b0}
+\ee
+By Lax-Milgrim lemma we know that (\ref{elastic_eqz}-\ref{elastic_b0}) has a unique solution $u_z\in H^1(\R^2_+)$. For any domain $ D \subset \R^2_+$, we define the weighted space $L^{2,s}(D),s \in \R$, by
+\ben
+L^{2,s}(D)=\{v \in L^2_{\rm loc}(D): (1+|x|^2)^{s/2}v \in L^2(D) \}
+\een
+with the norm $\| v \|_{ L^{2,s}(\mathcal D)} = (\int_{\mathcal D}(1+|x|^2)^{s}|v|^2 dx )^{1/2}$. The weighted Sobolev space $H^{1,s}(D),s \in \R$,
+is defined as the set of functions in $L^{2,s}(D)$ whose first derivative is also in $L^{2,s}(D)$. The norm
+$\| v \|_{ H^{1,s}(D)} = (\| v \|^2_{ L^{2,s} (D)} + \| \nabla v \|^2_{ L^{2,s}(D)})^{1/2}$.
+
+We need the following sligt generalization of Rellich Theorem:
+\begin{lem}\label{relli_embed}
+	Let $\Omega$ be an open Lipschitz domain, then the sobolev space $H^{1,-s}(\Omega)$ is compactly embeded in $L^{2,-s'}(\Omega)$ for every $s'>s>0$.
+\end{lem}
+
+\begin{lem}{\label{global_es}}
+	Let  $ f  \in L^2 (\R^2_+) $ with compact support in $B_R$. For any $z=1+\i\ep$, $0<\ep<1$, we have, for any $s>1/2$,
+	$\|u_z\|_{H^{1,-s}(\R^2_+)}\le C\|f\|_{L^2(\R^2_+)}$ for some constant independent of $\ep, u_z$, and $f$.
+\end{lem}
+\debproof
+Let $R_z$ denote the map from $L^2_c(\R^2_+)$ to $H^{1,-s}(\R^2_+)$ such that $R_z(f)=u_z$ where $L^2_c(\R^2_+)$ is denoted by all $ f  \in L^2 (\R^2_+) $ with compact support in $B_R$, then it is easy to see that $R_z$ is a linear bounded operator. It follows from theorem 3.7 in \cite{Yves1988} that $R_z$ is a uniformly continuous operator continues valued function on $z=1+\i\ep$, $0<\ep<1$ with value in $B(L^2_c(\R^2_+),H^{1,-s}(\R^2_+))$. Then, we can obtain that $R_z$ is uniformly bounded in $B(L^2_c(\R^2_+),H^{1,-s}(\R^2_+))$. This complete the proof by the defintion of the operator norm.
+\finproof
+
+We next recall the following lemma which states the absence of positive eigenvalues for the linear elasticity system in half space \cite{sini2004}.
+\begin{lem} \label{elas_unique}
+	Let $u\in L^2(\R^2_+ \backslash \bar D)$ such that $u$ satisfies (\ref{elas_1}) and (\ref{elas_b0}), than we assert that $u=0$ in $\R^2_+ \backslash \bar D$
+\end{lem}
+\debproof
+The asserting above can be proved by extending \cite[theorem 3.1]{sini2004}, here we omit the details.
+\finproof
+
+For any $0<\ep<1$, we consider the problem
+\be {\label{elas_z1}}
+\Delta_e u_\ep + (1+\i\ep)\omega^2 u_\ep=0 \qquad\mbox{\rm in } \R^2_+\bks \bar{D}\\
+u_\ep= g \ \ \ \ \mbox{\rm on } \Ga_D  \label{elas_zbd}\\
+\sigma(u_\eps)e_2=0 \ \ \ \ \mbox{\rm on} \Ga_0 \label{elas_zb0}
+\ee
+We know that the above problem has a unique solution $u_{\ep} \in H^1(\R^2_+ \backslash \bar D)$ by the Lax-Milgram Lemma. Thus, we have next lemma
+\begin{lem}{\label{global_elas_bd}}
+	Let  $ g  \in H^{1/2} (\Ga_D) $ . For any $0<\ep<1$, we have, for any $s>1/2$,
+	$\|u_{\eps}\|_{H^{1,-s}(\R^2_+ \backslash \bar D)} \leq C \|g\|_{H^{1/2}(\Ga_D)}$ for some constant independent of $\ep, u_\eps$, and $g$.
+\end{lem}
+\debproof
+Because $h=dist(D,\Ga_0)>0$, we can find three concentric circles $B_{R_1},B_{R_2},B_{R_3}$ such that $D\subsetneq B_{R_1}\subsetneq B_{R_2} \subsetneq B_{R_3} \subsetneq \R^2_+$. Let $\chi \in C_{0}^{\infty}(\R^2_+)$ be the cut-off function such that $0 \leq \chi \leq 1$, $\chi=0$ in $B_{R_1}$, and $\chi=1$ outside of $B_{R_2}$.
+Let $v_\eps=\chi u_\eps$.
+Then $v_\eps$ satisfies (\ref{elastic_eqz}) with
+$z=1+\i\eps$ and $q=\sigma(u_\eps)\na\chi+(\lambda+\mu)(\na^2 \chi u_\eps+ \na u_\eps \na\chi)+\mu\Delta\chi u_\eps +\mu\div u_\eps\na\chi$, where $\na^2 \chi$ is the Hessian matrix of $\chi$. Clearly $q$ has compact support. By lemma \ref{global_es} we can obtain
+\be \label{elas_ineq2}
+\|v_\eps\|_{H^{1,-s}(\R^2_+)}\le C\|u_{\eps}\|_{H^1(B_{R_2}\backslash \bar{D})}
+\ee
+for some constant $C$ independent of $\eps>0$. Now let $\chi_1 \in C_{0}^{\infty}(\R^2_+)$
+be the cut-off function with that  $0 \leq \chi_1 \leq 1$, $\chi_1=1$ in $B_{R_2}$, and $\chi_1=0$
+outside of $B_{R_3}$. For $g\in H^{1/2}(\Ga_D)$, let $u_g \in H^{1}(\R^2_+ \backslash \bar{D})$ be the lifting function such that $  u_{g}=g \mbox{ on } \Ga_D$ and $\|u_{g}\|_{H^{1}(\R^2_+ \backslash \bar{D})}\le C\|g\|_{H^{1/2}(\Ga_D)}$. By testing \ref{elas_z1} with
+$\chi_1^2 ( \overline{u_{\eps}-u_{g}} )$ and using the standard argument we have
+\be \label{elas_ineq3}
+\|u_{\eps}\|_{H^{1}(B_{R_2} \backslash \bar{D})}\le C( \|u_{\eps}\|_{L^{2}(B_{R_3} \backslash \bar{D})} + \|g\|_{H^{1/2}(\Ga_D)} ).
+\ee
+A combination of (\ref{elas_ineq2}) and the above estimate yields
+\be \label{elas_ineq4}
+\|u_{\eps}\|_{H^{1,-s} ( \R^2_+ \backslash \bar{D})}\le C( \|u_{\eps}\|_{L^{2}(B_{R_3} \backslash \bar{D})} + \|g\|_{H^{1/2}(\Ga_D)} ).
+\ee
+Now we claim
+\be \label{elas_ineq5}
+\|u_{\eps}\|_{L^2(B_{R_3} \backslash \bar D)} \leq C \|g\|_{H^{1/2}(\Ga_D)} ,
+\ee
+for any $g \in H^{1/2}(\Ga_D)$ and $\eps >0$. If it were false, there would exist sequences $\{g_m\} \subset H^{1/2}(\Ga_D)$ and $\{\eps_m\} \subset (0,1)$, and $\{u_{\eps_m}\}$ be the corresponding solution of (\ref{elas_z1})-(\ref{elas_zb0}) such that
+\be {\label{contradict}}
+\|u_{\eps_m}\|_{L^2(B_{R_3} \backslash \bar D)} = 1 \ {\rm{ and }} \ \|g_m\|_{H^{-1/2}(\Ga_D)} \leq \frac{1}{m}.
+\ee
+Then $\|u_{\eps_m}\|_{H^{1,-s} ( \R^2_+ \backslash \bar{D})}\le C $, and thus there is a subsequence of $\{\eps_m\}$, which is
+still denoted by $\{\eps_m\}$, such that $\eps_m \to \eps' \in [0,1]$, and a subsequence of $\{u_{\eps_m}\}$,
+which is still denoted by $\{u_{\eps_m}\}$, such that it converges to some $u_{\eps'}$ in ${H^{1,-s'} ( \R^2_+ \backslash \bar{D})}$ by choosing $s'>s$. This is a consequence of Korn's inequality and lemma \ref{relli_embed}. So $u_{\eps'} \in H^{1,-s'}(\R^2_+ \backslash \bar D)$ satisfies (\ref{elas_z1}-\ref{elas_zb0}) with $g=0$ and $\eps=\eps'$.
+
+By the integral representation satistied by $u_{\eps_m}$, we know that for $y\in \R^2_+\backslash\bar B_{R_1}$ and $i=1,2$
+\be \ \hspace{-2cm} \label{green_rep}
+u_{\eps'}(y)\cdot e^i=\int_{\pa B_{R_1}} (\sigma(N_{\eps'}(x,y)e_i)\nu)\cdot u_{\eps'}(x) - (N_{\eps'}(x,y)e_i)\cdot (\sigma(u_{\eps'})_{\eps'}\nu)ds(x)
+\ee
+If $\eps'>0$, we deduce  from (\ref{green_rep}) that $u_{\eps'}$ decays exponentially and thus $u_{\eps'} \in H^{1}(\R^2_+\backslash \bar D) $, then $u_{\eps'} =0$ by the uniqueness of the solution in $H^{1}(\R^2_+ \backslash \bar D) $ with positive absorption.
+If $\eps'=0$, by the \cite[theorem 5.2]{Yves1988}, we have $u_{\eps'}\in L^2(\R^2_+\bks\bar D)$. Then we conclude $u_{\eps'}=0$ by the lemma \ref{elas_unique}
+Therefore, in any case $u_{\epsilon'}=0$, which , however contradicts to \ref{contradict}. This complete the proof.
+\finproof
+Now we are in the position to prove the exsitence of Theorem \ref{elastic_eq2}.
+\begin{lem} \label{elas_exis}
+	For any $s>1/2$, $u_\eps:(0,1)\to H^{1,-s}(\R^2_+ \bks \bar D)$ is a uniformly continuous operator valued function. Immediately, $u_{\eps}$ converges to some $u_0$ in $H^{1,-s}(\R^2_+ \bks \bar D)$ and $u_0$ is a solution of (\ref{elas_1}-\ref{elas_ineq}).
+\end{lem}
+\debproof
+We also give a indirect prove here. Let $\delta_0>0$ and $\{\mu_n\}$ and $\{\nu_n\}$ be sequences in $ (0,1) $ such that
+\be
+|\mu_n-\nu_n|\le 1/n \qquad \mbox{and} \qquad \|u_{\mu_n}-u_{\nu_n}\|_{H^{1,-s}(\R^2_+ \bks \bar D)} \ge \delta_0
+\ee
+Thus there is a subsequence of $\{\mu_n\}$, which is still denoted by $\{\mu_n\}$, such that $\{\mu_n\}\to \epsilon\in[0,1]$ and also $\{\nu_n\}\to \epsilon$. Then using lemma \ref{global_elas_bd} and the procedure proving it, we get the $u_\epsilon,v_\epsilon \in H^{1,-s'} (\R^2_+ \bks \bar D)$, by choosing $s'>s$, such that
+\ben
+\|u_{\mu_n}-u_\epsilon\|_{H^{1,-s'}(\R^2_+ \bks \bar D)} \to 0 \\
+\|u_{\nu_n}-v_\epsilon\|_{H^{1,-s'}(\R^2_+ \bks \bar D)} \to 0
+\een
+and $u_\epsilon=v_\epsilon$ by the same arguement in lemma \ref{global_elas_bd} which leads to a contradiction. Thus we have proved $u_\eps$ is uniformly continuously for $\eps \in (0,1)$. Then it is easy to see $u_\eps$ has a limitation in ${H^{1,-s}(\R^2_+ \bks \bar D)} $ and the estimation of $u_0$ can be obtained by (\ref{elas_ineq5}). This completes the proof.
+\finproof
+It is remain to prove the uniqueness in theorem \ref{elastic_eq2}. Actually, it can be obtained following the existence of solution with any $g\in H^{1/2}(\Ga_D)$.
+
+{\it \bf proof of Theorem \ref{elastic_eq2}}
+By the linearity of the problem, it is sufficient to prove that any $u_0$  satisfies the system (\ref{elas_1}-\ref{elas_b0}) with the corresponding homogeneous boundary-value vanishes identically in $\R^2_+\bks \bar D$. For any $y\in \R^2_+\bks \bar D$, there exists $U^s(x,y)$ sataifies (\ref{elas_1}-\ref{elas_b0}) with $g(x)=-N(x,y)$ on $\Ga_D$ following the lemma \ref{elas_exis} and we define $U(x,y)=N(x,y)+U^s(x,y)$. It is easy to see that $U(x,y)$ satifies the generalized radiation condition (\ref{rc}). Thus by the integral representaion of $u_0$, we have
+\ben
+\lim_{r\to\infty}  \int_{S_r^+} (\sigma(U(x,y)e_i)\nu)\cdot u_0(x) - (U(x,y)e_i)\cdot (\sigma(u_0)\nu)ds(x)=0
+\een
+Finally, combining $U(x,y)=0,u_0(x)=0$ on $\Ga_D$ and the Green integral theorem we find that
+\ben
+u_0(y)e_i&=\int_{\R^2_+\bks\bar D} -(\Delta_e (N(x,y)e_i)+\omega^2 N(x,y)e_i)\cdot u_0(x) dx\\
+&=\int_{\R^2_+\bks\bar D} \Delta u_0(x)\cdot (N(x,y)e_i)
+-\Delta_e (N(x,y)e_i)\cdot u_0(x) \\
+&=\int_{\Ga_D} (\sigma(U(x,y)e_i)\nu)\cdot u_0(x) - (U(x,y)e_i)\cdot (\sigma(u_0)\nu)ds(x)=0
+\een
+Then the desired unique exsitence follows lemma \ref{elas_exis}. This completes the proof of theorem \ref{elastic_eq2}.
+\finproof
 \section*{References}
 \bibliography{eee}
 \end{document}
