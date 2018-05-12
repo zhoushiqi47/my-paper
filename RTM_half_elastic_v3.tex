@@ -806,14 +806,10 @@ By scaling argument and trace theorem we know that there exists a constant $C>0$
 %\inf_{{\phi|_{\Ga}=v,\,\phi\in H^1(U)}}\|\phi\|_{H^1(U)}\le C_2\frac{|U|^{\frac 12}}{d_U}\|v\|_{H^{1/2}(\Ga)}.
 \ee
 
-The point spread function measures the resolution for finding point source\cite{ammari2013mathematical}. In \cite{RTMhalf_aco}, the point spread function has been defined in the case of acoustic wave. We now define elastic point spread function $J(z,y)$, a $\mathbb{C}^{2\times2}$ matrix, which back-propagate the conjugated data $\overline{N(x,y)}$ as the Dirichlet boundary condition. Thus, for any $z,y \in \R_+^2$
+The point spread function measures the resolution for finding point source\cite{ammari2013mathematical}. In \cite{RTMhalf_aco}, the point spread function has been defined in the case of acoustic wave. We now define elastic point spread function $\J(z,y)$, a $\mathbb{C}^{2\times2}$ matrix, which back-propagate the conjugated data $\overline{N(x,y)}$ as the Dirichlet boundary condition. Thus, for any $z,y \in \R_+^2$
 \be\label{fullpsf}
-J(z,y)&=&\int_{\Gamma_0} \ (T_D(x,z))^T \overline{\N(x,y)} ds(x) \\
-&=&\int_\R \ (T_D(x_1,0;z_1,z_2))^T \overline{\N(x_1,0;y_1,y_2)} dx_1
-\ee
-\be\label{fullpsf}
-\J_{ij}(z,y)&=&\int_{\Gamma_0} \ \sigma_x(\D(x,y)e_i)e_2\cdot\overline{\N(x,y)}d)e_j ds(x) \\
-&=&\int_\R \ (T_D(x_1,0;z_1,z_2))^T \overline{\N(x_1,0;y_1,y_2)} dx_1
+e_i\cdot \J e_j:=\J_{ij}(z,y)&=&\int_{\Gamma_0} \ \sigma_x(\D(x,y)e_i)e_2\cdot\overline{\N(x,y)}e_j ds(x) \\
+&=&\int_\R \ \sigma_x(\D(x_1,0;z_1,z_2)e_i)e_2\cdot\overline{\N(x_1,0;z_1,z_2)}e_j dx_1
 \ee
 The estimate in lemma \ref{es_dgreen}-\ref{es_ngreen} show that the integral above exists.
 Now, we define functions
@@ -855,7 +851,7 @@ J(z,y)=\sum_{\alpha=p,s}^{\eta=p,s} \ J^{\alpha\eta}(z,y)
 \een
 In order to analysis the PSF, loss is assumed in the medium that $k_{\alpha,\ep}:=k_\alpha(1+\i\ep)$. Then by Parseval identity, we carry out
 \ben\hspace{-1.5cm}
-J^{ss}(z,y)&=&\lim_{\ep\to 0^+} \ \int_R \  ({T}^s_D (x_1,0;z_1,z_2))^T \overline{{\N}^{s,\ep} (x_1,0;y_1,y_2)} dx_1 \\
+\J^{ss}(z,y)&=&\lim_{\ep\to 0^+} \ \int_R \  ({T}^s_D (x_1,0;z_1,z_2))^T \overline{{\N}^{s,\ep} (x_1,0;y_1,y_2)} dx_1 \\
 &=&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_R \  (\hat{T}^s_D (\xi,0;z))^T \overline{\hat{\N}^{s,\ep} (\xi,0;y)} d\xi \\
 &=& \frac{1}{2\pi}\int^{k_s}_{-k_s} \  (\hat{T}^s_D (\xi,0;z))^T \overline{\hat{\N}^{s,\ep} (\xi,0;y)} d\xi \\
 &+&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_s,k_s]} \  (\hat{T}_D (\xi,0;z))^T \overline{\hat{\N}^{s,\ep} (\xi,0;y)} d\xi \\
