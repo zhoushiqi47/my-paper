@@ -140,6 +140,10 @@
 \newcommand{\Ns}{\mathcal{N}_s}
 \newcommand{\Tp}{\mathcal{T}_p}
 \newcommand{\Ts}{\mathcal{T}_s}
+\newcommand{\Na}{\mathcal{N}_\alpha}
+\newcommand{\Nb}{\mathcal{N}_\beta}
+\newcommand{\Ta}{\mathcal{T}_\alpha}
+\newcommand{\Tb}{\mathcal{T}_\beta}
 \newcommand{\GG}{\mathcal{G}}
 
 \newcommand{\N}{\mathbb{N}}
@@ -622,42 +626,15 @@ Before proposing RTM imaging function, we first introduce the point spred functi
 e_i\cdot \J e_j:=\J_{ij}(z,y)&=&\int_{\Gamma_0} \ \sigma_x(\D(x,y)e_i)e_2\cdot\overline{\N(x,y)}e_j ds(x) \\
 &=&\int_\R \ \sigma_x(\D(x_1,0;z_1,z_2)e_i)e_2\cdot\overline{\N(x_1,0;z_1,z_2)}e_j dx_1
 \ee
-The estimate in lemma \ref{es_dgreen}-\ref{es_ngreen} show that the integral above exists. We split the spectral terms into components associated with pressure and shearing waves.
-\ben
-\hat{\D}=\hat{\D^p}+\hat{\D^s} \ \ \ \ \ \ \ \ \ \
-\hat{\N}=\hat{\N^p}+\hat{\N^s} \ \ \
-\een
-And we define
-\be\hspace{-1cm}
-\J^{\alpha\eta}_{ij}(z,y)&=&\int_{\Gamma_0} \ \sigma_x(\D^\alpha(x,y)e_i)e_2\cdot\overline{\N^{\eta}(x,y)}d)e_j ds(x),
-\ \ \ \  \alpha,\eta\in\{s,p\}
+The estimate in lemma \ref{es_dgreen}-\ref{es_ngreen} show that the integral above exists. 
+Moreove, we define
+\be
+\F(z,y)&=&\frac{1}{2\pi}\int^{k_p}_{-k_p} \  \frac{{\Tp}(\xi)^T \overline{\Np}(\xi)}{\overline{\delta(\xi)}} e^{\i \mu_p (z_2- y_2)+\i(y_1-z_1)\xi} d\xi \\
+&+&\frac{1}{2\pi}\int^{k_s}_{-k_s} \  \frac{{\Ts}(\xi)^T \overline{\Ns}(\xi)}{\overline{\delta(\xi)}} e^{\i \mu_s (z_2- y_2)+\i(y_1-z_1)\xi} d\xi
 \ee
-It's esay to see
-\ben
-\J(z,y)=\sum_{\alpha=p,s}^{\eta=p,s} \ \J^{\alpha\eta}(z,y)
-\een
-In order to analysis the PSF, loss is assumed in the medium that $k_{\alpha,\ep}:=k_\alpha(1+\i\ep)$. Then by Parseval identity, we carry out
-\ben\hspace{-1.5cm}
-\J^{ss}(z,y)&=&\lim_{\ep\to 0^+} \ \frac{1}{2\pi} \int_R \  ({\T}^s_D (x_1,0;z_1,z_2))^T \overline{{\N}^{s,\ep} (x_1,0;y_1,y_2)} dx_1 \\
-&=& \frac{1}{2\pi}\int^{k_s}_{-k_s} \  \frac{{\Ts}(\xi)^T \overline{\Ns}(\xi)}{\overline{\delta(\xi)}} e^{\i (\mu_s z_2-\overline{\mu_s} y_2)+\i(y_1-z_1)\xi} d\xi  \\
-&+&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_s,k_s]} \  \frac{{\Ts^{\ep}}(\xi)^T \overline{\Ns^{\ep}}(\xi)}{\overline{\delta^{\ep}(\xi)}} e^{\i (\mu_s^{\ep} z_2-\overline{\mu_s^{\ep}} y_2)+\i(y_1-z_1)\xi} d\xi   \\
-&:=&\F^{ss}(z,y)+\gR^{ss}(z,y)
-\een
-Similarly, we have
-\ben\hspace{-1.5cm}
-\J^{pp}(z,y)&=&\lim_{\ep\to 0^+} \ \frac{1}{2\pi} \int_R \  ({\T}^p_D (x_1,0;z_1,z_2))^T \overline{{\N}^{p,\ep} (x_1,0;y_1,y_2)} dx_1 \\
-&=& \frac{1}{2\pi}\int^{k_s}_{-k_s} \  \frac{{\Tp}(\xi)^T \overline{\Np}(\xi)}{\overline{\delta(\xi)}} e^{\i (\mu_p z_2-\overline{\mu_p} y_2)+\i(y_1-z_1)\xi} d\xi  \\
-&+&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-k_s,k_s]} \  \frac{{\Tp^{\ep}}(\xi)^T \overline{\Np^{\ep}}(\xi)}{\overline{\delta^{\ep}(\xi)}} e^{\i (\mu_p^{\ep} z_2-\overline{\mu_p^{\ep}} y_2)+\i(y_1-z_1)\xi} d\xi   \\
-&:=&\F^{pp}(z,y)+\gR^{pp}(z,y)
-\een
- Our goal now is to show which is the main contribution to the point spread funciton when $k_s h\gg1$. Put $n_*=\min\{N|\kappa^{2N-1}<1/c_3,N\in \Z_+ \}$. Then we present some primary results for point spread function, whose proof will be stated in seciton 4.
+ The following theorem show that $\F(z,y)$ is the main contribution to the point spread funciton when $k_s h\gg1$. Put $n_*=\min\{N|\kappa^{2N-1}<1/c_3,N\in \Z_+ \}$. Then we present some primary results for point spread function, whose proof will be stated in seciton 4.
 \begin{thm}\label{thm_psf}
-	Let $k_s h>1$. For any $z,y\in\Om$, $\J(z,y)=\F(z,y)+\R(z,y)$, where
-	\be
-	\F(z,y)=\F_{ss}(z,y)+\F_{pp}(z,y) \\
-	\R(z,y)=\R^{ss}(z,y)+\R^{pp}(z,y)+\J^{sp}(z,y)+\J^{ps}(z,y) 
-	\ee
-	Moreover, 
+	Let $k_s h>1$. For any $z,y\in\Om$, let $\R(z,y)=\J(z,y)-\F(z,y)$ and it satisfy that
 	\be\hspace{-2cm}
 	|\R_{ij}(z,y)|+k_s^{-1}|\na_y \R_{ij}(z,y)|\leq \frac{C}{\mu}(\frac{1}{(k_s h)^{\frac{1}{2n^*}}}+e^{-k_s h\sqrt{\kappa_R^2-1}}):=\frac{C}{\mu} \epsilon_1(k_s h)
 	\ee
@@ -880,44 +857,84 @@ incident wave $\overline{\F(z,\cdot)}$. By lemma \ref{festimate1} we konw that $
 boundary $\Ga_D$ outside the scatterer $D$ if $k_s h \gg 1$ and $d\gg h$.
 \section{Some proof; Section name TBD}
 
+In this section we give the proof of theorem \ref{thm_psf} and lemma \ref{festimate1} which depend on several lemmas that follow.
+Without loss of generality. we assume $z_1-y_1\geq0$ in the sebsequent. Otherwise, we can take substitution $\xi=-\xi$.
 
-Without loss of generality. we assume $z_1-y_1\geq0$ in this section. Otherwise, we can take substitution $\xi=-\xi$.
-
-
-
-
+We split the spectral terms into components associated with pressure and shearing waves.
+\ben
+\hat{\D}=\hat{\D^p}+\hat{\D^s} \ \ \ \ \ \ \ \ \ \
+\hat{\N}=\hat{\N^p}+\hat{\N^s} \ \ \,
+\een
+and we define
+\be\hspace{-1cm}
+\J^{\alpha\eta}_{ij}(z,y)&=&\int_{\Gamma_0} \ \sigma_x(\D^\alpha(x,y)e_i)e_2\cdot\overline{\N^{\eta}(x,y)}d)e_j ds(x),
+\ \ \ \  \alpha,\eta\in\{s,p\}
+\ee
+It's esay to see
+\ben
+\J(z,y)=\sum_{\alpha=p,s}^{\eta=p,s} \ \J^{\alpha\eta}(z,y)
+\een
+In order to analysis the PSF, loss is assumed in the medium that $k_{\alpha,\ep}:=k_\alpha(1+\i\ep)$. For $\alpha,\beta\in \{s,p\}$, define $b_{\alpha\beta}=k_s$ only if $\alpha=\beta=s$ , or otherwise $b_{\alpha\beta}=k_p$.Then by Parseval identity, we carry out
+\ben\hspace{-1.5cm}
+\J^{\alpha\beta}(z,y)&=&\lim_{\ep\to 0^+} \ \frac{1}{2\pi} \int_R \  \frac{{\Ta^{\ep}}(\xi)^T \overline{\Nb^{\ep}}(\xi)}{\overline{\delta^{\ep}(\xi)}} e^{\i (\mu_\alpha^{\ep} z_2-\overline{\mu_\beta^{\ep}} y_2)+\i(y_1-z_1)\xi} d\xi\\
+&=& \frac{1}{2\pi}\int^{b_{\alpha\beta}}_{-b_{\alpha\beta}} \  \frac{{\Ta}(\xi)^T \overline{\Nb}(\xi)}{\overline{\delta(\xi)}} e^{\i (\mu_\alpha z_2-\overline{\mu_\beta} y_2)+\i(y_1-z_1)\xi} d\xi  \\
+&+&\lim_{\ep\to 0^+} \ \frac{1}{2\pi}\int_{R\bks[-b_{\alpha\beta},b_{\alpha\beta}]} \  \frac{{\Ta^{\ep}}(\xi)^T \overline{\Nb^{\ep}}(\xi)}{\overline{\delta^{\ep}(\xi)}} e^{\i (\mu_\alpha^{\ep} z_2-\overline{\mu_\beta^{\ep}} y_2)+\i(y_1-z_1)\xi} d\xi   \\
+&:=&\F^{\alpha\beta}(z,y)+\R^{\alpha\beta}(z,y)
+\een
+By the defination of Cauchy principle value, we can obtian
+\ben\hspace{-1.5cm}
+\R^{\alpha\beta}(z,y)&=&\frac{1}{2\pi}\int_{[-k_s,k_s]\bks[-b_{\alpha\beta},b_{\alpha\beta}]}+P.V\int_{R\bks[-k_s,k_s]}   \frac{{\Ta}(\xi)^T \overline{\Nb}(\xi)}{\overline{\delta(\xi)}} e^{\i (\mu_\alpha z_2-\overline{\mu_\beta} y_2)+\i(y_1-z_1)\xi} d\xi \\
+&-&\frac{\i}{2}\Big(\frac{{\Ta}(k_R)^T \overline{\Nb}(k_R)}{\overline{\delta'(k_R)}}e^{\i(y_1-z_1)k_R}-\frac{{\Ta}(-k_R)^T \overline{\Nb}(-k_R)}{\overline{\delta'(-k_R)}}e^{-\i(y_1-z_1)k_R}\Big)e^{-\sqrt{k_R^2-k_\alpha^2}z_2-\sqrt{k_R^2-k_\beta^2}y_2}
+\\
+&:=&\R_1^{\alpha\beta}(z,y)+\R_2^{\alpha\beta}(z,y)+\R_3^{\alpha\beta}(z,y)
+\een
+\begin{lem}\label{pv_term}
+\ben
+|P.V \int_{1}^{\infty}\frac{k_s^4 g(t)}{\delta(k_s t)}|\leq C\Big( \int_{1}^{\infty}|g(t)|dt+ \max_{t\in[1,2\kappa_R-1]}(|g(t)|+|g'(t)|)\Big)
+\een
+where $\kappa_R = k_R/k_s$ and C only depend on $\kappa$.
+\end{lem}
+\debproof
+Since $\kappa_R$ is the first order zero point of $\delta(k_s t)$, we can choose $\sigma>0$ small enough such that $|\delta'(k_s t)/k_s^3|$ has positive lower bound in $I_1:=(\kappa_R-\sigma,\kappa_R+\sigma)$.
+Let $\delta_1(t)=\frac{\delta(k_s t)}{k_s^4 (t-\kappa_R)}$ and $I_2=(1,\infty)\bks I_1$ we have
+\ben \hspace{-1.5cm}
+|P.V \int_{{1}^{\infty}}\frac{k_s^4 g(t)}{\delta(k_s t)}|\leq
+|P.V\int_{I_1}\frac{k_s^4 g(t)}{\delta(k_s t)}dt|+|\int_{I_2}\frac{k_s^4 g(t)}{\delta(k_s t)}dt|\\  \hspace{-2cm}
+\leq |\int_{I_1}\frac{g(t)\delta_1(t)^{-1}-g(\kappa_R)\delta_1(\kappa_R)^{-1}}{t-\kappa_R}+P.V\int_{I_1}\frac{g(\kappa_R)\delta_1(\kappa_R)^{-1}}{t-\kappa_R}|+\max_{t\in I_2}\frac{k_s^4}{\delta(k_s t)}\int_{I_2}|g(t)|dt\\ \hspace{-2cm}
+\leq \max_{t\in I_1}|\big(\frac{g(t)}{\delta_1(t)}\big)'|
++C\frac{k_s^4}{\delta(k_s t)}\int_{I_2}|g(t)|dt
+\een
+By the mean value theorem, For $t\in (1,2\kappa_R-1)$ we carry out
+\ben
+(\frac{g(t)}{\delta_1(t)})'=\frac{g'(t)\delta'(k_s t_1)k_s^5+g(t)\delta''(k_s t_2)k_s^6}{\delta'(k_s t_1)} \ \ \ t_1,t_2\in [\kappa_R,t] \ \mbox{or} \ [t,\kappa_R] \\
+\leq C\max_{t\in I_1}(|g(t)|+|g'(t)|)
+\een
+This completes the proof.
+\finproof
 
 \begin{lem}\label{medi_term}
-	Let $f(\xi)$ be a bounded complex valued function in $L^1((\kappa,1))$. Then we have
+	Let $f(t)$ be a complex valued function in $(\kappa,\infty)$ and satisfy that $|f(t)|<C(1+t^k), k\in \Z_+$. Then for $\rho>1$ we have
 	\ben
-	|I(a,b):=\int_{\kappa}^{1}|f(\xi)e^{\i\xi a+\i\mu_\kappa(\xi)b}d\xi|\\
-	\leq C\frac{1}{b}\|f\|_{L^\infty(\kappa,1)}
-	\een
+	|\int_{\kappa}^{1}|f(t)e^{-\rho \sqrt{t^2-\kappa^2}}d\xi|
+	\leq C\frac{1}{\rho} \\
+	|\int_{1}^{\infty}|f(t)e^{-\rho \sqrt{t^2-1}}d\xi|
+	\leq C\frac{1}{\rho}
+	\een  
 \end{lem}
 \debproof
 It is simple to see that
 \ben
-|I(a,b)|&\leq& C \int_{\kappa}^{1}e^{-b\sqrt{\xi^2-\kappa^2}}d\xi \\
-&\leq& C\int_{0}^{\sqrt{1-\kappa^2}}\frac{t}{\sqrt{t^2+\kappa^2}}e^{-bt}dt \\
-&\leq& C\frac{1}{b}\|f\|_{L^\infty(\kappa,1)}
+|\int_{\kappa}^{1}|f(t)e^{-\rho \sqrt{(t^2-\kappa^2)}}dt|\leq C \int_{\kappa}^{1}(1+t^k)e^{-\rho \sqrt{t^2-\kappa^2}}dt \\
+\leq C\int_{0}^{\sqrt{(1-\kappa^2)}}\frac{t}{\sqrt{t^2+\kappa^2}}e^{-\rho t}dt \leq C \frac{1}{\rho}
 \een
+and
+\ben
+|\int_{1}^{\infty}|f(t)e^{-\rho \sqrt{t^2-1}}dt|\leq C \int_{1}^{\infty}(1+t^k)e^{-\rho \sqrt{t^2-1}}dt \\
+\leq C\int_{0}^{\infty}\frac{(1+(t^2+1)^{k/2})t}{\sqrt{t^2+1}}e^{-\rho t}dt \leq C \frac{1}{\rho}
+\een
+This completes the proof.
 \finproof
-\begin{lem} \label{r_estimate3}
-	For any $z,y\in \R^2_+$,
-	\be\hspace{-2cm}
-	|{\MyRoman{3}}^{pp}_{ij}(x,y)|\le\frac{C}{\mu k_s(y_2+z_2)} \ \ \
-	|{\MyRoman{3}}^{sp}_{ij}(x,y)|\le\frac{C}{\mu k_s y_2} \ \ \
-	|{\MyRoman{3}}^{ps}_{ij}(x,y)|\le\frac{C}{\mu k_s z_2} \\ \hspace{-2cm}
-	|\frac{\pa{\MyRoman{3}}^{pp}_{ij}(x,y)}{\pa y_k}|\le\frac{C}{\mu y_2+z_2} \ \ \
-	|\frac{\pa{\MyRoman{3}}^{sp}_{ij}(x,y)}{\pa y_k}|\le\frac{C}{\mu y_2} \ \ \
-	|\frac{\pa{\MyRoman{3}}^{ps}_{ij}(x,y)}{\pa y_k}|\le\frac{C}{\mu z_2} 
-	\ee
-	where $C$ is only dependent on $\kappa$.
-\end{lem}
-\debproof
-Taking substitution $\xi=k_s t$ and using the fact that $\gamma(\xi),\delta(\xi)$ have no roots on interval $[k_p,k_s]$, then we can get supremum of amplitude function. By lemma \ref{medi_term} with $b=k_s(y+z),k_sy,k_s z$, we can get the estimate immediately. This completes the proof.
-\finproof
-It turn to estimate $F^{sp}(z,y)$ and $F^{ps}(z,y)$.
+
 \begin{lem}\label{cross_term}
 	For $0<\kappa<1$, let $F(\lambda)=\int_{0}^{\kappa}f(t)e^{\i\lambda(\sqrt{1-t^2}-\tau\sqrt{\kappa^2-t^2}+\alpha t)}dt$, where $\tau\geq c_0>0$ and $\alpha\in\R$, then we have
 	\ben
@@ -932,9 +949,8 @@ Put $\phi(t)=-\sqrt{1-t^2}$ and $\psi(t,\tau)=\tau\kappa\phi(t/\kappa)-\phi(t)+\
 \een
 A standard computation show that
 \ben
-\phi^{(1)}(t)=\frac{t}{\sqrt{1-t^2}}  \\
-\phi^{(2)}(t)=\frac{1}{(1-t^2)^{3/2}}\\
-\phi^{(3)}(t)=\frac{3t}{(1-t^2)^{5/2}}
+\phi^{(1)}(t)=\frac{t}{\sqrt{1-t^2}}  \ \ \
+\phi^{(2)}(t)=\frac{1}{(1-t^2)^{3/2}}
 \een
 Moreover, for $n\geq3$, we have
 \be
@@ -965,10 +981,10 @@ The lemma is now a direct consequence of lemma (\ref{van}).
 \finproof
 Now we are in the position to prove the main theorem of this section.
 
-{\it \bf proof of Theorem \ref{thm_psf}}. The theorem now follows from lemma \ref{r_estimate1}, lemma \ref{r_estimate2}, lemma \ref{r_estimate3} and lemma \ref{r_estimate4}.
+{\it \bf proof of Theorem \ref{thm_psf}}. The theorem now follows from lemma \ref{pv_term}, lemma \ref{medi_term} and lemma \ref{cross_term}.
 
 
-To complete the analysis of the point spread function, Substitute (\ref{}) and (\ref{ngreen}) into  $F_{ss}(z,y),F_{pp}(z,y)$:
+To prove the lemma \ref{festimate1}, Substitute (\ref{tgreen}) and (\ref{ngreen}) into  $F_{ss}(z,y),F_{pp}(z,y)$, then we have
 \be
 \hspace{-2cm}\label{F_p}
 F^{pp}(z,y)=-\frac{1}{2\pi}\int_{(-k_p,k_p)} \frac{\i k_s^2\mu_s}{\mu\gamma(\xi)\delta(\xi)}
@@ -992,7 +1008,6 @@ F^{ss}(z,y)=-\frac{1}{2\pi}\int_{(-k_p,k_p)} \frac{\i k_s^2\mu_p}{\mu\gamma(\xi)
 \end{array}		\Bigg)e^{\i\mu_s (z_2-y_2) +\i\xi(y_1-z_1)} \\ \nn
 :=F^{ss1}(z,y)+F^{ss2}(z,y)
 \ee
-Based on the above argument, we know that $R(z,y)$ becomes small when z,y move away from $\Gamma_0$. Our goal is to show $F(z,y)$ has the similar decay to the elastic fundamental solution $\Im\Phi(z,y)$ as $|z-y|\to\infty$.
 
 {\it \bf proof of Lemma \ref{festimate1}}.
 We only proof the case of $i=1$, the other ones are similar.
