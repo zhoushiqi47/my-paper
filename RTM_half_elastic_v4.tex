@@ -135,6 +135,7 @@
 \renewcommand{\div}{\mathrm{div}}
 \newcommand{\curl}{\mathrm{curl}}
 \newcommand{\Curl}{\mathbf{curl}}
+\newcommand{\pv}{\mathrm{P.V}}
 
 \newcommand{\Np}{\mathcal{N}_p}
 \newcommand{\Ns}{\mathcal{N}_s}
@@ -155,6 +156,7 @@
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\W}{\mathbb{W}}
+\newcommand{\V}{\mathbb{V}}
 \newcommand{\J}{\mathbb{J}}
 \newcommand{\Zg}{\mathbb{Z}}
 \newcommand{\Gtheta}{\mathbb{\Theta}}
@@ -327,7 +329,7 @@ Denote $B_\sigma^{+(-)}(a)$ the upper(lower) half part of the circle centered at
 \N(x,y)=\lim_{\ep\to 0^+} \N_\ep(x,y)=\lim_{\ep\to 0^+}\frac{1}{2\pi}\int^{+\infty}_{-\infty}\hat \N_\ep(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}
 =\lim_{\ep\to 0^+}\frac{1}{2\pi}\int_{L_\sigma}\hat \N_\ep(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi=\frac{1}{2\pi}\int_{L_\sigma}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}
 =\lim_{\sigma\to 0^+}\frac{1}{2\pi}\int_{L_\sigma/B_\sigma^{-}(-k_R)\cup B_\sigma^{+}(k_R)}+\int_{B_\sigma^{-}(-k_R)\cup B_\sigma^{+}(k_R)}\hat \N_\ep(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}\label{Ngreen}
-= \frac{1}{2\pi}PV\int_{\R}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi
+= \frac{1}{2\pi}\pv\int_{\R}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi
 -\frac{\i}{2}\frac{\N_\delta(-k_R)}{\delta'(-k_R)}e^{-\i(x_1-y_1)k_R}+\frac{\i}{2}\frac{\N_\delta(k_R)}{\delta'(k_R)}e^{\i(x_1-y_1)k_R}
 \ee
 where $\N_\delta(\xi)=\hat \N(\xi,x_2;y_2)\delta(\xi)$.
@@ -554,7 +556,7 @@ This completes the proof.
 For $\N(x,y)$, it suffice to estimate the first part $\N_f$.
 The proof is similar to lemma \ref{es_dgreen}. Here we only point out the different parts. Denote integral path $P_\sigma^1=(-\infty,-k_R-\sigma) \cup(-k_R+\sigma,k_R-\sigma)\cup(k_R +\sigma,\infty)$ and $P_\sigma=P_\sigma^1\cup B_\sigma^{+}(-k_R)\cup  B_\sigma^{+}(k_R)$. By the defination of Cauchy principal value, we have
 \be\hspace{-2.3cm}\nn
-\N_f(x,y)=\frac{1}{2\pi}PV\int_{\R}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi=\lim_{\sigma\to 0^+}\frac{1}{2\pi}\int_{P_\sigma^1}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi\\ \hspace{-2.3cm}
+\N_f(x,y)=\frac{1}{2\pi}\pv\int_{\R}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi=\lim_{\sigma\to 0^+}\frac{1}{2\pi}\int_{P_\sigma^1}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi\\ \hspace{-2.3cm}
 = \frac{1}{2\pi}\int_{P_\sigma}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi
 +\frac{\i}{2}\frac{\N_\delta(-k_R)}{\delta'(-k_R)}e^{-\i(x_1-y_1)k_R}+\frac{\i}{2}\frac{\N_\delta(k_R)}{\delta'(k_R)}e^{\i(x_1-y_1)k_R}
 \ee
@@ -596,24 +598,14 @@ We finish this section by introducing  some results on foward scattering problem
 	\|u\|_{H^{1}(\mathcal O)}\le C\|g\|_{H^{-1/2}(\Ga_D)}n
 	\ee
 \end{thm}
-Moreover, we give the definition of the Dirichlet-to-Neumann mapping for Elastic scattering problems. For any $g\in H^{1/2}(\Ga_D) $, define $T_e(g)= \sigma(u)\nu\in H^{-1/2}(\Ga_D)$ where  u is the corresponding solution of above equation. we will denote $\|T_e\|$ by its operator norm in the remainder of this paper. 
+Moreover, we give the definition of the Dirichlet-to-Neumann mapping for Elastic scattering problems. For any $g\in H^{1/2}(\Ga_D) $, define $T_h(g)= \sigma(u)\nu\in H^{-1/2}(\Ga_D)$ where  u is the corresponding solution of above equation and also $T_f(g)=\sigma(v)\nu$ where v is the solution of full space scattering proble. we will denote $\|T_h\|$ or $\|T_f\|$ by its operator norm in the remainder of this paper. 
 
 For the sake of convenience, we introduce the following notation:
-\ben
+\be\label{bi_op}
 \GG(W,U)=\int_{\Ga_D} [W(x)\cdot \sigma(U(x))\nu- \sigma(W(x))\nu\cdot U(x)]ds(x)
-\een
+\ee
 Using this notation, the integral representation formula of the solution U(x) to the scattering
 problem (\ref{elas_1})-(\ref{elas_b0}) reads: $u(x)\cdot q=\GG(u,\N(\cdot,x)q)$.
-\begin{lem}
-	Let $W\in C^1(\bar{D} )^2$ and $U \in H_{loc}^1( R^2\bks\bar{D} )$ be the solution of the scattering
-	problem (\ref{elas_1})-(\ref{rc}) with the boundary condition $g =  u$ on $\Ga_D$ for some function $u\in
-	C^1(\bar{D} )^2$. Then we have
-	\ben
-	\GG(W,U)\leq C(1+\|T_e\|)\max_{x\in \bar{D}}[(|W(x)|+|\nabla W(x)|)(|u(x)|+|\nabla u(x)|)]
-	\een
-\end{lem}
-\debproof
-\finproof
 
 \section{Reverse time migration method }
 In this section we introduce RTM method for inverse elastic scattering problems in the half space. Assume that there $N_s$ sources and $N_r$ receivers uniformly distributed on $\Gamma^d_0$, where $\Gamma^d_0=\{(x_1,x_2)^T\in\Gamma_0:x_1\in[-d,d]\},d>0$ is aperture. We denote by $\Omega$ the sampling domain in which the obstacle is sought. Let $h=dist(\Omega,\Gamma_0)$ be the distance of $\Omega$ to $\Gamma_0$. We assume the obstacle $D\subset\Omega$ and there exist constants $0<c_1<1,c_2>0,c_3>0$ such that
@@ -636,7 +628,7 @@ Moreove, we define
 \begin{thm}\label{thm_psf}
 	Let $k_s h>1$. For any $z,y\in\Om$, let $\R(z,y)=\J(z,y)-\F(z,y)$ and it satisfy that
 	\be\hspace{-2cm}
-	|\R_{ij}(z,y)|+k_s^{-1}|\na_y \R_{ij}(z,y)|\leq \frac{C}{\mu}(\frac{1}{(k_s h)^{\frac{1}{2n^*}}}+e^{-k_s h\sqrt{\kappa_R^2-1}}):=\frac{C}{\mu} \epsilon_1(k_s h)
+	|\R_{ij}(z,y)|+k_s^{-1}|\na_y \R_{ij}(z,y)|\leq \frac{C}{\mu}(\frac{1}{(k_s h)^{\frac{1}{2n^*}}}+k_she^{-k_s h\sqrt{\kappa_R^2-1}}):=\frac{C}{\mu} \epsilon_1(k_s h)
 	\ee
 	uniformly for $z,y\in\Om$. Here $\kappa_R:=k_R/k_s$ and the constant C may dependent on $k_s d_D$ and $\kappa:=k_p/k_s$, but is independent of $k_s$, $k_p$, h, $d_D$.
 \end{thm}
@@ -658,9 +650,9 @@ By (\ref{q0}), we obtain the following consequence of theorem \ref{thm_psf} and 
 \begin{cor}\label{cor_psf}
 	There exists a constant C independent of $k_s$, h such that
 	\ben\hspace{-2cm}
-	\|F(z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(F(z,\cdot))\cdot\nu\|_{H^{-1/2}(\Gamma_D)}
+	\|F(z,\cdot)e_j\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(F(z,\cdot)e_j)\cdot\nu\|_{H^{-1/2}(\Gamma_D)}
 	\leq  \frac{C}{\mu}(1+k_s d_D) \\ \hspace{-2cm}
-	\|R(z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(R(z,\cdot))\cdot\nu\|_{H^{-1/2}(\Gamma_D)}
+	\|R(z,\cdot)e_j\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(R(z,\cdot)e_j)\cdot\nu\|_{H^{-1/2}(\Gamma_D)}
 	\leq  \frac{C}{\mu}(1+k_s d_D) \epsilon_1(k_s h)
 	\een
 	uniformly for $z\in\Om$, where $d_D$ is the diameter of the obstacle D.	
@@ -702,9 +694,9 @@ Here we have used the first inequeality in (\ref{convention_2}). Similarly, we c
 \finproof
 By (\ref{q0}) we obtain the following corollary
 \begin{cor}\label{cor_dpsf}
-	For $k_s h\geq 1$ and $z,y\in\Omega$, there exists a constant C independent of $k_s$, h such that
-	\ben\hspace{-2.5cm}
-	\|J(z,\cdot)-J_d (z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(J(z,\cdot)-J_d (z,\cdot))\cdot\nu\|_{H^{-1/2}(\Gamma_D)} 
+	Let $\R_d(z,y)=\J(z,y)-\J_d(z,y)$. For $k_s h\geq 1$ and $z,y\in\Omega$, there exists a constant C independent of $k_s$, h such that
+	\ben\hspace{-2cm}
+	\|\R_d (z,\cdot))e_j\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(\R_d (z,\cdot)e_j)\cdot\nu\|_{H^{-1/2}(\Gamma_D)} 
 	\leq \frac{C}{\mu} \epsilon_2(k_s h,h/d)(1+k_sd_D)
 	\een
 	uniformly for $z\in\Om$, where $d_D$ is the diameter of the obstacle D.	
@@ -742,121 +734,98 @@ Now, We turn to  study the resolution of the function $\hat{I}_d(z)$. To do this
 	\u_2 = g \ \ \ \ \mbox{\rm on } \Ga_D  \label{elas_rbd2}
 	\ee
 	Then there exits a constant C independant of $k_s$, $k_p$, such that
-	\be\hspace{-2cm}
-	\|T_x^\nu(\u_1-\u_2)\|_{H^{-1/2}(\Gamma_D)}&\leq& \frac{C}{\mu}(1+k_s d_D)^2((k_s h)^{-1/2}+e^{-\sqrt{k_R^2-k_s^2}h})\|g\|_{ H^{1/2}(\Ga_D)} \\
-	&\leq& \frac{C}{\mu}(1+k_s d_D)^2\epsilon_1(k_s h)\|g\|_{ H^{1/2}(\Ga_D)}
+	\be\hspace{-2.3cm}
+	\|\sigma_x(\u_1-\u_2)\nu\|_{H^{-1/2}(\Gamma_D)}
+	\leq \frac{C}{\mu}(1+\|T_f\|)(1+\|T_h\|)(1+k_s d_D)^2\epsilon_1(k_s h)\|g\|_{ H^{1/2}(\Ga_D)}
 	\ee
 \end{thm}
 Theorem \ref{diff_solu} also will be proved in the appendix of this paper. The following theorem is the main result of resolution analysis.
 \begin{thm}\label{resolution1}
 	For any $z\in\Omega$, let $\Psi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
 	\ben
-	& & \Delta_e \Psi(y,z) + \omega^2\Psi= 0 \ \ \ \ \mbox{in }\R_+^2\bks \bar{D}\\
+	& & \Delta_e \Psi(y,z)e_i + \omega^2\Psi e_i= 0 \ \ \ \ \mbox{in }\R_+^2\bks \bar{D} \ \ \ i=1,2 \\
 	& &\Psi(y,z)= -\overline{\F(z,y)} \ \ \ \ \ \ \ \mbox{on} \ \Ga_D  \\ 
 	\een
 	Then, we have
 	\be\hspace{-1cm}
-	\hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\overline{\F(z,y)}+\Psi(y,z))^T \overline{\F(z,y)}ds(y)+\W_{\hat{I}}(z)
+	\hat{I}_d(z)=\Im\int_{\Gamma_D}\sum_{i=1}^2[\sigma_y (\overline{(\F(z,y)}+\Psi(y,z))e_i)\cdot \overline{\F(z,y)}e_i]ds(y)+\W_{\hat{I}}(z)
 	\ee
-	where $|\W_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$.
+	where $|\W_{\hat{I}}(z)|\leq \frac{C}{\mu}(1+\|T_f\|)(1+\|T_h\|)(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$.
 \end{thm}
 \debproof
-By the integral representation, we have,
-\be\hspace{-1cm}
-\u^s_k(x_r,x_s)=\int_{\Gamma_D}(T^{\nu}_y \N(y,x_r))^T\u^s_k(y,x_s)-\N(x_r,y)(T^{\nu}_y \u^s_k(y,x_s)) ds(y)
-\ee
-where $\u^s_k(x,x_s)+N(x,x_s)e_k=0$.
-From (\ref{fullpsf}) we get for any $z\in\Omega$,
+Denote by $v_k(z,x_s)$ the field back-propagating from $\overline{\u^s_k(x_r,x_s)}$ on $\Ga_d$ where $\u^s_k(x,x_s)+N(x,x_s)e_k=0$.
+From (\ref{fullpsf}) and (\ref{bi_op}), we get for any $z\in\Omega$,
 \ben\hspace{-1cm}
-v_k(z,x_s)&=&\int_{\Gamma_0^d}(T^{e_2}_{x_r}\D(x_r,z))^T\overline{\u^s_k(x_r,x_s)}ds(x_r) \\
-&=&\int_{\Gamma_D}ds(y)\Big(\int_{\Gamma_0^d}(T^{e_2}_{x_r}\D(x_r,z))^T\overline{(T^{\nu}_y \N(y,x_r))^T}ds(x_r)\Big)\overline{ \u^s_k(y,x_s) }\\
-& &-\Big(\int_{\Gamma_0^d}(T^{e_2}_{x_r}\D(x_r,z))^T\overline{\N(x_r,y)}ds(x_r)\Big)\overline{(T^{\nu}_y \u^s_k(y,x_s))} \\
-&=&\int_{\Gamma_D}ds(y)\Big(\int_{\Gamma_0^d}(T^{\nu}_y \overline{\N(y,x_r)}T^{e_2}_{x_r}\D(x_r,z))^T ds(x_r)\Big)\overline{ \u^s_k(y,x_s) }\\
-& & -\Big(\int_{\Gamma_0^d}(T^{e_2}_{x_r}\D(x_r,z))^T\overline{\N(x_r,y)}ds(x_r)\Big)\overline{(T^{\nu}_y \u^s_k(y,x_s))} \\
-&=&\int_{\Gamma_D}ds(y)\Big(\int_{\Gamma_0^d}(T^{\nu}_y [\overline{\N(y,x_r)}T^{e_2}_{x_r}\D(x_r,z)])^T ds(x_r)\Big)\overline{u^s_k(y,x_s) }\\
-& &-\Big(\int_{\Gamma_0^d}(T^{e_2}_{x_r}\D(x_r,z))^T\overline{\N(x_r,y)}ds(x_r)\Big)\overline{(T^{\nu}_y \u^s_k(y,x_s))}\\
-&=&\int_{\Gamma_D}ds(y)\Big((T^{\nu}_y \J^T_d(z,y))^T \overline{ \u^s_k(y,x_s) }
--\J_d(z,y)\overline{(T^{\nu}_y \u^s_k(y,x_s))}\Big)
+v_k(z,x_s)\cdot e_i&=&\int_{\Gamma_0^d}\sigma_{x_r}(\D(x_r,z)e_i)e_2\cdot\overline{\u^s_k(x_r,x_s)}ds(x_r) \\
+&=&\sum_{j=1}\int_{\Gamma_0^d}e_j^T\sigma_{x_r}(\D(x_r,z)e_i)e_2\GG(\overline{\u^s_k(\cdot,x_s)},\N(\cdot,x_r)e_j)ds(x_r)\\
+&=&\GG(\overline{\u^s_k(\cdot,x_s)},\sum_{j=1}\int_{\Gamma_0^d}e_j^T\sigma_{x_r}(\D(x_r,z)e_i)e_2\N(\cdot,x_r)e_j ds(x_r))\\
+&=&\GG(\overline{\u^s_k(\cdot,x_s)},\J_d(z,\cdot)^Te_i)
 \een
-where we use the fact $(\sigma_x(A(x))\nu)B=\sigma_x(A(x)B)\nu$ above. By the definition of the imaging function $\hat{I}_d(z)$, we have
+By the definition of the imaging function $\hat{I}_d(z)$, we have
 \be\hspace{-1cm}
-\hat{I}_d(z)&=&\Im\sum_{k=1}^{2}\int_{\Gamma_0^d}(T^{e_2}_{x_s}\D(x_s,z))^Te_k\cdot v_k(z,x_s) ds(x_s)\\
-&=&\int_{\Gamma_D} ds(y)\sum_{k=1}^{2}\int_{\Gamma_0^d}(T^{e_2}_{x_s}\D(x_s,z))^Te_k\cdot\Big((T^{\nu}_y \J^T_d(z,y))^T \overline{ \u^s_k(y,x_s) } \\
-& &-\J_d(z,y)\overline{(T^{\nu}_y \u^s_k(y,x_s))}\Big) \\
-&=&\Im\int_{\Gamma_D} ds(y)\sum_{k=1}^{2}\mathbf{tr}\Big((T^{\nu}_y \J^T_d(z,y))^T\int_{\Gamma_0^d}
-\overline{ \u^s_k(y,x_s) } e_k^T T^{e_2}_{x_s}\D(x_s,z)\\
-& &-\J_d(z,y)\int_{\Gamma_0^d}\overline{(T^{\nu}_y u^s_k(y,x_s))} e_k^T T^{e_2}_{x_s}\D(x_s,z)\Big) \\
-&=&\Im\int_{\Gamma_D} ds(y)\mathbf{tr}\Big((T^{\nu}_y \J^T_d(z,y))^T \sum_{k=1}^{2} \W_k(y,z)\\
-& &-\J_d(z,y)(T^{\nu}_y \sum_{k=1}^{2}\W_k(y,z))\Big) \\ \label{resolu_1}
-&=&\Im\int_{\Gamma_D} \mathbf{tr}\Big((T^{\nu}_y \J^T_d(z,y))^T \W(y,z)-\J_d(z,y)(T^{\nu}_y \W(y,z))\Big)ds(y)
+\hat{I}_d(z)&=&\Im\sum_{k=1}^{2}\int_{\Gamma_0^d}\sum_{i=1}^2(e_k\cdot
+\sigma_{x_s}(\D(x_s,z)e_i)e_2)( v_k(z,x_s)\cdot e_i) ds(x_s)\\
+&=& \Im\sum_{k=1}^{2}\int_{\Gamma_0^d}\mathbf{tr}[( v_k(z,x_s)\cdot e_i)(e_k^T
+\sigma_{x_s}(\D(x_s,z)e_j)e_2)]_{ij} ds(x_s)\\
+&=&\Im\mathbf{tr}[\GG(\sum_{k=1}^{2}\int_{\Gamma_0^d}\overline{\u^s_k(\cdot,x_s)}e_k^T
+\sigma_{x_s}(\D(x_s,z)e_j)e_2 ds(x_s),\J_d(z,\cdot)^Te_i)]_{ij}\\ \label{resolu_1}
+&=&\Im\mathbf{tr}[\GG(\W(\cdot,z)e_j,\J_d(z,\cdot)^Te_i)]_{ij}
 \ee
 where
 \be
-\W(y,z)=\sum_{k=1}^{2} \W_k(y,z) \\
-\W_k(y,z)= \int_{\Gamma_0^d}
-\overline{ u^s_k(y,x_s) } e_k^T (T^{e_2}_{x_s}D(x_s,z))ds(x_s)
+\W(y,z)e_j= \sum_{k=1}^{2}\int_{\Gamma_0^d}\overline{\u^s_k(\cdot,x_s)}e_k^T
+\sigma_{x_s}(\D(x_s,z)e_j)e_2 ds(x_s)
 \ee
-Therefore, $\overline{\W_k(y,z)}$ can be viewed as the weighted superposition of $u^s_k(y,x_s)$. Then $\overline{\W_k(y,z)}$ satisfies elastic equation
-\be
-\Delta_e^y \overline{\W_k(y,z)} +\omega^2 \overline{\W_k(y,z)}=0
-\ee
+Therefore, $\overline{\W(y,z)}e_j$ can be viewed as the weighted superposition of $u^s_k(y,x_s)$.
 On the boundary of the obstacle $\Gamma_D$, we have
 \ben
-\overline{\W(y,z)}&=&\sum_{k=1}^{2}\int_{\Gamma_0^d}
-u^s_k(y,x_s)  e_k^T T^{e_2}_{x_s}\overline{D(x_s,z)}ds(x_s) \\
-&=&\sum_{k=1}^{2}\int_{\Gamma_0^d}-N(y,x_s)e_k e_k^T T^{e_2}_{x_s}\overline{D(x_s,z)}ds(x_s)\\
-&=&-\int_{\Gamma_0^d}N(y,x_s) T^{e_2}_{x_s}\overline{D(x_s,z)}ds(x_s) \\
-&=&-\overline{\J_d^T(z,y)}
+\overline{\W(y,z)}e_j&=&\sum_{k=1}^{2}\int_{\Gamma_0^d}\u^s_k(y,x_s)e_k^T
+\sigma_{x_s}(\overline{\D(x_s,z)}e_j)e_2 ds(x_s) \\
+&=&\sum_{k=1}^{2}\int_{\Gamma_0^d}-\N(y,x_s)e_k e_k^T
+\sigma_{x_s}(\overline{\D(x_s,z)}e_j)e_2 ds(x_s)\\
+&=&-\overline{\J_d^T(z,y)}e_j
 \een
-Moreover, $T_y^{e_2}\overline{\W_k(y,z)}=0$ on $\Gamma_0$ since $T_y^{e_2}u^s_k(y,x_s)=0$ on $\Gamma_0$. Let $\W_d(y,z)$ be the scattering solution of the problem
+Moreover, $\sigma_y(\overline{\W(y,z)}e_j)e_2=0$ on $\Gamma_0$ since $\sigma_y(\overline{u^s_k(y,x_s)})e_2=0$ on $\Gamma_0$. Let $\W_d(y,z)$ be the scattering solution of the problem
 \be
-& & \Delta_e \W_d(y,z) + \omega^2 \W_d(y,z)= 0 \ \ \ \ \mbox{in }\R_+^2\bks \bar{D}\\
+& & \Delta_e \W_d(y,z)e_j + \omega^2 \W_d(y,z)e_j= 0 \ \ \ \ \mbox{in }\R_+^2\bks \bar{D}\\
 & &\W_d(y,z)= \overline{\F(z,y)}-\overline{\J_d^T(z,y)} \ \ \mbox{on} \ \Ga_D  \\ 
-& & T_y^{e_2}(\W_d(y,z))=0 \ \ \mbox{on} \ \Ga_0
+& & \sigma_y(\W_d(y,z)e_j)e_2=0 \ \ \mbox{on} \ \Ga_0
 \ee
 By theorem \ref{elastic_eq2} and Corollaries \ref{cor_psf}-\ref{cor_dpsf} we have
-\be\nn
-\|T_y^{\nu}(\W_d(y,z))\|_{H^{1/2}(\Gamma_D)}&\leq& 	\|\F(z,\cdot)-\J_d^T(z,\cdot)\|_{H^{1/2}(\Gamma_D)}\\ \label{W_ineq}
-&\leq&  C(1+k_s d_D)(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
+\be\label{W_ineq}
+\|\sigma_y(\W_d(y,z)e_j)e\nu\|_{H^{-1/2}(\Gamma_D)}&\leq& 	\|T_h\|\|\F(z,\cdot)e_j-\J_d^T(z,\cdot)e_j\|_{H^{1/2}(\Gamma_D)}
 \ee
-Let $ V(y,z):=\overline{ \W(y,z)}-\W_d(y,z)-\Psi(y,z)$. Since $\overline{ \W(y,z)}-\W_d(y,z)$ satisfy the half-space scattering problem \ref{elas_r1} with $g(y)=-\overline{\F(z,y)}$, by using Theorem \ref{diff_solu} and Corollary \ref{cor_psf}
+Let $ \V(y,z):=\overline{ \W(y,z)}-\W_d(y,z)-\Psi(y,z)$. Since $\overline{ \W(y,z)}-\W_d(y,z)$ satisfy the half-space scattering problem \ref{elas_r1} with $g(y)=-\overline{\F(z,y)}$, by Theorem \ref{diff_solu}, we have
 \be
-\|T_y^{\nu}V(y,z)\|_{H^{1/2}(\Gamma_D)}&\leq& C(1+k_s d_D)^2\epsilon_1(k_s h)\|\F(z,\cdot)\|_{H^{1/2}(\Gamma_D)}\\
-&\leq&C(1+k_s d_D)^3\epsilon_1(k_s h)
+\|\sigma_y(\V(y,z)e_j)\nu\|_{H^{1/2}(\Gamma_D)}\\ \hspace{-0.5cm}
+\leq \frac{C}{\mu}(1+\|T_f\|)(1+\|T_h\|)(1+k_s d_D)^2\epsilon_1(k_s h)\|\F(z,\cdot)e_j\|_{H^{1/2}(\Gamma_D)}
 \ee
-Now we substitute $\overline{ \W(y,z)}=V(y,z)+\W_d(y,z)+\Psi(y,z)$ into (\ref{resolu_1}) to obtain
+Now we substitute $\overline{ \W(y,z)}=\V(y,z)+\W_d(y,z)+\Psi(y,z)$ into (\ref{resolu_1}) to obtain
 \be\hspace{-1.5cm}\label{I_d}
-\hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y \J^T_d(z,y))^T \overline{\Psi(y,z)}-\J_d(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+R_{\hat{I}}(z)
+\hat{I}_d(z)=\Im\mathbf{tr}[\GG(\overline{\Psi(\cdot,z)}e_j,\J_d(z,\cdot)^Te_i)]_{ij}+R_{\hat{I}}(z)
 \ee
 where
 \be\hspace{-1.5cm}
-R_{\hat{I}}(z)=&-&\Im\mathbf{tr}\int_{\Gamma_D}\J_d(z,y)(T^{\nu}_y V(y,z)ds(y)\\
-&+&\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y \J^T_d(z,y))^T \W_d(y,z)-\J_d(z,y)(T^{\nu}_y \W_d(y,z))ds(y)
+R_{\hat{I}}(z)=\Im\mathbf{tr}[\GG(\overline{\V(\cdot,z)}e_j,\J_d(z,\cdot)^Te_i)]_{ij}+\Im\mathbf{tr}[\GG(\overline{\W_d(\cdot,z)}e_j,\J_d(z,\cdot)^Te_i)]_{ij}
 \ee
 By (\ref{W_ineq}) and Corollaries \ref{cor_psf}-\ref{cor_dpsf} it is easy to see that
-\be
-|R_{\hat{I}}(z)|\leq C(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
+\be\hspace{-1.5cm}
+|R_{\hat{I}}(z)|\leq \frac{C}{\mu}(1+\|T_f\|)(1+\|T_h\|)(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
 \ee
-Finally, by (\ref{I_d}) and $\Psi(y,z)= -\overline{\F(z,y)}$
-\ben\hspace{-1cm}
-\hat{I}_d(z)&=&\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\F(z,y))^T \overline{\Psi(y,z)}-\F(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+w_{\hat{I}}(z) \\
-&=&-\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\F(z,y))^T \F(z,y)+\F(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+w_{\hat{I}}(z)\\
-&=&\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\overline{\F(z,y)}+\Psi(y,z))^T \overline{\F(z,y)}ds(y)+w_{\hat{I}}(z)
-\een
-
-where
+Finally, by (\ref{I_d}) and $\Psi(y,z)= -\overline{\F(z,y)}$ on $\Ga_D$
 \ben\hspace{-2cm}
-w_{\hat{I}}(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\J^T_d(z,y)-\F(z,y))^T \overline{\Psi(y,z)}-(\J_d(z,y)-\F(z,y))(T^{\nu}_y\overline{\Psi(y,z)})ds(y)
+\hat{I}_d(z)=\Im\mathbf{tr}[\GG(\overline{\Psi(\cdot,z)}e_j,\F(z,\cdot)e_i)]_{ij}+\Im\mathbf{tr}[\GG(\overline{\Psi(\cdot,z)}e_j,(\J^T_d(z,y)-\F(z,y))e_i)]_{ij}+R_{\hat{I}}(z) \\ \hspace{-1cm}
+=\Im\sum_{i=1}^2\int_{\Gamma_D}[\sigma_y (\overline{(\F(z,y)}+\Psi(y,z))e_i)\cdot \overline{\F(z,y)}e_i]ds(y)+w_{\hat{I}}(z)+R_{\hat{I}}(z)
 \een
 By Corollaries \ref{cor_psf}-\ref{cor_dpsf} we have
 \be
-|w_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
+|w_{\hat{I}}(z)|\leq \frac{C}{\mu}(1+\|T_h\|)(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
 \ee
 \finproof
-By (\ref{F_p})-(\ref{F_s}) we know that for any fixed $z\in\Om$, $\overline{\F(z,\cdot)}$ satisfies the Elastic wave equation. Thus $\G(y,z)$ can be viewed as the scattering solution of the Elastic equation with the
+By (\ref{F_p})-(\ref{F_s}) we know that for any fixed $z\in\Om$, $\overline{\F(z,\cdot)}$ satisfies the Elastic wave equation. Thus $\Psi(y,z)$ can be viewed as the scattering solution of the Elastic equation with the
 incident wave $\overline{\F(z,\cdot)}$. By lemma \ref{festimate1} we konw that $\overline{\F(z,\cdot)}$ decays as $|y-z|$ becomes large. Therefore the imaging function $\hat{I}_d(z)$ becomes small when z moves away from the
 boundary $\Ga_D$ outside the scatterer $D$ if $k_s h \gg 1$ and $d\gg h$.
-\section{Some proof; Section name TBD}
+\section{Some proof; Name of Section TBD}
 
 In this section we give the proof of theorem \ref{thm_psf} and lemma \ref{festimate1} which depend on several lemmas that follow.
 Without loss of generality. we assume $z_1-y_1\geq0$ in the sebsequent. Otherwise, we can take substitution $\xi=-\xi$.
@@ -884,30 +853,35 @@ In order to analysis the PSF, loss is assumed in the medium that $k_{\alpha,\ep}
 \een
 By the defination of Cauchy principle value, we can obtian
 \ben\hspace{-1.5cm}
-\R^{\alpha\beta}(z,y)&=&\frac{1}{2\pi}\int_{[-k_s,k_s]\bks[-b_{\alpha\beta},b_{\alpha\beta}]}+P.V\int_{R\bks[-k_s,k_s]}   \frac{{\Ta}(\xi)^T \overline{\Nb}(\xi)}{\overline{\delta(\xi)}} e^{\i (\mu_\alpha z_2-\overline{\mu_\beta} y_2)+\i(y_1-z_1)\xi} d\xi \\
+\R^{\alpha\beta}(z,y)&=&\frac{1}{2\pi}\int_{[-k_s,k_s]\bks[-b_{\alpha\beta},b_{\alpha\beta}]}+\pv\int_{R\bks[-k_s,k_s]}   \frac{{\Ta}(\xi)^T \overline{\Nb}(\xi)}{\overline{\delta(\xi)}} e^{\i (\mu_\alpha z_2-\overline{\mu_\beta} y_2)+\i(y_1-z_1)\xi} d\xi \\
 &-&\frac{\i}{2}\Big(\frac{{\Ta}(k_R)^T \overline{\Nb}(k_R)}{\overline{\delta'(k_R)}}e^{\i(y_1-z_1)k_R}-\frac{{\Ta}(-k_R)^T \overline{\Nb}(-k_R)}{\overline{\delta'(-k_R)}}e^{-\i(y_1-z_1)k_R}\Big)e^{-\sqrt{k_R^2-k_\alpha^2}z_2-\sqrt{k_R^2-k_\beta^2}y_2}
 \\
 &:=&\R_1^{\alpha\beta}(z,y)+\R_2^{\alpha\beta}(z,y)+\R_3^{\alpha\beta}(z,y)
 \een
 \begin{lem}\label{pv_term}
+Let $d=(\kappa_R-1)/2$, then we have
 \ben
-|P.V \int_{1}^{\infty}\frac{k_s^4 g(t)}{\delta(k_s t)}|\leq C\Big( \int_{1}^{\infty}|g(t)|dt+ \max_{t\in[1,2\kappa_R-1]}(|g(t)|+|g'(t)|)\Big)
+|\pv \int_{1}^{\infty}\frac{k_s^4 g(t)}{\delta(k_s t)}|\leq C\Big( \int_{1}^{\infty}|g(t)|dt+ \max_{t\in[1,2\kappa_R-1]}(|g(t)|+|g'(t)|)\Big)
 \een
 where $\kappa_R = k_R/k_s$ and C only depend on $\kappa$.
 \end{lem}
 \debproof
-Since $\kappa_R$ is the first order zero point of $\delta(k_s t)$, we can choose $\sigma>0$ small enough such that $|\delta'(k_s t)/k_s^3|$ has positive lower bound in $I_1:=(\kappa_R-\sigma,\kappa_R+\sigma)$.
+Since $\kappa_R$ is the first order zero point of $\delta(k_s t)$, we can choose $\sigma>0$ small enough such that 
+\be\label{de_eq}
+0<C_1\leq\frac{\delta'(k_s t)}{k_s^3}<C_2, \ \ \ \frac{\delta''(k_s t)}{k_s^2}<C_2
+\ee
+for any $t\in I_1=(\kappa_R-\sigma,\kappa_R+\sigma)$ .
 Let $\delta_1(t)=\frac{\delta(k_s t)}{k_s^4 (t-\kappa_R)}$ and $I_2=(1,\infty)\bks I_1$ we have
 \ben \hspace{-1.5cm}
-|P.V \int_{{1}^{\infty}}\frac{k_s^4 g(t)}{\delta(k_s t)}|\leq
-|P.V\int_{I_1}\frac{k_s^4 g(t)}{\delta(k_s t)}dt|+|\int_{I_2}\frac{k_s^4 g(t)}{\delta(k_s t)}dt|\\  \hspace{-2cm}
-\leq |\int_{I_1}\frac{g(t)\delta_1(t)^{-1}-g(\kappa_R)\delta_1(\kappa_R)^{-1}}{t-\kappa_R}+P.V\int_{I_1}\frac{g(\kappa_R)\delta_1(\kappa_R)^{-1}}{t-\kappa_R}|+\max_{t\in I_2}\frac{k_s^4}{\delta(k_s t)}\int_{I_2}|g(t)|dt\\ \hspace{-2cm}
+|\pv \int_{{1}^{\infty}}\frac{k_s^4 g(t)}{\delta(k_s t)}|\leq
+|\pv\int_{I_1}\frac{k_s^4 g(t)}{\delta(k_s t)}dt|+|\int_{I_2}\frac{k_s^4 g(t)}{\delta(k_s t)}dt|\\  \hspace{-2cm}
+\leq |\int_{I_1}\frac{g(t)\delta_1(t)^{-1}-g(\kappa_R)\delta_1(\kappa_R)^{-1}}{t-\kappa_R}+\pv\int_{I_1}\frac{g(\kappa_R)\delta_1(\kappa_R)^{-1}}{t-\kappa_R}|+\max_{t\in I_2}\frac{k_s^4}{\delta(k_s t)}\int_{I_2}|g(t)|dt\\ \hspace{-2cm}
 \leq \max_{t\in I_1}|\big(\frac{g(t)}{\delta_1(t)}\big)'|
 +C\frac{k_s^4}{\delta(k_s t)}\int_{I_2}|g(t)|dt
 \een
-By the mean value theorem, For $t\in (1,2\kappa_R-1)$ we carry out
+By the mean value theorem and \ref{de_eq}, for any $t\in (1,2\kappa_R-1)$ we have
 \ben
-(\frac{g(t)}{\delta_1(t)})'=\frac{g'(t)\delta'(k_s t_1)k_s^5+g(t)\delta''(k_s t_2)k_s^6}{\delta'(k_s t_1)} \ \ \ t_1,t_2\in [\kappa_R,t] \ \mbox{or} \ [t,\kappa_R] \\
+(\frac{g(t)}{\delta_1(t)})'=\frac{g'(t)\delta'(k_s t_1)k_s^5-g(t)\delta''(k_s t_2)k_s^6/2}{\delta'(k_s t_1)} \ \ \ t_1,t_2\in [\kappa_R,t] \ \mbox{or} \ [t,\kappa_R] \\
 \leq C\max_{t\in I_1}(|g(t)|+|g'(t)|)
 \een
 This completes the proof.
@@ -982,10 +956,15 @@ The lemma is now a direct consequence of lemma (\ref{van}).
 \finproof
 Now we are in the position to prove the main theorem of this section.
 
-{\it \bf proof of Theorem \ref{thm_psf}}. The theorem now follows from lemma \ref{pv_term}, lemma \ref{medi_term} and lemma \ref{cross_term}.
+{\it \bf proof of Theorem \ref{thm_psf}}. By lemma \ref{root_Ga} and expresision (\ref{ngreen}),(\ref{tgreen}), it is easy to see that
+\ben\hspace{-2cm}
+|e_i\cdot\Na(k_s t)e_j|\leq Ck_s^3(1+t^3),  \ \ |e_i\cdot\Ta(k_s t)e_j|\leq C(1+t^2) \ \ \ \ \ \ \ \ \ \ t\in \R \\ \hspace{-2.5cm}
+|(\Ta(k_st)e_i\cdot\overline{\Nb(k_s t)}e_je^{\i k_s(y_1-z_1)t-z_2\sqrt{k_\alpha^2-k_s^2t^2}-y_2\sqrt{k_\beta^2-k_s^2t^2}})'|\leq C k_s he^{-\sqrt{k_R^2-k_s^2}}\ \ \ , t\in (\kappa_R-d,\kappa_R+d) 
+\een
+Substituting $\xi=k_s t$ into $\R_1^{\alpha\beta}(z,y),\R_2^{\alpha\beta}(z,y),\R_3^{\alpha\beta}(z,y)$, the theorem now follows from lemma \ref{pv_term}, lemma \ref{medi_term} and lemma \ref{cross_term}.
+\finproof
 
-
-To prove the lemma \ref{festimate1}, Substitute (\ref{tgreen}) and (\ref{ngreen}) into  $F_{ss}(z,y),F_{pp}(z,y)$, then we have
+To prove the lemma \ref{festimate1}, substitute (\ref{tgreen}) and (\ref{ngreen}) into  $F_{ss}(z,y),F_{pp}(z,y)$, then we have
 \be
 \hspace{-2cm}\label{F_p}
 F^{pp}(z,y)=-\frac{1}{2\pi}\int_{(-k_p,k_p)} \frac{\i k_s^2\mu_s}{\mu\gamma(\xi)\delta(\xi)}
@@ -1058,13 +1037,11 @@ R_\alpha(x;d)=\left\{ \begin{array}{ll}
 	0 \ \ \ \ \ \ \ \  \ \ \ \ \ \ \  \ \ \ \mbox{if} \ \ x \in \pa D^{+}_d=\{x\in \pa D, \nu(x)\cdot d\geq0\}.
 \end{array} \right.
 \een
-
-Now we consider the physical interpretation of the imaging function $\hat{I}_d(z)$ when $z\in\Ga_D$.  By the same procedure which used in \cite[p11,12]{RTMhalf_aco}, we can carry out that 
-\ben\hspace{-1cm}
-\hat{I}_d(z)&\approx&\sqrt{8\pi k_p}\Im\mathbf{tr} \int_{0}^{\pi}((\lambda+2\mu)A_p(\theta)\eta_\theta e^{\i k_p (y_-(\eta_\theta)-z)\cdot \eta_\theta-\i\frac{\pi}{4}})^T\frac{\overline{F(z,y_-(\eta_\theta))}}{\sqrt{\vartheta(y_-(\eta_\theta))}}d\theta \\
-&+&\sqrt{8\pi k_s}\Im\mathbf{tr} \int_{0}^{\pi}(\mu A_s(\theta)\eta_\theta^\perp e^{\i k_s (y_-(\eta_\theta)-z)\cdot \eta_\theta-\i\frac{\pi}{4}})^T\frac{\overline{F(z,y_-(\eta_\theta))}}{\sqrt{\vartheta(y_-(\eta_\theta))}}d\theta
+Now we consider the physical interpretation of the imaging function $\hat{I}_d(z)$ when $z\in\Ga_D$. By (\ref{F_p}) and (\ref{F_s}), we have
+\ben\hspace{-2cm}
+\overline{F(z,y)}=\i\int_{0}^{\pi}A_p(\theta)\eta_\theta e^{\i k_p (y-z)\cdot \eta_\theta}+A_s(\theta)\eta_\theta^\perp e^{\i k_s (y-z)\cdot \eta_\theta}d\theta, \ \ \ \ \eta_\theta:=(\cos\theta,\sin\theta)^T
 \een
-where $\nu(y_-(\eta_\theta))=-\eta_\theta$ and $\vartheta(y)$ is the curvature of $\Ga_D$, 
+where 
 \ben
 A_p(\theta)=\frac{ k_s^2k_p^3 \mu_s(k_p\cos\theta)\sin\theta}{2\pi\mu\gamma(k_p\cos\theta)\delta(k_p\cos\theta)}(\cos\theta,\sin\theta)
 \een
@@ -1075,27 +1052,32 @@ A_s(\theta)=\left\{ \begin{array}{ll}
 	\frac{ k_s^5(1-4\cos^2\theta)\overline{\mu_p(k_s\cos\theta)}\sin\theta}{2\pi\overline{\gamma(k_s\cos\theta)}\delta(k_s\cos\theta)}(\sin\theta,-\cos\theta) \ \ \theta\in(0,\pi)\bks[\arccos(k_p),\arccos(-k_p)]
 \end{array}\right.
 \een
-By above formula and lemma \ref{festimate1}, we can explain that one cannot image the back part of the obstacle with only the data collected on $\Ga_0$. This confirmed in our numerical examples.
+ Let y(s) be the arc length parametrization of the boundry $\Ga_D$ and $y_{\pm}(\eta_\theta)=y(s_{\pm})$ be the pionts such that $\nu(y(s_{\pm}))=\pm\eta_\theta$. By the same procedure which used in \cite[p11,12]{RTMhalf_aco}, we can carry out that 
+\ben\hspace{-1cm}
+\hat{I}_d(z)&\approx&\sqrt{8\pi k_p}\Im\mathbf{tr} \int_{0}^{\pi}((\lambda+2\mu)A_p(\theta)\eta_\theta e^{\i k_p (y_-(\eta_\theta)-z)\cdot \eta_\theta-\i\frac{\pi}{4}})^T\frac{\overline{F(z,y_-(\eta_\theta))}}{\sqrt{\vartheta(y_-(\eta_\theta))}}d\theta \\
+&+&\sqrt{8\pi k_s}\Im\mathbf{tr} \int_{0}^{\pi}(\mu A_s(\theta)\eta_\theta^\perp e^{\i k_s (y_-(\eta_\theta)-z)\cdot \eta_\theta-\i\frac{\pi}{4}})^T\frac{\overline{F(z,y_-(\eta_\theta))}}{\sqrt{\vartheta(y_-(\eta_\theta))}}d\theta
+\een
+Now for z in the part of $\Ga_D$ which is back to $\Ga_0$, ie $\nu(z)\cdot\eta_\theta>0$ for any $\theta\in[0,\pi]$, we know that z and $y_{-}(\eta_\theta)$ are far away and thus $\hat{I}_d(z)\approx0$. By above formula and lemma \ref{festimate1}, we can explain that one cannot image the back part of the obstacle with only the data collected on $\Ga_0$. This confirmed in our numerical examples.
 
 \section{Extensions}
 In this section we consider the reconstraction of non-penetrable obstacles with the impedance boundary condition and penetrable obstacle in the half space by the RTM algorithm \ref{alg_rtm}. For non-penetrable obstacles with the impedance boundary condition on the obstacle, the measured data $u^s_k(x_r.x_s)=u_k(x_r,x_s)-N(x_r,x_s)e_k$, $k=1,2$, where $u^s_k(x_r.x_s)$ is the radiation solution of the following problem:
-\be
+\be\hspace{-2cm}
 \Delta_e u^s_k(x) + \omega^2 u^s_k(x) =0 \qquad\mbox{\rm in } \R^2_+\bks \bar{D}, \label{elas_4}\ \ \
-\\ (T^{\nu}_x+\i\eta(x)) u^s_k(x)=-(T^{\nu}_x+\i\eta(x))N(x_r,x_s)e_k\ \ \ \ \mbox{\rm on } \Ga_D, \label{elas_bd2} \\
+\\ \hspace{-2cm} \sigma(u^s_k(x))\nu+\i\eta(x)u^s_k(x)=-(\sigma(N(x,x_s)e_k)\nu+\i\eta(x)N(x,x_s)e_k)\ \ \mbox{\rm on } \Ga_D, \label{elas_bd2} \\ \hspace{-2cm}
 \sigma(u^s_k)e_2=0 \ \ \ \ \mbox{\rm on} \ \ \ \Ga_0, \label{elas_b02} 
 \ee
 By modifying the argument in Theorem \ref{resolution2}, we can show the following result whose proof is omitted.
 \begin{thm}\label{resolution2}
 	For any $z\in\Omega$, let $\Phi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
 	\ben
-	& & \Delta_e \Phi(y,z) + \omega^2\Phi= 0 \ \ \ \ \mbox{\rm in }\R^2\bks \bar{D}\\
-	& &T^{\nu}_y\Phi(y,z)+\i\eta(y)\Phi(y,z)= -(T^{\nu}_y+\i\eta(y))\overline{F(z,y)} \ \ \ \ \ \ \ \mbox{\rm on} \ \Ga_D  \\ 
+	& & \Delta_e \Psi(y,z)e_j + \omega^2\Psi e_j= 0 \ \ \ \ \mbox{\rm in }\R^2\bks \bar{D}\\
+	& &\sigma_y(\Phi(y,z)e_j)\nu+\i\eta(y)\Phi(y,z)e_j= -(\sigma_y(\overline{F(z,y)}e_j)\nu+\i\eta(y)\overline{F(z,y)}e_j )\ \ \mbox{\rm on} \ \Ga_D  \\ 
 	\een
 	Then, we have
-	\be\hspace{-1cm}
-	\hat{I}_d(z)=-\Im\mathbf{tr}\int_{\Gamma_D} (\overline{F(z,y)}+\Phi(y,z))^T ((T^{\nu}_y+\i\eta(y))\overline{F(z,y)})ds(y)+W_{\hat{I}}(z)
-	\ee
-	where $|W_{\hat{I}}(z)|\leq C(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$, $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$.
+	\ben\hspace{-2.5cm}
+	\hat{I}_d(z)=-\Im\int_{\Gamma_D}\sum_{i=1}^2 [((\overline{\F(z,y)}+\Psi(y,z))e_i)\cdot(\sigma_y(\overline{\F(z,y)}e_j)\nu+\i\eta(y)\overline{\F(z,y)}e_i)]ds(y)+W_{\hat{I}}(z)
+	\een
+	where $|W_{\hat{I}}(z)|\leq C(1+\|T_f\|)(1+\|T_h\|)(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$.
 \end{thm}
 
 For the penetrable obstacle , the measured data $u^s_k(x_r.x_s)=u_k(x_r,x_s)-N(x_r,x_s)e_k$, $k=1,2$, where $u^s_k(x_r.x_s)$ is the radiation solution of the following problem:
@@ -1105,15 +1087,15 @@ For the penetrable obstacle , the measured data $u^s_k(x_r.x_s)=u_k(x_r,x_s)-N(x
 \ee
 where $n(x)\in L^{\infty}({\R^2})$ is a positive function which is equel to 1 outside $D$. By modifying the argument in Theorem \ref{resolution2}, the following theorem can be proved.
 \begin{thm}\label{resolution2}
-	For any $z\in\Omega$, let $\Phi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
+	For any $z\in\Omega$, let $\Psi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
 	\ben
-	& & \Delta_e \Phi(y,z) + \omega^2n(y)\Phi= -\omega^2(n(y)-1)\overline{F(z,y)} \ \ \ \ \mbox{\rm in }\R^2
+	& & \Delta_e \Psi(y,z)e_j + \omega^2n(y)\Psi e_j= -\omega^2(n(y)-1)\overline{F(z,y)e_j} \ \ \ \ \mbox{\rm in }\R^2
 	\een
 	Then, we have
 	\be\hspace{-1cm}
-	\hat{I}_d(z)=-\Im\mathbf{tr}\int_{D}\omega^2(1-n(y)) (\overline{F(z,y)}+\Phi(y,z))^T \overline{F(z,y)})dy+W_{\hat{I}}(z)
+	\hat{I}_d(z)=-\Im\int_{D}\omega^2(1-n(y))\sum_{i=1}^2 [(\overline{\F(z,y)}+\Psi(y,z))e_i \cdot\overline{F(z,y)}e_i]dy+W_{\hat{I}}(z)
 	\ee
-	where $|W_{\hat{I}}(z)|\leq C(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$, $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$.
+	where $|W_{\hat{I}}(z)|\leq C(1+\|T_f\|)(1+\|T_h\|)(1+k_s d_D)^4(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$.
 \end{thm}
 \section{Numerical experiments}
 In this section we present several numerical examples to show the effectiveness of our
@@ -1359,7 +1341,7 @@ Then the desired unique exsitence follows lemma \ref{elas_exis}. This completes 
 	\een
 	where $f(a,b,c)$ is a homogeneous fifth order polynomial with repect to a,b,c and $\alpha,\beta\in \{p,s\}$.Then there exists a constant $C>0$ only depandent on $\kappa$ such that
 	\ben\hspace{-2.5cm}
-	|p(x,y)|+k_s^{-1}|\nabla_x p(x,y)|+k_s^{-1}|\nabla_y p(x,y)|+k_s^{-2}|\nabla_x\nabla_y p(x,y)|\leq C((k_s h)^{-1/2}+e^{-\sqrt{k_R^2-k_s^2}h})
+	|p(x,y)|+k_s^{-1}|\nabla_x p(x,y)|+k_s^{-1}|\nabla_y p(x,y)|+k_s^{-2}|\nabla_x\nabla_y p(x,y)|\leq C((k_s h)^{-1/2}+k_s he^{-\sqrt{k_R^2-k_s^2}h})
 	\een
 	uniformly for $x,y\in D$.
 \end{lem}
@@ -1377,9 +1359,9 @@ p_1(x,y)=\int_{-1}^{1}\frac{ f(\mu_p(k_\alpha t),\mu_s(k_\alpha t),k_\alpha t)}{
 \een
 where $\tau=y_2/x_2$, $\varsigma=k_\beta/k_\alpha$ and $\gamma=(y_1-x_1)/x_2$. It is easy to see that the phase function $\phi(t)=\sqrt{1-t^2}+\tau \sqrt{\varsigma^2-t^2} +\gamma t$ satifies $|\phi''(t)|\geq 1/(1-t^2)^{3/2}\geq1$ for $t\in(-1,1)$. Then we can obtain $|p_1(x,y)|\leq C 1/(k_s h)^{1/2}$ by lemma \ref{van}.
 
-For $p_2(x,y)$, by changing the integration path and using same argument as in the lemma \ref{hyper_term}-\ref{r_estimate3}, we can easily obtain:
+For $p_2(x,y)$, by the defination of Cauchy priciple value and lemma \ref{pv_term} and lemma \ref{medi_term}, we can easily obtain:
 \ben
-|p_2(x,y)|\leq C(\frac{1}{k_sh}+e^{-\sqrt{k_R^2-k_s^2}}h)
+|p_2(x,y)|\leq C(\frac{1}{k_sh}+k_s he^{-\sqrt{k_R^2-k_s^2}}h)
 \een
 This completes the proof of the esitmate for $|p(x,y)|$. The other estimates can be proved by a similar argument. We omit the details here.
 \finproof
@@ -1394,7 +1376,7 @@ Denote by $u_1^\ep$, $u_2^\ep$ the corresponding solution of equations \ref{elas
 Then $u^\ep_1-u^\ep_2-w^\ep$ satisfies (\ref{elas_z1}),(\ref{elas_zb0}) with the boundary condition $u^\ep_1-u^\ep_2-w^\ep=-w^\ep$ on $\Gamma_D$. Thus by the limiting absorption principle, lemma \ref{elas_bd} and trace therorem, we have
 \be\label{diff1}
 \|T_x^\nu(u^\ep_1-u^\ep_2)\|_{H^{-1/2}(\Gamma_D)}&\leq& C(\| w^\ep\|_{H^{1/2}(\Gamma_D)}+|T_x^\nu(w^\ep)\|_{H^{-1/2}(\Gamma_D)})\\
-&\leq&C \max_{x\in D}(|w^\ep(x)|+d_D|\nabla w^\ep(x|)
+&\leq&C (1+\|T_h^\ep\|)\max_{x\in D}(|w^\ep(x)|+d_D|\nabla w^\ep(x|)
 \ee
 where C is indepandent of $\ep,\om$. By the integral representation formula we have for any $z\in\Ga_0$
 \be
@@ -1414,18 +1396,19 @@ where
 \be
 v^\ep(x,y)=\int_{\Ga_0} N^\ep(x,z)(T_z^{e_2}\Phi^\ep(z,y))ds(z)
 \ee
-Since $\|T_x^\nu(u^\ep_2)\|_{H^{-1/2}(\Gamma_D)}\leq C \|g\|_{H^{1/2}(\Gamma_D)}$, we obtain
+Since $\|\sigma(u^\ep_2)\nu\|_{H^{-1/2}(\Gamma_D)}\leq \|T_f^\ep\| \|g\|_{H^{1/2}(\Gamma_D)}$, we obtain
 \be
-|w^\ep(x)|\leq C \|g\|_{H^{1/2}(\Gamma_D)}\max_{x\in D}(|v^\ep(x,y)|+d_D|\nabla_yv^\ep(x,y)|)
+|w^\ep(x)|\leq C (1+\|T_f^\ep\|) \|g\|_{H^{1/2}(\Gamma_D)}\max_{x\in D}(|v^\ep(x,y)|+d_D|\nabla_yv^\ep(x,y)|)
 \ee
 and
-\be
-|\nabla w^\ep(x)|\leq C \|g\|_{H^{1/2}(\Gamma_D)}\max_{x\in D}(|\nabla_x v^\ep(x,y)|+d_D|\nabla_x\nabla_yv^\ep(x,y)|)
-\ee
+\be\hspace{-2cm}
+|\nabla w^\ep(x)|\leq C (1+\|T_f^\ep\|) \|g\|_{H^{1/2}(\Gamma_D)}\max_{x\in D}(|\nabla_x v^\ep(x,y)|+d_D|\nabla_x\nabla_yv^\ep(x,y)|)
+\ee\hspace{-1.5cm}
 By (\ref{diff1}) and letting $\ep\to0^+$, we have 
 \be\label{diff2}
-\|T_x^\nu(u_1-u_2)\|_{H^{-1/2}(\Gamma_D)}
-\leq C\|g\|_{H^{1/2}(\Gamma_D)}\max_{x\in D}\lim_{\ep\to0^+}(|v^\ep(x,y)|\\
+\|\sigma(u_1-u_2)\nu\|_{H^{-1/2}(\Gamma_D)}
+\leq C(1+\|T_f\|)(1+\|T_h\|)\|g\|_{H^{1/2}(\Gamma_D)}\\
+\hspace{-1.5cm}\max_{x\in D}\lim_{\ep\to0^+}(|v^\ep(x,y)|
 +d_D|\nabla_y v^\ep(x,y)|+d_D|\nabla_x v^\ep(x,y)|+d_D^2|\nabla_x\nabla_yv^\ep(x,y)|)
 \ee
 Applying the Fourier transformation to the first horizontal variable of $T_z^{e_2}\Phi^\ep(z,y)$, we have 
