@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  13 MAY 2018 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  13 MAY 2018 17:36
 entering extended mode
 **./RTM_half_elastic_v4.tex
 (RTM_half_elastic_v4.tex
@@ -248,7 +248,7 @@ File: ./graphic/transfor.png Graphic file (type png)
 
 <use ./graphic/transfor.png>
 Package pdftex.def Info: ./graphic/transfor.png used on input line 566.
-(pdftex.def)             Requested size: 267.8427pt x 210.02777pt.
+(pdftex.def)             Requested size: 357.12132pt x 280.03487pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 570--573
 
@@ -264,22 +264,22 @@ Overfull \hbox (80.5472pt too wide) in alignment at lines 855--860
  [] [] [] [] 
  []
 
-
+[17]
 Overfull \hbox (6.32037pt too wide) in alignment at lines 875--881
  [] [] [] [] 
  []
 
-[17]
+
 Underfull \hbox (badness 10000) in paragraph at lines 886--889
 
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 909--912
 
  []
 
-[18]
+[19]
 Overfull \hbox (50.50615pt too wide) in alignment at lines 960--963
  [] [] [] [] 
  []
@@ -289,7 +289,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 963--966
 
  []
 
-[19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1011--1014
 
  []
@@ -392,6 +392,10 @@ File: ./graphic/peanut_3pi_transmission-eps-converted-to.pdf Graphic file (type
 Package pdftex.def Info: ./graphic/peanut_3pi_transmission-eps-converted-to.pdf
  used on input line 1128.
 (pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+
+[23 <./graphic/peanut_3pi-eps-converted-to.pdf> <./graphic/peanut_3pi_neumann-e
+ps-converted-to.pdf> <./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf> <.
+/graphic/peanut_3pi_transmission-eps-converted-to.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
@@ -407,7 +411,7 @@ nverted-to.pdf ./graphic/circle_3pi.eps>
 (epstopdf)             \includegraphics on input line 1146.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/circle_3pi-eps-converted-to.pdf, id=99, 418.56375pt x 314.17375pt>
+<./graphic/circle_3pi-eps-converted-to.pdf, id=135, 418.56375pt x 314.17375pt>
 File: ./graphic/circle_3pi-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphic/circle_3pi-eps-converted-to.pdf>
@@ -426,7 +430,7 @@ nverted-to.pdf ./graphic/circle_5pi.eps>
 (epstopdf)             \includegraphics on input line 1147.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/circle_5pi-eps-converted-to.pdf, id=100, 418.56375pt x 314.17375pt>
+<./graphic/circle_5pi-eps-converted-to.pdf, id=136, 418.56375pt x 314.17375pt>
 File: ./graphic/circle_5pi-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphic/circle_5pi-eps-converted-to.pdf>
@@ -444,7 +448,7 @@ ted-to.pdf ./graphic/circle.eps>
 (epstopdf)             \includegraphics on input line 1148.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/circle-eps-converted-to.pdf, id=101, 418.56375pt x 314.17375pt>
+<./graphic/circle-eps-converted-to.pdf, id=137, 418.56375pt x 314.17375pt>
 File: ./graphic/circle-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphic/circle-eps-converted-to.pdf>
@@ -480,7 +484,7 @@ nverted-to.pdf ./graphic/peanut_5pi.eps>
 (epstopdf)             \includegraphics on input line 1150.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/peanut_5pi-eps-converted-to.pdf, id=102, 418.56375pt x 314.17375pt>
+<./graphic/peanut_5pi-eps-converted-to.pdf, id=138, 418.56375pt x 314.17375pt>
 File: ./graphic/peanut_5pi-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphic/peanut_5pi-eps-converted-to.pdf>
@@ -498,7 +502,7 @@ ted-to.pdf ./graphic/peanut.eps>
 (epstopdf)             \includegraphics on input line 1151.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/peanut-eps-converted-to.pdf, id=103, 418.56375pt x 314.17375pt>
+<./graphic/peanut-eps-converted-to.pdf, id=139, 418.56375pt x 314.17375pt>
 File: ./graphic/peanut-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphic/peanut-eps-converted-to.pdf>
@@ -517,7 +521,7 @@ nverted-to.pdf ./graphic/p_leaf_3pi.eps>
 (epstopdf)             \includegraphics on input line 1152.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/p_leaf_3pi-eps-converted-to.pdf, id=104, 418.56375pt x 314.17375pt>
+<./graphic/p_leaf_3pi-eps-converted-to.pdf, id=140, 418.56375pt x 314.17375pt>
 File: ./graphic/p_leaf_3pi-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphic/p_leaf_3pi-eps-converted-to.pdf>
@@ -536,7 +540,7 @@ nverted-to.pdf ./graphic/p_leaf_5pi.eps>
 (epstopdf)             \includegraphics on input line 1153.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/p_leaf_5pi-eps-converted-to.pdf, id=105, 418.56375pt x 314.17375pt>
+<./graphic/p_leaf_5pi-eps-converted-to.pdf, id=141, 418.56375pt x 314.17375pt>
 File: ./graphic/p_leaf_5pi-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphic/p_leaf_5pi-eps-converted-to.pdf>
@@ -554,7 +558,7 @@ ted-to.pdf ./graphic/p_leaf.eps>
 (epstopdf)             \includegraphics on input line 1154.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/p_leaf-eps-converted-to.pdf, id=106, 350.30875pt x 257.96375pt>
+<./graphic/p_leaf-eps-converted-to.pdf, id=142, 350.30875pt x 257.96375pt>
 File: ./graphic/p_leaf-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphic/p_leaf-eps-converted-to.pdf>
@@ -573,7 +577,7 @@ df>
 (epstopdf)             \includegraphics on input line 1155.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/rectangle_3pi-eps-converted-to.pdf, id=107, 418.56375pt x 314.17375p
+<./graphic/rectangle_3pi-eps-converted-to.pdf, id=143, 418.56375pt x 314.17375p
 t>
 File: ./graphic/rectangle_3pi-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphic/rectangle_3pi-eps-converted-to.pdf>
@@ -592,7 +596,7 @@ df>
 (epstopdf)             \includegraphics on input line 1156.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/rectangle_5pi-eps-converted-to.pdf, id=108, 418.56375pt x 314.17375p
+<./graphic/rectangle_5pi-eps-converted-to.pdf, id=144, 418.56375pt x 314.17375p
 t>
 File: ./graphic/rectangle_5pi-eps-converted-to.pdf Graphic file (type pdf)
  <use ./graphic/rectangle_5pi-eps-converted-to.pdf>
@@ -610,16 +614,13 @@ verted-to.pdf ./graphic/rectangle.eps>
 (epstopdf)             \includegraphics on input line 1157.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphic/rectangle-eps-converted-to.pdf, id=109, 418.56375pt x 314.17375pt>
+<./graphic/rectangle-eps-converted-to.pdf, id=145, 418.56375pt x 314.17375pt>
 File: ./graphic/rectangle-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphic/rectangle-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphic/rectangle-eps-converted-to.pdf used on input
  line 1157.
 (pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
- [23 <./graphic/peanut_3pi-eps-converted-to.pdf> <./graphic/peanut_3pi_neumann-
-eps-converted-to.pdf> <./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf> <
-./graphic/peanut_3pi_transmission-eps-converted-to.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
@@ -877,16 +878,16 @@ pdf used on input line 1207.
 -eps-converted-to.pdf> <./graphic/bi_circle-eps-converted-to.pdf> <./graphic/ci
 rcle_0_4_peanut_1_profile-eps-converted-to.pdf> <./graphic/circle_0_4_peanut_1_
 3pi_1-eps-converted-to.pdf> <./graphic/circle_0_4_peanut_1_multi_1-eps-converte
-d-to.pdf>]
+d-to.pdf>] [26 <./graphic/bi_circle_4pi_error2-eps-converted-to.pdf> <./graphic
+/bi_circle_4pi_error4-eps-converted-to.pdf> <./graphic/bi_circle_4pi_error6-eps
+-converted-to.pdf> <./graphic/bi_circle_multi_2_8_error2-eps-converted-to.pdf> 
+<./graphic/bi_circle_multi_2_8_error4-eps-converted-to.pdf> <./graphic/bi_circl
+e_multi_2_8_error6-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 1242--1245
 
  []
 
-[26 <./graphic/bi_circle_4pi_error2-eps-converted-to.pdf> <./graphic/bi_circle_
-4pi_error4-eps-converted-to.pdf> <./graphic/bi_circle_4pi_error6-eps-converted-
-to.pdf> <./graphic/bi_circle_multi_2_8_error2-eps-converted-to.pdf> <./graphic/
-bi_circle_multi_2_8_error4-eps-converted-to.pdf> <./graphic/bi_circle_multi_2_8
-_error6-eps-converted-to.pdf>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 1250--1253
 
  []
@@ -931,7 +932,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2720 strings out of 495237
  36580 string characters out of 3182726
- 97893 words of memory out of 3000000
+ 98893 words of memory out of 3000000
  5918 multiletter control sequences out of 15000+200000
  16373 words of font info for 67 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -953,7 +954,7 @@ i10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/CTEX/MiKTeX/fonts/type1/public
 /amsfonts/latxfont/lasy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb>
-Output written on RTM_half_elastic_v4.pdf (32 pages, 1010593 bytes).
+Output written on RTM_half_elastic_v4.pdf (32 pages, 1012126 bytes).
 PDF statistics:
  390 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
