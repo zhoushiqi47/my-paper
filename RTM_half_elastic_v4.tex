@@ -658,9 +658,9 @@ By (\ref{q0}), we obtain the following consequence of theorem \ref{thm_psf} and 
 \begin{cor}\label{cor_psf}
 	There exists a constant C independent of $k_s$, h such that
 	\ben\hspace{-2cm}
-	\|F(z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(F(z,\cdot))\cdot\nu\|_{H^{1/2}(\Gamma_D)}
+	\|F(z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(F(z,\cdot))\cdot\nu\|_{H^{-1/2}(\Gamma_D)}
 	\leq  \frac{C}{\mu}(1+k_s d_D) \\ \hspace{-2cm}
-	\|R(z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(R(z,\cdot))\cdot\nu\|_{H^{1/2}(\Gamma_D)}
+	\|R(z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(R(z,\cdot))\cdot\nu\|_{H^{-1/2}(\Gamma_D)}
 	\leq  \frac{C}{\mu}(1+k_s d_D) \epsilon_1(k_s h)
 	\een
 	uniformly for $z\in\Om$, where $d_D$ is the diameter of the obstacle D.	
@@ -677,8 +677,9 @@ Our aim is to estimate the difference $J(z,y)-J_d(z,y)$. It is easy to see that
 \frac{z_2^2}{\rho^2}\leq\frac{c_3^2}{(1-c_1)^2(h/d)+c_3^2 }:=M(h/d)
 \ee
 where $\rho=\sqrt{(x_1-z_1)^2+z_2^2}$ and $z\in\Omega,x\in \Gamma_0\bks(-d,d)$.
+In the sebsequent discussions, we assume $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$.
 \begin{thm} \label{ap_psf}
-	Assume $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$ and $k_s h\geq 1$. Then for $z,y\in\Omega$, we have
+	For $k_s h\geq 1$ and $z,y\in\Omega$, we have
 	\be 
 	|J(z,y)-J_d(z,y)|+k_s^{-1}|\nabla_y(J(z,y)-J_d(z,y))|\\
 	\leq \frac{C}{\mu} ((\frac{h}{d})^{2}+\frac{(k_s h)^{1/2}}{ e^{k_s h\sqrt{\kappa_R^2-1}}}(\frac{h}{d})^{1/2}):=\frac{C}{\mu} \epsilon_2(k_s h,h/d)
@@ -701,9 +702,9 @@ Here we have used the first inequeality in (\ref{convention_2}). Similarly, we c
 \finproof
 By (\ref{q0}) we obtain the following corollary
 \begin{cor}\label{cor_dpsf}
-	Assume $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$ and $k_s h\geq 1$. There exists a constant C independent of $k_s$, h such that
+	For $k_s h\geq 1$ and $z,y\in\Omega$, there exists a constant C independent of $k_s$, h such that
 	\ben\hspace{-2.5cm}
-	\|J(z,\cdot)-J_d (z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(J(z,\cdot)-J_d (z,\cdot))\cdot\nu\|_{H^{1/2}(\Gamma_D)} 
+	\|J(z,\cdot)-J_d (z,\cdot)\|_{H^{1/2}(\Gamma_D)}+	\|\sigma(J(z,\cdot)-J_d (z,\cdot))\cdot\nu\|_{H^{-1/2}(\Gamma_D)} 
 	\leq \frac{C}{\mu} \epsilon_2(k_s h,h/d)(1+k_sd_D)
 	\een
 	uniformly for $z\in\Om$, where $d_D$ is the diameter of the obstacle D.	
@@ -757,7 +758,7 @@ Theorem \ref{diff_solu} also will be proved in the appendix of this paper. The f
 	\be\hspace{-1cm}
 	\hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y (\overline{\F(z,y)}+\Psi(y,z))^T \overline{\F(z,y)}ds(y)+\W_{\hat{I}}(z)
 	\ee
-	where $|\W_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$, $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$.
+	where $|\W_{\hat{I}}(z)|\leq C(1+k_s d_D)^2(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))$ uniformly for z in $\Om$.
 \end{thm}
 \debproof
 By the integral representation, we have,
@@ -818,12 +819,12 @@ By theorem \ref{elastic_eq2} and Corollaries \ref{cor_psf}-\ref{cor_dpsf} we hav
 \|T_y^{\nu}(\W_d(y,z))\|_{H^{1/2}(\Gamma_D)}&\leq& 	\|\F(z,\cdot)-\J_d^T(z,\cdot)\|_{H^{1/2}(\Gamma_D)}\\ \label{W_ineq}
 &\leq&  C(1+k_s d_D)(\epsilon_1(k_s h)+\epsilon_2(k_s h,h/d))
 \ee
-Let $ V(y,z):=\overline{ \W(y,z)}-\W_d(y,z)-\G(y,z)$. Since $\overline{ \W(y,z)}-\W_d(y,z)$ satisfy the half-space scattering problem \ref{elas_r1} with $g(y)=-\overline{\F(z,y)}$, by using Theorem \ref{diff_solu} and Corollary \ref{cor_psf}
+Let $ V(y,z):=\overline{ \W(y,z)}-\W_d(y,z)-\Psi(y,z)$. Since $\overline{ \W(y,z)}-\W_d(y,z)$ satisfy the half-space scattering problem \ref{elas_r1} with $g(y)=-\overline{\F(z,y)}$, by using Theorem \ref{diff_solu} and Corollary \ref{cor_psf}
 \be
 \|T_y^{\nu}V(y,z)\|_{H^{1/2}(\Gamma_D)}&\leq& C(1+k_s d_D)^2\epsilon_1(k_s h)\|\F(z,\cdot)\|_{H^{1/2}(\Gamma_D)}\\
 &\leq&C(1+k_s d_D)^3\epsilon_1(k_s h)
 \ee
-Now we substitute $\overline{ \W(y,z)}=V(y,z)+\W_d(y,z)+\G(y,z)$ into (\ref{resolu_1}) to obtain
+Now we substitute $\overline{ \W(y,z)}=V(y,z)+\W_d(y,z)+\Psi(y,z)$ into (\ref{resolu_1}) to obtain
 \be\hspace{-1.5cm}\label{I_d}
 \hat{I}_d(z)=\Im\mathbf{tr}\int_{\Gamma_D}(T^{\nu}_y \J^T_d(z,y))^T \overline{\Psi(y,z)}-\J_d(z,y)(T^{\nu}_y\overline{\Psi(y,z)})ds(y)+R_{\hat{I}}(z)
 \ee
