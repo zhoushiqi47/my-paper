@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: RTMbyFangSF.aux
+The style file: Biblio/gbt-7714-2015-numerical.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Biblio/rtmbyfangsf.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty booktitle in Ciraolo2008NON
+You've used 71 entries,
+            3393 wiz_defined-function locations,
+            1150 strings with 16312 characters,
+and the built_in function-call counts, 170685 in all, are:
+= -- 2197
+> -- 23964
+< -- 15552
++ -- 8155
+- -- 293
+* -- 1842
+:= -- 19488
+add.period$ -- 269
+call.type$ -- 71
+change.case$ -- 270
+chr.to.int$ -- 7689
+cite$ -- 72
+duplicate$ -- 16537
+empty$ -- 2551
+format.name$ -- 505
+if$ -- 36144
+int.to.chr$ -- 9
+int.to.str$ -- 72
+missing$ -- 12
+newline$ -- 419
+num.names$ -- 213
+pop$ -- 8055
+preamble$ -- 1
+purify$ -- 71
+quote$ -- 0
+skip$ -- 16506
+stack$ -- 0
+substring$ -- 7768
+swap$ -- 155
+text.length$ -- 71
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 461
+warning$ -- 1
+while$ -- 213
+width$ -- 0
+write$ -- 1059
+(There was 1 warning)

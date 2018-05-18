@@ -1,0 +1,51 @@
+\contentsline {chapter}{摘\hskip 1em\relax 要}{vii}{chapter*.1}
+\contentsline {chapter}{Abstract}{ix}{chapter*.2}
+\contentsline {chapter}{目\hskip 1em\relax 录}{xi}{section*.3}
+\contentsline {chapter}{图形列表}{xiii}{section*.5}
+\contentsline {chapter}{符号列表}{xvii}{chapter*.7}
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}引言}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}声波半空间散射问题与逆散射问题}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}逆时偏移算法思想介绍}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}波导模型初步介绍}{7}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}平板声波闭波导}{7}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Pekeris开波导}{8}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}本文主要工作}{11}{section.1.4}
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}声波半空间无相位数据成像问题}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}问题介绍}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}半空间无相位逆时偏移算法}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}预备知识}{16}{section.2.3}
+\contentsline {section}{\numberline {2.4}无相位逆时偏移算法的分辨率分析}{18}{section.2.4}
+\contentsline {section}{\numberline {2.5}不可穿透情形}{26}{section.2.5}
+\contentsline {section}{\numberline {2.6}数值算例}{27}{section.2.6}
+\contentsline {section}{\numberline {2.7}本章小结}{30}{section.2.7}
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}Pekeris开波导逆散射问题}{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}问题介绍}{31}{section.3.1}
+\contentsline {section}{\numberline {3.2}Pekeris开波导正散射问题}{33}{section.3.2}
+\contentsline {section}{\numberline {3.3}点扩散函数}{38}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}直接推广：$G_{bp}(x,z)=G_{k_1}(x,z)$.}{39}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}另一种想法：$G_{bp}(x,z)=G(x,z)$.}{40}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Pekeris开波导逆时偏移算法}{43}{section.3.4}
+\contentsline {section}{\numberline {3.5}数值测试}{44}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}障碍物$D\subset L_1$.}{44}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}障碍物$D\subset L_2$.}{48}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}算法分析与思考}{51}{section.3.6}
+\contentsline {section}{\numberline {3.7}本章小结}{55}{section.3.7}
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}阻抗型开波导逆时偏移算法}{57}{chapter.4}
+\contentsline {section}{\numberline {4.1}Impedance格林函数}{57}{section.4.1}
+\contentsline {section}{\numberline {4.2}点扩散函数}{60}{section.4.2}
+\contentsline {section}{\numberline {4.3}阻抗型开波导逆时偏移算法}{62}{section.4.3}
+\contentsline {section}{\numberline {4.4}数值测试}{63}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}$D\subset L_1$.}{63}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}$D\subset L_2$.}{67}{subsection.4.4.2}
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}总结与展望}{71}{chapter.5}
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Hemholtz散射系数介绍}{73}{appendix.A}
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}开波导点扩散函数分析}{75}{appendix.B}
+\contentsline {section}{\numberline {B.1}定理\ref {thm_psf_half}的证明}{75}{section.B.1}
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}闭波导逆时偏移算法讨论}{81}{appendix.C}
+\contentsline {section}{\numberline {C.1}平板声波闭波导格林函数}{81}{section.C.1}
+\contentsline {subsection}{\numberline {C.1.1}Neumann格林函数}{81}{subsection.C.1.1}
+\contentsline {subsection}{\numberline {C.1.2}Dirichlet格林函数}{82}{subsection.C.1.2}
+\contentsline {section}{\numberline {C.2}闭波导点扩散函数}{83}{section.C.2}
+\contentsline {chapter}{参考文献}{87}{section*.46}
+\contentsline {chapter}{简历}{93}{appendix*.48}
+\contentsline {chapter}{致\hskip 1em\relax 谢}{95}{appendix*.54}

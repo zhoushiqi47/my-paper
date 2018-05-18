@@ -1,0 +1,15 @@
+\beamer@endinputifotherversion {3.14pt}
+\beamer@sectionintoc {1}{研究动机}{3}{0}{1}
+\beamer@sectionintoc {2}{半空间无相位数据障碍物成像问题}{10}{0}{2}
+\beamer@subsectionintoc {2}{1}{问题介绍}{11}{0}{2}
+\beamer@subsectionintoc {2}{2}{求解算法}{12}{0}{2}
+\beamer@subsectionintoc {2}{3}{数值算例}{14}{0}{2}
+\beamer@sectionintoc {3}{Pekeris开波导障碍物成像问题}{20}{0}{3}
+\beamer@subsectionintoc {3}{1}{Pekeris模型和问题介绍}{21}{0}{3}
+\beamer@subsectionintoc {3}{2}{开波导逆时偏移算法}{28}{0}{3}
+\beamer@subsectionintoc {3}{3}{数值测试}{39}{0}{3}
+\beamer@subsectionintoc {3}{4}{算法分析与思考}{45}{0}{3}
+\beamer@sectionintoc {4}{总结与展望}{60}{0}{4}
+\beamer@subsectionintoc {4}{1}{总结与展望}{61}{0}{4}
+\beamer@subsectionintoc {4}{2}{致谢}{62}{0}{4}
+\beamer@subsectionintoc {4}{3}{个人简历}{63}{0}{4}

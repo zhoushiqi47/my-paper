@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  14 MAY 2018 17:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  16 MAY 2018 17:09
 entering extended mode
 **./RTM_half_elastic_v4.tex
 (RTM_half_elastic_v4.tex
@@ -238,18 +238,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 543--548
 
  []
 
-<./graphic/transfor.png, id=48, 540.51938pt x 423.83344pt>
-File: ./graphic/transfor.png Graphic file (type png)
+<./graphic/transfor2.png, id=48, 578.91281pt x 422.32782pt>
+File: ./graphic/transfor2.png Graphic file (type png)
 
-<use ./graphic/transfor.png>
-Package pdftex.def Info: ./graphic/transfor.png used on input line 566.
-(pdftex.def)             Requested size: 357.13153pt x 223.2014pt.
+<use ./graphic/transfor2.png>
+Package pdftex.def Info: ./graphic/transfor2.png used on input line 566.
+(pdftex.def)             Requested size: 357.1202pt x 223.20114pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 570--573
 
  []
 
-[10] [11 <./graphic/transfor.png>] [12] [13] [14] [15]
+[10] [11 <./graphic/transfor2.png>] [12] [13] [14] [15]
 Overfull \hbox (24.29568pt too wide) in alignment at lines 815--818
  [] [] [] [] 
  []
@@ -930,7 +930,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  2719 strings out of 495237
- 36574 string characters out of 3182726
+ 36579 string characters out of 3182726
  97876 words of memory out of 3000000
  5917 multiletter control sequences out of 15000+200000
  16373 words of font info for 67 fonts, out of 3000000 for 9000
@@ -953,7 +953,7 @@ i10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/CTEX/MiKTeX/fonts/type1/public
 /amsfonts/latxfont/lasy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb>
-Output written on RTM_half_elastic_v4.pdf (32 pages, 1011431 bytes).
+Output written on RTM_half_elastic_v4.pdf (32 pages, 1011734 bytes).
 PDF statistics:
  390 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

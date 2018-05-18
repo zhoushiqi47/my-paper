@@ -286,7 +286,7 @@ where
 \een
 and  $\beta(\xi)=k_s^2-2\xi^2$, $\delta(\xi)=\beta^2+4\xi^2\mu_s\mu_p $.
 
-The desired Green function should be obtained by taking the inverse Fourier transform of $\hat N(\xi,x_2;y_2)$. Unfortunately, one cannot simply take the inverse Fourier transform in the above formula because $\delta(\xi)$ have zero points in the real axis by lemma \ref{root_De1} \cite{achenbach1980}\cite{Harris2001Linear}.
+The desired Green function should be obtained by taking the inverse Fourier transform of $\hat \N(\xi,x_2;y_2)$. Unfortunately, one cannot simply take the inverse Fourier transform in the above formula because $\delta(\xi)$ have zero points in the real axis by lemma \ref{root_De1} \cite{achenbach1980}\cite{Harris2001Linear}.
 \begin{lem} \label{root_De1}
 	Let \emph{Lam\'{e}} constant $\lambda, \mu \in \R^+$, then the Rayleigh equation $\delta(\xi) = 0$ has only two roots denoted by $\pm k_R$ in complex plane. Morever, $k_R > k_s > k_p, \ k_R\in\R$ and $k_R$ is called Rayleigh wave number.
 \end{lem}
@@ -350,7 +350,7 @@ Specially, $N(x,y)$ has a simple form when $x_2=0$ following an easy calculation
 		\end{array} \Bigg)e^{\i\mu_s y_2} \Bigg] \\
 	  &:=&\frac{1}{\delta(\xi)}(\Np(\xi)e^{\i\mu_p y_2}+\Ns(\xi)e^{\i\mu_s y_2})
 \ee
-and let $N_f(x_1;y_1,y_2)$ denote the first part of $N$ and $N_r(x_1;y_1,y_2)$ denote the second part of $\N$ in (\ref{Ngreen}).
+and let $\N_f(x_1;y_1,y_2)$ denote the first part of $\N$ and $\N_r(x_1;y_1,y_2)$ denote the second part of $\N$ in (\ref{Ngreen}).
 
 It remains to study Dirichlet Green Tensor $\D(x,y)$.
 We still use Fourier transform to derive the formula of Green Tensor in frequency domain. Then we can obtain $\D(x,y)$ similar to $\N(x,y)$. It follows an alternative representation for $\D(x,y)$ 
@@ -430,7 +430,7 @@ where
 \ee
 
 
-We should give asymptotic anslysis for $N(x_1,0,y)$ and $T_D(x_1,0;y)$ which will be in demand in the subsequent discussions. First we need the following slight generalization of Van der Corput lemma for the oscillatory integral \cite[P.152]{grafakos}.
+We should give asymptotic anslysis for $\N(x_1,0,y)$ and $\T_D(x_1,0;y)$ which will be in demand in the subsequent discussions. First we need the following slight generalization of Van der Corput lemma for the oscillatory integral \cite[P.152]{grafakos}.
 \begin{lem}\label{van}
 	Let $-\infty<a<b<\infty$, and $u$ is a $C^k$ function $u$ in $(a,b)$. \\
  1. If $|u'(t)|\ge 1$ for $t\in (a,b)$ and $u'$ is monotone in (a,b), then for any $\phi(t)$ in $(a,b)$ with integrable derivatives
@@ -474,7 +474,7 @@ By lemma \ref{van} and inequelity (\ref{es_I1}), we can obtain:
 \ben
   \bigg|\int_{I_1}f(t)(\kappa^2-\sin^2(t+\phi))^{-1/2}e^{\i\rho\cos t}dt\bigg|  \\
   \leq \frac{C}{\cos d}\rho^{-1/2}\Big(|f(d)||\kappa^2-\sin^2(d+\phi)|^{-1/2}+\int_{I_1}|f'(t)||\kappa^2-\sin^2(t+\phi)|^{-1/2}dt\\
-  \int_{I_1}|f(t)||\kappa^2-\sin^2(t+\phi)|^{-3/2}dt\Big)\\
+  +\frac{1}{2}\int_{I_1}|f(t)||\kappa^2-\sin^2(t+\phi)|^{-3/2}dt\Big)\\
   \leq C(\phi^*,\kappa)\rho^{-1/2}\big(|f(0)|+\int_{I_1}|f'(t)|dt\big)
  \een
 and similarly we have
@@ -488,7 +488,7 @@ For interval $I_2$, we only analysis the integral on $[t_1-d,t_1]$. The integral
 \leq \frac{C}{|\sin(t_1-d)|}\rho^{-1}\Big(|f(t_1-\delta)||\kappa^2-\sin^2(\phi_\kappa-\delta)|^{-1/2}+\int_{-d}^{-\delta}|f'(t_1+t)||\kappa^2-\sin^2 (\phi_\kappa+t)|^{-1/2}dt\\ \hspace{-2cm}
 +\int_{-d}^{-\delta}|f(t_1+t)||\kappa^2-\sin^2 (\phi_\kappa+t)|^{-3/2}dt\Big) \\ \hspace{-2cm}
 \leq C\frac{\cos^{-3/2}(\phi_\kappa+d)}{\sin d}\rho^{-1}\Big(|f(t_1-\delta)|((\kappa+\sin(\phi_\kappa-d))\delta)^{-1/2}+\int_{-d}^{-\delta}|f'(t_1+t)|((\kappa+\sin(\phi_\kappa-d))\delta)^{-1/2}dt\\ \hspace{-2cm}
-+\int_{-d}^{-\delta}|f(t_1+t)|(-(\kappa+\sin(\phi_\kappa-d))t)^{-3/2}dt\Big)\\
++\frac{1}{2}\int_{-d}^{-\delta}|f(t_1+t)|(-(\kappa+\sin(\phi_\kappa-d))t)^{-3/2}dt\Big)\\
 \hspace{-2cm}
 \leq C(\phi^*,\kappa)(1+\delta^{-1/2})\rho^{-1}\big(|f(0)|+\int_{-\pi/2}^{\pi/2}|f'(t)|dt\big)
 \een
@@ -533,7 +533,7 @@ k_s\int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})\cos (t
 -k_s \sin \phi \int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2})\sin t \ e^{\i k_s\rho(\cos t)} dt \\\hspace{-2cm}
 :=k_s (\cos\phi \ I_1+\sin\phi \ I_2)
 \een
-For $I_1$, we split the integral path L into $L_1=(-\pi/2,\pi/2)$ and $L_2=(-\pi/2+\i\infty,-\pi/2)\cup(\pi/2,\pi/2-\i\infty)$, then we have corresponding representation: $I_1=I_{11}+I_{12}$. Since $F(t)\cos t\in W^{1,1}([-\frac{\pi}{2},\frac{\pi}{2}])$, we can obtain $|I_{11}|\leq 1/(k_s\rho)^{1/2}$ by lemma \ref{van}. Using integration by parts, it follows that $|I_{12}|\leq 1/(k_s\rho)$.
+For $I_1$, we split the integral path $L$ into $L_1=(-\pi/2,\pi/2)$ and $L_2=(-\pi/2+\i\infty,-\pi/2)\cup(\pi/2,\pi/2-\i\infty)$, then we have corresponding representation: $I_1=I_{11}+I_{12}$. Since $F(t)\cos t\in W^{1,1}([-\frac{\pi}{2},\frac{\pi}{2}])$, we can obtain $|I_{11}|\leq 1/(k_s\rho)^{1/2}$ by lemma \ref{van}. Using integration by parts, it follows that $|I_{12}|\leq 1/(k_s\rho)$.
 For $I_2$, using integration by parts on path $L$ first, we have
 \be \hspace{-2cm}
 I_2=\frac{1}{\i k_s\rho} \int_L F(\sin (t+\phi),\cos (t+\phi),(\kappa^2-\sin^2 (t+\phi))^{1/2}) d \ e^{\i(k_s\rho \cos t)} \\ \hspace{-1.5cm}
@@ -563,7 +563,7 @@ The proof is similar to lemma \ref{es_dgreen}. Here we only point out the differ
 Notice that, in the present case, the substitution $\xi=k_s \sin t$ , taking $P_\sigma$ in the $\xi$-plane onto $\Ga_\sigma$ in the $t$-plane. The geometry now is depicted in Figure \ref{figure_trans}.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\textwidth,height=0.5\textwidth]{./graphic/transfor.png}
+	\includegraphics[width=0.8\textwidth,height=0.5\textwidth]{./graphic/transfor2.png}
 	\caption{Transform from $P_\sigma$ in the $\xi$-plane to $\Ga_\sigma$ in the t-plane}\label{figure_trans}
 \end{figure}
 
@@ -598,7 +598,7 @@ We finish this section by introducing  some results on foward scattering problem
 	\|u\|_{H^{1}(\mathcal O)}\le C\|g\|_{H^{-1/2}(\Ga_D)}n
 	\ee
 \end{thm}
-We also give the definition of the Dirichlet-to-Neumann mapping for Elastic scattering problems. For any $g\in H^{1/2}(\Ga_D) $, define $T_h(g)= \sigma(u)\nu\in H^{-1/2}(\Ga_D)$ where  u is the corresponding solution of above equation and also $T_f(g)=\sigma(v)\nu$ where $v$ is the solution of full space scattering proble. we will denote $\|T_h\|$ or $\|T_f\|$ by its operator norm in the remainder of this paper. For the sake of convenience, we introduce the following notation:
+We also give the definition of the Dirichlet-to-Neumann mapping for Elastic scattering problems. For any $g\in H^{1/2}(\Ga_D) $, define $T_h(g)= \sigma(u)\nu\in H^{-1/2}(\Ga_D)$ where  $u$ is the corresponding solution of above equation and also $T_f(g)=\sigma(v)\nu$ where $v$ is the solution of full space scattering proble and their operator norm are denoted by $\|T_h\|$ or $\|T_f\|$in the remainder of this paper. For the sake of convenience, we introduce the following notation:
 \be\label{bi_op}
 \GG(W,U)=\int_{\Ga_D} [W(x)\cdot \sigma(U(x))\nu- \sigma(W(x))\nu\cdot U(x)]ds(x)
 \ee
@@ -907,7 +907,7 @@ Let $d=(\kappa_R-1)/2$, then we have
 where $\kappa_R = k_R/k_s$ and C only depend on $\kappa$.
 \end{lem}
 \debproof
-Since $\kappa_R$ is the first order zero point of $\delta(k_s t)$, we can choose $\sigma>0$ small enough such that 
+Since $\delta(k_s t)$ has a zero at $\kappa_R$ of order one, we can choose $\sigma>0$ small enough such that 
 \be\label{de_eq}
 0<C_1\leq\frac{\delta'(k_s t)}{k_s^3}<C_2, \ \ \ \frac{\delta''(k_s t)}{k_s^2}<C_2
 \ee

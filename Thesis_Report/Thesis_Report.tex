@@ -1,0 +1,1753 @@
+
+\documentclass[cjk,8pt]{beamer}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathrsfs}
+\usepackage{color,xcolor}
+\usepackage{graphicx}
+\usepackage{clock} % Use this package to insert a clock in the beamer.
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{epstopdf}
+\mode<presentation>
+{
+  \usetheme{Warsaw}
+  % 可以改成别的主题
+  \setbeamercovered{transparent}
+  % 也可删去
+}
+% 这一行是为了改变beamer中难看的数学字体
+\usefonttheme{professionalfonts}
+\usepackage{CJK}
+\usepackage{color}
+\usepackage{xcolor}
+% 如果内容中用到定理环境, 则需插入以下命令
+\begin{CJK*}{GBK}{kai}
+\newtheorem{thm}[theorem]{定理}
+\end{CJK*}
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}}
+\renewcommand{\i}{\mathbf{i}}
+\newcommand{\ii}{\mathbf{i}}
+\renewcommand{\Re}{\mathrm{Re}\,}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\newtheorem{algorithm}{算法}[section]
+\newtheorem{lem}{引理}[section]
+\newtheorem{them}{定理}[section]
+\newtheorem{assumption}{假设}[section]
+\newtheorem{remark}{注}[section]
+%\newtheorem{definition}{定义}[section]
+\newtheorem{question}{问题}[section]
+%\newtheorem{example}{\bf 算例}[section]
+
+\def\debproof{\noindent {\bf 证明.} }
+\def\finproof{\hfill {\small $\Box$} \\}
+\begin{document}
+\begin{CJK*}{GBK}{kai}
+\CJKtilde
+\title[]{地球物理反问题的逆时偏移算法}
+
+\author[]{ 答辩人：方少峰\\ \vspace{0.3cm} 指导教师：陈志明}
+\institute[]{\scriptsize 中国科学院~计算数学与科学工程研究所}
+\date[]{2018年5月17号}
+
+% 如果你想要在每一小节之前都显示一下目录, 则可把一下小段的注解号 "%" 删去
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{目录}
+%    \tableofcontents[currentsection,currentsubsection]
+     \tableofcontents[currentsection]
+  \end{frame}
+}
+%\AtBeginSubsection[]
+%{
+%  \begin{frame}<beamer>
+%    \frametitle{Outline}
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+
+% 除掉以下命令的注解 "%" 后, 许多环境都会自动逐段显示
+%\beamerdefaultoverlayspecification{<+->}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{目录}
+  \setcounter{tocdepth}{1}
+  \tableofcontents%[pausesections]
+\end{frame}
+
+\section{研究动机}
+\begin{frame}
+\frametitle{半空间逆散射问题}
+\begin{columns}
+\begin{column}{.5\textwidth}
+
+\begin{tiny}
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+\Delta u+k^2n(x)u=-\delta_{x_s}(x),&in&\R^2_+\\
+& &\\
+\frac{\partial u}{\partial x_2}=0,&on&\Gamma_0\\
+& &\\
+\sqrt{r}\left(\frac{\partial u}{\partial r}-\i ku\right)\rightarrow0,& as& r\rightarrow\infty,\ \ r=|x|
+\end{array}
+\right.
+\end{eqnarray*}
+\end{tiny}
+\small{其中$n(x)-1$为支集在障碍物$D$上的有界函数。}
+\end{column}
+
+\begin{column}{.5\textwidth}
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm,height=3cm]{./figure/half_forward}
+\end{figure}
+\end{column}
+\end{columns}
+\begin{block}{散射问题：}
+令$u^i(x,x_s)=N_k(x,x_s)$为入射场，其中$N(x,y)=\Phi_k(x,y)+\Phi_k(x,y')$为半空间Neumann格林函数，然后求解散射场$u^s(x,x_s)=u(x,x_s)-u^i(x,x_s)$。
+\end{block}
+\begin{block}{逆散射问题：}
+\begin{enumerate}
+  \item 通过在$\textcolor{blue}{\Gamma_0}$上接受到的\textcolor{red}{散射数据}，构建算法来确定障碍物$D$ 的位置、大小和形状。
+  \item 通过在$\textcolor{blue}{\Gamma_0}$上接受到的\textcolor{red}{无相位数据}，构建算法来确定障碍物$D$ 的位置、大小和形状。
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{常见算法分类与介绍}
+\begin{columns}
+
+\column{.5\textwidth}
+
+\begin{block}{直接成像法}
+\begin{itemize}
+  \item 线性采样法(LSM)，分解法(Factorization method)，点源法(Point source method)
+  \item MUSIC成像算法(MUltiple SIgnal Classification)
+  \item 叠前深度偏移(Prestack depth migration)，\textcolor{blue}{逆时偏移算法}
+\end{itemize}
+
+\end{block}
+\begin{block}{特点}
+  可以直接成像，计算速度快，但较难给出定量的介质参数信息，且严格的数学理论并不完善
+\end{block}
+\column{.5\textwidth}
+
+\begin{block}{迭代法}
+\begin{itemize}
+  \item 微分相似优化算法(Differential semblance optimization)
+  \item 全波形反演(Full waveform inversion)
+  \item 逐步线性化算法(Recursive linearization algorithm)
+\end{itemize}
+\end{block}
+\begin{block}{特点}
+ 可以得到定量信息，但是需要先验信息，计算耗时，收敛性分析困难
+\end{block}
+\end{columns}
+\begin{block}{逆时偏移算法(Reverse Time Migration)}
+  基于波动方程反传播和时逆的想法，能够对复杂地质构造进行有效成像，被广泛应用，但是之前的理论分析需要
+  \textcolor{red}{高频渐进假设}或者\textcolor{red}{几何光学近似}。
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{逆时偏移算法：数学理论框架}
+\begin{small}
+\begin{block}{全空间声波、电磁波及弹性波：}
+\begin{enumerate}
+  \item Chen J, Chen Z, Huang G. {\it Reverse time migration for extended obstacles: acoustic waves [J]}. Inverse Problems. 2013, 29(8):645-648
+  \item Chen J, Chen Z, Huang G. {\it Reverse time migration for extended obstacles: Electromagnetic waves[J]}. Scientia Sinica, 2015, 29(8):085005.
+  \item Chen Z, Huang G. {\it Reverse time migration for extended obstacles: Elastic waves (in Chinese)[J]}. Science China Mathematics, 2015, 45(8):1103-1114.
+\end{enumerate}
+\end{block}
+\begin{block}{平板声波闭波导：}
+\begin{enumerate}
+  \item Chen Z M, Huang G H. {\it Reverse time migration for reconstructing extended obstacles in planar acoustic waveguides[J]}. Science China Mathematics, 2015, 58(9):1811-1834.
+\end{enumerate}
+\end{block}
+
+\begin{block}{声波半空间：}
+\begin{enumerate}
+  \item Chen Z, Huang G. {\it Reverse time migration for reconstructing extended obstacles in the half space[J].} Inverse Problems, 2015, 31(5):055007 (19pp).
+\end{enumerate}
+\end{block}
+
+\begin{block}{扩展：无相位成像算法}
+\begin{enumerate}
+  \item Chen Z, Huang G. {\it Phaseless Imaging by Reverse Time Migration: Acoustic Waves[J]. } Numerical Mathematics Theory Methods and Applications, 2017, 10(1):1-21.
+%  \item Chen Z, Huang G. {\it A Direct Imaging Method for Electromagnetic Scattering Data without Phase Information[J]. }Siam Journal on Imaging Sciences, 2016, 9(3).
+%  \item Chen Z, Fang S, Huang G. {\it A Direct Imaging Method for the Half-Space Inverse Scattering Problem with Phaseless Data[J].} Inverse Problems and Imaging, 2017, 11(5).
+\end{enumerate}
+\end{block}
+\end{small}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{逆时偏移算法：基本思想}
+\begin{small}
+\begin{algorithm}[半空间逆时偏移算法]
+设$u^s(x_r,x_s)$为在接受点$x_r\in\Gamma_0^d$上所接受到的由点源$x_s\in\Gamma_0^d$ 所激发的散射场。其中$\Gamma_0^d:=\{(x_1,x_2)\in\R^2;x_1\in(-d,d),x_2=0\}$，$s=1,2,\ldots,N_s$，$r=1,2,\ldots,N_r$。然后算法具体实现分为如下两步：
+\begin{enumerate}
+  \item 反传播：对$s=1,2,\ldots,N_s$，计算反传播场
+  \begin{equation*}
+      v_b(z,x_s)=\frac{|\Gamma_0^d|}{N_r}\sum\limits_{r=1}^{N_r}\frac{\partial\Phi_k(x_r,z)}{\partial x_2(x_r)}\textcolor{red}{\overline{u^s(x_r,x_s)}},\  \  \forall z\in\Omega.
+  \end{equation*}
+  \item 互相关：对$z\in\Omega$，计算成像函数
+  \begin{equation*}
+    I_d(z)=\Im\left\{\frac{|\Gamma_0^d|}{N_s}\sum\limits_{s=1}^{N_s}\frac{\partial\Phi_k(x_s,z)}{\partial x_2(x_s)}v_b(z,x_s)
+  \right\}.
+\end{equation*}
+\end{enumerate}
+\end{algorithm} 
+\begin{block}{}
+将反传波场$v_b(z,x_s)$代入到成像函数$I_d(z)$，可得
+\begin{equation*}
+  \qquad I_d(z)=\Im\left\{\frac{|\Gamma_0^d||\Gamma_0^d|}{N_sN_r}
+  \sum\limits_{s=1}^{N_s}\sum\limits_{r=1}^{N_r}
+  \frac{\partial\Phi_k(x_s,z)}{\partial x_2(x_s)}\frac{\partial\Phi_k(x_r,z)}{\partial x_2(x_r)}
+  \textcolor{red}{\overline{u^s(x_r,x_s)}}
+  \right\},\  \ \forall z\in\Omega.\quad\quad
+\end{equation*}
+\end{block}
+\end{small}
+\end{frame}
+\begin{frame}
+\frametitle{逆时偏移算法：成像函数}
+\begin{block}{成像函数}
+\begin{small}
+若令$N_s,N_r\rightarrow\infty$，则上式可看做对如下积分的近似。
+\begin{equation*}
+ \qquad  I_{\rm RTM}(z)=\Im\int_{\Gamma_0^d}\int_{\Gamma_0^d}\frac{\partial\Phi_{k}(x_s,z)}{\partial x_2(x_s)}\frac{\partial\Phi_{k}(x_r,z)}{\partial x_2(x_r)}
+  \textcolor{red}{\overline{u^s(x_r,x_s)}}ds(x_r)ds(x_s),\  \  \forall z\in\Omega.\quad\quad
+\end{equation*}
+\end{small}
+\end{block}
+\begin{figure}
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[width=0.23\textwidth]{./introduction/elliptic1}
+  \includegraphics[width=0.23\textwidth]{./introduction/elliptic2}
+  \includegraphics[width=0.23\textwidth]{./introduction/elliptic3}
+  \includegraphics[width=0.23\textwidth]{./introduction/elliptic4}
+  \caption{半空间逆时偏移算法测试：椭圆型障碍物，从左到右依次为声软障碍物、声硬障碍物、阻抗边界障碍物以及可穿透障碍物，波数$k=4\pi$，以及$N_r=N_s=512$。}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{逆时偏移算法：点扩散函数}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm,height=3cm]{./point/point_half}
+\end{figure}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{small}
+\begin{block}{点源问题}
+ 设源点$y\in\R^2_+$，然后令$x_r,r=1,2,\ldots,N_r$ 为均匀分布在$\Gamma_0^d$ 上的$N_r$ 个接收点，如何通过在$\Gamma_0^d$ 上接收到的
+  由点$y$激发而在点$x_r$ 处接收到的数据：
+  $$\{N_k(x_r,y);r=1,2,\ldots,N_r\},$$
+  来确定源点$y$的具体位置？
+\end{block}
+\end{small}
+\end{column}
+\end{columns}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm,height=3.5cm]{./introduction/psf_chha}
+\end{figure}
+
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{small}
+\begin{block}{有限孔穴点扩散函数：}
+\begin{equation*}
+ \textcolor{red}{J_d(z,y)}:=\int_{\Gamma_0^d}\frac{\partial G_k(x_r,z)}{\partial x_2}\overline{N_k(x_r,y)}ds(x_r)
+\end{equation*}
+其中
+\begin{eqnarray*}
+  G_k(x,y)&:=&\Phi_k(x,y)-\Phi_k(x,y'),\\
+  N_k(x,y)&:=&\Phi_k(x,y)+\Phi_k(x,y')
+\end{eqnarray*}
+
+左图为：$\textcolor{red}{-\Im J_d(z,y)}$，其中$ d=50,k=4\pi,y=(0,5),z\in[-2,2]\times[3,7]$
+
+\end{block}
+\end{small}
+\end{column}
+\end{columns}
+\end{frame}
+\section{半空间无相位数据障碍物成像问题}
+\subsection{问题介绍}
+\begin{frame}
+\frametitle{半空间逆散射问题}
+\begin{columns}
+\begin{column}{.5\textwidth}
+
+\begin{tiny}
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+\Delta u+k^2n(x)u=-\delta_{x_s}(x),&in&\R^2_+\\
+& &\\
+\frac{\partial u}{\partial x_2}=0,&on&\Gamma_0\\
+& &\\
+\sqrt{r}\left(\frac{\partial u}{\partial r}-\i ku\right)\rightarrow0,& as& r\rightarrow\infty,\ \ r=|x|
+\end{array}
+\right.
+\end{eqnarray*}
+\end{tiny}
+\small{其中$n(x)-1$为支集在障碍物$D$上的有界函数。}
+\end{column}
+
+\begin{column}{.5\textwidth}
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm,height=3cm]{./figure/half_forward}
+\end{figure}
+\end{column}
+\end{columns}
+\begin{block}{散射问题：}
+令$u^i(x,x_s)=N_k(x,x_s)$为入射场，其中$N_k(x,y)=\Phi_k(x,y)+\Phi_k(x,y')$为半空间Neumann格林函数，然后求解散射场$u^s(x,x_s)=u(x,x_s)-u^i(x,x_s)$。
+\end{block}
+\begin{block}{逆散射问题：}
+\begin{enumerate}
+  \item 通过在$\Gamma_0$上接受到的\textcolor{red}{散射数据}，构建算法来确定障碍物$D$的位置、大小和形状。
+  \item 通过在$\Gamma_0$上接受到的\textcolor{red}{无相位数据}，构建算法来确定障碍物$D$的位置、大小和形状。
+\end{enumerate}
+\end{block}
+\end{frame}
+\subsection{求解算法}
+\begin{frame}
+\frametitle{求解算法}
+\begin{small}
+\begin{algorithm}[半空间无相位逆时偏移算法]
+设$\textcolor{red}{|u(x_r,x_s)|=|u^s(x_r,x_s)+u^i(x_r,x_s)|}$ 为我们在接收点$x_r\in\Gamma_0^d$出采集的无相位总场数据，其源点为$x_s\in\Gamma_0^d$，并令$\Omega$为采样区域。
+\begin{enumerate}
+  \item 反传播： 对于 $s=1,\ldots,N_s$，计算反传播场
+\begin{equation*}
+  v_b(z,x_s)=\frac{|\Gamma_0^d|}{N_r}\sum\limits_{r=1}^{N_r}\frac{\partial\Phi_k(x_r,z)}{\partial x_2(x_r)}\textcolor{red}{\Delta(x_r,x_s)},\  \  \forall z\in\Omega.
+\end{equation*}
+其中
+\begin{equation*}
+\textcolor{red}{
+     \Delta(x_r,x_s)=\frac{|u(x_r,x_s)|^2-|u^i(x_r,x_s)|^2}{u^i(x_r,x_s)}.
+     }
+\end{equation*}
+  \item 互相关: 对于 $z\in\Omega$, 计算成像函数
+\begin{equation*}
+  I_d(z)=\Im\left\{\frac{|\Gamma_0^d|}{N_s}\sum\limits_{s=1}^{N_s}\frac{\partial\Phi_k(x_s,z)}{\partial x_2(x_s)}v_b(z,x_s)
+  \right\}.
+\end{equation*}
+\end{enumerate}
+
+将反传波场$v_b(z,x_s)$代入到成像函数$I_d(z)$，可得
+\begin{equation*}
+  \qquad I_d(z)=\Im\left\{\frac{|\Gamma_0^d||\Gamma_0^d|}{N_sN_r}
+  \sum\limits_{s=1}^{N_s}\sum\limits_{r=1}^{N_r}
+  \frac{\partial\Phi_k(x_s,z)}{\partial x_2(x_s)}\frac{\partial\Phi_k(x_r,z)}{\partial x_2(x_r)}
+  \textcolor{red}{\Delta(x_r,x_s)}
+  \right\},\  \ \forall z\in\Omega.\quad\quad
+\end{equation*}
+\end{algorithm}
+\end{small}
+\end{frame}
+\begin{frame}
+\frametitle{算法比较}
+\begin{small}
+若令$N_s,N_r\rightarrow\infty$，则上式可看做对如下积分的近似。
+\begin{equation*}
+ \qquad  I^{\rm Phaseless}_{\rm RTM}(z)=\Im\int_{\Gamma_0^d}\int_{\Gamma_0^d}\frac{\partial\Phi_k(x_s,z)}{\partial x_2(x_s)}\frac{\partial\Phi_k(x_r,z)}{\partial x_2(x_r)}
+  \textcolor{purple}{\Delta(x_r,x_s)}ds(x_r)ds(x_s),\  \  \forall z\in\Omega.\quad\quad
+\end{equation*}
+观察到
+\begin{equation*}
+  \textcolor{purple}{\Delta(x_r,x_s)}=\textcolor{red}{\overline{u^s(x_r,x_s)}}+
+  \textcolor{blue}{\frac{|u^s(x_r,x_s)|^2}{u^i(x_r,x_s)}}+\textcolor{blue}{\frac{u^s(x_r,x_s)
+  \overline{u^i(x_r,x_s)}}{u^i(x_r,x_s)}}.
+\end{equation*}
+据此可得
+\begin{eqnarray*}
+ I^{\rm Phaseless}_{\rm RTM}(z)&=& \Im\int_{\Gamma_{0}^d}\int_{\Gamma_0^d}\frac{\partial\Phi_k(x_s,z)}{\partial x_2(x_s)}\frac{\partial\Phi_k(x_r,z)}{\partial x_2(x_r)}
+  \overline{u^s(x_r,x_s)}  ds(x_r)ds(x_s)\\
+  & &+ \Im\int_{\Gamma_{0}^d}\int_{\Gamma_0^d}\frac{\partial\Phi_k(x_s,z)}{\partial x_2(x_s)}\frac{\partial\Phi_k(x_r,z)}{\partial x_2(x_r)}\frac{|u^s(x_r,x_s)|^2}{u^i(x_r,x_s)}ds(x_r)ds(x_s)\\
+  & & +\Im\int_{\Gamma_{0}^d}\int_{\Gamma_0^d}\frac{\partial\Phi_k(x_s,z)}{\partial x_2(x_s)}\frac{\partial\Phi_k(x_r,z)}{\partial x_2(x_r)}
+  \frac{u^s(x_r,x_s)
+  \overline{u^i(x_r,x_s)}}{u^i(x_r,x_s)}ds(x_r)ds(x_s)\\
+  & &\\
+  &:=& \textcolor{red}{I_{\rm RTM}(z)}+\textcolor{blue}{{\rm I}_2(z)}
+  +\textcolor{blue}{{\rm I}_3(z)}
+\end{eqnarray*}
+\end{small}
+\end{frame}
+
+\subsection{数值算例}
+\begin{frame}
+\frametitle{数值测试：不同形状的可穿透障碍物}
+\begin{small}
+\begin{block}{基本参数设置}
+ 设$D\subset\Omega$，其中$\Omega=[-2,2]\times[8,10]$为采样区域；$h=10$，其中 $h=dist(\Omega,\Gamma_0)$；$d=50$为孔穴半径；$x_s,s=1,2,\ldots,N_s$ 和$x_r,r=1,2,\ldots,N_r$ 分别为在$\Gamma_0^d:=\{(x_1,x_2)\in\R^2;x_1\in(-d,d),x_2=0\}$上均匀分布的源点和接收点。
+\end{block}
+\end{small}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex1/ex1phaseless1}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex1/ex1phaseless2}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex1/ex1phaseless3}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex1/ex1phaseless4}\\
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex1/ex1phase1}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex1/ex1phase2}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex1/ex1phase3}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex1/ex1phase4}
+  \caption{数值算例：不同形状的可穿透障碍物，其中第一行为半空间无相位成像算法，第二行为半空间逆时偏移算法。参数为：$k=4\pi$, and $N_s=512$, $N_r=512$。} \label{fig1}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{数值测试：不同边界类型的障碍物}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex2/ex2elliptic1}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex2/ex2elliptic2}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex2/ex2elliptic3}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex2/ex2elliptic4}\\
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex2/ex2square1}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex2/ex2square2}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex2/ex2square3}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex2/ex2square4}
+    \caption{数值算例：不同类型的椭圆型障碍物，从左到右依次为声软障碍物、声硬障碍物、阻抗边界障碍物 和可穿透障碍物，第一、行分别为椭圆型和方形障碍物。 参数为：$k=4\pi$, and $N_s=512$, $N_r=512$。}\label{fig2}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{数值算例：抗噪性和多频测试}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex3/ex3singlefreqsigma1}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex3/ex3singlefreqsigma2}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex3/ex3singlefreqsigma3}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex3/ex3singlefreqsigma4}\\
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex3/ex3multifreqsigma1}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex3/ex3multifreqsigma2}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex3/ex3multifreqsigma3}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex3/ex3multifreqsigma4}
+    \caption{数值测试： 带噪音数据的可穿透障碍物成像，噪音水平从左到右依次为为： $\mu=0.1,0.2,0.3,0.4$。
+    第一行是单频测试结果，第二行为多频叠加结果。}\label{fig3}
+\end{figure}
+\begin{remark}[带有高斯噪音的接收数据]
+$$ |u|_{noise}=|u|+v_{noise},\mbox{ 其中 }\ v_{noise}=\mu \max{|u|}\epsilon,\ \ \epsilon\sim N(0,1).$$
+\end{remark}
+\end{frame}
+\begin{frame}
+\frametitle{数值算例：多个障碍物}
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.23\textwidth]{./phaseless/ex4/ex4singlefreqsigma1}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex4/ex4singlefreqsigma2}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex4/ex4singlefreqsigma3}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex4/ex4singlefreqsigma4}\\
+      \includegraphics[width=0.23\textwidth]{./phaseless/ex4/ex4multifreqsigma1}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex4/ex4multifreqsigma2}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex4/ex4multifreqsigma3}
+  \includegraphics[width=0.23\textwidth]{./phaseless/ex4/ex4multifreqsigma4}
+    \caption{数值算例： 带噪音数据的两个声软障碍物成像， 噪音水平从左到右依次为为： $\mu=0.1,0.2,0.3,0.4$。
+    第一行是单频测试结果，第二行为多频叠加结果。}\label{fig4}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{分辨率分析证明思路}
+\begin{small}
+\begin{block}{目标：建立成像函数$I^{\rm Phaseless}_{\rm RTM}(z)$的分辨率分析}
+\begin{eqnarray*}
+ I^{\rm Phaseless}_{\rm RTM}(z)&=& \textcolor{red}{I_{\rm RTM}(z)}+\textcolor{blue}{{\rm I}_2(z)}
+  +\textcolor{blue}{{\rm I}_3(z)}
+\end{eqnarray*}
+\end{block}
+
+\begin{remark}[半空间RTM成像函数$I_{\rm RTM}$的分辨率分析]
+对任意的 $z\in\Omega$， 令$\psi(y,z)$为如下问题的散射解 $$
+\Delta_y\psi(y,z)+k^2n(y)\psi(y,z)=-k^2(n(y)-1)\overline{F(z,y)}\ \ in\ \ \R^2.$$
+则我们有， 对任意的 $z\in\Omega$,$$
+\textcolor{red}{I_{\rm RTM}(z)}=-\frac{1}{4}\Im\int_Dk^2(1-n(y))(\psi(y,z)+\overline{F(z,y)})\overline{F(z,y)}dy
++W_{\hat{I}}(z),$$
+其中 $\left|W_{\hat{I}}(z)\right|\leq C(1+kd_D)^4((kh)^{-1/2}+h/d)$，关于$z\in\Omega$一致成立。
+
+\end{remark}
+\begin{block}{函数$F(z,y):=-\frac{\ii}{2\pi}\int_0^{\pi}e^{\i k(z_1-y_1)\cos\theta+\i k(z_2-y_2)\sin\theta}d\theta$具有如下性质：}
+存在某个与$k$无关的常数$C$使得，
+\begin{equation*}
+|F(z,y)|\leq C[(k|z-y|)^{-1/2}+(k|z-y|)^{-1}],\ \ \forall z,y\in\Omega.
+\end{equation*}
+\end{block}
+\end{small}
+\end{frame}
+\begin{frame}
+\frametitle{算法分辨率分析}
+\begin{small}
+\begin{them}[无相位逆时偏移算法的分辨率分析]
+ 设$\Omega$\footnote[1]{关于采样区域$\Omega$的假设：$|y_1-z_1|\leq Ch,\ z_2\leq Ch,\ \ \forall y,z\in\Omega,\ \ \mbox{其中 }h=dist(\Omega,\Gamma_0)$
+}为采样区域，若$|u(x_r,x_s)|=|u^s(x_r,x_s)+u^i(x_r,x_s))|$为所测量的散射总场的无相位数据，其中 $u^s(x,x_s)$ 是以$u^i(x,x_s)=N_k(x,x_s)$ 为入射场的散射解，则我们有
+\begin{equation*}
+\textcolor{red}{
+  I^{\rm phaseless}_{\rm RTM}(z)=I_{\rm RTM}(z)+ R^{\rm phaseless}_{\rm RTM}(z),\ \ \forall z\in\Omega,
+  }
+\end{equation*}
+其中
+\begin{equation*}
+\textcolor{blue}{
+  \left| R^{\rm phaseless}_{\rm RTM}(z)\right|\leq C(1 + \|\mathbb{S}\|)^2(kh)^{-1/2},\ \ \forall z\in\Omega.
+  }
+\end{equation*}
+其中常数$C>0$ 可能依赖于 $kd_D$ 和 $\|n(\cdot)\|_{L^{\infty}(D)}$，但是与 $k,h,d_D$无关。
+\end{them}
+
+\begin{remark}[$\mathbb{S}$为正问题的解算子]
+$\mathbb{S}:L^2(D)\rightarrow H^1(D)$,
+\begin{equation*}
+  w=\mathbb{S} g
+\end{equation*}
+其中$w\in H^1(D)$ 为对应于入射场$g\in L^2(D)$的散射场，其满足如下方程：
+\begin{equation*}\label{forward}
+  \Delta w+k^2n(x)w=k^2(1-n(x))g\  \ in\  \ \R^2_+, \  \ \frac{\partial w}{\partial x_2}=0\  \  on\  \  \Gamma_0,
+\end{equation*}
+\end{remark}
+\end{small}
+\end{frame}
+\section{Pekeris开波导障碍物成像问题}
+\subsection{Pekeris模型和问题介绍}
+\begin{frame}
+\frametitle{Pekeris开波导模型}
+\begin{columns}
+\begin{column}{.5\textwidth}
+
+\begin{small}
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+    \Delta u+\textcolor{red}{k(x)}^2n(x)u=-\delta_{x_s}(x),&in&\R^2_+\\
+    & &\\
+    \left[u(\cdot,x_s)\right]_{\Gamma_h}=\left[\frac{\partial u(\cdot,x_s)}{\partial\nu}\right]_{\Gamma_h}=0\\
+    & &\\
+    \frac{\partial u}{\partial x_2}=0,&on&\Gamma_0\\
+\end{array}
+\right.
+\end{eqnarray*}
+\end{small}
+\small{其中$n(x)-1$为支集在障碍物$D$上的有界函数。}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=6cm,height=3cm]{./figure/wg_forward}
+\end{figure}
+\end{column}
+
+\begin{column}{.5\textwidth}
+\begin{block}{符号说明}
+\begin{small}
+背景介质波数$k(x)$ 为
+\begin{eqnarray*}
+k(x)=\left\{
+\begin{array}{lll}
+  k_1&,&x_2\in(0,h)\\
+  & &\\
+  k_2&,&x_2\in(h,+\infty)
+\end{array}
+\right.
+\end{eqnarray*}
+其中$\textcolor{red}{k_1>k_2}$，并记$\Gamma_0,\Gamma_h,L_1,L_2$ 分别为
+\begin{itemize}
+  \item $ \Gamma_0=\{(x_1,x_2);x_1\in \R, x_2=0\}$;
+  \item $ \Gamma_h=\{(x_1,x_2);x_1\in \R, x_2=h\}$;
+  \item $ L_1=\{(x_1,x_2);x_1\in \R, 0<x_2<h\}$;
+  \item $ L_2=\{(x_1,x_2);x_1\in \R, x_2>h\}$.
+\end{itemize}
+\end{small}
+\end{block}
+\begin{block}{开波导逆散射问题}
+\begin{small}
+在$\Gamma_0$上接受散射数据，然后构建合适的数值重构算法，来确定障碍物$D$位置、大小和形状。
+\end{small}
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{散射问题}
+\begin{columns}
+\begin{column}{.8\textwidth}
+\begin{block}{入射场}
+\begin{small}
+令$u^i(x,x_s)=N(x,x_s)$为入射场，其中$N(x,y)$为Pekeris开波导Neumann格林函数，其满足如下方程：
+\begin{eqnarray*}\label{G_Neumann}
+\left\{
+\begin{array}{lll}
+  \Delta_xN(x,y)+k^2(x)N(x,y)=-\delta_y(x),&in&\R^2_+\\
+  & &\\
+  \left[N(\cdot,y)\right]_{\Gamma_h}=0,\ \ \left[\frac{\partial N(\cdot,y)}{\partial\nu}\right]_{\Gamma_h}=0 & &\\
+  & &\\
+  \frac{\partial N(x,y)}{\partial x_2}=0, &on&\Gamma_0
+\end{array}
+\right.
+\end{eqnarray*}
+\end{small}
+\end{block}
+\begin{block}{散射场}
+\begin{small}
+散射场$u^s(x,x_s)=u(x,x_s)-u^i(x,x_s)$满足如下方程：
+\begin{eqnarray*}\label{wg_scatterfield}
+\left\{
+\begin{array}{lll}
+ \Delta u^s(x,x_s)+k^2(x)u^s(x,x_s)=k^2(x)[1-n(x)]u(x,x_s),&in&\R^2_+ \\
+  & &\\
+  \left[u^s(\cdot,x_s)\right]_{\Gamma_h}=0,\ \ \left[\frac{\partial u^s(\cdot,x_s)}{\partial\nu}\right]_{\Gamma_h}=0.\\
+ & &\\
+ \frac{\partial u^s(x,x_s)}{\partial x_2}=0,&on&\Gamma_0
+\end{array}
+\right.
+\end{eqnarray*}
+\end{small}
+\end{block}
+\end{column}
+\begin{column}{.2\textwidth}
+\begin{small}
+\begin{block}{开波导散射问题注意事项}
+\begin{enumerate}
+  \item 开波导格林函数$N(x,y)$积分表达式和波导模式展开的推导及数值计算
+  \item 辐射条件的提出以及正问题的适定性
+  \item 正散射问题的数值计算方法
+\end{enumerate}
+\end{block}
+\end{small}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{格林函数$N(x,y)$积分表达式}
+\begin{small}
+令$\xi=\xi_1+\i\xi_2,\xi_1,\xi_2\in\R$，以及$\mu_j=\sqrt{k_j^2-\xi^2},j=1,2$，并记关于$\xi$的函数$\hat N_h(\xi)$ 和$\hat M_h(\xi)$ 如下所示：
+\begin{eqnarray*}\label{NhMh_N}
+ \textcolor{red}{\hat N_h(\xi)=\frac{\mu_1+\mu_2}{\mu_1-\mu_2}-e^{2\i\mu_1h}},\ \
+ \hat M_h(\xi)=\frac{\mu_1+\mu_2}{\mu_1-\mu_2}e^{2\i\mu_1h}-1
+\end{eqnarray*}
+则格林函数$N(x,y)$有如下表达式
+\begin{eqnarray*}
+ N(x,y)=\left\{
+ \begin{array}{lll}
+   \Phi_{k_1}(x,y)+\Phi_{k_1}(x,y')+\hat S_1(x,y)&,&x\in L_1,y\in L_1\\
+   \hat S_2(x,y)&,&x\in L_2,y\in L_1\\
+   \hat K_1(x,y)&,&x\in L_1,y\in L_2\\
+   \Phi_{k_2}(x,y)+\hat K_2(x,y)&,&x\in L_2,y\in L_2
+ \end{array}
+ \right.
+\end{eqnarray*}
+其中$\hat S_j(x,y),\hat K_j(x,y)$的表达式为
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+ \hat{S}_1(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{\i}{2\mu_1}\frac{e^{2\i\mu_1h}
+ \left[4\cos{(\mu_1x_2)\cos{(\mu_1y_2)}}\right]}{\textcolor{red}{\hat N_h(\xi)}}
+  e^{\i(x_1-y_1)\xi}d\xi\\
+  & &\\
+ \hat{S}_2(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{2\i e^{\i\mu_1h}\cos{(\mu_1y_2)}}{(\mu_1-\mu_2)\textcolor{red}{\hat N_h(\xi)}}e^{\i\mu_2(x_2-h)+\i(x_1-y_1)\xi}d\xi\\
+ & &\\
+ \hat{K}_1(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{2\i e^{\i\mu_1h}\cos(\mu_1x_2)}{\textcolor{red}{\hat N_h(\xi)}}e^{\i\mu_2(y_2-h)+\i(x_1-y_1)\xi}d\xi\\
+ & &\\
+ \hat{K}_2(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{\i}{2\mu_2}\frac{\hat M_h(\xi)}{\textcolor{red}{\hat N_h(\xi)}}e^{\i\mu_2(x_2+y_2-2h)+\i(x_1-y_1)\xi}d\xi
+\end{array}
+\right.
+\end{eqnarray*}
+\end{small}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{提取波导模式}
+\begin{columns}
+
+\begin{column}{0.5\textwidth}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=6cm,height=3cm]{./SIP/SIP_IFT.jpg}
+  \caption{Sommerfeld积分路径(SIP)}\label{SIP_IFT}
+\end{figure}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{tiny}
+\begin{block}{解析分支}
+对于任意地$z\in \mathbb{C}\backslash\{0\}$， $z^{1/2}$是$\sqrt{z}$ 的如下解析分支：$\Im(z^{1/2})\geq 0$，
+则对于$z=z_1+\mathbf{i}z_2$, $z_1,z_2\in\R$,
+\begin{equation*}\label{branch}
+  z^{1/2}=sgn(z_2)\sqrt{\frac{|z|+z_1}{2}}+\mathbf{i}\sqrt{\frac{|z|-z_1}{2}}
+\end{equation*}
+当$z$位于右半实轴时，取$z^{1/2}$为$\epsilon\rightarrow0^+$ 时$(z+\i\epsilon)^{1/2}$ 的极限即可。
+\end{block}
+\end{tiny}
+\end{column}
+\end{columns}
+\begin{tiny}
+\begin{block}{函数$\hat N_h(\xi)$在实轴上的零点}
+
+\begin{enumerate}
+  \item 当$\xi\in\{\xi\in\R;|\xi|\geq k_1,|\xi|<k_2\}$时，$\hat N_h(\xi)\neq0$。
+  \item 若$\sin\left(\sqrt{k_1^2-k_2^2}h\right)\neq0$，则当$\xi=\pm k_2$时，$\hat N_h(\xi)\neq0$。
+  \item 当$\xi\in(k_2,k_1)$时，$\hat N_h(\xi)=0$等价于：$
+\textcolor{red}{
+  \tan{\left(\sqrt{k_1^2-\xi^2}h\right)}=\frac{\sqrt{\xi^2-k_2^2}}{\sqrt{k_1^2-\xi^2}}
+  }
+$。记函数$N_h(\xi)$在区间$(k_2,k_1)$的零点为：$\hat\xi_m,m=1,2\ldots,\hat M$，则$\hat M\leq\left[\sqrt{k_1^2-k_2^2}h/\pi\right]+1$。
+\end{enumerate}
+\end{block}
+\end{tiny}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{格林函数$N(x,y)$的波导模式展开}
+\begin{small}
+设$\hat\xi_m$, $m=1,\ldots,\hat M$是$\hat N_h(\xi)$在区间$(k_2,k_1)$上的$\hat M$ 个实根，并记$\hat\mu_{jm}=\mu_j(\hat\xi_m), j=1,2$，则$N(x,y)$ 的波导模式展开为
+\begin{equation*}
+  \textcolor{red}{N(x,y)=N_g(x,y)+N_{rad}(x,y)}
+\end{equation*}
+其中$N_g(x,y)=\textcolor{red}{\sum\limits_{m=1}^{\hat M} N_m(x,y)}$，且
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+  N_m(x,y)&=&\frac{\hat\mu_{2m}}{\hat\xi_m(1-\i\hat\mu_{2m}h)}\hat g(x_2,\hat\xi_m)\hat g(y_2,\hat\xi_m)\textcolor{red}{e^{\i|x_1-y_1|\hat\xi_m}}\\
+  & &\\
+ N_{rad}(x,y)&=&\frac{\i}{\pi}\int_{\i\infty}^{k_2}\frac{\mu_2 \hat g(x_2,\xi)\hat g(y_2,\xi)}{(k_1^2-k_2^2)\sin^2(\mu_1h)+\mu_2^2}e^{\ii|x_1-y_1|\xi}d\xi
+\end{array}
+\right.
+\end{eqnarray*}
+其中$N_m(x,y)$中对应于$\hat\xi_m\in(k_2,k_1)$ 的函数$\hat g(x_2,\hat\xi_m)$表达式如下
+\begin{eqnarray*}
+\hat g(x_2,\hat\xi_m):=\left\{
+ \begin{array}{lll}
+   \cos(\hat\mu_{1m}x_2),& &x_2\in(0,h)\\
+   & &\\
+   \cos(\hat\mu_{1m}h)\textcolor{red}{e^{\i\hat\mu_{2m}(x_2-h)}},& &x_2\in(h,+\infty)
+ \end{array}
+ \right.
+\end{eqnarray*}
+此外，$N_{rad}(x,y)$中有向区间$[\i\infty,k_2]:=\{\xi;\xi\in[0,k_2],\ \ \mbox{或}\xi=\i\eta$,$\eta\in(0,+\infty)\}$，以及对应于$\xi\in[\i\infty,k_2]$的
+函数$\hat g(x_2,\xi)$如下所示
+ \begin{eqnarray*}
+\hat g(x_2,\xi):=\left\{
+ \begin{array}{lll}
+   \cos(\mu_1x_2),& &x_2\in(0,h)\\
+   & &\\
+   \cos(\mu_1h)\cos[\mu_2(x_2-h)]-\frac{\mu_1}{\mu_2}\sin(\mu_1h)\sin[\mu_2(x_2-h)],& &x_2\in(h,+\infty)
+ \end{array}
+ \right.
+ \end{eqnarray*}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{散射问题相关文献：开波导\ \  VS\ \ 闭波导}
+\begin{small}
+\begin{block}{开波导不存在陷阱模式(No Trapped modes in open waveguide)}
+\begin{enumerate}
+  \item Littman W. {\it Spectral properties of operators arising in acoustic wave propagation in an ocean of variable depth[J].} Applied Mathematics and Optimization, 1982, 8(1):189-196.
+  \item Weder R. {\it Absence of Eigenvalues of the acoustic propagator in deformed wave guides[J].} Rocky Mountain Journal of Mathematics, 1988, 18(18):495-504.
+  \item Hazard C. {\it On the absence of trapped modes in locally perturbed open waveguides[J].} Ima Journal of Applied Mathematics, 2014, 80(4):1049.
+\end{enumerate}
+\end{block}
+\begin{block}{}
+\begin{equation*}
+ u\in L^2\Longrightarrow u=0\ \ a.e.
+\end{equation*}
+\end{block}
+\begin{block}{闭波导模型可能存在陷阱模式(Trapped modes may exist in close waveguide)}
+\begin{enumerate}
+  \item Linton C M, Mciver P. {\it Embedded trapped modes in water waves and acoustics[J].} Wave Motion, 2007, 45(1):16-29.
+\end{enumerate}
+\end{block}
+\end{small}
+\end{frame}
+\begin{frame}
+\frametitle{散射问题相关文献：适定性}
+\begin{small}
+\begin{block}{散射条件及适定性}
+\begin{enumerate}
+  \item Ciraolo G, Magnanini R. {\it A radiation condition for uniqueness in a wave propagation problem for 2D open waveguides[J].} Mathematical Methods in the Applied Sciences, 2010, 32(10):1183-1206.
+  \item Ciraolo G. {\it A Radiation Condition for the 2-D Helmholtz Equation in Stratified Media[J]. } Communications in Partial Differential Equations, 2009, 34(12):1592-1606.
+  \item Dhia, B. B., Dakhia, G., Hazard, C., Chorfi, L. {\it Diffraction by a defect in an open waveguide: a mathematical analysis based on a modal radiation condition. }Siam Journal on Applied Mathematics, 2009, 70(3), 677-693.
+  \item Carlos J H, Jean-Claude N. {\it Asymptotics for Helmholtz and Maxwell Solutions in 3-D Open Waveguides[J].} Communications in Computational Physics, 2012, 11(2):629-646.
+\end{enumerate}
+\end{block}
+\begin{block}{极限吸收原理}
+\begin{enumerate}
+  \item Ben-Artzi M, Dermenjian Y, Guillot J C. {\it Acoustic Waves in Perturbed Stratified Fluids: A Spectral Theory[J].} Communications in Partial Differential Equations, 1989, 14(4):479-517.
+  \item Ben-Artzi M, Guillot J C, Dermenjian Y. {\it Analyticity properties and estimates of resolvent kernels near thresholds[J]. } Communications in Partial Differential Equations, 2000, 25(9-10):1753-1770.
+  \item Weder R. {\it Spectral and Scattering Theory for Wave Propagation in Perturbed Stratified Media[M].} Springer New York, 1991.
+\end{enumerate}
+\end{block}
+\end{small}
+\end{frame}
+
+\subsection{开波导逆时偏移算法}
+\begin{frame}
+\frametitle{Pekeris开波导逆散射问题}
+
+\begin{block}{逆散射问题}
+\begin{itemize}
+  \item 在半空间边界$\Gamma_0$上接受散射数据，然后构建合适的数值重构算法，来确定障碍物$D$的位置、大小和形状。
+\end{itemize}
+\end{block}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=8cm,height=4cm]{./figure/wg_forward}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{开波导反问题相关工作}
+\begin{small}
+\begin{block}{MUSIC算法}
+\begin{enumerate}
+    \item Ammari H, Kang H. {\it Reconstruction of a Small Inclusion in a Two-Dimensional Open Waveguide[J].} Siam Journal on Applied Mathematics, 2005, 65(6):2107-2127.
+\end{enumerate}
+\end{block}
+
+\begin{block}{反问题唯一性}
+\begin{enumerate}
+
+  \item Gilbert, R. P., Zhang, N., Zeev, N., Xu, Y. {\it Inverse problem for wave propagation in a perturbed layered half-space with a bump.} Mathematical and Computer Modelling, 2007, 45(1), 21-33.
+   \item Gang B, Faouzi T. {\it Reconstruction of a defect in an open waveguide[J].} Science China Mathematics, 2013, 56(12):2539-2548.
+\end{enumerate}
+\end{block}
+
+\begin{block}{偏移成像}
+\begin{enumerate}
+  \item Garnier J, Papanicolaou G. {\it Passive Sensor Imaging Using Cross Correlations of Noisy Signals in a Scattering Medium[J].} Siam Journal on Imaging Sciences, 2009, 2(2):396-437.
+  \item Garnier J, Papanicolaou G. {\it Correlation-based virtual source imaging in strongly scattering random media[J]. }Inverse Problems, 2012, 28(28):75002-75039(38).
+  \item Borcea L, Gonzalez dCF, Papanicolaou G, et al. {\it Filtering deterministic layer effects in imaging [reprint of MR2480120].[J].} Siam Review, 2009, 54(4):757-798.
+\end{enumerate}
+\end{block}
+\end{small}
+\end{frame}
+\begin{frame}
+\frametitle{点源问题及点扩散函数}
+
+\begin{small}
+\begin{block}{点源问题}
+  设源点$y\in\R^2_+$，然后令$x_r,r=1,2,\ldots,N_r$ 为均匀分布在$\Gamma_0^d$ 上的$N_r$ 个接收点，如何通过在$\Gamma_0^d$ 上接收到的
+  由点$y$激发而在点$x_r$ 处接收到的数据：
+  $$\{N(x_r,y);r=1,2,\ldots,N_r\},$$
+  来确定源点$y$的具体位置？
+\end{block}
+\end{small}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=8cm,height=4cm]{./point/point_waveguide}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{有限孔穴点扩散函数}
+\begin{small}
+\begin{block}{离散的有限孔穴点扩散函数}
+参考声波半空间逆时偏移算法，上述问题可以转化为寻求一个合适的反传播函数$G_{bp}(x,z)$使得：
+\begin{equation*}
+\hat J_d(z,y):=\frac{|\Gamma_0^d|}{N_r}\sum\limits_{r=1}^{N_r}\frac{\partial G_{bp}(x_r,z)}{\partial x_2(x_r)}\overline{N(x_r,y)},\ \ x_2(x_r)=0
+\end{equation*}
+拥有如下性质：
+\begin{itemize}
+  \item 当$z=y$ 时，$-\Im\hat J_d(z,y)$ 取得峰值；当$z$远离$y$ 时，$-\Im\hat J_d(z,y)$ 逐渐衰减。
+\end{itemize}
+\end{block}
+\end{small}
+
+\begin{small}
+\begin{block}{}
+当接收点的个数$N_r\rightarrow\infty$ 时，$\hat J_d(z,y)$将趋于函数$J_d(z,y)$:
+\begin{equation*}
+\textcolor{red}{
+  J_d(z,y):=\int_{\Gamma_0^d}\frac{\partial G_{bp}(x_r,z)}{\partial x_2(x_r)}\overline{N(x_r,y)}ds(x_r)
+  }
+\end{equation*}
+\end{block}
+\end{small}
+
+\end{frame}
+\begin{frame}
+\frametitle{反传播函数选取}
+\begin{small}
+\begin{block}{(i) 直接推广：取$G_{bp}(x,y)=G_{k_1}(x,y)$，其中函数$G_{k_1}(x,y)$满足}
+\begin{eqnarray*}
+\Delta_xG_{k_1}(x,y)+k_1^2G_{k_1}(x,y)=-\delta_y(x),\ \ in\ \ \R^2_+;\ \
+G_{k_1}(x,y)=0,\ \ on\ \ \Gamma_0
+\end{eqnarray*}
+易知：$G_{k_1}(x,y)=\Phi_{k_1}(x,y)-\Phi_{k_1}(x,y')$，其中$\Phi_{k_1}(x,y)=\frac{\i}{4}H_0^{(1)}(k_1|x-y|)$.
+\end{block}
+\end{small}
+
+\begin{small}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=5cm,height=2.5cm]{./waveguide1/psf_half/in_mesh.eps}
+  \includegraphics[width=5cm,height=2.5cm]{./waveguide1/psf_half/out_mesh.eps}
+  %\includegraphics[width=12cm,height=6cm]{./waveguide1/psf_half/out_mesh.eps}
+  \caption{\tiny{$-\Im J_d(z,y)$，其中$\textcolor{red}{G_{bp}(x,z)=G_{k_1}(x,z)}$，左边为源点$y_1\in L_1$，右边为源点$y_2\in L_2$。参数：$k_1=4\pi,k_2=2\pi,h=10,d=50,N_r=256,y_1=(0,8),y_2=(0,12)$.}}
+\end{figure}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{另一种选取方法}
+\begin{small}
+\begin{block}{(ii) 取$G_{bp}(x,y)=G(x,y)$，其中函数$G(x,y)$满足}
+\begin{eqnarray*}\label{G_Dirichlet}
+\left\{
+\begin{array}{lll}
+  \Delta_xG(x,y)+k^2(x)G(x,y)=-\delta_z(y),&in&\R^2_+\\
+  & &\\
+  \left[G(\cdot,y)\right]_{\Gamma_h}=0,\ \ \left[\frac{\partial G(\cdot,y)}{\partial\nu}\right]_{\Gamma_h}=0 & &\\
+  & &\\
+  G(x,y)=0, &on&\Gamma_0
+\end{array}
+\right.
+\end{eqnarray*}
+其中背景介质波数$k(x)$ 为
+\begin{eqnarray*}
+k(x)=\left\{
+\begin{array}{lll}
+  k_1&,&x_2\in(0,h)\\
+  & &\\
+  k_2&,&x_2\in(h,+\infty)
+\end{array}
+\right.
+\end{eqnarray*}
+函数$G(x,y)$被称为Pekeris开波导Dirichlet格林函数。
+\end{block}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{格林函数$G(x,y)$的积分表达式}
+\begin{small}
+令$\xi=\xi_1+\i\xi_2,\xi_1,\xi_2\in\R$，以及$\mu_j=\sqrt{k_j^2-\xi^2},j=1,2$，并记关于$\xi$的函数$N_h(\xi)$和$M_h(\xi)$如下所示
+\begin{eqnarray*}\label{NhMh}
+ \textcolor{red}{N_h(\xi)=\frac{\mu_1+\mu_2}{\mu_1-\mu_2}+e^{2\i\mu_1h}},\ \
+ M_h(\xi)=1+\frac{\mu_1+\mu_2}{\mu_1-\mu_2}e^{2\i\mu_1h},
+\end{eqnarray*}
+则格林函数$G(x,y)$有如下表达式
+\begin{eqnarray*}
+G(x,y)=\left\{
+\begin{array}{lll}
+  \Phi_{k_1}(x,y)-\Phi_{k_1}(x,y')+S_1(x,y)&, &x\in L_1,y\in L_1\\
+ S_2(x,y)&, &x\in L_2,y\in L_1\\
+ K_1(x,y)&, &x\in L_1,y\in L_2\\
+ \Phi_{k_2}(x,y)+K_2(x,y)&,&x\in L_2,y\in L_2
+\end{array}
+\right.
+\end{eqnarray*}
+其中$S_j(x,y),K_j(x,y),j=1,2$ 的表达式为
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+  S_1(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{-\i}{2\mu_1}\frac{e^{2\i\mu_1h}\left[4\sin{(\mu_1x_2)\sin{(\mu_1y_2)}}\right]}{\textcolor{red}{N_h(\xi)}}
+  e^{\i(x_1-y_1)\xi}d\xi\\
+  & &\\
+  S_2(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{2e^{\i\mu_1h}\sin{(\mu_1y_2)}}{(\mu_1-\mu_2)\textcolor{red}{N_h(\xi)}}e^{\i\mu_2(x_2-h)+\i(x_1-y_1)\xi}d\xi\\
+  & &\\
+  K_1(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{2e^{\i\mu_1h}\sin(\mu_1x_2)}{(\mu_1-\mu_2)\textcolor{red}{N_h(\xi)}}e^{\i\mu_2(y_2-h)+\i(x_1-y_1)\xi}d\xi\\
+  & &\\
+  K_2(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{-\i}{2\mu_2}\frac{M_h(\xi)}{\textcolor{red}{N_h(\xi)}}e^{\i\mu_2(x_2+y_2-2h)+\i(x_1-y_1)\xi}d\xi
+\end{array}
+\right.
+\end{eqnarray*}
+\end{small}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{格林函数$G(x,y)$的波导模式展开}
+\begin{small}
+设$\xi_m$, $m=1,\ldots,M$是$\textcolor{blue}{N_h(\xi)}$在区间$(k_2,k_1)$ 上的$M$ 个实根，并记$\mu_{jm}=\mu_j(\xi_m), j=1,2$，则$G(x,y)$ 的波导模式展开为
+\begin{equation*}
+\textcolor{red}{
+  G(x,y)=G_g(x,y)+G_{rad}(x,y)
+  }
+\end{equation*}
+其中$G_g(x,y)=\textcolor{red}{\sum\limits_{m=1}^M G_m(x,y)}$，且
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+  G_m(x,y)&=&\frac{\mu_{2m}}{\xi_m(1-\i\mu_{2m}h)}g(x_2,\xi_m)g(y_2,\xi_m)\textcolor{red}{e^{\i|x_1-y_1|\xi_m}}\\
+& &\\
+ G_{rad}(x,y)&=&\frac{\ii}{\pi}\int_{\ii\infty}^{k_2}\frac{\mu_2 g(x_2,\xi)g(y_2,\xi)}{(k_1^2-k_2^2)\cos^2(\mu_1h)+\mu_2^2}e^{\ii|x_1-y_1|\xi}d\xi
+\end{array}
+\right.
+\end{eqnarray*}
+其中$G_m(x,y)$中对应于$\xi_m\in(k_2,k_1)$的$g(x_2,\xi_m)$ 表达式如下
+ \begin{eqnarray*}
+ g(x_2,\xi_m):=\left\{
+ \begin{array}{lll}
+   \sin(\mu_{1m}x_2),& &x_2\in(0,h)\\
+   & &\\
+   \sin(\mu_{1m}h)\textcolor{red}{e^{\i\mu_{2m}(x_2-h)}},& &x_2\in(h,+\infty)
+ \end{array}
+ \right.
+ \end{eqnarray*}
+此外$G_{rad}(x,y)$中有向积分区间$[\i\infty,k_2]:=\{\xi;\xi\in[0,k_2],\ \ \mbox{或}\xi=\i\eta$,$\eta\in(0,+\infty)\}$，以及对应于$\xi\in[\i\infty,k_2]$的函数$g(x_2,\xi)$ 如下
+ \begin{eqnarray*}
+ g(x_2,\xi):=\left\{
+ \begin{array}{lll}
+   \sin(\mu_1x_2),& &x_2\in(0,h)\\
+   & &\\
+   \sin(\mu_1h)\cos[\mu_2(x_2-h)]+\frac{\mu_1}{\mu_2}\cos(\mu_1h)\sin[\mu_2(x_2-h)],& &x_2\in(h,+\infty)
+ \end{array}
+ \right.
+ \end{eqnarray*}
+\end{small}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{回顾：格林函数$N(x,y)$的波导模式展开}
+\begin{small}
+设$\hat\xi_m$, $m=1,\ldots,\hat M$是$\textcolor{blue}{\hat N_h(\xi)}$在区间$(k_2,k_1)$上的$\hat M$ 个实根，并记$\hat\mu_{jm}=\mu_j(\hat\xi_m), j=1,2$，则$N(x,y)$ 的波导模式展开为
+\begin{equation*}
+  \textcolor{red}{N(x,y)=N_g(x,y)+N_{rad}(x,y)}
+\end{equation*}
+其中$N_g(x,y)=\textcolor{red}{\sum\limits_{m=1}^{\hat M} N_m(x,y)}$，且
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+  N_m(x,y)&=&\frac{\hat\mu_{2m}}{\hat\xi_m(1-\i\hat\mu_{2m}h)}\hat g(x_2,\hat\xi_m)\hat g(y_2,\hat\xi_m)\textcolor{red}{e^{\i|x_1-y_1|\hat\xi_m}}\\
+  & &\\
+ N_{rad}(x,y)&=&\frac{\i}{\pi}\int_{\i\infty}^{k_2}\frac{\mu_2 \hat g(x_2,\xi)\hat g(y_2,\xi)}{(k_1^2-k_2^2)\sin^2(\mu_1h)+\mu_2^2}e^{\ii|x_1-y_1|\xi}d\xi
+\end{array}
+\right.
+\end{eqnarray*}
+其中$N_m(x,y)$中对应于$\hat\xi_m\in(k_2,k_1)$ 的函数$\hat g(x_2,\hat\xi_m)$表达式如下
+\begin{eqnarray*}
+\hat g(x_2,\hat\xi_m):=\left\{
+ \begin{array}{lll}
+   \cos(\hat\mu_{1m}x_2),& &x_2\in(0,h)\\
+   & &\\
+   \cos(\hat\mu_{1m}h)\textcolor{red}{e^{\i\hat\mu_{2m}(x_2-h)}},& &x_2\in(h,+\infty)
+ \end{array}
+ \right.
+\end{eqnarray*}
+此外，$N_{rad}(x,y)$中有向区间$[\i\infty,k_2]:=\{\xi;\xi\in[0,k_2],\ \ \mbox{或}\xi=\i\eta$,$\eta\in(0,+\infty)\}$，以及对应于$\xi\in[\i\infty,k_2]$的
+函数$\hat g(x_2,\xi)$如下所示
+ \begin{eqnarray*}
+\hat g(x_2,\xi):=\left\{
+ \begin{array}{lll}
+   \cos(\mu_1x_2),& &x_2\in(0,h)\\
+   & &\\
+   \cos(\mu_1h)\cos[\mu_2(x_2-h)]-\frac{\mu_1}{\mu_2}\sin(\mu_1h)\sin[\mu_2(x_2-h)],& &x_2\in(h,+\infty)
+ \end{array}
+ \right.
+ \end{eqnarray*}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{(ii)另一种选取方法：$G_{bp}(x,y)=G(x,y)$}
+\begin{block}{有限孔穴点扩散函数：}
+\begin{equation*}
+\textcolor{red}{
+  J_d(z,y):=\int_{\Gamma_0^d}\frac{\partial G(x_r,z)}{\partial x_2(x_r)}\overline{N(x_r,y)}ds(x_r)
+  }
+\end{equation*}
+其中函数$G(x,z),N(x,y)$分别为Pekeris开波导Dirichlet和Neumann格林函数。
+\end{block}
+\begin{small}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=5cm,height=2.5cm]{./waveguide1/psf_waveguide/in_mesh.eps}
+  \includegraphics[width=5cm,height=2.5cm]{./waveguide1/psf_waveguide/out_mesh.eps}
+  %\includegraphics[width=12cm,height=6cm]{./waveguide1/psf_half/out_mesh.eps}
+  \caption{\tiny{$-\Im J_d(z,y)$，其中$\textcolor{red}{G_{bp}(x,z)=G(x,z)}$，左边为源点$y_1\in L_1$，右边为源点$y_2\in L_2$。 参数：$k_1=4\pi,k_2=2\pi,h=10,d=50,N_r=256,y_1=(0,8),y_2=(0,12)$.}}
+\end{figure}
+\end{small}
+\end{frame}
+\begin{frame}
+\frametitle{开波导逆时偏移算法}
+\begin{small}
+\begin{algorithm}\label{alg_wg}
+设$\Omega$为采样区域，令$u^s(x_r,x_s)$ 为在接收点$x_r$收到的由源点$x_s$ 所激发的散射数据，其中$x_r,x_s\in\Gamma_0^d;r=1,\ldots,N_r;s=1,\ldots,N_s$.\\
+$1^\circ$ 反传播： 对$s=1,\ldots,N_s$，计算反传播场
+\begin{equation*}
+  v_b(z,x_s)=\frac{|\Gamma_0^d|}{N_r}\sum\limits_{r=1}^{N_r}\frac{\partial \textcolor{red}{G(x_r,z)}}{\partial x_2(x_r)}\overline{u^s(x_r,x_s)},\  \  \forall z\in\Omega.
+\end{equation*}
+若令$N_r\rightarrow0$，则上式可看做如下积分的数值近似，
+\begin{equation*}
+  \hat v_b(z,x_s)=\int_{\Gamma_0^d}\frac{\partial \textcolor{red}{G(x_r,z)}}{\partial x_2(x_r)}\overline{u^s(x_r,x_s)}ds(x_r)
+\end{equation*}
+$2^\circ$ 互相关： 对$z\in\Omega$，计算成像函数
+\begin{equation*}
+  I_d(z)=\Im\left\{\frac{|\Gamma_0^d|}{N_s}\sum\limits_{s=1}^{N_s}\frac{\partial \textcolor{red}{G(x_s,z)}}{\partial x_2(x_s)}v_b(z,x_s)
+  \right\}.
+\end{equation*}
+将$v_b(z,x_s)$的表达式代入$I_d(z)$，可得
+\begin{equation*}\label{Id_wg}
+  I_d(z)=\Im\left\{\frac{|\Gamma_0^d|}{N_s}\frac{|\Gamma_0^d|}{N_r}\sum\limits_{s=1}^{N_s}\sum\limits_{r=1}^{N_r}\frac{\partial \textcolor{red}{G(x_s,z)}}{\partial x_2(x_s)}\frac{\partial \textcolor{red}{G(x_r,z)}}{\partial x_2(x_r)}\overline{u^s(x_r,x_s)}
+  \right\}.
+\end{equation*}
+\end{algorithm}
+\end{small}
+\end{frame}
+
+\subsection{数值测试}
+\begin{frame}
+\frametitle{数值测试：$D\subset L_1$，声软障碍物}
+\begin{small}
+\begin{block}{}
+首先假设$D\subset L_1$，并令$h=10,d=50$，源点$x_s$和接收点$x_r$在$\Gamma_0^d$上均匀分布，其个数为$N_s=N_r=256$，探测频率$k_1=4\pi,k_2=2\pi$。除此之外，我们将比较成像函数$I_d(z)$和使用$G_{k_1}(x,z)$做为反传播函数的$I_d^{k_1}(z)$，即
+\begin{equation*}\label{Id_half}
+   I_d^{k_1}(z)=\Im\left\{\frac{|\Gamma_0^d|}{N_s}\frac{|\Gamma_0^d|}{N_r}\sum\limits_{s=1}^{N_s}\sum\limits_{r=1}^{N_r}\frac{\partial G_{k_1}(x_s,z)}{\partial x_2(x_s)}\frac{\partial G_{k_1}(x_r,z)}{\partial x_2(x_r)}\overline{u^s(x_r,x_s)}
+  \right\}.
+\end{equation*}
+\end{block}
+\end{small}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example1/In_soft_pleaf1.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example1/In_soft_square1.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example1/In_soft_peanut.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example1/In_soft_circle1.eps}\\
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example1/In_soft_pleaf1_half.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example1/In_soft_square1_half.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example1/In_soft_peanut_half.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example1/In_soft_circle1_half.eps}
+  \caption{算例：测试不同形状的声软障碍物成像效果，从左到右依次为4 叶风扇、矩形、花生以及椭圆形状，其中第一、二行分别为所提算法成像函数$I_d(z)$和成像函数$I_d^{k_1}(z)$的成像效果。}
+\label{fig_wg_ex1}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{数值测试：$D\subset L_1$，不同类型和边界障碍物}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example2/In_Circle_Soft.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example2/In_Circle_Hard.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example2/In_Circle_Imp.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example2/In_Circle_Tran.eps}\\
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example2/In_Circle_Soft_half.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example2/In_Circle_Hard_half.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example2/In_Circle_Imp_half.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example2/In_Circle_Tran_half.eps}
+  \caption{测试不同类型不同边界的障碍物：前面三个从左到右依次为声软障碍物、声硬障碍物、阻尼系数为$\eta(x)$的阻抗边界障碍物，最后一个为折射系数为$n(x)$的可穿透障碍物，其中第一行为所提算法成像函数$I_d(z)$的成像效果，第二行为反传播函数是函数$G_{k_1}(x,z)$时所对应成像函数$I_d^{k_1}(z)$的成像效果。}\label{fig_wg_ex2}
+\end{figure}
+
+\end{frame}
+\begin{frame}
+\frametitle{数值测试：$D\subset L_1$，可穿透障碍物，抗噪性及多频测试}
+\begin{block}{带有高斯噪音的接收数据}
+\begin{equation*} u^s_{noise}(x_r,x_s)=u^s(x_r,x_s)+v_{noise},\mbox{ 其中 }\ v_{noise}=\mu \max{|u^s|}\epsilon,\ \ \epsilon\sim N(0,1).
+\end{equation*}
+\end{block}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example3/In_transmission_circle_2.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example3/In_transmission_circle_3.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example3/In_transmission_circle_4.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example3/In_transmission_circle_5.eps}\\
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example3/In_transmission_circle_2_multi.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example3/In_transmission_circle_4_multi.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example3/In_transmission_circle_6_multi.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/example3/In_transmission_circle_8_multi.eps}
+  \caption{测试算法成像函数$I_d(z)$的抗噪音性能：目标障碍物为圆形的可穿透障碍物，噪音水平$\mu$从左到右按如下水平依次递增：$0.1,0.2,0.4,0.6$。其中第一行为单频测试结果，测试频率为：$k_1=4\pi,k_2=2\pi$；第二行为多频测试结果，测试频率为：$k_2=\frac{1}{2}k_1,k_1=2\pi+0.4n\pi,n=0,1\ldots,9$。}\label{fig_wg_ex3_2}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{数值测试：$D\subset L_2$，声软障碍物}
+\begin{small}
+\begin{block}{}
+首先假设$D\subset L_2$，并令$h=10,d=50$，源点$x_s$和接收点$x_r$在$\Gamma_0^d$上均匀分布，其个数为$N_s=N_r=256$，探测频率$k_1=8\pi,k_2=4\pi$。除此之外，我们将比较成像函数$I_d(z)$和使用$G_{k_1}(x,z)$做为反传播函数的$I_d^{k_1}(z)$。
+\end{block}
+\end{small}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example1/out_circle_soft.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example1/out_circle_hard.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example1/out_circle_imp.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example1/out_circle_tran.eps}\\
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example1/out_circle_soft_half.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example1/out_circle_hard_half.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example1/out_circle_imp_half.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example1/out_circle_tran_half.eps}
+  \caption{测试位于Pekeris开波导第二层$L_2$的不同类型障碍物：前面三个从左到右依次为声软障碍物、声硬障碍物、阻尼系数为$\eta(x)$的阻抗边界障碍物，最后一个为折射系数为$n(x)$的可穿透障碍物，其中第一行为所提算法成像函数$I_d(z)$的成像效果，第二行为反传播函数是函数$G_{k_1}(x,z)$时所对应成像函数$I_d^{k_1}(z)$ 的成像效果。}\label{fig_wgout_ex1}
+\end{figure}
+\end{frame}
+\begin{frame}
+\frametitle{数值测试：$D\subset L_2$，不同形状障碍物}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example2/Out_soft_pleaf1.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example2/Out_soft_square1.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example2/Out_soft_peanut.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example2/Out_soft_circle1.eps}\\
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example2/Out_tran_pleaf1.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example2/Out_tran_square1.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example2/Out_tran_peanut.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example2/Out_tran_circle1.eps}
+  \caption{测试对于Pekeris开波导第二层$L_2$的不同类型不同形状的障碍物：从左到右依次为4叶风扇、矩形、花生以及椭圆形状，其中第一行为声软障碍物，第二行为可穿透障碍物。}
+  \label{fig_wgout_ex2}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{数值测试：$D\subset L_2$，抗噪性和多频测试}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example3/Out_soft_pleaf1_2.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example3/Out_soft_pleaf1_4.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example3/Out_soft_pleaf1_6.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example3/Out_soft_pleaf1_8.eps}\\
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example3/Out_soft_pleaf1_2_multi.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example3/Out_soft_pleaf1_4_multi.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example3/Out_soft_pleaf1_6_multi.eps}
+  \includegraphics[width=0.23\textwidth]{./waveguide1/out_example3/Out_soft_pleaf1_8_multi.eps}
+  \caption{测试算法成像函数$I_d(z)$的抗噪音性能：目标障碍物为位于开波导第二层$L_2$的4-叶风扇形状的声软障碍物，噪音水平$\mu$从左到右按如下数值依次递增：$0.1,0.2,0.4,0.6$。其中第一行为单频测试结果，测试频率为：$k_1=8\pi,k_2=4\pi$；第二行为多频测试结果，测试频率为：$k_2=\frac{1}{2}k_1,k_2=4\pi+0.4n\pi,n=0,1,\ldots,6$。}\label{fig_wgout_ex3}
+\end{figure}
+\end{frame}
+\subsection{算法分析与思考}
+\begin{frame}
+\frametitle{算法分析与思考}
+\begin{block}{有限孔穴点扩散函数}
+\begin{equation*}
+\textcolor{red}{
+  J_d(z,y):=\int_{\Gamma_0^d}\frac{\partial G(x_r,z)}{\partial x_2(x_r)}\overline{N(x_r,y)}ds(x_r)
+  }
+\end{equation*}
+其中函数$G(x,z),N(x,y)$分别为Pekeris开波导Dirichlet和Neumann格林函数。
+\end{block}
+\begin{small}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=5cm,height=2.5cm]{./waveguide1/psf_waveguide/in_mesh.eps}
+  \includegraphics[width=5cm,height=2.5cm]{./waveguide1/psf_waveguide/out_mesh.eps}
+  %\includegraphics[width=12cm,height=6cm]{./waveguide1/psf_half/out_mesh.eps}
+  \caption{\tiny{$-\Im J_d(z,y)$，其中$\textcolor{red}{G_{bp}(x,z)=G(x,z)}$，左边为源点$y_1\in L_1$，右边为源点$y_2\in L_2$。 参数：$k_1=4\pi,k_2=2\pi,h=10,d=50,N_r=256,y_1=(0,8),y_2=(0,12)$.}}
+\end{figure}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{点扩散函数讨论}
+\begin{small}
+函数$G(x,z)$和$N(x,y)$都会产生波导模式：
+\begin{eqnarray*}
+  G(x,z)=G_g(x,z)+G_{rad}(x,z),\ \
+  N(x,y)=N_g(x,y)+N_{rad}(x,y)
+\end{eqnarray*}
+其中$G_g(x,z)=\sum\limits_{p=1}^MG_p(x,z)$ 和$N_g(x,y)=\sum\limits_{q=1}^{\hat M}N_q(x,y)$，分别为$G(x,z)$和$N(x,y)$的波导项，$G_{rad}(x,z)$和$N_{rad}(x,y)$分别为相应衰减项。则
+\begin{equation*}
+  J_d(z,y)=\textcolor{red}{J_d^1(z,y)}+J_d^2(z,y)+J_d^3(z,y)+J_d^4(z,y)
+\end{equation*}
+其中$J_d^i(z,y),i=1,2,3,4$为
+\begin{eqnarray*}\label{psf_wg_4p}
+ \left\{
+ \begin{array}{lll}
+  \textcolor{red}{J_d^1(z,y)}&\textcolor{red}{=}&\textcolor{red}{\int_{\Gamma_0^d}\frac{\partial G_g(x_r,z)}{\partial x_2(x_r)}\overline{N_g(x_r,y)}ds(x_r)}\\
+  & &\\
+  J_d^2(z,y)&=&\int_{\Gamma_0^d}\frac{\partial G_{rad}(x_r,z)}{\partial x_2(x_r)}\overline{N_{rad}(x_r,y)}ds(x_r)\\
+  & &\\
+  J_d^3(z,y)&=&\int_{\Gamma_0^d}\frac{\partial G_g(x_r,z)}{\partial x_2(x_r)}\overline{N_{rad}(x_r,y)}ds(x_r)\\
+  & &\\
+  J_d^4(z,y)&=&\int_{\Gamma_0^d}\frac{\partial G_{rad}(x_r,z)}{\partial x_2(x_r)}\overline{N_g(x_r,y)}ds(x_r)
+ \end{array}
+ \right.
+\end{eqnarray*}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{点扩散函数进一步测试}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.23\textwidth]{./waveguide1/psf_part/psf_wg_in_1}
+	\includegraphics[width=0.23\textwidth]{./waveguide1/psf_part/psf_wg_in_2}
+	\includegraphics[width=0.23\textwidth]{./waveguide1/psf_part/psf_wg_in_3}
+	\includegraphics[width=0.23\textwidth]{./waveguide1/psf_part/psf_wg_in_4}
+	\caption{点扩散函数测试：$-\Im f(z,y)$，其中源点$y_1=(0,5)$在开波导第一层$L_1$内，从左到右函数$f(z,y)$依次为波导项反传波导项$J_d^1(z,y)$，衰减项反传衰减项$J_d^2(z,y)$，以及交叉反传项$J_d^3(z,y)$和$J_d^4(z,y)$。其中采样区域为$\Omega_1=[-2,2]\times[3,7]$，以及$k_2=\frac{1}{2}k_1,k_1=[2\pi,4\pi,6\pi]$。}\label{psf_wg_part_in}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.23\textwidth]{./waveguide1/psf_part/psf_wg_out_1}
+	\includegraphics[width=0.23\textwidth]{./waveguide1/psf_part/psf_wg_out_2}
+	\includegraphics[width=0.23\textwidth]{./waveguide1/psf_part/psf_wg_out_3}
+	\includegraphics[width=0.23\textwidth]{./waveguide1/psf_part/psf_wg_out_4}
+	\caption{点扩散函数测试：$-\Im f(z,y)$，其中源点$y_2=(0,15)$在开波导第二层$L_2$内，从左到右函数$f(z,y)$依次为波导项反传波导项$J_d^1(z,y)$，衰减项反传衰减项$J_d^2(z,y)$，以及交叉反传项$J_d^3(z,y)$和$J_d^4(z,y)$。其中采样区域为$\Omega_1=[-2,2]\times[13,17]$，以及$k_2=\frac{1}{2}k_1,k_1=[4\pi,6\pi,8\pi]$。}\label{psf_wg_part_out}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{收敛性问题}
+\begin{block}{}
+\begin{equation*}
+  J_d^1(z,y)=\sum\limits_{p=1}^M\sum\limits_{q=1}^{\hat M}f_{pq}(z_2,y_2)\textcolor{red}{I^{pq}_d(z_1,y_1)}
+\end{equation*}
+其中$f_{pq}(z_2,y_2),p=1,2\ldots,M;q=1,2,\ldots,\hat M$ 是关于$z_2$和$y_2$的函数，以及
+\begin{equation*}
+\textcolor{red}{
+    I^{pq}_d(z_1,y_1) =\int_{-d}^{d}e^{\i|x_1-z_1|\xi_p-\i|x_1-y_1|\hat\xi_q}dx_1
+}
+\end{equation*}
+\end{block}
+\begin{remark}\label{Idm1m2}
+直接计算可得$I_d^{pq}(z_1,y_1)$的具体表达式：当$z_1,y_1\in(-d,d)$时，
+\begin{equation*}
+  I_d^{pq}(z_1,y_1)=\textcolor{blue}{\psi^{pq}_1(d,z_1,y_1)}+\psi^{pq}_2(z_1,y_1)
+\end{equation*}
+其中
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+  \textcolor{blue}{\psi^{pq}_1(d,z_1,y_1)}&=&\frac{\textcolor{red}{e^{\i d(\xi_{p}-\hat\xi_{q})}}}{\i(\xi_{p}-\hat\xi_{q})}\left(e^{\i z_1\xi_{p}-\i y_1\hat\xi_{q}}+e^{\i y_1\hat\xi_{q}-\i z_1\xi_{p}}\right)\\
+  & &\\
+  \psi^{pq}_2(z_1,y_1)&=&\frac{e^{\i|z_1-y_1|\xi_{p}}-e^{-\i|z_1-y_1|\hat\xi_{q}}}{\i(\xi_{p}+\hat\xi_{q})}
+-\frac{e^{\i|z_1-y_1|\xi_{p}}+e^{-\i|z_1-y_1|\hat\xi_{q}}}{\i(\xi_{p}-\hat\xi_{q})}
+\end{array}
+\right.
+\end{eqnarray*}
+\end{remark}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{解决方案一：取$G_{bp}(x,y)=G_h(x,y)$}
+\begin{small}
+\begin{block}{全空间两层基本解$G_h(x,y)$}
+如果仅考虑Pekeris半空间两层开波导障碍物成像问题，可以考虑采用全空间两层基本解$G_h(x,y)$作为一种备选的反传播函数。 $G_h(x,y)$ 满足如下方程：
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+  \Delta_xG_h(x,y)+\hat k^2(x)G_h(x,y)=-\delta_y(x),& in& \R^2\\
+  & &\\
+  \left[G_h(\cdot,y)\right]_{\Gamma_h}=\left[\frac{\partial G_h(\cdot,y)}{\partial\nu}\right]_{\Gamma_h}=0.
+    \end{array}
+\right.
+\end{eqnarray*}
+其中波数$\hat k(x)$满足
+\begin{eqnarray*}
+\hat k(x)=\left\{
+\begin{array}{lll}
+  k_1&,&x_2<h\\
+  k_2&,&x_2>h
+\end{array}
+\right.
+\end{eqnarray*}
+\end{block}
+\end{small}
+
+\begin{small}
+\begin{block}{特点}
+\begin{itemize}
+  \item 好处：不会产生波导模式，且表达式相对简单，数值和理论分析较为容易
+  \item 坏处：不符合逆时偏移的思想，不能推广到半空间任意层模型，仅对两层内的障碍物有效
+\end{itemize}
+\end{block}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{函数$G_h(x,z)$的积分表达式}
+\begin{small}
+\begin{block}{}
+直接计算可知，函数$G_h(x,y)$表达式如下
+\begin{eqnarray*}
+G_h(x,y)=\left\{
+ \begin{array}{lll}
+ \Phi(k_1,x,y)-\Phi(k_1,x,y^*)+P_{11}(x,y),& &y_2<h,x_2<h\\
+ P_{12}(x,y),& &y_2<h,x_2>h\\
+ P_{21}(x,y),& &y_2>h,x_2<h\\
+ \Phi(k_2,x,y)-\Phi(k_2,x,y^*)+P_{22}(x,y),& &y_2>h,y_2>h
+ \end{array}
+ \right.
+\end{eqnarray*}
+其中$y^*=(y_1,2h-y_2)$，$\mu_j=\sqrt{k_j^2-\xi^2}, j=1,2$，以及函数$P_{ij}(x,y)$的表达式为
+\begin{eqnarray*}
+ \left\{
+ \begin{array}{lll}
+ P_{11}(x,y)&=&\frac{\i}{2\pi}\int_{SIP}\frac{1}{\textcolor{red}{\mu_1+\mu_2}}e^{\i\mu_1(2h-x_2-y_2)+\i\xi(x_1-y_1)}d\xi\\
+ & &\\
+ P_{12}(x,y)&=&\frac{\i}{2\pi}\int_{SIP}\frac{1}{\textcolor{red}{\mu_1+\mu_2}}e^{\i\mu_1(h-y_2)+\i\mu_2(x_2-h)+\i\xi(x_1-y_1)}d\xi\\
+ & &\\
+ P_{21}(x,y)&=&\frac{\i}{2\pi}\int_{SIP}\frac{1}{\textcolor{red}{\mu_1+\mu_2}}e^{\i\mu_2(y_2-h)+\i\mu_1(h-x_2)+\i\xi(x_1-y_1)}d\xi\\
+ & &\\
+ P_{22}(z,y)&=&\frac{\i}{2\pi}\int_{SIP}\frac{1}{\textcolor{red}{\mu_1+\mu_2}}e^{\i\mu_2(x_2+y_2-2h)+\i\xi(x_1-y_1)}d\xi
+ \end{array}
+ \right.
+\end{eqnarray*}
+\end{block}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{解决方案二：取$G_{bp}(x,y)=G_{\lambda}(x,y)$}
+\begin{small}
+\begin{block}{半空间两层介质Impedance格林函数$G_{\lambda}(x,y)$}
+设常数$\lambda$为阻抗系数，函数$G_{\lambda}(x,y)$满足如下方程：
+\begin{eqnarray*}\label{G_Impedance}
+\left\{
+\begin{array}{lll}
+  \Delta_xG_{\lambda}(x,y)+k^2(x)G_{\lambda}(x,y)=-\delta_y(x),&in&\quad \R^2_+\\
+  & &\\
+  \left[G_{\lambda}(\cdot,y)\right]_{\Gamma_h}=0,\ \ \left[\frac{\partial G_{\lambda}(\cdot,y)}{\partial\nu}\right]_{\Gamma_h}=0 & &\\
+  & &\\
+  \frac{\partial G_{\lambda}(x,y)}{\partial x_2}+\i\lambda G_{\lambda}(x,y)=0, &on&\Gamma_0\\
+\end{array}
+\right.
+\end{eqnarray*}
+其中
+\begin{eqnarray*}\label{owg_wn}
+k(x)=\left\{
+\begin{array}{lll}
+  k_1&,&x_2\in(0,h)\\
+  k_2&,&x_2\in(h,+\infty)
+\end{array}
+\right.
+\end{eqnarray*}
+
+\end{block}
+\end{small}
+\begin{small}
+\begin{block}{特点}
+\begin{itemize}
+  \item 好处：多了一个可调参数$\lambda$，当$\lambda$取值适当时不会产生波导模式；可以推广到半空间任意层开波导障碍物成像问题；符合逆时偏移算法的基本思想
+  \item  坏处：表达式较为复杂，数值和理论分析较为困难
+\end{itemize}
+\end{block}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{函数$G_{\lambda}(x,y)$的积分表达式}
+\begin{small}
+\begin{block}{}
+设$\lambda>0$，则半空间两层介质Impedance格林函数$G_{\lambda}(x,y)$表达式为
+\begin{eqnarray*}\label{IFT_impedance}
+  G_{\lambda}(x,y)&=&\frac{1}{2\pi}\int_{SIP}\hat G^y_{\lambda}(\xi,x_2)e^{\i|x_1-y_1|\xi}d\xi
+\end{eqnarray*}
+其中$\hat{G}^y_{\lambda}(\xi,x_2)$表示函数$G_{\lambda}^y(x_1,x_2):=G_{\lambda}(x,y)$ 关于$x$ 的
+第一个分量$x_1$的Fourier变换：
+\begin{equation*}
+ \hat{G}^y_{\lambda}(\xi,x_2)=\int^{\infty}_{-\infty}G^y_{\lambda}(x_1,x_2)e^{-\i(x_1-y_1)\xi}dx_1
+\end{equation*}
+\end{block}
+\end{small}
+
+\begin{small}
+\begin{block}{}
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+ \frac{\partial^2\hat{G}^y_{\lambda}(\xi,x_2)}{\partial x^2_2}+[k^2(x)-\xi^2]\hat{G}^y_{\lambda}(\xi,x_2)=-\delta_{y_2}(x_2),&in&\quad \R_+\\
+ & &\\
+ \left[\hat{G}^y_{\lambda}(\xi,x_2)\right]_{x_2=h}=\left[\frac{\partial\hat{G}^y_{\lambda}(\xi,x_2)}{\partial x_2}\right]_{x_2=h}=0,& &\\
+ & &\\
+ \frac{\partial \hat{G}^y_{\lambda}(\xi,x_2)}{\partial x_2}+\i\lambda\hat{G}^y_{\lambda}(\xi,x_2)=0,&on &x_2=0
+\end{array}
+\right.
+\end{eqnarray*}
+\end{block}
+\end{small}
+\end{frame}
+
+\begin{frame}
+\frametitle{函数$G_{\lambda}(x,y)$的Fourier变换$\hat{G}^y_{\lambda}(\xi,x_2)$}
+\begin{small}
+记关于$\xi$的函数$N_{\lambda}(\xi),M_{\lambda}(\xi)$为：
+\begin{eqnarray*}
+\textcolor{red}{
+  N_{\lambda}(\xi)=\frac{\mu_1+\mu_2}{\mu_1-\mu_2}\frac{\mu_1+\lambda}{\mu_1-\lambda}-e^{2\i\mu_1h}},\ \
+  M_{\lambda}(\xi)=\frac{\lambda+\mu_1}{\lambda-\mu_1}+\frac{\mu_1+\mu_2}{\mu_1-\mu_2}e^{2\i\mu_1h}
+\end{eqnarray*}
+(1) 当源点$y\in L_1$时，若$x_2\in(0,h)$，
+\begin{eqnarray*}
+  \hat{G}_{\lambda}^y(\xi,x_2)=\left\{
+\begin{array}{lll}
+  \frac{\i}{2\mu_1}e^{\i\mu_1|x_2-y_2|}&+&\frac{\i}{2\mu_1}\frac{\mu_1-\lambda}{\mu_1+\lambda}e^{\i\mu_1(x_2+y_2)}\\
+  & &\\
+  +\frac{\i}{2\mu_1}\frac{e^{2\i\mu_1h}}{\textcolor{red}{N_{\lambda}(\xi)}}\frac{\mu_1-\lambda}{\mu_1+\lambda}e^{\i\mu_1(x_2+y_2)}
+  &+&\frac{\i}{2\mu_1}\frac{e^{2\i\mu_1h}}{\textcolor{red}{N_{\lambda}(\xi)}}e^{\i\mu_1(x_2-y_2)}\\
+  & &\\
+  +\frac{\i}{2\mu_1}\frac{e^{2\i\mu_1h}}{\textcolor{red}{N_{\lambda}(\xi)}}\frac{\mu_1+\lambda}{\mu_1-\lambda}e^{\i\mu_1(-x_2-y_2)}
+  &+&\frac{\i}{2\mu_1}\frac{e^{2\i\mu_1h}}{\textcolor{red}{N_{\lambda}(\xi)}}e^{\i\mu_1(-x_2+y_2)}
+\end{array}
+\right.
+\end{eqnarray*}
+(2) 当源点$y\in L_1$时，若$x_2\in(h,+\infty)$，
+\begin{eqnarray*}
+ \begin{array}{lll}
+    \hat{G}_{\lambda}^y(\xi,x_2)&=&\frac{\i}{\mu_1-\mu_2}\frac{1}{\textcolor{red}{N_{\lambda}(\xi)}}\left[\frac{\mu_1+\lambda}{\mu_1-\lambda}e^{\i\mu_1(h-y_2)+\i\mu_2(x_2-h)}+
+  e^{\i\mu_1(h+y_2)+\i\mu_2(x_2-h)}\right]
+ \end{array}
+\end{eqnarray*}
+(3) 当源点$y\in L_2$时，若$x_2\in(0,h)$，
+\begin{eqnarray*}
+ \begin{array}{lll}
+    \hat{G}_{\lambda}^y(\xi,x_2)&=&\frac{\i}{\mu_1-\mu_2}\frac{1}{\textcolor{red}{N_{\lambda}(\xi)}}\left[e^{\i\mu_2(y_2-h)+\i\mu_1(x_2+h)}+
+ \frac{\mu_1+\lambda}{\mu_1-\lambda}e^{\i\mu_2(y_2-h)+\i\mu_1(h-x_2)}\right]
+ \end{array}
+\end{eqnarray*}
+(4) 当源点$y\in L_2$时，若$x_2\in(h,+\infty)$，
+\begin{eqnarray*}
+ \begin{array}{lll}
+    \hat{G}_{\lambda}^y(\xi,x_2)&=&\frac{\i}{2\mu_2}e^{\i\mu_2|x_2-y_2|}
+  +\frac{\i}{2\mu_2}\frac{M_{\lambda}(\xi)}{\textcolor{red}{N_{\lambda}(\xi)}}e^{\i\mu_2(x_2+y_2-2h)}
+ \end{array}
+\end{eqnarray*}
+\end{small}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{回顾：开波导Dirichlet格林函数$G(x,y)$的积分表达式}
+\begin{small}
+令$\xi=\xi_1+\i\xi_2,\xi_1,\xi_2\in\R$，以及$\mu_j=\sqrt{k_j^2-\xi^2},j=1,2$，并记关于$\xi$的函数$N_h(\xi)$和$M_h(\xi)$如下所示
+\begin{eqnarray*}\label{NhMh}
+ \textcolor{red}{N_h(\xi)=\frac{\mu_1+\mu_2}{\mu_1-\mu_2}+e^{2\i\mu_1h}},\ \
+ M_h(\xi)=1+\frac{\mu_1+\mu_2}{\mu_1-\mu_2}e^{2\i\mu_1h},
+\end{eqnarray*}
+则格林函数$G(x,y)$有如下表达式
+\begin{eqnarray*}
+G(x,y)=\left\{
+\begin{array}{lll}
+  \Phi_{k_1}(x,y)-\Phi_{k_1}(x,y')+S_1(x,y)&, &x\in L_1,y\in L_1\\
+ S_2(x,y)&, &x\in L_2,y\in L_1\\
+ K_1(x,y)&, &x\in L_1,y\in L_2\\
+ \Phi_{k_2}(x,y)+K_2(x,y)&,&x\in L_2,y\in L_2
+\end{array}
+\right.
+\end{eqnarray*}
+其中$S_j(x,y),K_j(x,y),j=1,2$ 的表达式为
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+  S_1(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{-\i}{2\mu_1}\frac{e^{2\i\mu_1h}\left[4\sin{(\mu_1x_2)\sin{(\mu_1y_2)}}\right]}{\textcolor{red}{N_h(\xi)}}
+  e^{\i(x_1-y_1)\xi}d\xi\\
+  & &\\
+  S_2(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{2e^{\i\mu_1h}\sin{(\mu_1y_2)}}{(\mu_1-\mu_2)\textcolor{red}{N_h(\xi)}}e^{\i\mu_2(x_2-h)+\i(x_1-y_1)\xi}d\xi\\
+  & &\\
+  K_1(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{2e^{\i\mu_1h}\sin(\mu_1x_2)}{(\mu_1-\mu_2)\textcolor{red}{N_h(\xi)}}e^{\i\mu_2(y_2-h)+\i(x_1-y_1)\xi}d\xi\\
+  & &\\
+  K_2(x,y)&=&\frac{1}{2\pi}\int_{SIP}\frac{-\i}{2\mu_2}\frac{M_h(\xi)}{\textcolor{red}{N_h(\xi)}}e^{\i\mu_2(x_2+y_2-2h)+\i(x_1-y_1)\xi}d\xi
+\end{array}
+\right.
+\end{eqnarray*}
+\end{small}
+
+\end{frame}
+
+\begin{frame}
+%{|开波导Dirichlet格林函数$G(x,y)$|阻抗格林函数$G_{\lambda}(x,y)$|全空间两层基本解$G_h(x,y)$}
+\frametitle{比较}
+\begin{block}{反传播函数}
+\begin{eqnarray*}
+\left\{
+\begin{array}{lll}
+\mbox{开波导Dirichlet格林函数}G(x,y)&:&N_h(\xi)=\frac{\mu_1+\mu_2}{\mu_1-\mu_2}+e^{2\i\mu_1h}\\
+& &\\
+\mbox{半空间两层阻抗格林函数}G_{\lambda}(x,y)&:&
+N_{\lambda}(\xi)=\frac{\mu_1+\mu_2}{\mu_1-\mu_2}\textcolor{blue}{\frac{\mu_1+\lambda}{\mu_1-\lambda}}-e^{2\i\mu_1h}\\
+& &\\
+\mbox{全空间两层基本解}G_h(x,y)&:&\mu_1+\mu_2
+\end{array}
+\right.
+\end{eqnarray*}
+\end{block}
+
+\begin{block}{有限孔穴点扩散函数}
+\begin{enumerate}
+  \item $  J_d(z,y):=\int_{\Gamma_0^d}\frac{\partial\textcolor{red}{ G(x_r,z)}}{\partial x_2(x_r)}\overline{N(x_r,y)}ds(x_r)$\hspace{2cm} $\surd$
+  \item $J_d(z,y):=\int_{\Gamma_0^d}\frac{\partial\textcolor{red}{ G_{\lambda}(x_r,z)}}{\partial x_2(x_r)}\overline{N(x_r,y)}ds(x_r)$\hspace{1.9cm} ?
+
+  \item $J_d(z,y):=\int_{\Gamma_0^d}\frac{\partial\textcolor{red}{ G_h(x_r,z)}}{\partial x_2(x_r)}\overline{N(x_r,y)}ds(x_r)$ \hspace{1.8cm} ?
+\end{enumerate}
+
+其中函数$N(x,y)$为Pekeris开波导Neumann格林函数。
+
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{点扩散函数测试}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{./waveguide1/psf_waveguide/in_mesh.eps}
+    \includegraphics[width=0.4\textwidth]{./waveguide1/psf_waveguide/out_mesh.eps}\\
+      \includegraphics[width=0.4\textwidth]{./waveguide1/psf_twolayer/in_mesh.eps}
+    \includegraphics[width=0.4\textwidth]{./waveguide1/psf_twolayer/out_mesh.eps}
+  \caption{有限孔穴点扩散函数的负虚部：$-\Im J_d(z,y)$，其中左边为源点$y_1=(0,8)$在$ L_1$中，右边为源点$y_2=(0,12)$在$ L_2$中，采样区域$\Omega$为$[-2,2]\times[6,14]$。第一行为阻抗边界格林函数，第二行为全空间两层基本解}\label{fig_psf_impedance}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{阻抗型开波导逆时偏移算法}
+\begin{small}
+\begin{algorithm}\label{alg_imp}
+设$\Omega$为采样区域，令$u^s(x_r,x_s)$ 为在接收点$x_r$收到的由源点$x_s$所激发的散射数据，其中$x_r,x_s\in\Gamma_0^d;r=1,\ldots,N_r;s=1,\ldots,N_s$.
+\begin{enumerate}
+  \item 反传播： 对$s=1,\ldots,N_s$，计算反传播场
+\begin{equation*}
+  v_b(z,x_s)=\frac{|\Gamma_0^d|}{N_r}\sum\limits_{r=1}^{N_r}\frac{\partial \textcolor{red}{G_{\lambda}(x_r,z)}}{\partial x_2(x_r)}\overline{u^s(x_r,x_s)},\  \  \forall z\in\Omega.
+\end{equation*}
+若令$N_r\rightarrow0$，则上式可看做如下积分的数值近似，
+\begin{equation*}
+  \hat v_b(z,x_s)=\int_{\Gamma_0^d}\frac{\partial \textcolor{red}{G_{\lambda}(x_r,z)}}{\partial x_2(x_r)}\overline{u^s(x_r,x_s)}ds(x_r)
+\end{equation*}
+  \item 互相关： 对$z\in\Omega$，计算成像函数
+\begin{equation*}
+  I_d^{\lambda}(z)=\Im\left\{\frac{|\Gamma_0^d|}{N_s}\sum\limits_{s=1}^{N_s}\frac{\partial \textcolor{red}{G_{\lambda}(x_s,z)}}{\partial x_2(x_s)}v_b(z,x_s)
+  \right\}.
+\end{equation*}
+将$v_b(z,x_s)$的表达式代入$I_d^{\lambda}(z)$，可得
+\begin{equation*}\label{Id_imp}
+  I_d^{\lambda}(z)=\Im\left\{\frac{|\Gamma_0^d|}{N_s}\frac{|\Gamma_0^d|}{N_r}\sum\limits_{s=1}^{N_s}\sum\limits_{r=1}^{N_r}\frac{\partial \textcolor{red}{G_{\lambda}(x_s,z)}}{\partial x_2(x_s)}\frac{\partial \textcolor{red}{G_{\lambda}(x_r,z)}}{\partial x_2(x_r)}\overline{u^s(x_r,x_s)}
+  \right\}.
+\end{equation*}
+\end{enumerate}
+\end{algorithm}
+\end{small}
+\end{frame}
+\begin{frame}
+\frametitle{障碍物成像比较：$D\subset L_1$，可穿透障碍物}
+\begin{small}
+\begin{block}{}
+令$h=10,d=50$，源点$x_s$和接收点$x_r$在$\Gamma_0^d$上均匀分布，其个数为$N_s=N_r=256$，探测频率$k_1=4\pi,k_2=2\pi$。除此之外，我们将比较成像函数$I_d^{\lambda}(z)$和使用全空间两层基本解$G_h(x,z)$做为反传播函数的$I_d^h(z)$，即
+\begin{equation*}\label{Id_half}
+   I_d^h(z)=\Im\left\{\frac{|\Gamma_0^d|}{N_s}\frac{|\Gamma_0^d|}{N_r}\sum\limits_{s=1}^{N_s}\sum\limits_{r=1}^{N_r}\frac{\partial G_h(x_s,z)}{\partial x_2(x_s)}\frac{\partial G_h(x_r,z)}{\partial x_2(x_r)}\overline{u^s(x_r,x_s)}
+  \right\}.
+\end{equation*}
+\end{block}
+\end{small}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.23\textwidth]{./waveguide2/example1/pleaf1_tran_in_impedance.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/example1/square1_tran_in_impedance.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/example1/peanut_tran_in_impedance.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/example1/circle1_tran_in_impedance.eps}\\
+	\includegraphics[width=0.23\textwidth]{./waveguide2/example1/pleaf1_tran_in_twolayer.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/example1/square1_tran_in_twolayer.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/example1/peanut_tran_in_twolayer.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/example1/circle1_tran_in_twolayer.eps}
+	\caption{测试不同形状的可穿透障碍物($D\subset L_1$)：从左到右依次为4-叶风扇、矩形、花生以及椭圆形状，其中第一、二行分别是成像函数$I_d^{\lambda}(z)$和$I_d^h(z)$的成像效果。}\label{fig_imp_ex1_2}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{障碍物成像测试：$D\subset L_2$，可穿透障碍物}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.23\textwidth]{./waveguide2/out_example2/Out_tran_pleaf1_impedance.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/out_example2/Out_tran_square1_impedance.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/out_example2/Out_tran_peanut_impedance.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/out_example2/Out_tran_circle1_impedance.eps}\\
+	\includegraphics[width=0.23\textwidth]{./waveguide2/out_example2/Out_tran_pleaf1_twolayer.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/out_example2/Out_tran_square1_twolayer.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/out_example2/Out_tran_peanut_twolayer.eps}
+	\includegraphics[width=0.23\textwidth]{./waveguide2/out_example2/Out_tran_circle1_twolayer.eps}
+	\caption{测试不同形状的可穿透障碍物($D\subset L_2$)：从左到右依次为4-叶风扇、矩形、花生以及椭圆形状，其中第一、二行分别是成像函数$I_d^{\lambda}(z)$和$I_d^h(z)$的成像效果。}
+	\label{fig_imp_ex2}
+\end{figure}
+\end{frame}
+\section{总结与展望}
+\subsection{总结与展望}
+\begin{frame}
+\frametitle{总结与展望}
+\begin{block}{总结：}
+\begin{enumerate}
+  \item 针对一般半空间障碍物成像问题，提出一种无相位直接成像算法
+  \item 针对Pekeris开波导障碍物成像问题，提出开波导逆时偏移算法
+  \item 对开波导逆时偏移算法加以改进，提出阻抗型开波导逆时偏移算法
+\end{enumerate}
+\end{block}
+
+\begin{block}{展望：}
+\begin{enumerate}
+  \item 考虑开波导逆时偏移算法中的收敛性问题及其分辨率分析
+  \item 分析半空间两层介质阻抗格林函数以及相应算法的分辨率分析
+  \item 将本文算法推广到电磁波和弹性波开波导模型或者半空间$n$层模型
+  \item 开波导散射问题的PML算法
+\end{enumerate}
+
+\end{block}
+
+%\begin{block}{建议：}
+%\begin{enumerate}
+%  \item
+%\end{enumerate}
+%\end{block}
+\end{frame}
+
+\subsection{致谢}
+\begin{frame}
+
+\frametitle{}
+\begin{center}
+  \huge\sffamily \textit{谢谢大家！}
+\end{center}
+\end{frame}
+
+
+\subsection{个人简历}
+\begin{frame}
+\frametitle{个人简历}
+\begin{small}
+\begin{block}{基本情况}
+
+方少峰，男，河北邯郸人，1993 年~9 月出生，
+中科院数学与系统科学研究院，在读博士研究生
+\end{block}
+\begin{block}{教育状况}
+\begin{enumerate}
+  \item 2009 年~9 月至~2013 年~7 月，吉林大学数学学院，本科，计算数学
+  \item 2013 年~9 月至~2018 年~7 月，中科院计算数学所，直博生，计算数学
+\end{enumerate}
+\end{block}
+\begin{block}{研究兴趣}
+
+逆散射问题，逆时偏移算法，开波导模型
+\end{block}
+\begin{block}{发表文章目录}
+\begin{enumerate}
+  \item Chen Z, Fang S, Huang G. {\it A Direct Imaging Method for the Half-Space Inverse Scattering Problem with Phaseless Data[J]. Inverse Problems $\&$ Imaging}, 2017, 11(5).
+\end{enumerate}
+\end{block}
+\begin{block}{联系方式}
+
+通讯地址：北京市海淀区中关村东路55号，中科院数学与系统科学研究院，100190
+
+邮箱： fangsf@lsec.cc.ac.cn\qquad 电话：15600602175/15910819374
+\end{block}
+\end{small}
+\end{frame}
+\end{CJK*}
+
+\bibliography{./Thesis_Report}%
+\end{document}
+

@@ -1,0 +1,83 @@
+%%
+%%% >>> Title Page
+%%
+%%
+%%% Chinese Title Page
+%%
+  \confidential{}% show confidential tag
+  \schoollogo{scale=0.112}{UCAS}% university logo
+  \title[地球物理反问题的逆时偏移算法]{地球物理反问题的逆时偏移算法}% \title[short title for headers]{Long title of thesis}
+  \author{方少峰}% name of author
+  \advisor{陈志明~研究员}% names and titles of supervisors
+  \advisorinstitute{中国科学院~数学与系统科学研究院}% institute names of supervisors
+  \degree{博士}% degree  
+  \degreetype{理学}% degree type
+  \major{计算数学}% major
+  \institute{中国科学院~数学与系统科学研究院}% institute of author
+  %\chinesedate{2014~年~06~月}% only need for user customized date
+%%
+%%% English Title Page
+%%
+  \englishtitle{Reverse Time Migration Method  \\ in \\ Geophysical Inverse Problem}
+  \englishauthor{Fang Shaofeng}
+  \englishadvisor{Professor Chen Zhiming}
+  \englishdegree{Doctor}
+  \englishthesistype{thesis}
+  \englishmajor{Computational Mathematics}
+  \englishinstitute{Institute of Applied Mathematics \\
+    Academy of Mathematics and Systems Science \\
+    Chinese Academy of Sciences}
+  %\englishdate{June, 2014}% only need for user customized date
+%%
+%%% Generate Chinese Title
+%%
+\maketitle
+%%
+%%% Generate English Title
+%%
+\makeenglishtitle
+%%
+%%% >>> Author's declaration
+%%
+\makedeclaration
+%%
+%%% >>> Abstract
+%%
+\chapter{摘\quad 要}% does not show the title on the top
+%\begin{abstract}% will show the title on the top
+本文主要研究了半空间时谐声波逆散射问题的逆时偏移算法。我们主要关心两个方面，其一是如何利用在半空间表面接收到的无相位数据对嵌入在半空间的障碍物进行成像；其二是以Pekeris开波导模型为例研究半空间分层介质的逆时偏移算法。
+
+在光栅衍射成像和雷达散射成像等问题中，相对于测量相位信息，对数据的模的测量更加易于处理。本文第一部分主要提出了一种半空间无相位数据直接成像算法。 该算法传承了半空间逆时偏移算法的优点，在不需要知道障碍物的任何先验信息的情况下，能够对不同类型的扩展障碍物进行有效成像。通过对新算法成像函数进行分辨率分析，我们证明了当障碍物远离半空间表面时，新算法可以达到和半空间逆时偏移算法相同的精度。最后，我们通过大量的数值算例验证了新算法的有效性和鲁棒性。
+
+
+
+在地质勘探及海洋声学成像等领域，被探测的目标大多是嵌入在波导结构中。由于波导模式的存在，波导散射问题和逆散射问题将比在均匀背景介质中复杂地多。本文第二部分主要以Pekeris开波导模型为例研究波在半空间分层介质中的传播性质，以及开波导逆散射问题的逆时偏移算法。通过对点扩散函数的测试和分析，提出了采用Pekeris开波导Dirichlet零边界格林函数进行反传播和计算互相关的开波导逆时偏移算法。数值算例表明，该算法能够对嵌入Pekeris开波导不同介质层的扩展障碍物进行成像。
+
+此外，我们发现在开波导逆时偏移算法中，由于反传播函数和散射数据都会产生波导模式，故而当孔穴半径趋于无穷时，开波导逆时偏移算法的成像函数会产生收敛性问题。为此，我们推导了半空间两层介质阻抗零边界格林函数，并发现若阻抗系数$\lambda$取合理值，则阻抗格林函数函数不会产生波导模式。然后通过对点扩散函数的分析和测试，提出了采用半空间两层介质阻抗零边界格林函数进行反传播和计算互相关的阻抗型开波导逆时偏移算法。数值算例表明，阻抗格林函数可以替代开波导Dirichlet零边界格林函数做为反传播函数，同样可以对障碍物进行有效成像。
+
+\keywords{逆散射问题，逆时偏移算法，无相位数据，Pekeris开波导}
+%\end{abstract}
+
+
+\chapter{Abstract}% does not show the title on the top
+%\begin{englishabstract}
+
+\begin{center}
+Fang Shao-feng(majored in computational mathematics)
+
+Directed by Prof. Chen Zhi-ming
+
+\end{center}
+
+In this thesis statement, we focus on developing reverse time migration method for time harmonic acoustic wave inverse scattering problems in half space. The first research is to find the support of an unknown extended obstacle embedded in the half space using the amplitude of the total field, while the second one is to study reverse time migration algorithm in Pekeris open waveguide structure.
+
+In the diffractive optics imaging and radar imaging systems, measurement of the intensity of the total field is much easier and cheaper than the phase information of the field. So in the first part, we propose a phaseless directly imaging method for solving the half  space acoustic scattering problem. The new imaging algorithm still holds the advantages of half space reverse time migration method. In fact, it can efficiently find the location of unknown extended obstacles without any priori information. Furthermore, by a detailed analysis of resolution, we prove that the new imaging algorithm can achieve an extraordinary precision, which is the same as the primary one under suitable assumption. The conclusion is also confirmed by a plenty of numerical tests in the end.
+
+It is frequently to see that the target which we are trying to find is embedded in layered medias, such as oil exploration and ocean acoustic imaging. Because of the existence of guided modes, it is much more complicated to solve the waveguide scattering problem and inverse scattering problem. So in the second part, we try to have a clear understanding of how the acoustic wave propagates in open waveguide structure and propose corresponding reverse time migration algorithm, where we  use Pekeris waveguide model as an example. Thanks to the test and analysis of point spread function, we successfully propose the reverse time migration method of open waveguide structure. The algorithm takes the Pekeris open waveguide Dirichlet Green function to compute the processes of back propagation and cross correlation. The numerical examples clearly justify that our algorithm can find the location of obstacles embedded in different layers.
+
+In addition, we are also aware of an interesting and fatal problem in the above open waveguide reverse time migration algorithm. Due to the fact that both back propagation function and waveguide model will emerge many guided modes, the imaging function in the algorithm will not be  absolutely convergent as the aperture radius goes into infinity. Therefore,
+we derive the corresponding impedance zero boundary Green function of half space two layered media, and it is delightful to find that the impedance Green function will not emerge guided modes if we choose the impedance parameter properly. Based on this discovery and the test of point spread function, we propose an impedance open waveguide reverse time migration algorithm, which uses impedance Green function to back propagate the scattering data and compute the cross correlation . The numerical tests show that the new algorithm can achieve the same imaging property as the primary one.
+
+\englishkeywords{Inverse scattering problem, Reverse time migration algorithm, Phaseless data, Pekeris open waveguide}
+%\end{englishabstract}
+

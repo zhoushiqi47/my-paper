@@ -1,0 +1,476 @@
+\begin{thebibliography}{71}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI: #1}\else
+  \providecommand{\doi}{DOI: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Colton~et~al.(1998)Colton and Kress]{colton-kress}
+COLTON D, KRESS R.
+\newblock Inverse acoustic and electromagnetic scattering theory[M].
+\newblock [S.l.]: Springer-Verlag,, 1998: 1601.
+
+\bibitem[Cakoni~et~al.(2014{\natexlab{a}})Cakoni and Colton]{Cakoni2014A}
+CAKONI F, COLTON D.
+\newblock A Qualitative Approach to Inverse Scattering Theory[M].
+\newblock [S.l.]: Springer US, 2014{\natexlab{a}}.
+
+\bibitem[Mclean(2000)]{Mclean2000Strongly}
+MCLEAN W.
+\newblock Strongly elliptic systems and boundary integral equations /[M].
+\newblock [S.l.]: Cambridge University Press,, 2000.
+
+\bibitem[Bo~et~al.(1998)Bo and Chandler-Wilde]{Bo1998Acoustic}
+BO Z, CHANDLER-WILDE S N.
+\newblock Acoustic scattering by an inhomogeneous layer on a rigid plate[J].
+\newblock Siam Journal on Applied Mathematics.
+\newblock 1998, 58 (6): 1931-1950.
+
+\bibitem[Chandler-Wilde~et~al.(1996)Chandler-Wilde and
+  Ross]{Chandler1996Scattering}
+CHANDLER-WILDE S N, ROSS C R.
+\newblock Scattering by rough surfaces: the dirichlet problem for the helmholtz
+  equation in a non-locally perturbed half-plane[J].
+\newblock Mathematical Methods in the Applied Sciences.
+\newblock 1996, 19 (12): 959–976.
+
+\bibitem[Chandler-Wilde(1997)]{Chandler1997The}
+CHANDLER-WILDE S N.
+\newblock The impedance boundary value problem for the helmholtz equation in a
+  half-plane[J].
+\newblock Mathematical Methods in the Applied Sciences.
+\newblock 1997, 20 (10): 813–840.
+
+\bibitem[Chen~et~al.(2015{\natexlab{a}})Chen and Huang]{ch_ha}
+CHEN Z, HUANG G.
+\newblock Reverse time migration for reconstructing extended obstacles in the
+  half space[J].
+\newblock Inverse Problems.
+\newblock 2015{\natexlab{a}}, 31 (5): 55007-55025(19).
+
+\bibitem[Leis(1986)]{Leis1986Initial}
+LEIS R.
+\newblock Initial Boundary Value Problems in Mathematical Physics[M].
+\newblock [S.l.]: J. Wiley, 1986: 354-355.
+
+\bibitem[Chen~et~al.(2010)Chen and Zheng]{cz2010}
+CHEN Z, ZHENG W.
+\newblock Convergence of the Uniaxial Perfectly Matched Layer Method for
+  Time-Harmonic Scattering Problems in Two-Layered Media[M].
+\newblock [S.l.]: Society for Industrial and Applied Mathematics, 2010:
+  2158-2185.
+
+\bibitem[Chen~et~al.(2015{\natexlab{b}})Chen and Huang]{ch_cw}
+CHEN Z M, HUANG G H.
+\newblock Reverse time migration for reconstructing extended obstacles in
+  planar acoustic waveguides[J].
+\newblock Science China Mathematics.
+\newblock 2015{\natexlab{b}}, 58 (9): 1811-1834.
+
+\bibitem[Chen~et~al.(2013)Chen, Chen, and Huang]{cch_a}
+CHEN J, CHEN Z, HUANG G.
+\newblock Reverse time migration for extended obstacles: Acoustic waves[J].
+\newblock Inverse Problems.
+\newblock 2013, 29 (8): 645-648.
+
+\bibitem[Chen~et~al.(2015{\natexlab{c}})Chen, Chen, and Huang]{cch_e}
+CHEN J, CHEN Z, HUANG G.
+\newblock Reverse time migration for extended obstacles: Electromagnetic
+  waves[J].
+\newblock Inverse Problems.
+\newblock 2015{\natexlab{c}}, 29 (8): 085005.
+
+\bibitem[Chen~et~al.(2015{\natexlab{d}})Chen and Huang]{ch_e}
+CHEN Z, HUANG G H.
+\newblock Reverse time migration for extended obstacles:elastic waves[J].
+\newblock Scientia Sinica.
+\newblock 2015{\natexlab{d}}, 29 (8): 317-322.
+
+\bibitem[Arens~et~al.(2010)Arens, Gintides, and
+  Lechleiter]{Arens2010Variational}
+ARENS T, GINTIDES D, LECHLEITER A.
+\newblock Variational formulations for scattering in a 3-dimensional acoustic
+  waveguide[J].
+\newblock Mathematical Methods in the Applied Sciences.
+\newblock 2010, 31 (7): 821-847.
+
+\bibitem[Arens~et~al.(2011)Arens and Lechleiter]{Arens2011Direct}
+ARENS T, LECHLEITER A.
+\newblock Direct and inverse medium scattering in a three-dimensional
+  homogeneous planar waveguide[J].
+\newblock Siam Journal on Applied Mathematics.
+\newblock 2011, 71 (3): 753-772.
+
+\bibitem[Morgenrother~et~al.(1988)Morgenrother and Werner]{K1988On}
+MORGENROTHER K, WERNER P.
+\newblock On the principles of limiting absorption and limit amplitude for a
+  class of locally perturbed waveguides. part 1: Time-independent theory[J].
+\newblock Mathematical Methods in the Applied Sciences.
+\newblock 1988, 10 (2): 125–144.
+
+\bibitem[Morgenrother~et~al.(2010)Morgenrother and Werner]{K2010on}
+MORGENROTHER K, WERNER P.
+\newblock On the principles of limiting absorption and limit amplitude for a
+  class of locally perturbed waveguides. part 2: Time-dependent theory[J].
+\newblock Mathematical Methods in the Applied Sciences.
+\newblock 2010, 11 (1): 1-25.
+
+\bibitem[Xu(1990)]{Xu1990The}
+XU Y.
+\newblock The propagating solutions and far-field patterns for acoustic
+  harmonic waves in a finite depth ocean[J].
+\newblock Applicable Analysis.
+\newblock 1990, 35 (1-4): 129-151.
+
+\bibitem[Linton~et~al.(2013)Linton and Mciver]{Linton2013Embedded}
+LINTON C M, MCIVER P.
+\newblock Embedded trapped modes in water waves and acoustics[J].
+\newblock Wave Motion.
+\newblock 2013, 45 (1): 16-29.
+
+\bibitem[Ciraolo~et~al.(2009)Ciraolo and Magnanini]{Ciraolo2009A1}
+CIRAOLO G, MAGNANINI R.
+\newblock A radiation condition for uniqueness in a wave propagation problem
+  for 2-d open waveguides[J].
+\newblock Mathematical Methods in the Applied Sciences.
+\newblock 2009, 32 (10): 1183-1206.
+
+\bibitem[Ciraolo(2009)]{Ciraolo2009A2}
+CIRAOLO G.
+\newblock A radiation condition for the 2-d helmholtz equation in stratified
+  media[J].
+\newblock Communications in Partial Differential Equations.
+\newblock 2009, 34 (12): 1592-1606.
+
+\bibitem[Dhia~et~al.(2009)Dhia, Dakhia, Hazard, and
+  Chorfi]{Dhia2009DIFFRACTION}
+DHIA B B, DAKHIA G, HAZARD C, et~al.
+\newblock Diffraction by a defect in an open waveguide: A mathematical analysis
+  based on a modal radiation condition[J].
+\newblock Siam Journal on Applied Mathematics.
+\newblock 2009, 70 (3): 677-693.
+
+\bibitem[Jerez-Hanckes~et~al.(2012)Jerez-Hanckes and
+  Nedelec]{Jerez2012Asymptotics}
+JEREZ-HANCKES C, NEDELEC J C.
+\newblock Asymptotics for helmholtz and maxwell solutions in 3-d open
+  waveguides[J].
+\newblock Communications in Computational Physics.
+\newblock 2012, 11 (2): 629-646.
+
+\bibitem[Littman(1982)]{Littman1982Spectral}
+LITTMAN W.
+\newblock Spectral properties of operators arising in acoustic wave propagation
+  in an ocean of variable depth[J].
+\newblock Applied Mathematics $\&$ Optimization.
+\newblock 1982, 8 (1): 189-196.
+
+\bibitem[Weder(1988)]{Weder1988Absence}
+WEDER R.
+\newblock Absence of eigenvalues of the acoustic propagator in deformed wave
+  guides[J].
+\newblock Rocky Mountain Journal of Mathematics.
+\newblock 1988, 18 (18): 495-504.
+
+\bibitem[Hazard(2014)]{Hazard2014On}
+HAZARD C.
+\newblock On the absence of trapped modes in locally perturbed open
+  waveguides[J].
+\newblock Ima Journal of Applied Mathematics.
+\newblock 2014, 80 (4): 1049.
+
+\bibitem[Gilbert~et~al.(2007{\natexlab{a}})Gilbert, Hackl, and
+  Xu]{Gilbert2007Inverse}
+GILBERT R, HACKL K, XU Y.
+\newblock Inverse problem for wave propagation in a perturbed layered
+  half-space[J].
+\newblock Mathematical $\&$ Computer Modelling.
+\newblock 2007{\natexlab{a}}, 45 (1–2): 21-33.
+
+\bibitem[Ammari~et~al.(2005{\natexlab{a}})Ammari and
+  Kang]{Ammari2005Reconstruction}
+AMMARI H, KANG H.
+\newblock Reconstruction of a small inclusion in a two-dimensional open
+  waveguide[J].
+\newblock Siam Journal on Applied Mathematics.
+\newblock 2005{\natexlab{a}}, 65 (6): 2107-2127.
+
+\bibitem[Gang~et~al.(2013)Gang and Faouzi]{Bao2013Reconstruction}
+GANG B, FAOUZI T.
+\newblock Reconstruction of a defect in an open waveguide[J].
+\newblock Science China Mathematics.
+\newblock 2013, 56 (12): 2539-2548.
+
+\bibitem[Bao(2005)]{Bao2005Inverse}
+BAO G.
+\newblock Inverse medium scattering problems for electromagnetic waves[J].
+\newblock Siam Journal on Applied Mathematics.
+\newblock 2005, 65 (6): 2049-2066.
+
+\bibitem[Bao~et~al.(2010)Bao and Triki]{Bao2010Error}
+BAO G, TRIKI F.
+\newblock Error estimates for the recursive linearization of inverse medium
+  problems[J].
+\newblock 计算数学(英文版).
+\newblock 2010, 28 (6): 725-744.
+
+\bibitem[Bao~et~al.(2011)Bao, Lin, and Triki]{Bao2011An}
+BAO G, LIN J, TRIKI F.
+\newblock An inverse source problem with multiple frequency data[J].
+\newblock Comptes rendus - Mathématique.
+\newblock 2011, 349 (15): 855-859.
+
+\bibitem[Devaney(1989)]{d89}
+DEVANEY A J.
+\newblock Structure determination from intensity measurements in scattering
+  experiments[J].
+\newblock Physical review letters.
+\newblock 1989, 62 (20): 2385.
+
+\bibitem[D'Urso~et~al.(2008)D'Urso, Belkebir, Crocco, Isernia, and Litman]{dbc}
+D'URSO M, BELKEBIR K, CROCCO L, et~al.
+\newblock Phaseless imaging with experimental data: facts and challenges.[J].
+\newblock Journal of the Optical Society of America A.
+\newblock 2008, 25 (1): 271-81.
+
+\bibitem[Franceschini~et~al.(2006)Franceschini, Donelli, Azaro, and Massa]{fda}
+FRANCESCHINI G, DONELLI M, AZARO R, et~al.
+\newblock Inversion of phaseless total field data using a two-step strategy
+  based on the iterative multiscaling approach[J].
+\newblock IEEE transactions on geoscience and remote sensing.
+\newblock 2006, 44 (12): 3527--3539.
+
+\bibitem[Bardsley~et~al.(2016)Bardsley and Vasquez]{bv}
+BARDSLEY P, VASQUEZ F G.
+\newblock Kirchhoff migration without phases[J].
+\newblock Inverse Problems.
+\newblock 2016, 10 (10).
+
+\bibitem[Darwish~et~al.(2014)Darwish, Batayneh, Jenkins, Scott, Collier, and
+  Mcelnay]{nmp}
+DARWISH M, BATAYNEH M, JENKINS J, et~al.
+\newblock Illumination strategies for intensity-only imaging[J].
+\newblock Mathematics.
+\newblock 2014, 8 (3): 139-166.
+
+\bibitem[Kress~et~al.(1997)Kress and Rundell]{kr}
+KRESS R, RUNDELL W.
+\newblock Inverse obstacle scattering with modulus of the far field pattern as
+  data[J].
+\newblock Inverse problems in medical imaging and nondestructive testing
+  (Oberwolfach, 1996).
+\newblock 1997: 75--92.
+
+\bibitem[Ivanyshyn~et~al.(2010)Ivanyshyn and Kress]{LK2010}
+IVANYSHYN O, KRESS R.
+\newblock Identification of sound-soft 3d obstacles from phaseless data[J].
+\newblock Inverse Problem and Imaing.
+\newblock 2010, 4: 131--149.
+
+\bibitem[Ivanyshyn~et~al.(2011)Ivanyshyn and Kress]{LK2011}
+IVANYSHYN O, KRESS R.
+\newblock Inverse scattering for surface impedance from phase-less far field
+  data[J].
+\newblock Journal of Computational Physics.
+\newblock 2011, 230 (9): 3443--3452.
+
+\bibitem[Bao~et~al.(2013)Bao, Li, and Lv]{bll}
+BAO G, LI P, LV J.
+\newblock Numerical solution of an inverse diffraction grating problem from
+  phaseless data[J].
+\newblock Journal of the Optical Society of America A Optics Image Science $\&$
+  Vision.
+\newblock 2013, 30 (3): 293.
+
+\bibitem[Chai~et~al.(2011)Chai, Moscoso, and Papanicolaou]{cmp}
+CHAI A, MOSCOSO M, PAPANICOLAOU G.
+\newblock Array imaging using intensity-only measurements[J].
+\newblock Inverse Problems.
+\newblock 2011, 27 (1): 15005-16.
+
+\bibitem[Bleistein~et~al.(2001)Bleistein, Stockwell, and Cohen]{bcs}
+BLEISTEIN N, STOCKWELL J W, COHEN J K.
+\newblock Mathematics of Multidimensional Seismic Imaging, Migration, and
+  Inversion[M].
+\newblock [S.l.]: [s.n.], 2001: B94.
+
+\bibitem[Chen~et~al.(2015{\natexlab{e}})Chen and Huang]{ch_pha}
+CHEN Z, HUANG G.
+\newblock Phaseless imaging by reverse time migration: Acoustic waves[J].
+\newblock Mathematics.
+\newblock 2015{\natexlab{e}}.
+
+\bibitem[Zhang~et~al.(2007)Zhang, Xu, Bleistein, and Zhang]{zs07}
+ZHANG Y, XU S, BLEISTEIN N, et~al.
+\newblock True-amplitude, angle-domain, common-image gathers from one-way
+  wave-equation migrations[J].
+\newblock Geophysics.
+\newblock 2007, 72 (1): S49-S58.
+
+\bibitem[Zhang~et~al.(2009)Zhang and Sun]{zs09}
+ZHANG Y, SUN J.
+\newblock Practical issues of reverse time migration: true amplitude gathers,
+  noise removal and harmonic-source encoding[J].
+\newblock Aseg Extended Abstracts.
+\newblock 2009, 2009 (3): 397-398.
+
+\bibitem[Cakoni~et~al.(2014{\natexlab{b}})Cakoni and Colton]{cc14}
+CAKONI F, COLTON D.
+\newblock A qualitative approach to inverse scattering theory[J].
+\newblock Applied Mathematical Sciences.
+\newblock 2014{\natexlab{b}}, 188.
+
+\bibitem[Chandler-Wilde~et~al.(2009)Chandler-Wilde, Graham, Langdon, and
+  Lindner]{cg09}
+CHANDLER-WILDE S N, GRAHAM I G, LANGDON S, et~al.
+\newblock Condition number estimates for combined potential boundary integral
+  operators in acoustic scattering[J].
+\newblock Journal of Integral Equations $\&$ Applications.
+\newblock 2009, 21 (2): 229-279.
+
+\bibitem[Watson(1995)]{watson}
+WATSON G N.
+\newblock A treatise on the theory of Bessel functions[M].
+\newblock [S.l.]: Cambridge university press, 1995.
+
+\bibitem[Grafakos(2004)]{grafakos}
+GRAFAKOS L.
+\newblock Classical and modern fourier analysis[J].
+\newblock Prentice Hall.
+\newblock 2004.
+
+\bibitem[Gilbert~et~al.(2007{\natexlab{b}})Gilbert, Hackl, and
+  Xu]{Robert2007Inverse}
+GILBERT R, HACKL K, XU Y.
+\newblock Inverse problem for wave propagation in a perturbed layered
+  half-space[J].
+\newblock Mathematical and Computer Modelling.
+\newblock 2007{\natexlab{b}}, 45 (1–2): 21-33.
+
+\bibitem[Garnier~et~al.(2012)Garnier and Papanicolaou]{Garnier2012Correlation}
+GARNIER J, PAPANICOLAOU G.
+\newblock Correlation-based virtual source imaging in strongly scattering
+  random media[J].
+\newblock Inverse Problems.
+\newblock 2012, 28 (28): 75002-75039(38).
+
+\bibitem[Katsnelson~et~al.(2012)Katsnelson, Petnikov, and
+  Lynch]{Katsnelson2012Fundamentals}
+KATSNELSON B, PETNIKOV V, LYNCH J.
+\newblock Fundamentals of shallow water acoustics[J].
+\newblock Underwater Acoustics.
+\newblock 2012: 145-191.
+
+\bibitem[Kuperman~et~al.(2011)Kuperman, Kuperman, and
+  Kuperman]{Kuperman2011Computational}
+KUPERMAN W A, KUPERMAN W A, KUPERMAN W A.
+\newblock Computational Ocean Acoustics[M].
+\newblock [S.l.]: Springer New York, 2011: 1-64.
+
+\bibitem[Chew(1995)]{Chew1995Waves}
+CHEW W C.
+\newblock Waves and fields in inhomogeneous media[M].
+\newblock [S.l.]: Van Nostrand Reinhold, 1995.
+
+\bibitem[Desanto(1992)]{Desanto1992Scalar}
+DESANTO J A.
+\newblock Scalar Wave Theory[M].
+\newblock [S.l.]: Springer Berlin Heidelberg, 1992: 1-31.
+
+\bibitem[黄光辉(2014)]{thesis_guanghui}
+黄光辉.
+\newblock 逆散射问题的逆时偏移方法[D].
+\newblock [出版地不详]: 中国科学院大学, 2014.
+
+\bibitem[Magnanini~et~al.(2000)Magnanini and Santosa]{Magnanini2000Wave}
+MAGNANINI R, SANTOSA F.
+\newblock Wave propagation in a 2-d optical waveguide[J].
+\newblock Siam Journal on Applied Mathematics.
+\newblock 2000, 61 (4): 1237-1252.
+
+\bibitem[Ammari(2003)]{Ammari2003Resonances}
+AMMARI H.
+\newblock Resonances for microstrip transmission lines[J].
+\newblock Siam Journal on Applied Mathematics.
+\newblock 2003, 64 (2): 601-636.
+
+\bibitem[Ciraolo(2008)]{Ciraolo2008NON}
+CIRAOLO G.
+\newblock Non-rectilinear waveguides: Analytical and numerical results based on
+  the green's function[M]//[S.l.]: [s.n.], 2008.
+
+\bibitem[Weder(1991)]{Weder1991Spectral}
+WEDER R.
+\newblock Spectral and Scattering Theory for Wave Propagation in Perturbed
+  Stratified Media[M].
+\newblock [S.l.]: Springer New York, 1991: 137-167.
+
+\bibitem[Hazard(2009)]{Hazard2009A}
+HAZARD C.
+\newblock A distribution framework for the generalized fourier transform
+  associated with a sturm--liouville operator[J].
+\newblock Functional Analysis.
+\newblock 2009.
+
+\bibitem[Rellich(1943)]{Rellich1943}
+RELLICH F.
+\newblock Uber das asymptotische verhalten der l$\ddot{o}$sungen von $\delta
+  u+\lambda u=0$ in unendlichen gebieten.[J].
+\newblock Jahresbericht der Deutschen Mathematiker-Vereinigung.
+\newblock 1943: 57-65.
+
+\bibitem[Wilcox(1976)]{Wilcox1976Spectral}
+WILCOX C.
+\newblock Spectral analysis of the pekeris operator in the theory of acoustic
+  wave propagation in shallow water[J].
+\newblock Archive for Rational Mechanics $\&$ Analysis.
+\newblock 1976, 60 (3): 259-300.
+
+\bibitem[Wilcox(1984)]{Wilcox1984Sound}
+WILCOX C H.
+\newblock Sound Propagation in Stratified Fluids[M].
+\newblock [S.l.]: Springer-Verlag,, 1984: 495-9.
+
+\bibitem[Ammari~et~al.(2005{\natexlab{b}})Ammari, Iakovleva, and
+  Lesselier]{Ammari2005A}
+AMMARI H, IAKOVLEVA E, LESSELIER D.
+\newblock A music algorithm for locating small inclusions buried in a
+  half-space from the scattering amplitude at a fixed frequency[J].
+\newblock Siam Journal on Multiscale Modeling $\&$ Simulation.
+\newblock 2005{\natexlab{b}}, 3 (3): 597-628.
+
+\bibitem[Melrose~et~al.(1985)Melrose and Taylor]{Melrose1985Near}
+MELROSE R B, TAYLOR M E.
+\newblock Near peak scattering and the corrected kirchhoff approximation for a
+  convex obstacle[J].
+\newblock Advances in Mathematics.
+\newblock 1985, 55 (3): 242-315.
+
+\bibitem[Ammari~et~al.(2013{\natexlab{a}})Ammari, Kang, Lee, Lim, and
+  Yu]{Ammari2013Enhancement}
+AMMARI H, KANG H, LEE H, et~al.
+\newblock Enhancement of near-cloaking for the full maxwell equations[J].
+\newblock Siam Journal on Applied Mathematics.
+\newblock 2013{\natexlab{a}}, 73 (6): 2055-2076.
+
+\bibitem[Ammari~et~al.(2013{\natexlab{b}})Ammari, Chow, and Zou]{Ammari2013The}
+AMMARI H, CHOW Y T, ZOU J.
+\newblock The concept of heterogeneous scattering coefficients and its
+  application in inverse medium scattering[J].
+\newblock Mathematics.
+\newblock 2013{\natexlab{b}}, 46.
+
+\bibitem[Ammari~et~al.(2015)Ammari and Zhang]{Ammari2015Super}
+AMMARI H, ZHANG H.
+\newblock Super-resolution in high contrast media[J].
+\newblock Proceedings of the Royal Society A Mathematical Physical $\&$
+  Engineering Sciences.
+\newblock 2015, 471 (2178): 469 - 472.
+
+\bibitem[Hirst~et~al.(2013)Hirst, Lockheart, and Ogden]{Hirst2013Enhancement}
+HIRST K, LOCKHEART A, OGDEN J E.
+\newblock Enhancement of near-cloaking. part ii: The helmholtz equation[J].
+\newblock Communications in Mathematical Physics.
+\newblock 2013, 317 (2): 485-502.
+
+\end{thebibliography}

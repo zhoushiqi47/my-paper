@@ -1,0 +1,4125 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2018.3.14)  16 MAY 2018 19:05
+entering extended mode
+**Thesis_Report.tex
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamer.cls
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasercs.sty
+Package: beamerbasercs 2012/02/22 (rcs-revision 46e1bc9c9b76)
+)
+Document Class: beamer 2011/09/12 development version 3.14 A class for typesett
+ing presentations (rcs-revision 70f9d8411e54)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasemodes.sty
+Package: beamerbasemodes 2010/05/01 (rcs-revision efa082c6111d)
+\beamer@tempbox=\box26
+\beamer@tempcount=\count79
+\c@beamerpauses=\count80
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasedecode.sty
+Package: beamerbasedecode 2010/05/01 (rcs-revision efa082c6111d)
+\beamer@slideinframe=\count81
+\beamer@minimum=\count82
+)
+\beamer@commentbox=\box27
+\beamer@modecount=\count83
+)
+(D:\CTEX\MiKTeX\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+\headheight=\dimen102
+\headdp=\dimen103
+\footheight=\dimen104
+\sidebarheight=\dimen105
+\beamer@tempdim=\dimen106
+\beamer@finalheight=\dimen107
+\beamer@animht=\dimen108
+\beamer@animdp=\dimen109
+\beamer@animwd=\dimen110
+\beamer@leftmargin=\dimen111
+\beamer@rightmargin=\dimen112
+\beamer@leftsidebar=\dimen113
+\beamer@rightsidebar=\dimen114
+\beamer@boxsize=\dimen115
+\beamer@vboxoffset=\dimen116
+\beamer@descdefault=\dimen117
+\beamer@descriptionwidth=\dimen118
+\beamer@lastskip=\skip41
+\beamer@areabox=\box28
+\beamer@animcurrent=\box29
+\beamer@animshowbox=\box30
+\beamer@sectionbox=\box31
+\beamer@logobox=\box32
+\beamer@linebox=\box33
+\beamer@sectioncount=\count84
+\beamer@subsubsectionmax=\count85
+\beamer@subsectionmax=\count86
+\beamer@sectionmax=\count87
+\beamer@totalheads=\count88
+\beamer@headcounter=\count89
+\beamer@partstartpage=\count90
+\beamer@sectionstartpage=\count91
+\beamer@subsectionstartpage=\count92
+\beamer@animationtempa=\count93
+\beamer@animationtempb=\count94
+\beamer@xpos=\count95
+\beamer@ypos=\count96
+\beamer@showpartnumber=\count97
+\beamer@currentsubsection=\count98
+\beamer@coveringdepth=\count99
+\beamer@sectionadjust=\count100
+\beamer@tocsectionnumber=\count101
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbaseoptions.sty
+Package: beamerbaseoptions 2010/04/27 (rcs-revision 982469101dd6)
+
+(D:\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+))
+\beamer@paperwidth=\skip42
+\beamer@paperheight=\skip43
+
+(D:\CTEX\MiKTeX\tex\latex\geometry\geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(D:\CTEX\MiKTeX\tex\generic\oberdiek\ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(D:\CTEX\MiKTeX\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count102
+\Gm@cntv=\count103
+\c@Gm@tempcnt=\count104
+\Gm@bindingoffset=\dimen119
+\Gm@wd@mp=\dimen120
+\Gm@odd@mp=\dimen121
+\Gm@even@mp=\dimen122
+\Gm@layoutwidth=\dimen123
+\Gm@layoutheight=\dimen124
+\Gm@layouthoffset=\dimen125
+\Gm@layoutvoffset=\dimen126
+\Gm@dimlist=\toks15
+
+(D:\CTEX\MiKTeX\tex\latex\geometry\geometry.cfg))
+(D:\CTEX\MiKTeX\tex\latex\extsizes\size8.clo
+File: size8.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+)
+(D:\CTEX\MiKTeX\tex\latex\pgf\basiclayer\pgfcore.sty
+(D:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(D:\CTEX\MiKTeX\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(D:\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(D:\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(D:\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(D:\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count105
+))
+\Gin@req@height=\dimen127
+\Gin@req@width=\dimen128
+)
+(D:\CTEX\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+(D:\CTEX\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+(D:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks16
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfutil-latex.def
+\pgfutil@abb=\box34
+
+(D:\CTEX\MiKTeX\tex\latex\ms\everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(D:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+))
+(D:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+
+(D:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+(D:\CTEX\MiKTeX\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks19
+))
+\pgf@x=\dimen129
+\pgf@y=\dimen130
+\pgf@xa=\dimen131
+\pgf@ya=\dimen132
+\pgf@xb=\dimen133
+\pgf@yb=\dimen134
+\pgf@xc=\dimen135
+\pgf@yc=\dimen136
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count106
+\c@pgf@countb=\count107
+\c@pgf@countc=\count108
+\c@pgf@countd=\count109
+
+(D:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+
+(D:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+
+(D:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+)))
+(D:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+\pgfsyssoftpath@smallbuffer@items=\count110
+\pgfsyssoftpath@bigbuffer@items=\count111
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(D:\CTEX\MiKTeX\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(D:\CTEX\MiKTeX\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcore.code.tex
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathcalc.code.tex
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathutil.code.tex)
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen137
+\pgfmath@count=\count112
+\pgfmath@box=\box35
+\pgfmath@toks=\toks20
+\pgfmath@stack@operand=\toks21
+\pgfmath@stack@operation=\toks22
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.code.tex
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex)
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex)
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.random.code.tex)
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex)
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.base.code.tex)
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.round.code.tex)
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex)))
+(D:\CTEX\MiKTeX\tex\generic\pgf\math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count113
+))
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen138
+\pgf@picmaxx=\dimen139
+\pgf@picminy=\dimen140
+\pgf@picmaxy=\dimen141
+\pgf@pathminx=\dimen142
+\pgf@pathmaxx=\dimen143
+\pgf@pathminy=\dimen144
+\pgf@pathmaxy=\dimen145
+\pgf@xx=\dimen146
+\pgf@xy=\dimen147
+\pgf@yx=\dimen148
+\pgf@yy=\dimen149
+\pgf@zx=\dimen150
+\pgf@zy=\dimen151
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen152
+\pgf@path@lasty=\dimen153
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen154
+\pgf@shorten@start@additional=\dimen155
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+\pgfpic=\box36
+\pgf@hbox=\box37
+\pgf@layerbox@main=\box38
+\pgf@picture@serial@count=\count114
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen156
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen157
+\pgf@pt@y=\dimen158
+\pgf@pt@temp=\dimen159
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen160
+\pgf@sys@shading@range@num=\count115
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+\pgfexternal@startupbox=\box39
+))
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+)
+(D:\CTEX\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+)))
+(D:\CTEX\MiKTeX\tex\latex\pgf\utilities\xxcolor.sty
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count116
+\XC@countmixins=\count117
+)
+(D:\CTEX\MiKTeX\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2012/02/06 v6.82o Hypertext links for LaTeX
+
+(D:\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty
+Package: hobsub-hyperref 2011/04/23 v1.4 Bundle oberdiek, subset hyperref (HO)
+
+(D:\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty
+Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
+Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
+Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provides unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/01/30 v1.0 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
+Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
+)
+(D:\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+)
+\@linkdim=\dimen161
+\Hy@linkcounter=\count118
+\Hy@pagecounter=\count119
+
+(D:\CTEX\MiKTeX\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2012/02/06 v6.82o Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count120
+
+(D:\CTEX\MiKTeX\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 3925.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 3925.
+Package hyperref Info: Option `implicit' set `false' on input line 3925.
+Package hyperref Info: Hyper figures OFF on input line 4046.
+Package hyperref Info: Link nesting OFF on input line 4051.
+Package hyperref Info: Hyper index ON on input line 4054.
+Package hyperref Info: Plain pages OFF on input line 4061.
+Package hyperref Info: Backreferencing OFF on input line 4066.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4284.
+\c@Hy@tempcnt=\count121
+
+(D:\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4637.
+\Fld@menulength=\count122
+\Field@Width=\dimen162
+\Fld@charsize=\dimen163
+Package hyperref Info: Hyper figures OFF on input line 5757.
+Package hyperref Info: Link nesting OFF on input line 5762.
+Package hyperref Info: Hyper index ON on input line 5765.
+Package hyperref Info: backreferencing OFF on input line 5772.
+Package hyperref Info: Link coloring OFF on input line 5777.
+Package hyperref Info: Link coloring with OCG OFF on input line 5782.
+Package hyperref Info: PDF/A mode OFF on input line 5787.
+LaTeX Info: Redefining \ref on input line 5827.
+LaTeX Info: Redefining \pageref on input line 5831.
+\Hy@abspage=\count123
+
+
+Package hyperref Message: Stopped early.
+
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(D:\CTEX\MiKTeX\tex\latex\hyperref\hpdftex.def
+File: hpdftex.def 2012/02/06 v6.82o Hyperref driver for pdfTeX
+\Fld@listcount=\count124
+\c@bookmark@seq@number=\count125
+
+(D:\CTEX\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+))
+Package hyperref Info: Option `CJKbookmarks' set `true' on input line 365.
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbaserequires.sty
+Package: beamerbaserequires 2010/05/01  (rcs-revision efa082c6111d)
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasecompatibility.sty
+Package: beamerbasecompatibility 2011/09/24  (rcs-revision 17e820568435)
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasefont.sty
+Package: beamerbasefont 2010/10/26  (rcs-revision f39336aafb3c)
+
+(D:\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(D:\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks23
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)))
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasetranslator.sty
+Package: beamerbasetranslator 2010/06/11  (rcs-revision 85fd1cc7fc42)
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\translator\translator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\translator\translator-language-mappings.t
+ex))) (D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasemisc.sty
+Package: beamerbasemisc 2012/02/24  (rcs-revision 2ff5461be705)
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasetwoscreens.sty
+Package: beamerbasetwoscreens 2010/05/01  (rcs-revision efa082c6111d)
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbaseoverlay.sty
+Package: beamerbaseoverlay 2012/02/22  (rcs-revision 1e3e174835fb)
+\beamer@argscount=\count126
+\beamer@lastskipcover=\skip44
+\beamer@trivlistdepth=\count127
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasetitle.sty
+Package: beamerbasetitle 2010/09/21  (rcs-revision f0446ed0b6ae)
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasesection.sty
+Package: beamerbasesection 2012/02/22  (rcs-revision 9a2581f9efb6)
+\c@lecture=\count128
+\c@part=\count129
+\c@section=\count130
+\c@subsection=\count131
+\c@subsubsection=\count132
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbaseframe.sty
+Package: beamerbaseframe 2011/09/12  (rcs-revision 70f9d8411e54)
+\beamer@framebox=\box40
+\beamer@frametitlebox=\box41
+\beamer@zoombox=\box42
+\beamer@zoomcount=\count133
+\beamer@zoomframecount=\count134
+\beamer@frametextheight=\dimen164
+\c@subsectionslide=\count135
+\beamer@frametopskip=\skip45
+\beamer@framebottomskip=\skip46
+\beamer@frametopskipautobreak=\skip47
+\beamer@framebottomskipautobreak=\skip48
+\beamer@envbody=\toks24
+\c@framenumber=\count136
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbaseverbatim.sty
+Package: beamerbaseverbatim 2011/09/12  (rcs-revision 70f9d8411e54)
+\beamer@verbatimfileout=\write4
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbaseframesize.sty
+Package: beamerbaseframesize 2011/09/12  (rcs-revision 70f9d8411e54)
+\beamer@splitbox=\box43
+\beamer@autobreakcount=\count137
+\beamer@autobreaklastheight=\dimen165
+\beamer@frametitletoks=\toks25
+\beamer@framesubtitletoks=\toks26
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbaseframecomponents.sty
+Package: beamerbaseframecomponents 2011/09/12  (rcs-revision 70f9d8411e54)
+\beamer@footins=\box44
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasecolor.sty
+Package: beamerbasecolor 2010/06/06  (rcs-revision d1a9b48be06d)
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasenotes.sty
+Package: beamerbasenotes 2010/05/01  (rcs-revision efa082c6111d)
+\beamer@frameboxcopy=\box45
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasetoc.sty
+Package: beamerbasetoc 2012/02/28  (rcs-revision 138681b92320)
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasetemplates.sty
+Package: beamerbasetemplates 2010/05/01  (rcs-revision efa082c6111d)
+\beamer@sbttoks=\toks27
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbaseauxtemplates.sty
+Package: beamerbaseauxtemplates 2010/05/01  (rcs-revision efa082c6111d)
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbaseboxes.sty
+Package: beamerbaseboxes 2010/05/01  (rcs-revision efa082c6111d)
+\bmb@box=\box46
+\bmb@colorbox=\box47
+\bmb@boxshadow=\box48
+\bmb@boxshadowball=\box49
+\bmb@boxshadowballlarge=\box50
+\bmb@temp=\dimen166
+\bmb@dima=\dimen167
+\bmb@dimb=\dimen168
+\bmb@prevheight=\dimen169
+)
+\beamer@blockheadheight=\dimen170
+))
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbaselocalstructure.sty
+Package: beamerbaselocalstructure 2012/02/22  (rcs-revision 2ae76965ffee)
+
+(D:\CTEX\MiKTeX\tex\latex\tools\enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks28
+)
+\c@figure=\count138
+\c@table=\count139
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasenavigation.sty
+Package: beamerbasenavigation 2010/05/01  (rcs-revision efa082c6111d)
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasetheorems.sty
+Package: beamerbasetheorems 2010/06/06  (rcs-revision 7e7cc5e53e9d)
+
+(D:\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(D:\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(D:\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks29
+\ex@=\dimen171
+))
+(D:\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen172
+)
+(D:\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count140
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count141
+\leftroot@=\count142
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count143
+\DOTSCASE@=\count144
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen173
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count145
+\c@MaxMatrixCols=\count146
+\dotsspace@=\muskip11
+\c@parentequation=\count147
+\dspbrk@lvl=\count148
+\tag@help=\toks30
+\row@=\count149
+\column@=\count150
+\maxfields@=\count151
+\andhelp@=\toks31
+\eqnshift@=\dimen174
+\alignsep@=\dimen175
+\tagshift@=\dimen176
+\tagwidth@=\dimen177
+\totwidth@=\dimen178
+\lineht@=\dimen179
+\@envbody=\toks32
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks33
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(D:\CTEX\MiKTeX\tex\latex\ams\classes\amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks34
+\thm@bodyfont=\toks35
+\thm@headfont=\toks36
+\thm@notefont=\toks37
+\thm@headpunct=\toks38
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks39
+)
+\c@theorem=\count152
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\beamerbasethemes.sty
+Package: beamerbasethemes 2010/05/01  (rcs-revision efa082c6111d)
+))
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\theme\beamerthemedefault.sty
+Package: beamerthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\font\beamerfontthemedefault.sty
+Package: beamerfontthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\color\beamercolorthemedefault.sty
+Package: beamercolorthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+) (D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\inner\beamerinnerthemedefault.st
+y
+Package: beamerinnerthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+\beamer@dima=\dimen180
+\beamer@dimb=\dimen181
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\outer\beamerouterthemedefault.sty
+Package: beamerouterthemedefault 2010/06/17  (rcs-revision d02a7cf4d8ae)
+))) (D:\CTEX\MiKTeX\tex\latex\jknappen\mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(D:\CTEX\MiKTeX\tex\latex\clock\clock.sty
+Package: clock 2001/04/10 v0.1 TeXclock
+
+(D:\CTEX\MiKTeX\tex\generic\clock\clock.tex
+\time@in@minutes=\count153
+\floor@minutes=\count154
+\hour@minutes=\count155
+\text@hours=\count156
+\text@minutes=\count157
+\my@minute=\count158
+\my@minutes=\count159
+\my@hour=\count160
+\ClockStyle=\count161
+))
+(D:\CTEX\MiKTeX\tex\latex\base\textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(D:\CTEX\MiKTeX\tex\latex\base\ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(D:\CTEX\MiKTeX\tex\latex\base\fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(D:\CTEX\MiKTeX\tex\latex\base\t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(D:\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(D:\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(D:\CTEX\MiKTeX\tex\latex\oberdiek\grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\theme\beamerthemeWarsaw.sty
+Package: beamerthemeWarsaw 2010/06/17  (rcs-revision d02a7cf4d8ae)
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\inner\beamerinnerthemerounded.sty
+Package: beamerinnerthemerounded 2010/06/17  (rcs-revision d02a7cf4d8ae)
+) (D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\outer\beamerouterthemeshadow.sty
+Package: beamerouterthemeshadow 2010/06/17  (rcs-revision d02a7cf4d8ae)
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\outer\beamerouterthemesplit.sty
+Package: beamerouterthemesplit 2010/06/17  (rcs-revision d02a7cf4d8ae)
+))
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\color\beamercolorthemeorchid.sty
+Package: beamercolorthemeorchid 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\color\beamercolorthemewhale.sty
+Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
+))
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\themes\font\beamerfontthemeprofessionalfo
+nts.sty
+Package: beamerfontthemeprofessionalfonts 2010/06/17  (rcs-revision d02a7cf4d8a
+e)
+) (D:\CTEX\MiKTeX\tex\latex\cjk\CJK.sty
+Package: CJK 2008/12/29 4.8.2
+
+(D:\CTEX\MiKTeX\tex\latex\cjk\mule\MULEenc.sty
+Package: MULEenc 2008/12/29 4.8.2
+)
+(D:\CTEX\MiKTeX\tex\latex\cjk\CJK.enc
+File: CJK.enc 2008/12/29 4.8.2
+)
+LaTeX Info: Redefining \selectfont on input line 756.
+\CJK@indent=\box53
+)
+(D:\CTEX\MiKTeX\tex\latex\cjk\standard.bdg
+File: standard.bdg 2008/12/29 4.8.2
+)
+(D:\CTEX\MiKTeX\tex\latex\cjk\extended.enc
+File: extended.enc 2008/12/29 4.8.2
+)
+(D:\CTEX\MiKTeX\tex\latex\cjk\extended.chr
+File: extended.chr 2008/12/29 4.8.2
+)
+\c@algorithm=\count162
+\c@lem=\count163
+\c@them=\count164
+\c@assumption=\count165
+\c@remark=\count166
+\c@question=\count167
+
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.aux
+
+LaTeX Warning: Label `NhMh' multiply defined.
+
+
+LaTeX Warning: Label `Id_half' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/clock/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 45.
+ (D:\CTEX\MiKTeX\tex\latex\base\ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=307.28987pt
+* \textheight=244.6939pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=9.0pt
+* \footskip=14.22636pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=7.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(D:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count168
+\scratchdimen=\dimen182
+\scratchbox=\box54
+\nofMPsegments=\count169
+\nofMParguments=\count170
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count171
+\MPscratchDim=\dimen183
+\MPnumerator=\count172
+\makeMPintoPDFobject=\count173
+\everyMPtoPDFconversion=\toks41
+) ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box55
+Package hyperref Info: Link coloring OFF on input line 45.
+
+(D:\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+(D:\CTEX\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count174
+)
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
+
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.out)
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.out)
+\@outlinefile=\write5
+
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\translator\dicts\translator-basic-diction
+ary\translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\translator\dicts\translator-bibliography-
+dictionary\translator-bibliography-dictionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\translator\dicts\translator-environment-d
+ictionary\translator-environment-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\translator\dicts\translator-months-dictio
+nary\translator-months-dictionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\translator\dicts\translator-numbers-dicti
+onary\translator-numbers-dictionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(D:\CTEX\MiKTeX\tex\latex\beamer\base\translator\dicts\translator-theorem-dicti
+onary\translator-theorem-dictionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+)
+LaTeX Info: Redefining \includegraphics on input line 45.
+
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.nav)
+
+Package hyperref Warning: Option `pdfauthor' has already been used,
+(hyperref)                setting the option has no effect on input line 50.
+
+LaTeX Font Info:    Try loading font information for C19+kai on input line 76.
+(D:\CTEX\CTeX\tex\latex\CJK\GB\c19kai.fd
+File: c19kai.fd 2009/09/23 4.8.2
+)
+
+LaTeX Font Warning: Font shape `T1/cmss/m/n' in size <4> not available
+(Font)              size <5> substituted on input line 76.
+
+[1{D:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
+
+]
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.toc) [2
+
+]
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.toc) [3
+
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 122.
+
+(D:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 122.
+
+(D:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 122.
+
+(D:\CTEX\MiKTeX\tex\latex\jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+Overfull \hbox (42.67459pt too wide) in alignment at lines 122--122
+ [][][] []
+ []
+
+<./figure/half_forward.jpg, id=167, 1279.78125pt x 518.93875pt>
+File: ./figure/half_forward.jpg Graphic file (type jpg)
+
+<use ./figure/half_forward.jpg>
+Package pdftex.def Info: ./figure/half_forward.jpg used on input line 122.
+(pdftex.def)             Requested size: 170.71259pt x 85.35197pt.
+
+Overfull \hbox (17.06766pt too wide) in paragraph at lines 122--122
+ [] 
+ []
+
+[4
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/figure/half_forward.jpg>] [
+5
+
+]
+Overfull \vbox (5.51402pt too high) detected at line 192
+ []
+
+[6
+
+] [7
+
+]
+Package epstopdf Info: Source file: <./introduction/elliptic1.eps>
+(epstopdf)                    date: 2017-07-08 09:24:22
+(epstopdf)                    size: 47265 bytes
+(epstopdf)             Output file: <./introduction/elliptic1-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-04-18 09:46:00
+(epstopdf)                    size: 15957 bytes
+(epstopdf)             Command: <epstopdf --outfile=./introduction/elliptic1-ep
+s-converted-to.pdf ./introduction/elliptic1.eps>
+(epstopdf)             \includegraphics on input line 245.
+Package epstopdf Info: Output file is already uptodate.
+
+<./introduction/elliptic1-eps-converted-to.pdf, id=334, 421.575pt x 316.18124pt
+>
+File: ./introduction/elliptic1-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./introduction/elliptic1-eps-converted-to.pdf>
+Package pdftex.def Info: ./introduction/elliptic1-eps-converted-to.pdf used on 
+input line 245.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./introduction/elliptic2.eps>
+(epstopdf)                    date: 2017-07-08 09:25:20
+(epstopdf)                    size: 46947 bytes
+(epstopdf)             Output file: <./introduction/elliptic2-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-04-18 09:46:00
+(epstopdf)                    size: 15916 bytes
+(epstopdf)             Command: <epstopdf --outfile=./introduction/elliptic2-ep
+s-converted-to.pdf ./introduction/elliptic2.eps>
+(epstopdf)             \includegraphics on input line 245.
+Package epstopdf Info: Output file is already uptodate.
+
+<./introduction/elliptic2-eps-converted-to.pdf, id=335, 421.575pt x 316.18124pt
+>
+File: ./introduction/elliptic2-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./introduction/elliptic2-eps-converted-to.pdf>
+Package pdftex.def Info: ./introduction/elliptic2-eps-converted-to.pdf used on 
+input line 245.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./introduction/elliptic3.eps>
+(epstopdf)                    date: 2017-07-08 09:27:48
+(epstopdf)                    size: 41246 bytes
+(epstopdf)             Output file: <./introduction/elliptic3-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-04-18 09:46:02
+(epstopdf)                    size: 18613 bytes
+(epstopdf)             Command: <epstopdf --outfile=./introduction/elliptic3-ep
+s-converted-to.pdf ./introduction/elliptic3.eps>
+(epstopdf)             \includegraphics on input line 245.
+Package epstopdf Info: Output file is already uptodate.
+
+<./introduction/elliptic3-eps-converted-to.pdf, id=336, 514.92375pt x 402.50375
+pt>
+File: ./introduction/elliptic3-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./introduction/elliptic3-eps-converted-to.pdf>
+Package pdftex.def Info: ./introduction/elliptic3-eps-converted-to.pdf used on 
+input line 245.
+(pdftex.def)             Requested size: 70.67535pt x 55.24463pt.
+Package epstopdf Info: Source file: <./introduction/elliptic4.eps>
+(epstopdf)                    date: 2017-07-08 09:23:52
+(epstopdf)                    size: 47882 bytes
+(epstopdf)             Output file: <./introduction/elliptic4-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2018-04-18 09:46:02
+(epstopdf)                    size: 15671 bytes
+(epstopdf)             Command: <epstopdf --outfile=./introduction/elliptic4-ep
+s-converted-to.pdf ./introduction/elliptic4.eps>
+(epstopdf)             \includegraphics on input line 245.
+Package epstopdf Info: Output file is already uptodate.
+
+<./introduction/elliptic4-eps-converted-to.pdf, id=337, 421.575pt x 316.18124pt
+>
+File: ./introduction/elliptic4-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./introduction/elliptic4-eps-converted-to.pdf>
+Package pdftex.def Info: ./introduction/elliptic4-eps-converted-to.pdf used on 
+input line 245.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+ [8
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/introduction/elliptic1-eps-
+converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/introducti
+on/elliptic2-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_
+Report/introduction/elliptic3-eps-converted-to.pdf> <C:/Users/david/Desktop/毕
+业答辩/Thesis_Report/introduction/elliptic4-eps-converted-to.pdf>]
+<./point/point_half.jpg, id=388, 1279.78125pt x 510.90875pt>
+File: ./point/point_half.jpg Graphic file (type jpg)
+
+<use ./point/point_half.jpg>
+Package pdftex.def Info: ./point/point_half.jpg used on input line 294.
+(pdftex.def)             Requested size: 170.71259pt x 85.35654pt.
+
+Overfull \hbox (17.06766pt too wide) in paragraph at lines 294--294
+ [] 
+ []
+
+Package epstopdf Info: Source file: <./introduction/psf_chha.eps>
+(epstopdf)                    date: 2018-03-06 17:03:54
+(epstopdf)                    size: 142282 bytes
+(epstopdf)             Output file: <./introduction/psf_chha-eps-converted-to.p
+df>
+(epstopdf)                    date: 2018-04-11 16:37:52
+(epstopdf)                    size: 110032 bytes
+(epstopdf)             Command: <epstopdf --outfile=./introduction/psf_chha-eps
+-converted-to.pdf ./introduction/psf_chha.eps>
+(epstopdf)             \includegraphics on input line 294.
+Package epstopdf Info: Output file is already uptodate.
+
+<./introduction/psf_chha-eps-converted-to.pdf, id=389, 421.575pt x 316.18124pt>
+File: ./introduction/psf_chha-eps-converted-to.pdf Graphic file (type pdf)
+<use ./introduction/psf_chha-eps-converted-to.pdf>
+Package pdftex.def Info: ./introduction/psf_chha-eps-converted-to.pdf used on i
+nput line 294.
+(pdftex.def)             Requested size: 170.71764pt x 99.58313pt.
+
+Overfull \hbox (17.07271pt too wide) in paragraph at lines 294--294
+ [] 
+ []
+
+
+Overfull \vbox (4.79538pt too high) detected at line 294
+ []
+
+[9
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/point/point_half.jpg> <C:/U
+sers/david/Desktop/毕业答辩/Thesis_Report/introduction/psf_chha-eps-convert
+ed-to.pdf>]
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.toc) [10
+
+]
+Overfull \hbox (42.67459pt too wide) in alignment at lines 334--334
+ [][][] []
+ []
+
+File: ./figure/half_forward.jpg Graphic file (type jpg)
+<use ./figure/half_forward.jpg>
+Package pdftex.def Info: ./figure/half_forward.jpg used on input line 334.
+(pdftex.def)             Requested size: 170.71259pt x 85.35197pt.
+
+Overfull \hbox (17.06766pt too wide) in paragraph at lines 334--334
+ [] 
+ []
+
+[11
+
+] [12
+
+]
+Overfull \hbox (11.2414pt too wide) detected at line 397
+ \OML/cmm/m/it/7 I[]\OT1/cmr/m/n/7 (\OML/cmm/m/it/7 z\OT1/cmr/m/n/7 ) = []  [][
+] [][] [][][][]\OML/cmm/m/it/7 ds\OT1/cmr/m/n/7 (\OML/cmm/m/it/7 x[]\OT1/cmr/m/
+n/7 )\OML/cmm/m/it/7 ds\OT1/cmr/m/n/7 (\OML/cmm/m/it/7 x[]\OT1/cmr/m/n/7 )\OML/
+cmm/m/it/7 ;   \OMS/cmsy/m/n/7 8\OML/cmm/m/it/7 z \OMS/cmsy/m/n/7 2 \OT1/cmr/m/
+n/7 
+\OML/cmm/m/it/7 :  
+ []
+
+
+Overfull \hbox (9.47545pt too wide) in alignment at lines 397--397
+ [][][] []
+ []
+
+[13
+
+]
+Package epstopdf Info: Source file: <./phaseless/ex1/ex1phaseless1.eps>
+(epstopdf)                    date: 2017-07-08 09:06:42
+(epstopdf)                    size: 47883 bytes
+(epstopdf)             Output file: <./phaseless/ex1/ex1phaseless1-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:11:40
+(epstopdf)                    size: 15673 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex1/ex1phaseles
+s1-eps-converted-to.pdf ./phaseless/ex1/ex1phaseless1.eps>
+(epstopdf)             \includegraphics on input line 419.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex1/ex1phaseless1-eps-converted-to.pdf, id=570, 421.575pt x 316.18
+124pt>
+File: ./phaseless/ex1/ex1phaseless1-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use ./phaseless/ex1/ex1phaseless1-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex1/ex1phaseless1-eps-converted-to.pdf use
+d on input line 419.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex1/ex1phaseless2.eps>
+(epstopdf)                    date: 2017-07-08 09:07:08
+(epstopdf)                    size: 46573 bytes
+(epstopdf)             Output file: <./phaseless/ex1/ex1phaseless2-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:11:40
+(epstopdf)                    size: 15199 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex1/ex1phaseles
+s2-eps-converted-to.pdf ./phaseless/ex1/ex1phaseless2.eps>
+(epstopdf)             \includegraphics on input line 419.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex1/ex1phaseless2-eps-converted-to.pdf, id=571, 421.575pt x 316.18
+124pt>
+File: ./phaseless/ex1/ex1phaseless2-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use ./phaseless/ex1/ex1phaseless2-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex1/ex1phaseless2-eps-converted-to.pdf use
+d on input line 419.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex1/ex1phaseless3.eps>
+(epstopdf)                    date: 2017-07-08 09:07:40
+(epstopdf)                    size: 49300 bytes
+(epstopdf)             Output file: <./phaseless/ex1/ex1phaseless3-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:11:42
+(epstopdf)                    size: 16221 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex1/ex1phaseles
+s3-eps-converted-to.pdf ./phaseless/ex1/ex1phaseless3.eps>
+(epstopdf)             \includegraphics on input line 419.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex1/ex1phaseless3-eps-converted-to.pdf, id=572, 421.575pt x 316.18
+124pt>
+File: ./phaseless/ex1/ex1phaseless3-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use ./phaseless/ex1/ex1phaseless3-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex1/ex1phaseless3-eps-converted-to.pdf use
+d on input line 419.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex1/ex1phaseless4.eps>
+(epstopdf)                    date: 2017-07-08 09:08:04
+(epstopdf)                    size: 52135 bytes
+(epstopdf)             Output file: <./phaseless/ex1/ex1phaseless4-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:11:42
+(epstopdf)                    size: 17090 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex1/ex1phaseles
+s4-eps-converted-to.pdf ./phaseless/ex1/ex1phaseless4.eps>
+(epstopdf)             \includegraphics on input line 419.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex1/ex1phaseless4-eps-converted-to.pdf, id=573, 421.575pt x 316.18
+124pt>
+File: ./phaseless/ex1/ex1phaseless4-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use ./phaseless/ex1/ex1phaseless4-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex1/ex1phaseless4-eps-converted-to.pdf use
+d on input line 419.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex1/ex1phase1.eps>
+(epstopdf)                    date: 2017-07-08 09:08:28
+(epstopdf)                    size: 47901 bytes
+(epstopdf)             Output file: <./phaseless/ex1/ex1phase1-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-07-08 09:11:44
+(epstopdf)                    size: 15651 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex1/ex1phase1-e
+ps-converted-to.pdf ./phaseless/ex1/ex1phase1.eps>
+(epstopdf)             \includegraphics on input line 419.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex1/ex1phase1-eps-converted-to.pdf, id=574, 421.575pt x 316.18124p
+t>
+File: ./phaseless/ex1/ex1phase1-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./phaseless/ex1/ex1phase1-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex1/ex1phase1-eps-converted-to.pdf used on
+ input line 419.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex1/ex1phase2.eps>
+(epstopdf)                    date: 2017-07-08 09:08:52
+(epstopdf)                    size: 46457 bytes
+(epstopdf)             Output file: <./phaseless/ex1/ex1phase2-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-07-08 09:11:44
+(epstopdf)                    size: 15198 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex1/ex1phase2-e
+ps-converted-to.pdf ./phaseless/ex1/ex1phase2.eps>
+(epstopdf)             \includegraphics on input line 419.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex1/ex1phase2-eps-converted-to.pdf, id=575, 421.575pt x 316.18124p
+t>
+File: ./phaseless/ex1/ex1phase2-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./phaseless/ex1/ex1phase2-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex1/ex1phase2-eps-converted-to.pdf used on
+ input line 419.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex1/ex1phase3.eps>
+(epstopdf)                    date: 2017-07-08 09:09:14
+(epstopdf)                    size: 49389 bytes
+(epstopdf)             Output file: <./phaseless/ex1/ex1phase3-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-07-08 09:11:46
+(epstopdf)                    size: 16175 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex1/ex1phase3-e
+ps-converted-to.pdf ./phaseless/ex1/ex1phase3.eps>
+(epstopdf)             \includegraphics on input line 419.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex1/ex1phase3-eps-converted-to.pdf, id=576, 421.575pt x 316.18124p
+t>
+File: ./phaseless/ex1/ex1phase3-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./phaseless/ex1/ex1phase3-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex1/ex1phase3-eps-converted-to.pdf used on
+ input line 419.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex1/ex1phase4.eps>
+(epstopdf)                    date: 2017-07-08 09:09:40
+(epstopdf)                    size: 52266 bytes
+(epstopdf)             Output file: <./phaseless/ex1/ex1phase4-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-07-08 09:11:46
+(epstopdf)                    size: 17109 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex1/ex1phase4-e
+ps-converted-to.pdf ./phaseless/ex1/ex1phase4.eps>
+(epstopdf)             \includegraphics on input line 419.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex1/ex1phase4-eps-converted-to.pdf, id=577, 421.575pt x 316.18124p
+t>
+File: ./phaseless/ex1/ex1phase4-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./phaseless/ex1/ex1phase4-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex1/ex1phase4-eps-converted-to.pdf used on
+ input line 419.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+ [14
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phaseless/ex1/ex1phaseless1
+-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phase
+less/ex1/ex1phaseless2-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答�
+��/Thesis_Report/phaseless/ex1/ex1phaseless3-eps-converted-to.pdf> <C:/Users/da
+vid/Desktop/毕业答辩/Thesis_Report/phaseless/ex1/ex1phaseless4-eps-converte
+d-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phaseless/ex1/ex1p
+hase1-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/
+phaseless/ex1/ex1phase2-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答
+辩/Thesis_Report/phaseless/ex1/ex1phase3-eps-converted-to.pdf> <C:/Users/david
+/Desktop/毕业答辩/Thesis_Report/phaseless/ex1/ex1phase4-eps-converted-to.pd
+f>]
+Package epstopdf Info: Source file: <./phaseless/ex2/ex2elliptic1.eps>
+(epstopdf)                    date: 2017-07-08 09:24:22
+(epstopdf)                    size: 47265 bytes
+(epstopdf)             Output file: <./phaseless/ex2/ex2elliptic1-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2018-04-18 13:24:22
+(epstopdf)                    size: 15957 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex2/ex2elliptic
+1-eps-converted-to.pdf ./phaseless/ex2/ex2elliptic1.eps>
+(epstopdf)             \includegraphics on input line 435.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex2/ex2elliptic1-eps-converted-to.pdf, id=653, 421.575pt x 316.181
+24pt>
+File: ./phaseless/ex2/ex2elliptic1-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./phaseless/ex2/ex2elliptic1-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex2/ex2elliptic1-eps-converted-to.pdf used
+ on input line 435.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex2/ex2elliptic2.eps>
+(epstopdf)                    date: 2017-07-08 09:25:20
+(epstopdf)                    size: 46947 bytes
+(epstopdf)             Output file: <./phaseless/ex2/ex2elliptic2-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2018-04-18 13:24:22
+(epstopdf)                    size: 15916 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex2/ex2elliptic
+2-eps-converted-to.pdf ./phaseless/ex2/ex2elliptic2.eps>
+(epstopdf)             \includegraphics on input line 435.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex2/ex2elliptic2-eps-converted-to.pdf, id=654, 421.575pt x 316.181
+24pt>
+File: ./phaseless/ex2/ex2elliptic2-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./phaseless/ex2/ex2elliptic2-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex2/ex2elliptic2-eps-converted-to.pdf used
+ on input line 435.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex2/ex2elliptic3.eps>
+(epstopdf)                    date: 2017-07-08 09:27:48
+(epstopdf)                    size: 41246 bytes
+(epstopdf)             Output file: <./phaseless/ex2/ex2elliptic3-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2018-04-18 13:24:24
+(epstopdf)                    size: 18613 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex2/ex2elliptic
+3-eps-converted-to.pdf ./phaseless/ex2/ex2elliptic3.eps>
+(epstopdf)             \includegraphics on input line 435.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex2/ex2elliptic3-eps-converted-to.pdf, id=655, 514.92375pt x 402.5
+0375pt>
+File: ./phaseless/ex2/ex2elliptic3-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./phaseless/ex2/ex2elliptic3-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex2/ex2elliptic3-eps-converted-to.pdf used
+ on input line 435.
+(pdftex.def)             Requested size: 70.67535pt x 55.24463pt.
+Package epstopdf Info: Source file: <./phaseless/ex2/ex2elliptic4.eps>
+(epstopdf)                    date: 2017-07-08 09:23:52
+(epstopdf)                    size: 47882 bytes
+(epstopdf)             Output file: <./phaseless/ex2/ex2elliptic4-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2018-04-18 13:24:24
+(epstopdf)                    size: 15671 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex2/ex2elliptic
+4-eps-converted-to.pdf ./phaseless/ex2/ex2elliptic4.eps>
+(epstopdf)             \includegraphics on input line 435.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex2/ex2elliptic4-eps-converted-to.pdf, id=656, 421.575pt x 316.181
+24pt>
+File: ./phaseless/ex2/ex2elliptic4-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use ./phaseless/ex2/ex2elliptic4-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex2/ex2elliptic4-eps-converted-to.pdf used
+ on input line 435.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex2/ex2square1.eps>
+(epstopdf)                    date: 2016-10-11 18:24:28
+(epstopdf)                    size: 47120 bytes
+(epstopdf)             Output file: <./phaseless/ex2/ex2square1-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2018-04-18 13:23:42
+(epstopdf)                    size: 15583 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex2/ex2square1-
+eps-converted-to.pdf ./phaseless/ex2/ex2square1.eps>
+(epstopdf)             \includegraphics on input line 435.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex2/ex2square1-eps-converted-to.pdf, id=657, 421.575pt x 317.185pt
+>
+File: ./phaseless/ex2/ex2square1-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./phaseless/ex2/ex2square1-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex2/ex2square1-eps-converted-to.pdf used o
+n input line 435.
+(pdftex.def)             Requested size: 70.67535pt x 53.17055pt.
+Package epstopdf Info: Source file: <./phaseless/ex2/ex2square2.eps>
+(epstopdf)                    date: 2016-10-11 18:24:28
+(epstopdf)                    size: 43276 bytes
+(epstopdf)             Output file: <./phaseless/ex2/ex2square2-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2018-04-18 13:23:44
+(epstopdf)                    size: 14617 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex2/ex2square2-
+eps-converted-to.pdf ./phaseless/ex2/ex2square2.eps>
+(epstopdf)             \includegraphics on input line 435.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex2/ex2square2-eps-converted-to.pdf, id=658, 421.575pt x 317.185pt
+>
+File: ./phaseless/ex2/ex2square2-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./phaseless/ex2/ex2square2-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex2/ex2square2-eps-converted-to.pdf used o
+n input line 435.
+(pdftex.def)             Requested size: 70.67535pt x 53.17055pt.
+Package epstopdf Info: Source file: <./phaseless/ex2/ex2square3.eps>
+(epstopdf)                    date: 2016-10-11 18:24:30
+(epstopdf)                    size: 31946 bytes
+(epstopdf)             Output file: <./phaseless/ex2/ex2square3-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2018-04-18 13:23:44
+(epstopdf)                    size: 12851 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex2/ex2square3-
+eps-converted-to.pdf ./phaseless/ex2/ex2square3.eps>
+(epstopdf)             \includegraphics on input line 435.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex2/ex2square3-eps-converted-to.pdf, id=659, 421.575pt x 317.185pt
+>
+File: ./phaseless/ex2/ex2square3-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./phaseless/ex2/ex2square3-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex2/ex2square3-eps-converted-to.pdf used o
+n input line 435.
+(pdftex.def)             Requested size: 70.67535pt x 53.17055pt.
+Package epstopdf Info: Source file: <./phaseless/ex2/ex2square4.eps>
+(epstopdf)                    date: 2016-10-11 18:24:30
+(epstopdf)                    size: 55054 bytes
+(epstopdf)             Output file: <./phaseless/ex2/ex2square4-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2018-04-18 13:23:44
+(epstopdf)                    size: 17084 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex2/ex2square4-
+eps-converted-to.pdf ./phaseless/ex2/ex2square4.eps>
+(epstopdf)             \includegraphics on input line 435.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex2/ex2square4-eps-converted-to.pdf, id=660, 421.575pt x 317.185pt
+>
+File: ./phaseless/ex2/ex2square4-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./phaseless/ex2/ex2square4-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex2/ex2square4-eps-converted-to.pdf used o
+n input line 435.
+(pdftex.def)             Requested size: 70.67535pt x 53.17055pt.
+ [15
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phaseless/ex2/ex2elliptic1-
+eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phasel
+ess/ex2/ex2elliptic2-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩
+/Thesis_Report/phaseless/ex2/ex2elliptic3-eps-converted-to.pdf> <C:/Users/david
+/Desktop/毕业答辩/Thesis_Report/phaseless/ex2/ex2elliptic4-eps-converted-to
+.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phaseless/ex2/ex2squar
+e1-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/pha
+seless/ex2/ex2square2-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答�
+�/Thesis_Report/phaseless/ex2/ex2square3-eps-converted-to.pdf> <C:/Users/david/
+Desktop/毕业答辩/Thesis_Report/phaseless/ex2/ex2square4-eps-converted-to.pd
+f>]
+Package epstopdf Info: Source file: <./phaseless/ex3/ex3singlefreqsigma1.eps>
+(epstopdf)                    date: 2017-07-08 09:33:42
+(epstopdf)                    size: 52543 bytes
+(epstopdf)             Output file: <./phaseless/ex3/ex3singlefreqsigma1-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:38:22
+(epstopdf)                    size: 17053 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex3/ex3singlefr
+eqsigma1-eps-converted-to.pdf ./phaseless/ex3/ex3singlefreqsigma1.eps>
+(epstopdf)             \includegraphics on input line 454.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex3/ex3singlefreqsigma1-eps-converted-to.pdf, id=739, 421.575pt x 
+316.18124pt>
+File: ./phaseless/ex3/ex3singlefreqsigma1-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./phaseless/ex3/ex3singlefreqsigma1-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex3/ex3singlefreqsigma1-eps-converted-to.p
+df used on input line 454.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex3/ex3singlefreqsigma2.eps>
+(epstopdf)                    date: 2017-07-08 09:34:04
+(epstopdf)                    size: 52653 bytes
+(epstopdf)             Output file: <./phaseless/ex3/ex3singlefreqsigma2-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:38:22
+(epstopdf)                    size: 17041 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex3/ex3singlefr
+eqsigma2-eps-converted-to.pdf ./phaseless/ex3/ex3singlefreqsigma2.eps>
+(epstopdf)             \includegraphics on input line 454.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex3/ex3singlefreqsigma2-eps-converted-to.pdf, id=740, 421.575pt x 
+316.18124pt>
+File: ./phaseless/ex3/ex3singlefreqsigma2-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./phaseless/ex3/ex3singlefreqsigma2-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex3/ex3singlefreqsigma2-eps-converted-to.p
+df used on input line 454.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex3/ex3singlefreqsigma3.eps>
+(epstopdf)                    date: 2017-07-08 09:34:26
+(epstopdf)                    size: 52941 bytes
+(epstopdf)             Output file: <./phaseless/ex3/ex3singlefreqsigma3-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:38:24
+(epstopdf)                    size: 17164 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex3/ex3singlefr
+eqsigma3-eps-converted-to.pdf ./phaseless/ex3/ex3singlefreqsigma3.eps>
+(epstopdf)             \includegraphics on input line 454.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex3/ex3singlefreqsigma3-eps-converted-to.pdf, id=741, 421.575pt x 
+316.18124pt>
+File: ./phaseless/ex3/ex3singlefreqsigma3-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./phaseless/ex3/ex3singlefreqsigma3-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex3/ex3singlefreqsigma3-eps-converted-to.p
+df used on input line 454.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex3/ex3singlefreqsigma4.eps>
+(epstopdf)                    date: 2017-07-08 09:34:46
+(epstopdf)                    size: 53869 bytes
+(epstopdf)             Output file: <./phaseless/ex3/ex3singlefreqsigma4-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:38:24
+(epstopdf)                    size: 17509 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex3/ex3singlefr
+eqsigma4-eps-converted-to.pdf ./phaseless/ex3/ex3singlefreqsigma4.eps>
+(epstopdf)             \includegraphics on input line 454.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex3/ex3singlefreqsigma4-eps-converted-to.pdf, id=742, 421.575pt x 
+316.18124pt>
+File: ./phaseless/ex3/ex3singlefreqsigma4-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./phaseless/ex3/ex3singlefreqsigma4-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex3/ex3singlefreqsigma4-eps-converted-to.p
+df used on input line 454.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex3/ex3multifreqsigma1.eps>
+(epstopdf)                    date: 2017-07-08 09:35:44
+(epstopdf)                    size: 46431 bytes
+(epstopdf)             Output file: <./phaseless/ex3/ex3multifreqsigma1-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:38:24
+(epstopdf)                    size: 14860 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex3/ex3multifre
+qsigma1-eps-converted-to.pdf ./phaseless/ex3/ex3multifreqsigma1.eps>
+(epstopdf)             \includegraphics on input line 454.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex3/ex3multifreqsigma1-eps-converted-to.pdf, id=743, 421.575pt x 3
+16.18124pt>
+File: ./phaseless/ex3/ex3multifreqsigma1-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./phaseless/ex3/ex3multifreqsigma1-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex3/ex3multifreqsigma1-eps-converted-to.pd
+f used on input line 454.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex3/ex3multifreqsigma2.eps>
+(epstopdf)                    date: 2017-07-08 09:36:20
+(epstopdf)                    size: 47520 bytes
+(epstopdf)             Output file: <./phaseless/ex3/ex3multifreqsigma2-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:38:26
+(epstopdf)                    size: 15109 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex3/ex3multifre
+qsigma2-eps-converted-to.pdf ./phaseless/ex3/ex3multifreqsigma2.eps>
+(epstopdf)             \includegraphics on input line 454.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex3/ex3multifreqsigma2-eps-converted-to.pdf, id=744, 421.575pt x 3
+16.18124pt>
+File: ./phaseless/ex3/ex3multifreqsigma2-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./phaseless/ex3/ex3multifreqsigma2-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex3/ex3multifreqsigma2-eps-converted-to.pd
+f used on input line 454.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex3/ex3multifreqsigma3.eps>
+(epstopdf)                    date: 2017-07-08 09:36:42
+(epstopdf)                    size: 47807 bytes
+(epstopdf)             Output file: <./phaseless/ex3/ex3multifreqsigma3-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:38:26
+(epstopdf)                    size: 15449 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex3/ex3multifre
+qsigma3-eps-converted-to.pdf ./phaseless/ex3/ex3multifreqsigma3.eps>
+(epstopdf)             \includegraphics on input line 454.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex3/ex3multifreqsigma3-eps-converted-to.pdf, id=745, 421.575pt x 3
+16.18124pt>
+File: ./phaseless/ex3/ex3multifreqsigma3-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./phaseless/ex3/ex3multifreqsigma3-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex3/ex3multifreqsigma3-eps-converted-to.pd
+f used on input line 454.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex3/ex3multifreqsigma4.eps>
+(epstopdf)                    date: 2017-07-08 09:36:58
+(epstopdf)                    size: 48653 bytes
+(epstopdf)             Output file: <./phaseless/ex3/ex3multifreqsigma4-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:38:28
+(epstopdf)                    size: 15629 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex3/ex3multifre
+qsigma4-eps-converted-to.pdf ./phaseless/ex3/ex3multifreqsigma4.eps>
+(epstopdf)             \includegraphics on input line 454.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex3/ex3multifreqsigma4-eps-converted-to.pdf, id=746, 421.575pt x 3
+16.18124pt>
+File: ./phaseless/ex3/ex3multifreqsigma4-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./phaseless/ex3/ex3multifreqsigma4-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex3/ex3multifreqsigma4-eps-converted-to.pd
+f used on input line 454.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+
+[16
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phaseless/ex3/ex3singlefreq
+sigma1-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report
+/phaseless/ex3/ex3singlefreqsigma2-eps-converted-to.pdf> <C:/Users/david/Deskto
+p/毕业答辩/Thesis_Report/phaseless/ex3/ex3singlefreqsigma3-eps-converted-to
+.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phaseless/ex3/ex3singl
+efreqsigma4-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_R
+eport/phaseless/ex3/ex3multifreqsigma1-eps-converted-to.pdf> <C:/Users/david/De
+sktop/毕业答辩/Thesis_Report/phaseless/ex3/ex3multifreqsigma2-eps-converted
+-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phaseless/ex3/ex3mu
+ltifreqsigma3-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis
+_Report/phaseless/ex3/ex3multifreqsigma4-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./phaseless/ex4/ex4singlefreqsigma1.eps>
+(epstopdf)                    date: 2017-07-08 09:48:46
+(epstopdf)                    size: 49555 bytes
+(epstopdf)             Output file: <./phaseless/ex4/ex4singlefreqsigma1-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:53:38
+(epstopdf)                    size: 14003 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex4/ex4singlefr
+eqsigma1-eps-converted-to.pdf ./phaseless/ex4/ex4singlefreqsigma1.eps>
+(epstopdf)             \includegraphics on input line 470.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex4/ex4singlefreqsigma1-eps-converted-to.pdf, id=821, 421.575pt x 
+316.18124pt>
+File: ./phaseless/ex4/ex4singlefreqsigma1-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./phaseless/ex4/ex4singlefreqsigma1-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex4/ex4singlefreqsigma1-eps-converted-to.p
+df used on input line 470.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex4/ex4singlefreqsigma2.eps>
+(epstopdf)                    date: 2017-07-08 09:49:22
+(epstopdf)                    size: 50403 bytes
+(epstopdf)             Output file: <./phaseless/ex4/ex4singlefreqsigma2-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:53:38
+(epstopdf)                    size: 14365 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex4/ex4singlefr
+eqsigma2-eps-converted-to.pdf ./phaseless/ex4/ex4singlefreqsigma2.eps>
+(epstopdf)             \includegraphics on input line 470.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex4/ex4singlefreqsigma2-eps-converted-to.pdf, id=822, 421.575pt x 
+316.18124pt>
+File: ./phaseless/ex4/ex4singlefreqsigma2-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./phaseless/ex4/ex4singlefreqsigma2-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex4/ex4singlefreqsigma2-eps-converted-to.p
+df used on input line 470.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex4/ex4singlefreqsigma3.eps>
+(epstopdf)                    date: 2017-07-08 09:49:42
+(epstopdf)                    size: 50482 bytes
+(epstopdf)             Output file: <./phaseless/ex4/ex4singlefreqsigma3-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:53:38
+(epstopdf)                    size: 14334 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex4/ex4singlefr
+eqsigma3-eps-converted-to.pdf ./phaseless/ex4/ex4singlefreqsigma3.eps>
+(epstopdf)             \includegraphics on input line 470.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex4/ex4singlefreqsigma3-eps-converted-to.pdf, id=823, 421.575pt x 
+316.18124pt>
+File: ./phaseless/ex4/ex4singlefreqsigma3-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./phaseless/ex4/ex4singlefreqsigma3-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex4/ex4singlefreqsigma3-eps-converted-to.p
+df used on input line 470.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex4/ex4singlefreqsigma4.eps>
+(epstopdf)                    date: 2017-07-08 09:49:58
+(epstopdf)                    size: 53813 bytes
+(epstopdf)             Output file: <./phaseless/ex4/ex4singlefreqsigma4-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:53:40
+(epstopdf)                    size: 15959 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex4/ex4singlefr
+eqsigma4-eps-converted-to.pdf ./phaseless/ex4/ex4singlefreqsigma4.eps>
+(epstopdf)             \includegraphics on input line 470.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex4/ex4singlefreqsigma4-eps-converted-to.pdf, id=824, 421.575pt x 
+316.18124pt>
+File: ./phaseless/ex4/ex4singlefreqsigma4-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./phaseless/ex4/ex4singlefreqsigma4-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex4/ex4singlefreqsigma4-eps-converted-to.p
+df used on input line 470.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex4/ex4multifreqsigma1.eps>
+(epstopdf)                    date: 2017-07-08 09:51:28
+(epstopdf)                    size: 34447 bytes
+(epstopdf)             Output file: <./phaseless/ex4/ex4multifreqsigma1-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:53:40
+(epstopdf)                    size: 9510 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex4/ex4multifre
+qsigma1-eps-converted-to.pdf ./phaseless/ex4/ex4multifreqsigma1.eps>
+(epstopdf)             \includegraphics on input line 470.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex4/ex4multifreqsigma1-eps-converted-to.pdf, id=825, 421.575pt x 3
+16.18124pt>
+File: ./phaseless/ex4/ex4multifreqsigma1-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./phaseless/ex4/ex4multifreqsigma1-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex4/ex4multifreqsigma1-eps-converted-to.pd
+f used on input line 470.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex4/ex4multifreqsigma2.eps>
+(epstopdf)                    date: 2017-07-08 09:51:46
+(epstopdf)                    size: 35947 bytes
+(epstopdf)             Output file: <./phaseless/ex4/ex4multifreqsigma2-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:53:42
+(epstopdf)                    size: 9935 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex4/ex4multifre
+qsigma2-eps-converted-to.pdf ./phaseless/ex4/ex4multifreqsigma2.eps>
+(epstopdf)             \includegraphics on input line 470.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex4/ex4multifreqsigma2-eps-converted-to.pdf, id=826, 421.575pt x 3
+16.18124pt>
+File: ./phaseless/ex4/ex4multifreqsigma2-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./phaseless/ex4/ex4multifreqsigma2-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex4/ex4multifreqsigma2-eps-converted-to.pd
+f used on input line 470.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex4/ex4multifreqsigma3.eps>
+(epstopdf)                    date: 2017-07-08 09:52:08
+(epstopdf)                    size: 37664 bytes
+(epstopdf)             Output file: <./phaseless/ex4/ex4multifreqsigma3-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:53:42
+(epstopdf)                    size: 10460 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex4/ex4multifre
+qsigma3-eps-converted-to.pdf ./phaseless/ex4/ex4multifreqsigma3.eps>
+(epstopdf)             \includegraphics on input line 470.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex4/ex4multifreqsigma3-eps-converted-to.pdf, id=827, 421.575pt x 3
+16.18124pt>
+File: ./phaseless/ex4/ex4multifreqsigma3-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./phaseless/ex4/ex4multifreqsigma3-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex4/ex4multifreqsigma3-eps-converted-to.pd
+f used on input line 470.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./phaseless/ex4/ex4multifreqsigma4.eps>
+(epstopdf)                    date: 2017-07-08 09:52:22
+(epstopdf)                    size: 39217 bytes
+(epstopdf)             Output file: <./phaseless/ex4/ex4multifreqsigma4-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2017-07-08 09:53:42
+(epstopdf)                    size: 11118 bytes
+(epstopdf)             Command: <epstopdf --outfile=./phaseless/ex4/ex4multifre
+qsigma4-eps-converted-to.pdf ./phaseless/ex4/ex4multifreqsigma4.eps>
+(epstopdf)             \includegraphics on input line 470.
+Package epstopdf Info: Output file is already uptodate.
+
+<./phaseless/ex4/ex4multifreqsigma4-eps-converted-to.pdf, id=828, 421.575pt x 3
+16.18124pt>
+File: ./phaseless/ex4/ex4multifreqsigma4-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./phaseless/ex4/ex4multifreqsigma4-eps-converted-to.pdf>
+Package pdftex.def Info: ./phaseless/ex4/ex4multifreqsigma4-eps-converted-to.pd
+f used on input line 470.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+
+[17
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phaseless/ex4/ex4singlefreq
+sigma1-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report
+/phaseless/ex4/ex4singlefreqsigma2-eps-converted-to.pdf> <C:/Users/david/Deskto
+p/毕业答辩/Thesis_Report/phaseless/ex4/ex4singlefreqsigma3-eps-converted-to
+.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phaseless/ex4/ex4singl
+efreqsigma4-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_R
+eport/phaseless/ex4/ex4multifreqsigma1-eps-converted-to.pdf> <C:/Users/david/De
+sktop/毕业答辩/Thesis_Report/phaseless/ex4/ex4multifreqsigma2-eps-converted
+-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/phaseless/ex4/ex4mu
+ltifreqsigma3-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis
+_Report/phaseless/ex4/ex4multifreqsigma4-eps-converted-to.pdf>] [18
+
+]
+[19
+
+] (C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.toc)
+[20
+
+]
+Overfull \hbox (34.50392pt too wide) in alignment at lines 587--587
+ [][][] []
+ []
+
+<./figure/wg_forward.jpg, id=1014, 1279.78125pt x 522.95375pt>
+File: ./figure/wg_forward.jpg Graphic file (type jpg)
+
+<use ./figure/wg_forward.jpg>
+Package pdftex.def Info: ./figure/wg_forward.jpg used on input line 587.
+(pdftex.def)             Requested size: 170.71259pt x 85.358pt.
+
+Overfull \hbox (17.06766pt too wide) in paragraph at lines 587--587
+ [] 
+ []
+
+[21
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/figure/wg_forward.jpg>]
+Overfull \hbox (25.81378pt too wide) in alignment at lines 638--638
+ [][][] []
+ []
+
+[22
+
+] [23
+
+] <./SIP/SIP_IFT.jpg, id=1125, 912.40875pt x 536.75531pt>
+File: ./SIP/SIP_IFT.jpg Graphic file (type jpg)
+
+<use ./SIP/SIP_IFT.jpg>
+Package pdftex.def Info: ./SIP/SIP_IFT.jpg used on input line 718.
+(pdftex.def)             Requested size: 170.71423pt x 85.35843pt.
+
+Overfull \hbox (17.0693pt too wide) in paragraph at lines 718--718
+ [] 
+ []
+
+[24
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/SIP/SIP_IFT.jpg>]
+Overfull \hbox (30.13272pt too wide) in alignment at lines 760--760
+ [][][] []
+ []
+
+[25
+
+] [26
+
+]
+Overfull \vbox (5.04785pt too high) detected at line 803
+ []
+
+[27
+
+]
+File: ./figure/wg_forward.jpg Graphic file (type jpg)
+ <use ./figure/wg_forward.jpg>
+Package pdftex.def Info: ./figure/wg_forward.jpg used on input line 819.
+(pdftex.def)             Requested size: 227.61678pt x 113.80536pt.
+ [28
+
+] [29
+
+]
+<./point/point_waveguide.jpg, id=1334, 1279.78125pt x 514.92375pt>
+File: ./point/point_waveguide.jpg Graphic file (type jpg)
+
+<use ./point/point_waveguide.jpg>
+Package pdftex.def Info: ./point/point_waveguide.jpg used on input line 865.
+(pdftex.def)             Requested size: 227.61678pt x 113.81pt.
+ [30
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/point/point_waveguide.jpg>]
+ [31
+
+]
+Package epstopdf Info: Source file: <./waveguide1/psf_half/in_mesh.eps>
+(epstopdf)                    date: 2018-03-19 17:36:36
+(epstopdf)                    size: 175375 bytes
+(epstopdf)             Output file: <./waveguide1/psf_half/in_mesh-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2018-03-19 17:37:56
+(epstopdf)                    size: 39443 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_half/in_me
+sh-eps-converted-to.pdf ./waveguide1/psf_half/in_mesh.eps>
+(epstopdf)             \includegraphics on input line 915.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_half/in_mesh-eps-converted-to.pdf, id=1404, 421.575pt x 316.1
+8124pt>
+File: ./waveguide1/psf_half/in_mesh-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use ./waveguide1/psf_half/in_mesh-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_half/in_mesh-eps-converted-to.pdf use
+d on input line 915.
+(pdftex.def)             Requested size: 142.26576pt x 71.12805pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_half/out_mesh.eps>
+(epstopdf)                    date: 2018-03-19 17:43:56
+(epstopdf)                    size: 159616 bytes
+(epstopdf)             Output file: <./waveguide1/psf_half/out_mesh-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2018-03-19 17:46:16
+(epstopdf)                    size: 41092 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_half/out_m
+esh-eps-converted-to.pdf ./waveguide1/psf_half/out_mesh.eps>
+(epstopdf)             \includegraphics on input line 915.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_half/out_mesh-eps-converted-to.pdf, id=1405, 421.575pt x 316.
+18124pt>
+File: ./waveguide1/psf_half/out_mesh-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use ./waveguide1/psf_half/out_mesh-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_half/out_mesh-eps-converted-to.pdf us
+ed on input line 915.
+(pdftex.def)             Requested size: 142.26576pt x 71.12805pt.
+ [32
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/psf_half/in_mesh
+-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveg
+uide1/psf_half/out_mesh-eps-converted-to.pdf>] [33
+
+] [34
+
+]
+Overfull \hbox (30.02162pt too wide) in alignment at lines 1026--1026
+ [][][] []
+ []
+
+[35
+
+]
+Overfull \hbox (30.13272pt too wide) in alignment at lines 1068--1068
+ [][][] []
+ []
+
+[36
+
+]
+Package epstopdf Info: Source file: <./waveguide1/psf_waveguide/in_mesh.eps>
+(epstopdf)                    date: 2018-03-20 12:34:26
+(epstopdf)                    size: 201650 bytes
+(epstopdf)             Output file: <./waveguide1/psf_waveguide/in_mesh-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-03-20 12:39:56
+(epstopdf)                    size: 53443 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_waveguide/
+in_mesh-eps-converted-to.pdf ./waveguide1/psf_waveguide/in_mesh.eps>
+(epstopdf)             \includegraphics on input line 1089.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_waveguide/in_mesh-eps-converted-to.pdf, id=1588, 581.17125pt 
+x 316.18124pt>
+File: ./waveguide1/psf_waveguide/in_mesh-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./waveguide1/psf_waveguide/in_mesh-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_waveguide/in_mesh-eps-converted-to.pd
+f used on input line 1089.
+(pdftex.def)             Requested size: 142.25961pt x 71.12805pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_waveguide/out_mesh.eps>
+(epstopdf)                    date: 2018-03-20 12:35:40
+(epstopdf)                    size: 231179 bytes
+(epstopdf)             Output file: <./waveguide1/psf_waveguide/out_mesh-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2018-03-20 12:39:58
+(epstopdf)                    size: 57594 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_waveguide/
+out_mesh-eps-converted-to.pdf ./waveguide1/psf_waveguide/out_mesh.eps>
+(epstopdf)             \includegraphics on input line 1089.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_waveguide/out_mesh-eps-converted-to.pdf, id=1589, 632.3625pt 
+x 316.18124pt>
+File: ./waveguide1/psf_waveguide/out_mesh-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./waveguide1/psf_waveguide/out_mesh-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_waveguide/out_mesh-eps-converted-to.p
+df used on input line 1089.
+(pdftex.def)             Requested size: 142.25612pt x 71.12805pt.
+
+[37
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/psf_waveguide/in
+_mesh-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/
+waveguide1/psf_waveguide/out_mesh-eps-converted-to.pdf>] [38
+
+]
+Package epstopdf Info: Source file: <./waveguide1/example1/In_soft_pleaf1.eps>
+(epstopdf)                    date: 2018-03-26 09:08:36
+(epstopdf)                    size: 44309 bytes
+(epstopdf)             Output file: <./waveguide1/example1/In_soft_pleaf1-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2018-03-26 09:40:22
+(epstopdf)                    size: 13434 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example1/In_so
+ft_pleaf1-eps-converted-to.pdf ./waveguide1/example1/In_soft_pleaf1.eps>
+(epstopdf)             \includegraphics on input line 1143.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example1/In_soft_pleaf1-eps-converted-to.pdf, id=1672, 421.575pt 
+x 316.18124pt>
+File: ./waveguide1/example1/In_soft_pleaf1-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./waveguide1/example1/In_soft_pleaf1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example1/In_soft_pleaf1-eps-converted-to.
+pdf used on input line 1143.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example1/In_soft_square1.eps>
+
+(epstopdf)                    date: 2018-03-26 09:09:56
+(epstopdf)                    size: 44186 bytes
+(epstopdf)             Output file: <./waveguide1/example1/In_soft_square1-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2018-03-26 09:40:24
+(epstopdf)                    size: 12801 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example1/In_so
+ft_square1-eps-converted-to.pdf ./waveguide1/example1/In_soft_square1.eps>
+(epstopdf)             \includegraphics on input line 1143.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example1/In_soft_square1-eps-converted-to.pdf, id=1673, 421.575pt
+ x 316.18124pt>
+File: ./waveguide1/example1/In_soft_square1-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./waveguide1/example1/In_soft_square1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example1/In_soft_square1-eps-converted-to
+.pdf used on input line 1143.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example1/In_soft_peanut.eps>
+(epstopdf)                    date: 2018-03-26 09:11:10
+(epstopdf)                    size: 40030 bytes
+(epstopdf)             Output file: <./waveguide1/example1/In_soft_peanut-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2018-03-26 09:40:26
+(epstopdf)                    size: 12309 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example1/In_so
+ft_peanut-eps-converted-to.pdf ./waveguide1/example1/In_soft_peanut.eps>
+(epstopdf)             \includegraphics on input line 1143.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example1/In_soft_peanut-eps-converted-to.pdf, id=1674, 421.575pt 
+x 316.18124pt>
+File: ./waveguide1/example1/In_soft_peanut-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./waveguide1/example1/In_soft_peanut-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example1/In_soft_peanut-eps-converted-to.
+pdf used on input line 1143.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example1/In_soft_circle1.eps>
+
+(epstopdf)                    date: 2018-03-26 09:12:36
+(epstopdf)                    size: 45378 bytes
+(epstopdf)             Output file: <./waveguide1/example1/In_soft_circle1-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2018-03-26 09:40:28
+(epstopdf)                    size: 13312 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example1/In_so
+ft_circle1-eps-converted-to.pdf ./waveguide1/example1/In_soft_circle1.eps>
+(epstopdf)             \includegraphics on input line 1143.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example1/In_soft_circle1-eps-converted-to.pdf, id=1675, 421.575pt
+ x 316.18124pt>
+File: ./waveguide1/example1/In_soft_circle1-eps-converted-to.pdf Graphic file (
+type pdf)
+
+<use ./waveguide1/example1/In_soft_circle1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example1/In_soft_circle1-eps-converted-to
+.pdf used on input line 1143.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example1/In_soft_pleaf1_half.
+eps>
+(epstopdf)                    date: 2018-04-07 18:46:48
+(epstopdf)                    size: 42374 bytes
+(epstopdf)             Output file: <./waveguide1/example1/In_soft_pleaf1_half-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-07 18:58:16
+(epstopdf)                    size: 12158 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example1/In_so
+ft_pleaf1_half-eps-converted-to.pdf ./waveguide1/example1/In_soft_pleaf1_half.e
+ps>
+(epstopdf)             \includegraphics on input line 1143.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example1/In_soft_pleaf1_half-eps-converted-to.pdf, id=1676, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/example1/In_soft_pleaf1_half-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/example1/In_soft_pleaf1_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example1/In_soft_pleaf1_half-eps-converte
+d-to.pdf used on input line 1143.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example1/In_soft_square1_half
+.eps>
+(epstopdf)                    date: 2018-04-07 18:49:56
+(epstopdf)                    size: 38936 bytes
+(epstopdf)             Output file: <./waveguide1/example1/In_soft_square1_half
+-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-07 18:58:18
+(epstopdf)                    size: 19158 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example1/In_so
+ft_square1_half-eps-converted-to.pdf ./waveguide1/example1/In_soft_square1_half
+.eps>
+(epstopdf)             \includegraphics on input line 1143.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example1/In_soft_square1_half-eps-converted-to.pdf, id=1677, 421.
+575pt x 316.18124pt>
+File: ./waveguide1/example1/In_soft_square1_half-eps-converted-to.pdf Graphic f
+ile (type pdf)
+
+<use ./waveguide1/example1/In_soft_square1_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example1/In_soft_square1_half-eps-convert
+ed-to.pdf used on input line 1143.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example1/In_soft_peanut_half.
+eps>
+(epstopdf)                    date: 2018-04-07 18:51:54
+(epstopdf)                    size: 36626 bytes
+(epstopdf)             Output file: <./waveguide1/example1/In_soft_peanut_half-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-07 18:58:22
+(epstopdf)                    size: 16651 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example1/In_so
+ft_peanut_half-eps-converted-to.pdf ./waveguide1/example1/In_soft_peanut_half.e
+ps>
+(epstopdf)             \includegraphics on input line 1143.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example1/In_soft_peanut_half-eps-converted-to.pdf, id=1678, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/example1/In_soft_peanut_half-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/example1/In_soft_peanut_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example1/In_soft_peanut_half-eps-converte
+d-to.pdf used on input line 1143.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example1/In_soft_circle1_half
+.eps>
+(epstopdf)                    date: 2018-04-07 18:53:38
+(epstopdf)                    size: 40739 bytes
+(epstopdf)             Output file: <./waveguide1/example1/In_soft_circle1_half
+-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-07 18:58:24
+(epstopdf)                    size: 11675 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example1/In_so
+ft_circle1_half-eps-converted-to.pdf ./waveguide1/example1/In_soft_circle1_half
+.eps>
+(epstopdf)             \includegraphics on input line 1143.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example1/In_soft_circle1_half-eps-converted-to.pdf, id=1679, 421.
+575pt x 316.18124pt>
+File: ./waveguide1/example1/In_soft_circle1_half-eps-converted-to.pdf Graphic f
+ile (type pdf)
+
+<use ./waveguide1/example1/In_soft_circle1_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example1/In_soft_circle1_half-eps-convert
+ed-to.pdf used on input line 1143.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+
+Overfull \vbox (7.44011pt too high) detected at line 1143
+ []
+
+[39
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/example1/In_soft
+_pleaf1-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Repor
+t/waveguide1/example1/In_soft_square1-eps-converted-to.pdf> <C:/Users/david/Des
+ktop/毕业答辩/Thesis_Report/waveguide1/example1/In_soft_peanut-eps-converte
+d-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/example
+1/In_soft_circle1-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Th
+esis_Report/waveguide1/example1/In_soft_pleaf1_half-eps-converted-to.pdf> <C:/U
+sers/david/Desktop/毕业答辩/Thesis_Report/waveguide1/example1/In_soft_squar
+e1_half-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Repor
+t/waveguide1/example1/In_soft_peanut_half-eps-converted-to.pdf> <C:/Users/david
+/Desktop/毕业答辩/Thesis_Report/waveguide1/example1/In_soft_circle1_half-ep
+s-converted-to.pdf>]
+Package epstopdf Info: Source file: <./waveguide1/example2/In_Circle_Soft.eps>
+(epstopdf)                    date: 2018-04-11 08:58:22
+(epstopdf)                    size: 44386 bytes
+(epstopdf)             Output file: <./waveguide1/example2/In_Circle_Soft-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2018-04-11 08:59:58
+(epstopdf)                    size: 14065 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example2/In_Ci
+rcle_Soft-eps-converted-to.pdf ./waveguide1/example2/In_Circle_Soft.eps>
+(epstopdf)             \includegraphics on input line 1160.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example2/In_Circle_Soft-eps-converted-to.pdf, id=1758, 421.575pt 
+x 316.18124pt>
+File: ./waveguide1/example2/In_Circle_Soft-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./waveguide1/example2/In_Circle_Soft-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example2/In_Circle_Soft-eps-converted-to.
+pdf used on input line 1160.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example2/In_Circle_Hard.eps>
+(epstopdf)                    date: 2018-04-11 08:58:46
+(epstopdf)                    size: 44375 bytes
+(epstopdf)             Output file: <./waveguide1/example2/In_Circle_Hard-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:00:00
+(epstopdf)                    size: 14126 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example2/In_Ci
+rcle_Hard-eps-converted-to.pdf ./waveguide1/example2/In_Circle_Hard.eps>
+(epstopdf)             \includegraphics on input line 1160.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example2/In_Circle_Hard-eps-converted-to.pdf, id=1759, 421.575pt 
+x 316.18124pt>
+File: ./waveguide1/example2/In_Circle_Hard-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./waveguide1/example2/In_Circle_Hard-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example2/In_Circle_Hard-eps-converted-to.
+pdf used on input line 1160.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example2/In_Circle_Imp.eps>
+(epstopdf)                    date: 2018-04-11 08:59:42
+(epstopdf)                    size: 45512 bytes
+(epstopdf)             Output file: <./waveguide1/example2/In_Circle_Imp-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:00:00
+(epstopdf)                    size: 14212 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example2/In_Ci
+rcle_Imp-eps-converted-to.pdf ./waveguide1/example2/In_Circle_Imp.eps>
+(epstopdf)             \includegraphics on input line 1160.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example2/In_Circle_Imp-eps-converted-to.pdf, id=1760, 421.575pt x
+ 316.18124pt>
+File: ./waveguide1/example2/In_Circle_Imp-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use ./waveguide1/example2/In_Circle_Imp-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example2/In_Circle_Imp-eps-converted-to.p
+df used on input line 1160.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example2/In_Circle_Tran.eps>
+(epstopdf)                    date: 2018-04-11 08:57:58
+(epstopdf)                    size: 44780 bytes
+(epstopdf)             Output file: <./waveguide1/example2/In_Circle_Tran-eps-c
+onverted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:00:02
+(epstopdf)                    size: 14216 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example2/In_Ci
+rcle_Tran-eps-converted-to.pdf ./waveguide1/example2/In_Circle_Tran.eps>
+(epstopdf)             \includegraphics on input line 1160.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example2/In_Circle_Tran-eps-converted-to.pdf, id=1761, 421.575pt 
+x 316.18124pt>
+File: ./waveguide1/example2/In_Circle_Tran-eps-converted-to.pdf Graphic file (t
+ype pdf)
+ <use ./waveguide1/example2/In_Circle_Tran-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example2/In_Circle_Tran-eps-converted-to.
+pdf used on input line 1160.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example2/In_Circle_Soft_half.
+eps>
+(epstopdf)                    date: 2018-04-11 08:52:04
+(epstopdf)                    size: 38544 bytes
+(epstopdf)             Output file: <./waveguide1/example2/In_Circle_Soft_half-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 08:54:40
+(epstopdf)                    size: 11983 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example2/In_Ci
+rcle_Soft_half-eps-converted-to.pdf ./waveguide1/example2/In_Circle_Soft_half.e
+ps>
+(epstopdf)             \includegraphics on input line 1160.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example2/In_Circle_Soft_half-eps-converted-to.pdf, id=1762, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/example2/In_Circle_Soft_half-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/example2/In_Circle_Soft_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example2/In_Circle_Soft_half-eps-converte
+d-to.pdf used on input line 1160.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example2/In_Circle_Hard_half.
+eps>
+(epstopdf)                    date: 2018-04-11 08:52:26
+(epstopdf)                    size: 38532 bytes
+(epstopdf)             Output file: <./waveguide1/example2/In_Circle_Hard_half-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 08:54:44
+(epstopdf)                    size: 11865 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example2/In_Ci
+rcle_Hard_half-eps-converted-to.pdf ./waveguide1/example2/In_Circle_Hard_half.e
+ps>
+(epstopdf)             \includegraphics on input line 1160.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example2/In_Circle_Hard_half-eps-converted-to.pdf, id=1763, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/example2/In_Circle_Hard_half-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/example2/In_Circle_Hard_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example2/In_Circle_Hard_half-eps-converte
+d-to.pdf used on input line 1160.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example2/In_Circle_Imp_half.e
+ps>
+(epstopdf)                    date: 2018-04-11 08:52:38
+(epstopdf)                    size: 39829 bytes
+(epstopdf)             Output file: <./waveguide1/example2/In_Circle_Imp_half-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 08:54:46
+(epstopdf)                    size: 12461 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example2/In_Ci
+rcle_Imp_half-eps-converted-to.pdf ./waveguide1/example2/In_Circle_Imp_half.eps
+>
+(epstopdf)             \includegraphics on input line 1160.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example2/In_Circle_Imp_half-eps-converted-to.pdf, id=1764, 421.57
+5pt x 316.18124pt>
+File: ./waveguide1/example2/In_Circle_Imp_half-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./waveguide1/example2/In_Circle_Imp_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example2/In_Circle_Imp_half-eps-converted
+-to.pdf used on input line 1160.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example2/In_Circle_Tran_half.
+eps>
+(epstopdf)                    date: 2018-04-11 08:52:56
+(epstopdf)                    size: 44021 bytes
+(epstopdf)             Output file: <./waveguide1/example2/In_Circle_Tran_half-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 08:54:50
+(epstopdf)                    size: 13835 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example2/In_Ci
+rcle_Tran_half-eps-converted-to.pdf ./waveguide1/example2/In_Circle_Tran_half.e
+ps>
+(epstopdf)             \includegraphics on input line 1160.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example2/In_Circle_Tran_half-eps-converted-to.pdf, id=1765, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/example2/In_Circle_Tran_half-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/example2/In_Circle_Tran_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example2/In_Circle_Tran_half-eps-converte
+d-to.pdf used on input line 1160.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+ [40
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/example2/In_Circ
+le_Soft-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Repor
+t/waveguide1/example2/In_Circle_Hard-eps-converted-to.pdf> <C:/Users/david/Desk
+top/毕业答辩/Thesis_Report/waveguide1/example2/In_Circle_Imp-eps-converted-
+to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/example2/
+In_Circle_Tran-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesi
+s_Report/waveguide1/example2/In_Circle_Soft_half-eps-converted-to.pdf> <C:/User
+s/david/Desktop/毕业答辩/Thesis_Report/waveguide1/example2/In_Circle_Hard_h
+alf-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/wa
+veguide1/example2/In_Circle_Imp_half-eps-converted-to.pdf> <C:/Users/david/Desk
+top/毕业答辩/Thesis_Report/waveguide1/example2/In_Circle_Tran_half-eps-conv
+erted-to.pdf>]
+Package epstopdf Info: Source file: <./waveguide1/example3/In_transmission_circ
+le_2.eps>
+(epstopdf)                    date: 2018-04-11 12:39:46
+(epstopdf)                    size: 47386 bytes
+(epstopdf)             Output file: <./waveguide1/example3/In_transmission_circ
+le_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 12:42:14
+(epstopdf)                    size: 14470 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example3/In_tr
+ansmission_circle_2-eps-converted-to.pdf ./waveguide1/example3/In_transmission_
+circle_2.eps>
+(epstopdf)             \includegraphics on input line 1180.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example3/In_transmission_circle_2-eps-converted-to.pdf, id=1841, 
+421.575pt x 316.18124pt>
+File: ./waveguide1/example3/In_transmission_circle_2-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide1/example3/In_transmission_circle_2-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example3/In_transmission_circle_2-eps-con
+verted-to.pdf used on input line 1180.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example3/In_transmission_circ
+le_3.eps>
+(epstopdf)                    date: 2018-04-11 12:40:44
+(epstopdf)                    size: 48365 bytes
+(epstopdf)             Output file: <./waveguide1/example3/In_transmission_circ
+le_3-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 12:42:16
+(epstopdf)                    size: 14618 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example3/In_tr
+ansmission_circle_3-eps-converted-to.pdf ./waveguide1/example3/In_transmission_
+circle_3.eps>
+(epstopdf)             \includegraphics on input line 1180.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example3/In_transmission_circle_3-eps-converted-to.pdf, id=1842, 
+421.575pt x 316.18124pt>
+File: ./waveguide1/example3/In_transmission_circle_3-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide1/example3/In_transmission_circle_3-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example3/In_transmission_circle_3-eps-con
+verted-to.pdf used on input line 1180.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example3/In_transmission_circ
+le_4.eps>
+(epstopdf)                    date: 2018-04-11 12:40:04
+(epstopdf)                    size: 47121 bytes
+(epstopdf)             Output file: <./waveguide1/example3/In_transmission_circ
+le_4-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 12:42:18
+(epstopdf)                    size: 14556 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example3/In_tr
+ansmission_circle_4-eps-converted-to.pdf ./waveguide1/example3/In_transmission_
+circle_4.eps>
+(epstopdf)             \includegraphics on input line 1180.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example3/In_transmission_circle_4-eps-converted-to.pdf, id=1843, 
+421.575pt x 316.18124pt>
+File: ./waveguide1/example3/In_transmission_circle_4-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide1/example3/In_transmission_circle_4-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example3/In_transmission_circle_4-eps-con
+verted-to.pdf used on input line 1180.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example3/In_transmission_circ
+le_5.eps>
+(epstopdf)                    date: 2018-04-11 12:41:12
+(epstopdf)                    size: 47350 bytes
+(epstopdf)             Output file: <./waveguide1/example3/In_transmission_circ
+le_5-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 12:42:22
+(epstopdf)                    size: 14626 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example3/In_tr
+ansmission_circle_5-eps-converted-to.pdf ./waveguide1/example3/In_transmission_
+circle_5.eps>
+(epstopdf)             \includegraphics on input line 1180.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example3/In_transmission_circle_5-eps-converted-to.pdf, id=1844, 
+421.575pt x 316.18124pt>
+File: ./waveguide1/example3/In_transmission_circle_5-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide1/example3/In_transmission_circle_5-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example3/In_transmission_circle_5-eps-con
+verted-to.pdf used on input line 1180.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example3/In_transmission_circ
+le_2_multi.eps>
+(epstopdf)                    date: 2018-04-11 12:33:12
+(epstopdf)                    size: 36877 bytes
+(epstopdf)             Output file: <./waveguide1/example3/In_transmission_circ
+le_2_multi-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 12:42:24
+(epstopdf)                    size: 11517 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example3/In_tr
+ansmission_circle_2_multi-eps-converted-to.pdf ./waveguide1/example3/In_transmi
+ssion_circle_2_multi.eps>
+(epstopdf)             \includegraphics on input line 1180.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example3/In_transmission_circle_2_multi-eps-converted-to.pdf, id=
+1845, 421.575pt x 316.18124pt>
+File: ./waveguide1/example3/In_transmission_circle_2_multi-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use ./waveguide1/example3/In_transmission_circle_2_multi-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example3/In_transmission_circle_2_multi-e
+ps-converted-to.pdf used on input line 1180.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example3/In_transmission_circ
+le_4_multi.eps>
+(epstopdf)                    date: 2018-04-11 12:33:44
+(epstopdf)                    size: 39664 bytes
+(epstopdf)             Output file: <./waveguide1/example3/In_transmission_circ
+le_4_multi-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 12:42:26
+(epstopdf)                    size: 12069 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example3/In_tr
+ansmission_circle_4_multi-eps-converted-to.pdf ./waveguide1/example3/In_transmi
+ssion_circle_4_multi.eps>
+(epstopdf)             \includegraphics on input line 1180.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example3/In_transmission_circle_4_multi-eps-converted-to.pdf, id=
+1846, 421.575pt x 316.18124pt>
+File: ./waveguide1/example3/In_transmission_circle_4_multi-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use ./waveguide1/example3/In_transmission_circle_4_multi-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example3/In_transmission_circle_4_multi-e
+ps-converted-to.pdf used on input line 1180.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example3/In_transmission_circ
+le_6_multi.eps>
+(epstopdf)                    date: 2018-04-11 12:34:10
+(epstopdf)                    size: 41715 bytes
+(epstopdf)             Output file: <./waveguide1/example3/In_transmission_circ
+le_6_multi-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 12:42:28
+(epstopdf)                    size: 12527 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example3/In_tr
+ansmission_circle_6_multi-eps-converted-to.pdf ./waveguide1/example3/In_transmi
+ssion_circle_6_multi.eps>
+(epstopdf)             \includegraphics on input line 1180.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example3/In_transmission_circle_6_multi-eps-converted-to.pdf, id=
+1847, 421.575pt x 316.18124pt>
+File: ./waveguide1/example3/In_transmission_circle_6_multi-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use ./waveguide1/example3/In_transmission_circle_6_multi-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example3/In_transmission_circle_6_multi-e
+ps-converted-to.pdf used on input line 1180.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/example3/In_transmission_circ
+le_8_multi.eps>
+(epstopdf)                    date: 2018-04-11 12:34:38
+(epstopdf)                    size: 42483 bytes
+(epstopdf)             Output file: <./waveguide1/example3/In_transmission_circ
+le_8_multi-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 12:42:32
+(epstopdf)                    size: 12781 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/example3/In_tr
+ansmission_circle_8_multi-eps-converted-to.pdf ./waveguide1/example3/In_transmi
+ssion_circle_8_multi.eps>
+(epstopdf)             \includegraphics on input line 1180.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/example3/In_transmission_circle_8_multi-eps-converted-to.pdf, id=
+1848, 421.575pt x 316.18124pt>
+File: ./waveguide1/example3/In_transmission_circle_8_multi-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use ./waveguide1/example3/In_transmission_circle_8_multi-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/example3/In_transmission_circle_8_multi-e
+ps-converted-to.pdf used on input line 1180.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+[41
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/example3/In_tran
+smission_circle_2-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Th
+esis_Report/waveguide1/example3/In_transmission_circle_3-eps-converted-to.pdf> 
+<C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/example3/In_trans
+mission_circle_4-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/The
+sis_Report/waveguide1/example3/In_transmission_circle_5-eps-converted-to.pdf> <
+C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/example3/In_transm
+ission_circle_2_multi-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答�
+�/Thesis_Report/waveguide1/example3/In_transmission_circle_4_multi-eps-converte
+d-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/example
+3/In_transmission_circle_6_multi-eps-converted-to.pdf> <C:/Users/david/Desktop/
+毕业答辩/Thesis_Report/waveguide1/example3/In_transmission_circle_8_multi-e
+ps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./waveguide1/out_example1/out_circle_soft.
+eps>
+(epstopdf)                    date: 2018-04-11 09:04:58
+(epstopdf)                    size: 36420 bytes
+(epstopdf)             Output file: <./waveguide1/out_example1/out_circle_soft-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:11:48
+(epstopdf)                    size: 11248 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example1/o
+ut_circle_soft-eps-converted-to.pdf ./waveguide1/out_example1/out_circle_soft.e
+ps>
+(epstopdf)             \includegraphics on input line 1201.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example1/out_circle_soft-eps-converted-to.pdf, id=1924, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/out_example1/out_circle_soft-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/out_example1/out_circle_soft-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example1/out_circle_soft-eps-converte
+d-to.pdf used on input line 1201.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example1/out_circle_hard.
+eps>
+(epstopdf)                    date: 2018-04-11 09:06:48
+(epstopdf)                    size: 34028 bytes
+(epstopdf)             Output file: <./waveguide1/out_example1/out_circle_hard-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:11:48
+(epstopdf)                    size: 10537 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example1/o
+ut_circle_hard-eps-converted-to.pdf ./waveguide1/out_example1/out_circle_hard.e
+ps>
+(epstopdf)             \includegraphics on input line 1201.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example1/out_circle_hard-eps-converted-to.pdf, id=1925, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/out_example1/out_circle_hard-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/out_example1/out_circle_hard-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example1/out_circle_hard-eps-converte
+d-to.pdf used on input line 1201.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example1/out_circle_imp.e
+ps>
+(epstopdf)                    date: 2018-04-11 09:08:54
+(epstopdf)                    size: 37823 bytes
+(epstopdf)             Output file: <./waveguide1/out_example1/out_circle_imp-e
+ps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:12:06
+(epstopdf)                    size: 11848 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example1/o
+ut_circle_imp-eps-converted-to.pdf ./waveguide1/out_example1/out_circle_imp.eps
+>
+(epstopdf)             \includegraphics on input line 1201.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example1/out_circle_imp-eps-converted-to.pdf, id=1926, 421.57
+5pt x 316.18124pt>
+File: ./waveguide1/out_example1/out_circle_imp-eps-converted-to.pdf Graphic fil
+e (type pdf)
+
+<use ./waveguide1/out_example1/out_circle_imp-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example1/out_circle_imp-eps-converted
+-to.pdf used on input line 1201.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example1/out_circle_tran.
+eps>
+(epstopdf)                    date: 2018-04-11 09:11:18
+(epstopdf)                    size: 42022 bytes
+(epstopdf)             Output file: <./waveguide1/out_example1/out_circle_tran-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:11:50
+(epstopdf)                    size: 13356 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example1/o
+ut_circle_tran-eps-converted-to.pdf ./waveguide1/out_example1/out_circle_tran.e
+ps>
+(epstopdf)             \includegraphics on input line 1201.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example1/out_circle_tran-eps-converted-to.pdf, id=1927, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/out_example1/out_circle_tran-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/out_example1/out_circle_tran-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example1/out_circle_tran-eps-converte
+d-to.pdf used on input line 1201.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example1/out_circle_soft_
+half.eps>
+(epstopdf)                    date: 2018-04-11 09:04:18
+(epstopdf)                    size: 36298 bytes
+(epstopdf)             Output file: <./waveguide1/out_example1/out_circle_soft_
+half-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:12:10
+(epstopdf)                    size: 12728 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example1/o
+ut_circle_soft_half-eps-converted-to.pdf ./waveguide1/out_example1/out_circle_s
+oft_half.eps>
+(epstopdf)             \includegraphics on input line 1201.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example1/out_circle_soft_half-eps-converted-to.pdf, id=1928, 
+421.575pt x 316.18124pt>
+File: ./waveguide1/out_example1/out_circle_soft_half-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide1/out_example1/out_circle_soft_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example1/out_circle_soft_half-eps-con
+verted-to.pdf used on input line 1201.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example1/out_circle_hard_
+half.eps>
+(epstopdf)                    date: 2018-04-11 09:06:34
+(epstopdf)                    size: 34773 bytes
+(epstopdf)             Output file: <./waveguide1/out_example1/out_circle_hard_
+half-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:12:12
+(epstopdf)                    size: 11410 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example1/o
+ut_circle_hard_half-eps-converted-to.pdf ./waveguide1/out_example1/out_circle_h
+ard_half.eps>
+(epstopdf)             \includegraphics on input line 1201.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example1/out_circle_hard_half-eps-converted-to.pdf, id=1929, 
+421.575pt x 316.18124pt>
+File: ./waveguide1/out_example1/out_circle_hard_half-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide1/out_example1/out_circle_hard_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example1/out_circle_hard_half-eps-con
+verted-to.pdf used on input line 1201.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example1/out_circle_imp_h
+alf.eps>
+(epstopdf)                    date: 2018-04-11 09:08:30
+(epstopdf)                    size: 36571 bytes
+(epstopdf)             Output file: <./waveguide1/out_example1/out_circle_imp_h
+alf-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:12:18
+(epstopdf)                    size: 13150 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example1/o
+ut_circle_imp_half-eps-converted-to.pdf ./waveguide1/out_example1/out_circle_im
+p_half.eps>
+(epstopdf)             \includegraphics on input line 1201.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example1/out_circle_imp_half-eps-converted-to.pdf, id=1930, 4
+21.575pt x 316.18124pt>
+File: ./waveguide1/out_example1/out_circle_imp_half-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./waveguide1/out_example1/out_circle_imp_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example1/out_circle_imp_half-eps-conv
+erted-to.pdf used on input line 1201.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example1/out_circle_tran_
+half.eps>
+(epstopdf)                    date: 2018-04-11 09:10:54
+(epstopdf)                    size: 46236 bytes
+(epstopdf)             Output file: <./waveguide1/out_example1/out_circle_tran_
+half-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:12:14
+(epstopdf)                    size: 14846 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example1/o
+ut_circle_tran_half-eps-converted-to.pdf ./waveguide1/out_example1/out_circle_t
+ran_half.eps>
+(epstopdf)             \includegraphics on input line 1201.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example1/out_circle_tran_half-eps-converted-to.pdf, id=1931, 
+421.575pt x 316.18124pt>
+File: ./waveguide1/out_example1/out_circle_tran_half-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide1/out_example1/out_circle_tran_half-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example1/out_circle_tran_half-eps-con
+verted-to.pdf used on input line 1201.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+
+[42
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/out_example1/out
+_circle_soft-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_
+Report/waveguide1/out_example1/out_circle_hard-eps-converted-to.pdf> <C:/Users/
+david/Desktop/毕业答辩/Thesis_Report/waveguide1/out_example1/out_circle_imp
+-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveg
+uide1/out_example1/out_circle_tran-eps-converted-to.pdf> <C:/Users/david/Deskto
+p/毕业答辩/Thesis_Report/waveguide1/out_example1/out_circle_soft_half-eps-c
+onverted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/
+out_example1/out_circle_hard_half-eps-converted-to.pdf> <C:/Users/david/Desktop
+/毕业答辩/Thesis_Report/waveguide1/out_example1/out_circle_imp_half-eps-con
+verted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/ou
+t_example1/out_circle_tran_half-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./waveguide1/out_example2/Out_soft_pleaf1.
+eps>
+(epstopdf)                    date: 2018-04-11 09:16:00
+(epstopdf)                    size: 35511 bytes
+(epstopdf)             Output file: <./waveguide1/out_example2/Out_soft_pleaf1-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:20:56
+(epstopdf)                    size: 10781 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example2/O
+ut_soft_pleaf1-eps-converted-to.pdf ./waveguide1/out_example2/Out_soft_pleaf1.e
+ps>
+(epstopdf)             \includegraphics on input line 1217.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example2/Out_soft_pleaf1-eps-converted-to.pdf, id=2007, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/out_example2/Out_soft_pleaf1-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/out_example2/Out_soft_pleaf1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example2/Out_soft_pleaf1-eps-converte
+d-to.pdf used on input line 1217.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example2/Out_soft_square1
+.eps>
+(epstopdf)                    date: 2018-04-11 09:17:34
+(epstopdf)                    size: 33445 bytes
+(epstopdf)             Output file: <./waveguide1/out_example2/Out_soft_square1
+-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:20:58
+(epstopdf)                    size: 16728 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example2/O
+ut_soft_square1-eps-converted-to.pdf ./waveguide1/out_example2/Out_soft_square1
+.eps>
+(epstopdf)             \includegraphics on input line 1217.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example2/Out_soft_square1-eps-converted-to.pdf, id=2008, 421.
+575pt x 316.18124pt>
+File: ./waveguide1/out_example2/Out_soft_square1-eps-converted-to.pdf Graphic f
+ile (type pdf)
+
+<use ./waveguide1/out_example2/Out_soft_square1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example2/Out_soft_square1-eps-convert
+ed-to.pdf used on input line 1217.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example2/Out_soft_peanut.
+eps>
+(epstopdf)                    date: 2018-04-11 09:19:06
+(epstopdf)                    size: 32059 bytes
+(epstopdf)             Output file: <./waveguide1/out_example2/Out_soft_peanut-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:20:58
+(epstopdf)                    size: 14926 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example2/O
+ut_soft_peanut-eps-converted-to.pdf ./waveguide1/out_example2/Out_soft_peanut.e
+ps>
+(epstopdf)             \includegraphics on input line 1217.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example2/Out_soft_peanut-eps-converted-to.pdf, id=2009, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/out_example2/Out_soft_peanut-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/out_example2/Out_soft_peanut-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example2/Out_soft_peanut-eps-converte
+d-to.pdf used on input line 1217.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example2/Out_soft_circle1
+.eps>
+(epstopdf)                    date: 2018-04-11 09:20:34
+(epstopdf)                    size: 37881 bytes
+(epstopdf)             Output file: <./waveguide1/out_example2/Out_soft_circle1
+-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 09:21:00
+(epstopdf)                    size: 11819 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example2/O
+ut_soft_circle1-eps-converted-to.pdf ./waveguide1/out_example2/Out_soft_circle1
+.eps>
+(epstopdf)             \includegraphics on input line 1217.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example2/Out_soft_circle1-eps-converted-to.pdf, id=2010, 421.
+575pt x 316.18124pt>
+File: ./waveguide1/out_example2/Out_soft_circle1-eps-converted-to.pdf Graphic f
+ile (type pdf)
+
+<use ./waveguide1/out_example2/Out_soft_circle1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example2/Out_soft_circle1-eps-convert
+ed-to.pdf used on input line 1217.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example2/Out_tran_pleaf1.
+eps>
+(epstopdf)                    date: 2018-04-13 13:59:56
+(epstopdf)                    size: 39042 bytes
+(epstopdf)             Output file: <./waveguide1/out_example2/Out_tran_pleaf1-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 14:10:12
+(epstopdf)                    size: 21807 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example2/O
+ut_tran_pleaf1-eps-converted-to.pdf ./waveguide1/out_example2/Out_tran_pleaf1.e
+ps>
+(epstopdf)             \includegraphics on input line 1217.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example2/Out_tran_pleaf1-eps-converted-to.pdf, id=2011, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/out_example2/Out_tran_pleaf1-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/out_example2/Out_tran_pleaf1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example2/Out_tran_pleaf1-eps-converte
+d-to.pdf used on input line 1217.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example2/Out_tran_square1
+.eps>
+(epstopdf)                    date: 2018-04-13 14:01:42
+(epstopdf)                    size: 38886 bytes
+(epstopdf)             Output file: <./waveguide1/out_example2/Out_tran_square1
+-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 14:10:16
+(epstopdf)                    size: 21463 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example2/O
+ut_tran_square1-eps-converted-to.pdf ./waveguide1/out_example2/Out_tran_square1
+.eps>
+(epstopdf)             \includegraphics on input line 1217.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example2/Out_tran_square1-eps-converted-to.pdf, id=2012, 421.
+575pt x 316.18124pt>
+File: ./waveguide1/out_example2/Out_tran_square1-eps-converted-to.pdf Graphic f
+ile (type pdf)
+
+<use ./waveguide1/out_example2/Out_tran_square1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example2/Out_tran_square1-eps-convert
+ed-to.pdf used on input line 1217.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example2/Out_tran_peanut.
+eps>
+(epstopdf)                    date: 2018-04-13 14:04:52
+(epstopdf)                    size: 36094 bytes
+(epstopdf)             Output file: <./waveguide1/out_example2/Out_tran_peanut-
+eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 14:11:24
+(epstopdf)                    size: 19147 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example2/O
+ut_tran_peanut-eps-converted-to.pdf ./waveguide1/out_example2/Out_tran_peanut.e
+ps>
+(epstopdf)             \includegraphics on input line 1217.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example2/Out_tran_peanut-eps-converted-to.pdf, id=2013, 421.5
+75pt x 316.18124pt>
+File: ./waveguide1/out_example2/Out_tran_peanut-eps-converted-to.pdf Graphic fi
+le (type pdf)
+
+<use ./waveguide1/out_example2/Out_tran_peanut-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example2/Out_tran_peanut-eps-converte
+d-to.pdf used on input line 1217.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example2/Out_tran_circle1
+.eps>
+(epstopdf)                    date: 2018-04-13 13:58:06
+(epstopdf)                    size: 39894 bytes
+(epstopdf)             Output file: <./waveguide1/out_example2/Out_tran_circle1
+-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 14:10:18
+(epstopdf)                    size: 22341 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example2/O
+ut_tran_circle1-eps-converted-to.pdf ./waveguide1/out_example2/Out_tran_circle1
+.eps>
+(epstopdf)             \includegraphics on input line 1217.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example2/Out_tran_circle1-eps-converted-to.pdf, id=2014, 421.
+575pt x 316.18124pt>
+File: ./waveguide1/out_example2/Out_tran_circle1-eps-converted-to.pdf Graphic f
+ile (type pdf)
+
+<use ./waveguide1/out_example2/Out_tran_circle1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example2/Out_tran_circle1-eps-convert
+ed-to.pdf used on input line 1217.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+ [43
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/out_example2/Out
+_soft_pleaf1-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_
+Report/waveguide1/out_example2/Out_soft_square1-eps-converted-to.pdf> <C:/Users
+/david/Desktop/毕业答辩/Thesis_Report/waveguide1/out_example2/Out_soft_pean
+ut-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/wav
+eguide1/out_example2/Out_soft_circle1-eps-converted-to.pdf> <C:/Users/david/Des
+ktop/毕业答辩/Thesis_Report/waveguide1/out_example2/Out_tran_pleaf1-eps-con
+verted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/ou
+t_example2/Out_tran_square1-eps-converted-to.pdf> <C:/Users/david/Desktop/毕�
+�答辩/Thesis_Report/waveguide1/out_example2/Out_tran_peanut-eps-converted-to.
+pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/out_example2
+/Out_tran_circle1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./waveguide1/out_example3/Out_soft_pleaf1_
+2.eps>
+(epstopdf)                    date: 2018-04-11 10:06:22
+(epstopdf)                    size: 39357 bytes
+(epstopdf)             Output file: <./waveguide1/out_example3/Out_soft_pleaf1_
+2-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 10:07:44
+(epstopdf)                    size: 11808 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example3/O
+ut_soft_pleaf1_2-eps-converted-to.pdf ./waveguide1/out_example3/Out_soft_pleaf1
+_2.eps>
+(epstopdf)             \includegraphics on input line 1233.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example3/Out_soft_pleaf1_2-eps-converted-to.pdf, id=2099, 421
+.575pt x 316.18124pt>
+File: ./waveguide1/out_example3/Out_soft_pleaf1_2-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use ./waveguide1/out_example3/Out_soft_pleaf1_2-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example3/Out_soft_pleaf1_2-eps-conver
+ted-to.pdf used on input line 1233.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example3/Out_soft_pleaf1_
+4.eps>
+(epstopdf)                    date: 2018-04-11 10:06:40
+(epstopdf)                    size: 40877 bytes
+(epstopdf)             Output file: <./waveguide1/out_example3/Out_soft_pleaf1_
+4-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 10:07:46
+(epstopdf)                    size: 12404 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example3/O
+ut_soft_pleaf1_4-eps-converted-to.pdf ./waveguide1/out_example3/Out_soft_pleaf1
+_4.eps>
+(epstopdf)             \includegraphics on input line 1233.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example3/Out_soft_pleaf1_4-eps-converted-to.pdf, id=2100, 421
+.575pt x 316.18124pt>
+File: ./waveguide1/out_example3/Out_soft_pleaf1_4-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use ./waveguide1/out_example3/Out_soft_pleaf1_4-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example3/Out_soft_pleaf1_4-eps-conver
+ted-to.pdf used on input line 1233.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example3/Out_soft_pleaf1_
+6.eps>
+(epstopdf)                    date: 2018-04-11 10:06:56
+(epstopdf)                    size: 41711 bytes
+(epstopdf)             Output file: <./waveguide1/out_example3/Out_soft_pleaf1_
+6-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 10:07:46
+(epstopdf)                    size: 12557 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example3/O
+ut_soft_pleaf1_6-eps-converted-to.pdf ./waveguide1/out_example3/Out_soft_pleaf1
+_6.eps>
+(epstopdf)             \includegraphics on input line 1233.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example3/Out_soft_pleaf1_6-eps-converted-to.pdf, id=2101, 421
+.575pt x 316.18124pt>
+File: ./waveguide1/out_example3/Out_soft_pleaf1_6-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use ./waveguide1/out_example3/Out_soft_pleaf1_6-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example3/Out_soft_pleaf1_6-eps-conver
+ted-to.pdf used on input line 1233.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example3/Out_soft_pleaf1_
+8.eps>
+(epstopdf)                    date: 2018-04-11 10:07:18
+(epstopdf)                    size: 42186 bytes
+(epstopdf)             Output file: <./waveguide1/out_example3/Out_soft_pleaf1_
+8-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 10:07:48
+(epstopdf)                    size: 12473 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example3/O
+ut_soft_pleaf1_8-eps-converted-to.pdf ./waveguide1/out_example3/Out_soft_pleaf1
+_8.eps>
+(epstopdf)             \includegraphics on input line 1233.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example3/Out_soft_pleaf1_8-eps-converted-to.pdf, id=2102, 421
+.575pt x 316.18124pt>
+File: ./waveguide1/out_example3/Out_soft_pleaf1_8-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use ./waveguide1/out_example3/Out_soft_pleaf1_8-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example3/Out_soft_pleaf1_8-eps-conver
+ted-to.pdf used on input line 1233.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example3/Out_soft_pleaf1_
+2_multi.eps>
+(epstopdf)                    date: 2018-04-11 10:03:34
+(epstopdf)                    size: 30551 bytes
+(epstopdf)             Output file: <./waveguide1/out_example3/Out_soft_pleaf1_
+2_multi-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 10:07:52
+(epstopdf)                    size: 14000 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example3/O
+ut_soft_pleaf1_2_multi-eps-converted-to.pdf ./waveguide1/out_example3/Out_soft_
+pleaf1_2_multi.eps>
+(epstopdf)             \includegraphics on input line 1233.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example3/Out_soft_pleaf1_2_multi-eps-converted-to.pdf, id=210
+3, 421.575pt x 316.18124pt>
+File: ./waveguide1/out_example3/Out_soft_pleaf1_2_multi-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./waveguide1/out_example3/Out_soft_pleaf1_2_multi-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example3/Out_soft_pleaf1_2_multi-eps-
+converted-to.pdf used on input line 1233.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example3/Out_soft_pleaf1_
+4_multi.eps>
+(epstopdf)                    date: 2018-04-11 10:03:56
+(epstopdf)                    size: 32126 bytes
+(epstopdf)             Output file: <./waveguide1/out_example3/Out_soft_pleaf1_
+4_multi-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 10:07:54
+(epstopdf)                    size: 15029 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example3/O
+ut_soft_pleaf1_4_multi-eps-converted-to.pdf ./waveguide1/out_example3/Out_soft_
+pleaf1_4_multi.eps>
+(epstopdf)             \includegraphics on input line 1233.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example3/Out_soft_pleaf1_4_multi-eps-converted-to.pdf, id=210
+4, 421.575pt x 316.18124pt>
+File: ./waveguide1/out_example3/Out_soft_pleaf1_4_multi-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./waveguide1/out_example3/Out_soft_pleaf1_4_multi-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example3/Out_soft_pleaf1_4_multi-eps-
+converted-to.pdf used on input line 1233.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example3/Out_soft_pleaf1_
+6_multi.eps>
+(epstopdf)                    date: 2018-04-11 10:04:42
+(epstopdf)                    size: 34509 bytes
+(epstopdf)             Output file: <./waveguide1/out_example3/Out_soft_pleaf1_
+6_multi-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 10:07:56
+(epstopdf)                    size: 16998 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example3/O
+ut_soft_pleaf1_6_multi-eps-converted-to.pdf ./waveguide1/out_example3/Out_soft_
+pleaf1_6_multi.eps>
+(epstopdf)             \includegraphics on input line 1233.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example3/Out_soft_pleaf1_6_multi-eps-converted-to.pdf, id=210
+5, 421.575pt x 316.18124pt>
+File: ./waveguide1/out_example3/Out_soft_pleaf1_6_multi-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./waveguide1/out_example3/Out_soft_pleaf1_6_multi-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example3/Out_soft_pleaf1_6_multi-eps-
+converted-to.pdf used on input line 1233.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/out_example3/Out_soft_pleaf1_
+8_multi.eps>
+(epstopdf)                    date: 2018-04-11 10:04:20
+(epstopdf)                    size: 35274 bytes
+(epstopdf)             Output file: <./waveguide1/out_example3/Out_soft_pleaf1_
+8_multi-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-11 10:08:00
+(epstopdf)                    size: 17352 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/out_example3/O
+ut_soft_pleaf1_8_multi-eps-converted-to.pdf ./waveguide1/out_example3/Out_soft_
+pleaf1_8_multi.eps>
+(epstopdf)             \includegraphics on input line 1233.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/out_example3/Out_soft_pleaf1_8_multi-eps-converted-to.pdf, id=210
+6, 421.575pt x 316.18124pt>
+File: ./waveguide1/out_example3/Out_soft_pleaf1_8_multi-eps-converted-to.pdf Gr
+aphic file (type pdf)
+
+<use ./waveguide1/out_example3/Out_soft_pleaf1_8_multi-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/out_example3/Out_soft_pleaf1_8_multi-eps-
+converted-to.pdf used on input line 1233.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+
+[44
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/out_example3/Out
+_soft_pleaf1_2-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesi
+s_Report/waveguide1/out_example3/Out_soft_pleaf1_4-eps-converted-to.pdf> <C:/Us
+ers/david/Desktop/毕业答辩/Thesis_Report/waveguide1/out_example3/Out_soft_p
+leaf1_6-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Repor
+t/waveguide1/out_example3/Out_soft_pleaf1_8-eps-converted-to.pdf> <C:/Users/dav
+id/Desktop/毕业答辩/Thesis_Report/waveguide1/out_example3/Out_soft_pleaf1_2
+_multi-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report
+/waveguide1/out_example3/Out_soft_pleaf1_4_multi-eps-converted-to.pdf> <C:/User
+s/david/Desktop/毕业答辩/Thesis_Report/waveguide1/out_example3/Out_soft_ple
+af1_6_multi-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_R
+eport/waveguide1/out_example3/Out_soft_pleaf1_8_multi-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./waveguide1/psf_waveguide/in_mesh.eps>
+(epstopdf)                    date: 2018-03-20 12:34:26
+(epstopdf)                    size: 201650 bytes
+(epstopdf)             Output file: <./waveguide1/psf_waveguide/in_mesh-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-03-20 12:39:56
+(epstopdf)                    size: 53443 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_waveguide/
+in_mesh-eps-converted-to.pdf ./waveguide1/psf_waveguide/in_mesh.eps>
+(epstopdf)             \includegraphics on input line 1254.
+Package epstopdf Info: Output file is already uptodate.
+File: ./waveguide1/psf_waveguide/in_mesh-eps-converted-to.pdf Graphic file (typ
+e pdf)
+<use ./waveguide1/psf_waveguide/in_mesh-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_waveguide/in_mesh-eps-converted-to.pd
+f used on input line 1254.
+(pdftex.def)             Requested size: 142.25961pt x 71.12805pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_waveguide/out_mesh.eps>
+(epstopdf)                    date: 2018-03-20 12:35:40
+(epstopdf)                    size: 231179 bytes
+(epstopdf)             Output file: <./waveguide1/psf_waveguide/out_mesh-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2018-03-20 12:39:58
+(epstopdf)                    size: 57594 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_waveguide/
+out_mesh-eps-converted-to.pdf ./waveguide1/psf_waveguide/out_mesh.eps>
+(epstopdf)             \includegraphics on input line 1254.
+Package epstopdf Info: Output file is already uptodate.
+File: ./waveguide1/psf_waveguide/out_mesh-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+
+<use ./waveguide1/psf_waveguide/out_mesh-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_waveguide/out_mesh-eps-converted-to.p
+df used on input line 1254.
+(pdftex.def)             Requested size: 142.25612pt x 71.12805pt.
+ [45
+
+] [46
+
+]
+Package epstopdf Info: Source file: <./waveguide1/psf_part/psf_wg_in_1.eps>
+(epstopdf)                    date: 2018-04-16 08:01:16
+(epstopdf)                    size: 39114 bytes
+(epstopdf)             Output file: <./waveguide1/psf_part/psf_wg_in_1-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2018-04-16 08:09:26
+(epstopdf)                    size: 22905 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_part/psf_w
+g_in_1-eps-converted-to.pdf ./waveguide1/psf_part/psf_wg_in_1.eps>
+(epstopdf)             \includegraphics on input line 1303.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_part/psf_wg_in_1-eps-converted-to.pdf, id=2251, 421.575pt x 3
+16.18124pt>
+File: ./waveguide1/psf_part/psf_wg_in_1-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./waveguide1/psf_part/psf_wg_in_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_part/psf_wg_in_1-eps-converted-to.pdf
+ used on input line 1303.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_part/psf_wg_in_2.eps>
+(epstopdf)                    date: 2018-04-16 08:02:24
+(epstopdf)                    size: 32848 bytes
+(epstopdf)             Output file: <./waveguide1/psf_part/psf_wg_in_2-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2018-04-16 08:09:30
+(epstopdf)                    size: 16730 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_part/psf_w
+g_in_2-eps-converted-to.pdf ./waveguide1/psf_part/psf_wg_in_2.eps>
+(epstopdf)             \includegraphics on input line 1303.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_part/psf_wg_in_2-eps-converted-to.pdf, id=2252, 421.575pt x 3
+16.18124pt>
+File: ./waveguide1/psf_part/psf_wg_in_2-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./waveguide1/psf_part/psf_wg_in_2-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_part/psf_wg_in_2-eps-converted-to.pdf
+ used on input line 1303.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_part/psf_wg_in_3.eps>
+(epstopdf)                    date: 2018-04-16 08:03:08
+(epstopdf)                    size: 39349 bytes
+(epstopdf)             Output file: <./waveguide1/psf_part/psf_wg_in_3-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2018-04-16 08:09:34
+(epstopdf)                    size: 22463 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_part/psf_w
+g_in_3-eps-converted-to.pdf ./waveguide1/psf_part/psf_wg_in_3.eps>
+(epstopdf)             \includegraphics on input line 1303.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_part/psf_wg_in_3-eps-converted-to.pdf, id=2253, 421.575pt x 3
+16.18124pt>
+File: ./waveguide1/psf_part/psf_wg_in_3-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./waveguide1/psf_part/psf_wg_in_3-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_part/psf_wg_in_3-eps-converted-to.pdf
+ used on input line 1303.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_part/psf_wg_in_4.eps>
+(epstopdf)                    date: 2018-04-16 08:03:56
+(epstopdf)                    size: 37585 bytes
+(epstopdf)             Output file: <./waveguide1/psf_part/psf_wg_in_4-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2018-04-16 08:09:38
+(epstopdf)                    size: 20511 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_part/psf_w
+g_in_4-eps-converted-to.pdf ./waveguide1/psf_part/psf_wg_in_4.eps>
+(epstopdf)             \includegraphics on input line 1303.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_part/psf_wg_in_4-eps-converted-to.pdf, id=2254, 421.575pt x 3
+16.18124pt>
+File: ./waveguide1/psf_part/psf_wg_in_4-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./waveguide1/psf_part/psf_wg_in_4-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_part/psf_wg_in_4-eps-converted-to.pdf
+ used on input line 1303.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_part/psf_wg_out_1.eps>
+(epstopdf)                    date: 2018-04-16 08:14:18
+(epstopdf)                    size: 28180 bytes
+(epstopdf)             Output file: <./waveguide1/psf_part/psf_wg_out_1-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-04-16 08:18:00
+(epstopdf)                    size: 14631 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_part/psf_w
+g_out_1-eps-converted-to.pdf ./waveguide1/psf_part/psf_wg_out_1.eps>
+(epstopdf)             \includegraphics on input line 1303.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_part/psf_wg_out_1-eps-converted-to.pdf, id=2255, 421.575pt x 
+316.18124pt>
+File: ./waveguide1/psf_part/psf_wg_out_1-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./waveguide1/psf_part/psf_wg_out_1-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_part/psf_wg_out_1-eps-converted-to.pd
+f used on input line 1303.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_part/psf_wg_out_2.eps>
+(epstopdf)                    date: 2018-04-16 08:15:10
+(epstopdf)                    size: 30716 bytes
+(epstopdf)             Output file: <./waveguide1/psf_part/psf_wg_out_2-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-04-16 08:18:04
+(epstopdf)                    size: 16693 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_part/psf_w
+g_out_2-eps-converted-to.pdf ./waveguide1/psf_part/psf_wg_out_2.eps>
+(epstopdf)             \includegraphics on input line 1303.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_part/psf_wg_out_2-eps-converted-to.pdf, id=2256, 421.575pt x 
+316.18124pt>
+File: ./waveguide1/psf_part/psf_wg_out_2-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./waveguide1/psf_part/psf_wg_out_2-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_part/psf_wg_out_2-eps-converted-to.pd
+f used on input line 1303.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_part/psf_wg_out_3.eps>
+(epstopdf)                    date: 2018-04-16 08:16:10
+(epstopdf)                    size: 34352 bytes
+(epstopdf)             Output file: <./waveguide1/psf_part/psf_wg_out_3-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-04-16 08:18:08
+(epstopdf)                    size: 19521 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_part/psf_w
+g_out_3-eps-converted-to.pdf ./waveguide1/psf_part/psf_wg_out_3.eps>
+(epstopdf)             \includegraphics on input line 1303.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_part/psf_wg_out_3-eps-converted-to.pdf, id=2257, 421.575pt x 
+316.18124pt>
+File: ./waveguide1/psf_part/psf_wg_out_3-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./waveguide1/psf_part/psf_wg_out_3-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_part/psf_wg_out_3-eps-converted-to.pd
+f used on input line 1303.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_part/psf_wg_out_4.eps>
+(epstopdf)                    date: 2018-04-16 08:16:48
+(epstopdf)                    size: 42819 bytes
+(epstopdf)             Output file: <./waveguide1/psf_part/psf_wg_out_4-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-04-16 08:18:10
+(epstopdf)                    size: 26494 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_part/psf_w
+g_out_4-eps-converted-to.pdf ./waveguide1/psf_part/psf_wg_out_4.eps>
+(epstopdf)             \includegraphics on input line 1303.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_part/psf_wg_out_4-eps-converted-to.pdf, id=2258, 421.575pt x 
+316.18124pt>
+File: ./waveguide1/psf_part/psf_wg_out_4-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./waveguide1/psf_part/psf_wg_out_4-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_part/psf_wg_out_4-eps-converted-to.pd
+f used on input line 1303.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+
+Overfull \vbox (4.15927pt too high) detected at line 1303
+ []
+
+[47
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/psf_part/psf_wg_
+in_1-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/w
+aveguide1/psf_part/psf_wg_in_2-eps-converted-to.pdf> <C:/Users/david/Desktop/�
+�业答辩/Thesis_Report/waveguide1/psf_part/psf_wg_in_3-eps-converted-to.pdf> 
+<C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/psf_part/psf_wg_i
+n_4-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/wa
+veguide1/psf_part/psf_wg_out_1-eps-converted-to.pdf> <C:/Users/david/Desktop/�
+�业答辩/Thesis_Report/waveguide1/psf_part/psf_wg_out_2-eps-converted-to.pdf>
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/psf_part/psf_wg_
+out_3-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/
+waveguide1/psf_part/psf_wg_out_4-eps-converted-to.pdf>]
+Overfull \vbox (1.16385pt too high) detected at line 1336
+ []
+
+[48
+
+] [49
+
+] [50
+
+] [51
+
+] [52
+
+]
+Overfull \hbox (17.24007pt too wide) in alignment at lines 1524--1524
+ [][][] []
+ []
+
+
+Overfull \hbox (17.24007pt too wide) in alignment at lines 1524--1524
+ [][][] []
+ []
+
+[53
+
+]pdfTeX warning (ext4): destination with the same identifier (name{NhMh}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1563 \end{frame}
+                   [54
+
+] [55
+
+]
+Package epstopdf Info: Source file: <./waveguide1/psf_waveguide/in_mesh.eps>
+(epstopdf)                    date: 2018-03-20 12:34:26
+(epstopdf)                    size: 201650 bytes
+(epstopdf)             Output file: <./waveguide1/psf_waveguide/in_mesh-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-03-20 12:39:56
+(epstopdf)                    size: 53443 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_waveguide/
+in_mesh-eps-converted-to.pdf ./waveguide1/psf_waveguide/in_mesh.eps>
+(epstopdf)             \includegraphics on input line 1607.
+Package epstopdf Info: Output file is already uptodate.
+File: ./waveguide1/psf_waveguide/in_mesh-eps-converted-to.pdf Graphic file (typ
+e pdf)
+
+<use ./waveguide1/psf_waveguide/in_mesh-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_waveguide/in_mesh-eps-converted-to.pd
+f used on input line 1607.
+(pdftex.def)             Requested size: 122.91406pt x 66.868pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_waveguide/out_mesh.eps>
+(epstopdf)                    date: 2018-03-20 12:35:40
+(epstopdf)                    size: 231179 bytes
+(epstopdf)             Output file: <./waveguide1/psf_waveguide/out_mesh-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2018-03-20 12:39:58
+(epstopdf)                    size: 57594 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_waveguide/
+out_mesh-eps-converted-to.pdf ./waveguide1/psf_waveguide/out_mesh.eps>
+(epstopdf)             \includegraphics on input line 1607.
+Package epstopdf Info: Output file is already uptodate.
+File: ./waveguide1/psf_waveguide/out_mesh-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+
+<use ./waveguide1/psf_waveguide/out_mesh-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_waveguide/out_mesh-eps-converted-to.p
+df used on input line 1607.
+(pdftex.def)             Requested size: 122.91406pt x 61.45486pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_twolayer/in_mesh.eps>
+(epstopdf)                    date: 2018-03-20 14:16:54
+(epstopdf)                    size: 186997 bytes
+(epstopdf)             Output file: <./waveguide1/psf_twolayer/in_mesh-eps-conv
+erted-to.pdf>
+(epstopdf)                    date: 2018-03-20 14:21:18
+(epstopdf)                    size: 51937 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_twolayer/i
+n_mesh-eps-converted-to.pdf ./waveguide1/psf_twolayer/in_mesh.eps>
+(epstopdf)             \includegraphics on input line 1607.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_twolayer/in_mesh-eps-converted-to.pdf, id=2630, 586.19pt x 31
+6.18124pt>
+File: ./waveguide1/psf_twolayer/in_mesh-eps-converted-to.pdf Graphic file (type
+ pdf)
+ <use ./waveguide1/psf_twolayer/in_mesh-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_twolayer/in_mesh-eps-converted-to.pdf
+ used on input line 1607.
+(pdftex.def)             Requested size: 122.91406pt x 66.29387pt.
+Package epstopdf Info: Source file: <./waveguide1/psf_twolayer/out_mesh.eps>
+(epstopdf)                    date: 2018-03-20 14:19:12
+(epstopdf)                    size: 178063 bytes
+(epstopdf)             Output file: <./waveguide1/psf_twolayer/out_mesh-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-03-20 14:21:22
+(epstopdf)                    size: 44564 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide1/psf_twolayer/o
+ut_mesh-eps-converted-to.pdf ./waveguide1/psf_twolayer/out_mesh.eps>
+(epstopdf)             \includegraphics on input line 1607.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide1/psf_twolayer/out_mesh-eps-converted-to.pdf, id=2631, 515.9275pt x
+ 302.12875pt>
+File: ./waveguide1/psf_twolayer/out_mesh-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./waveguide1/psf_twolayer/out_mesh-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide1/psf_twolayer/out_mesh-eps-converted-to.pd
+f used on input line 1607.
+(pdftex.def)             Requested size: 122.91406pt x 71.9776pt.
+
+[56
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide1/psf_twolayer/in_
+mesh-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/w
+aveguide1/psf_twolayer/out_mesh-eps-converted-to.pdf>] [57
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Id_half}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1660 \end{frame}
+                  
+Package epstopdf Info: Source file: <./waveguide2/example1/pleaf1_tran_in_imped
+ance.eps>
+(epstopdf)                    date: 2018-04-13 15:47:16
+(epstopdf)                    size: 45361 bytes
+(epstopdf)             Output file: <./waveguide2/example1/pleaf1_tran_in_imped
+ance-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 15:59:26
+(epstopdf)                    size: 25223 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/example1/pleaf
+1_tran_in_impedance-eps-converted-to.pdf ./waveguide2/example1/pleaf1_tran_in_i
+mpedance.eps>
+(epstopdf)             \includegraphics on input line 1660.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/example1/pleaf1_tran_in_impedance-eps-converted-to.pdf, id=2713, 
+421.575pt x 316.18124pt>
+File: ./waveguide2/example1/pleaf1_tran_in_impedance-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide2/example1/pleaf1_tran_in_impedance-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/example1/pleaf1_tran_in_impedance-eps-con
+verted-to.pdf used on input line 1660.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/example1/square1_tran_in_impe
+dance.eps>
+(epstopdf)                    date: 2018-04-13 15:50:14
+(epstopdf)                    size: 40915 bytes
+(epstopdf)             Output file: <./waveguide2/example1/square1_tran_in_impe
+dance-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 15:59:30
+(epstopdf)                    size: 22003 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/example1/squar
+e1_tran_in_impedance-eps-converted-to.pdf ./waveguide2/example1/square1_tran_in
+_impedance.eps>
+(epstopdf)             \includegraphics on input line 1660.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/example1/square1_tran_in_impedance-eps-converted-to.pdf, id=2714,
+ 421.575pt x 316.18124pt>
+File: ./waveguide2/example1/square1_tran_in_impedance-eps-converted-to.pdf Grap
+hic file (type pdf)
+
+<use ./waveguide2/example1/square1_tran_in_impedance-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/example1/square1_tran_in_impedance-eps-co
+nverted-to.pdf used on input line 1660.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/example1/peanut_tran_in_imped
+ance.eps>
+(epstopdf)                    date: 2018-04-13 15:55:14
+(epstopdf)                    size: 38322 bytes
+(epstopdf)             Output file: <./waveguide2/example1/peanut_tran_in_imped
+ance-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 15:59:32
+(epstopdf)                    size: 19822 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/example1/peanu
+t_tran_in_impedance-eps-converted-to.pdf ./waveguide2/example1/peanut_tran_in_i
+mpedance.eps>
+(epstopdf)             \includegraphics on input line 1660.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/example1/peanut_tran_in_impedance-eps-converted-to.pdf, id=2715, 
+421.575pt x 316.18124pt>
+File: ./waveguide2/example1/peanut_tran_in_impedance-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide2/example1/peanut_tran_in_impedance-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/example1/peanut_tran_in_impedance-eps-con
+verted-to.pdf used on input line 1660.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/example1/circle1_tran_in_impe
+dance.eps>
+(epstopdf)                    date: 2018-04-13 15:43:30
+(epstopdf)                    size: 46219 bytes
+(epstopdf)             Output file: <./waveguide2/example1/circle1_tran_in_impe
+dance-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 15:59:36
+(epstopdf)                    size: 26560 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/example1/circl
+e1_tran_in_impedance-eps-converted-to.pdf ./waveguide2/example1/circle1_tran_in
+_impedance.eps>
+(epstopdf)             \includegraphics on input line 1660.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/example1/circle1_tran_in_impedance-eps-converted-to.pdf, id=2716,
+ 421.575pt x 316.18124pt>
+File: ./waveguide2/example1/circle1_tran_in_impedance-eps-converted-to.pdf Grap
+hic file (type pdf)
+
+<use ./waveguide2/example1/circle1_tran_in_impedance-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/example1/circle1_tran_in_impedance-eps-co
+nverted-to.pdf used on input line 1660.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/example1/pleaf1_tran_in_twola
+yer.eps>
+(epstopdf)                    date: 2018-04-13 15:47:52
+(epstopdf)                    size: 43900 bytes
+(epstopdf)             Output file: <./waveguide2/example1/pleaf1_tran_in_twola
+yer-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 15:59:40
+(epstopdf)                    size: 24718 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/example1/pleaf
+1_tran_in_twolayer-eps-converted-to.pdf ./waveguide2/example1/pleaf1_tran_in_tw
+olayer.eps>
+(epstopdf)             \includegraphics on input line 1660.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/example1/pleaf1_tran_in_twolayer-eps-converted-to.pdf, id=2717, 4
+21.575pt x 316.18124pt>
+File: ./waveguide2/example1/pleaf1_tran_in_twolayer-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./waveguide2/example1/pleaf1_tran_in_twolayer-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/example1/pleaf1_tran_in_twolayer-eps-conv
+erted-to.pdf used on input line 1660.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/example1/square1_tran_in_twol
+ayer.eps>
+(epstopdf)                    date: 2018-04-13 15:50:38
+(epstopdf)                    size: 40792 bytes
+(epstopdf)             Output file: <./waveguide2/example1/square1_tran_in_twol
+ayer-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 15:59:42
+(epstopdf)                    size: 21905 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/example1/squar
+e1_tran_in_twolayer-eps-converted-to.pdf ./waveguide2/example1/square1_tran_in_
+twolayer.eps>
+(epstopdf)             \includegraphics on input line 1660.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/example1/square1_tran_in_twolayer-eps-converted-to.pdf, id=2718, 
+421.575pt x 316.18124pt>
+File: ./waveguide2/example1/square1_tran_in_twolayer-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide2/example1/square1_tran_in_twolayer-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/example1/square1_tran_in_twolayer-eps-con
+verted-to.pdf used on input line 1660.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/example1/peanut_tran_in_twola
+yer.eps>
+(epstopdf)                    date: 2018-04-13 15:55:38
+(epstopdf)                    size: 38240 bytes
+(epstopdf)             Output file: <./waveguide2/example1/peanut_tran_in_twola
+yer-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 15:59:46
+(epstopdf)                    size: 19487 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/example1/peanu
+t_tran_in_twolayer-eps-converted-to.pdf ./waveguide2/example1/peanut_tran_in_tw
+olayer.eps>
+(epstopdf)             \includegraphics on input line 1660.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/example1/peanut_tran_in_twolayer-eps-converted-to.pdf, id=2719, 4
+21.575pt x 316.18124pt>
+File: ./waveguide2/example1/peanut_tran_in_twolayer-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use ./waveguide2/example1/peanut_tran_in_twolayer-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/example1/peanut_tran_in_twolayer-eps-conv
+erted-to.pdf used on input line 1660.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/example1/circle1_tran_in_twol
+ayer.eps>
+(epstopdf)                    date: 2018-04-13 15:44:20
+(epstopdf)                    size: 44493 bytes
+(epstopdf)             Output file: <./waveguide2/example1/circle1_tran_in_twol
+ayer-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 15:59:50
+(epstopdf)                    size: 25714 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/example1/circl
+e1_tran_in_twolayer-eps-converted-to.pdf ./waveguide2/example1/circle1_tran_in_
+twolayer.eps>
+(epstopdf)             \includegraphics on input line 1660.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/example1/circle1_tran_in_twolayer-eps-converted-to.pdf, id=2720, 
+421.575pt x 316.18124pt>
+File: ./waveguide2/example1/circle1_tran_in_twolayer-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use ./waveguide2/example1/circle1_tran_in_twolayer-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/example1/circle1_tran_in_twolayer-eps-con
+verted-to.pdf used on input line 1660.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+
+Overfull \vbox (6.80008pt too high) detected at line 1660
+ []
+
+[58
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide2/example1/pleaf1_
+tran_in_impedance-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Th
+esis_Report/waveguide2/example1/square1_tran_in_impedance-eps-converted-to.pdf>
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide2/example1/peanut_
+tran_in_impedance-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Th
+esis_Report/waveguide2/example1/circle1_tran_in_impedance-eps-converted-to.pdf>
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide2/example1/pleaf1_
+tran_in_twolayer-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/The
+sis_Report/waveguide2/example1/square1_tran_in_twolayer-eps-converted-to.pdf> <
+C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide2/example1/peanut_tr
+an_in_twolayer-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesi
+s_Report/waveguide2/example1/circle1_tran_in_twolayer-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <./waveguide2/out_example2/Out_tran_pleaf1_
+impedance.eps>
+(epstopdf)                    date: 2018-04-13 18:16:02
+(epstopdf)                    size: 39387 bytes
+(epstopdf)             Output file: <./waveguide2/out_example2/Out_tran_pleaf1_
+impedance-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 18:33:58
+(epstopdf)                    size: 21813 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/out_example2/O
+ut_tran_pleaf1_impedance-eps-converted-to.pdf ./waveguide2/out_example2/Out_tra
+n_pleaf1_impedance.eps>
+(epstopdf)             \includegraphics on input line 1677.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/out_example2/Out_tran_pleaf1_impedance-eps-converted-to.pdf, id=2
+812, 421.575pt x 316.18124pt>
+File: ./waveguide2/out_example2/Out_tran_pleaf1_impedance-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use ./waveguide2/out_example2/Out_tran_pleaf1_impedance-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/out_example2/Out_tran_pleaf1_impedance-ep
+s-converted-to.pdf used on input line 1677.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/out_example2/Out_tran_square1
+_impedance.eps>
+(epstopdf)                    date: 2018-04-13 18:18:16
+(epstopdf)                    size: 38956 bytes
+(epstopdf)             Output file: <./waveguide2/out_example2/Out_tran_square1
+_impedance-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 18:34:02
+(epstopdf)                    size: 21351 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/out_example2/O
+ut_tran_square1_impedance-eps-converted-to.pdf ./waveguide2/out_example2/Out_tr
+an_square1_impedance.eps>
+(epstopdf)             \includegraphics on input line 1677.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/out_example2/Out_tran_square1_impedance-eps-converted-to.pdf, id=
+2813, 421.575pt x 316.18124pt>
+File: ./waveguide2/out_example2/Out_tran_square1_impedance-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use ./waveguide2/out_example2/Out_tran_square1_impedance-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/out_example2/Out_tran_square1_impedance-e
+ps-converted-to.pdf used on input line 1677.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/out_example2/Out_tran_peanut_
+impedance.eps>
+(epstopdf)                    date: 2018-04-13 18:23:04
+(epstopdf)                    size: 35214 bytes
+(epstopdf)             Output file: <./waveguide2/out_example2/Out_tran_peanut_
+impedance-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 18:34:04
+(epstopdf)                    size: 19083 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/out_example2/O
+ut_tran_peanut_impedance-eps-converted-to.pdf ./waveguide2/out_example2/Out_tra
+n_peanut_impedance.eps>
+(epstopdf)             \includegraphics on input line 1677.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/out_example2/Out_tran_peanut_impedance-eps-converted-to.pdf, id=2
+814, 421.575pt x 316.18124pt>
+File: ./waveguide2/out_example2/Out_tran_peanut_impedance-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use ./waveguide2/out_example2/Out_tran_peanut_impedance-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/out_example2/Out_tran_peanut_impedance-ep
+s-converted-to.pdf used on input line 1677.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/out_example2/Out_tran_circle1
+_impedance.eps>
+(epstopdf)                    date: 2018-04-13 18:26:00
+(epstopdf)                    size: 38874 bytes
+(epstopdf)             Output file: <./waveguide2/out_example2/Out_tran_circle1
+_impedance-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 18:34:08
+(epstopdf)                    size: 22251 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/out_example2/O
+ut_tran_circle1_impedance-eps-converted-to.pdf ./waveguide2/out_example2/Out_tr
+an_circle1_impedance.eps>
+(epstopdf)             \includegraphics on input line 1677.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/out_example2/Out_tran_circle1_impedance-eps-converted-to.pdf, id=
+2815, 421.575pt x 316.18124pt>
+File: ./waveguide2/out_example2/Out_tran_circle1_impedance-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use ./waveguide2/out_example2/Out_tran_circle1_impedance-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/out_example2/Out_tran_circle1_impedance-e
+ps-converted-to.pdf used on input line 1677.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/out_example2/Out_tran_pleaf1_
+twolayer.eps>
+(epstopdf)                    date: 2018-04-13 18:16:24
+(epstopdf)                    size: 39192 bytes
+(epstopdf)             Output file: <./waveguide2/out_example2/Out_tran_pleaf1_
+twolayer-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 18:34:12
+(epstopdf)                    size: 21418 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/out_example2/O
+ut_tran_pleaf1_twolayer-eps-converted-to.pdf ./waveguide2/out_example2/Out_tran
+_pleaf1_twolayer.eps>
+(epstopdf)             \includegraphics on input line 1677.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/out_example2/Out_tran_pleaf1_twolayer-eps-converted-to.pdf, id=28
+16, 421.575pt x 316.18124pt>
+File: ./waveguide2/out_example2/Out_tran_pleaf1_twolayer-eps-converted-to.pdf G
+raphic file (type pdf)
+
+<use ./waveguide2/out_example2/Out_tran_pleaf1_twolayer-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/out_example2/Out_tran_pleaf1_twolayer-eps
+-converted-to.pdf used on input line 1677.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/out_example2/Out_tran_square1
+_twolayer.eps>
+(epstopdf)                    date: 2018-04-13 18:18:40
+(epstopdf)                    size: 37405 bytes
+(epstopdf)             Output file: <./waveguide2/out_example2/Out_tran_square1
+_twolayer-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 18:34:14
+(epstopdf)                    size: 21154 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/out_example2/O
+ut_tran_square1_twolayer-eps-converted-to.pdf ./waveguide2/out_example2/Out_tra
+n_square1_twolayer.eps>
+(epstopdf)             \includegraphics on input line 1677.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/out_example2/Out_tran_square1_twolayer-eps-converted-to.pdf, id=2
+817, 421.575pt x 316.18124pt>
+File: ./waveguide2/out_example2/Out_tran_square1_twolayer-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use ./waveguide2/out_example2/Out_tran_square1_twolayer-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/out_example2/Out_tran_square1_twolayer-ep
+s-converted-to.pdf used on input line 1677.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/out_example2/Out_tran_peanut_
+twolayer.eps>
+(epstopdf)                    date: 2018-04-13 18:23:32
+(epstopdf)                    size: 35404 bytes
+(epstopdf)             Output file: <./waveguide2/out_example2/Out_tran_peanut_
+twolayer-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 18:34:18
+(epstopdf)                    size: 19049 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/out_example2/O
+ut_tran_peanut_twolayer-eps-converted-to.pdf ./waveguide2/out_example2/Out_tran
+_peanut_twolayer.eps>
+(epstopdf)             \includegraphics on input line 1677.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/out_example2/Out_tran_peanut_twolayer-eps-converted-to.pdf, id=28
+18, 421.575pt x 316.18124pt>
+File: ./waveguide2/out_example2/Out_tran_peanut_twolayer-eps-converted-to.pdf G
+raphic file (type pdf)
+
+<use ./waveguide2/out_example2/Out_tran_peanut_twolayer-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/out_example2/Out_tran_peanut_twolayer-eps
+-converted-to.pdf used on input line 1677.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+Package epstopdf Info: Source file: <./waveguide2/out_example2/Out_tran_circle1
+_twolayer.eps>
+(epstopdf)                    date: 2018-04-13 18:26:24
+(epstopdf)                    size: 39430 bytes
+(epstopdf)             Output file: <./waveguide2/out_example2/Out_tran_circle1
+_twolayer-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-04-13 18:34:22
+(epstopdf)                    size: 22423 bytes
+(epstopdf)             Command: <epstopdf --outfile=./waveguide2/out_example2/O
+ut_tran_circle1_twolayer-eps-converted-to.pdf ./waveguide2/out_example2/Out_tra
+n_circle1_twolayer.eps>
+(epstopdf)             \includegraphics on input line 1677.
+Package epstopdf Info: Output file is already uptodate.
+
+<./waveguide2/out_example2/Out_tran_circle1_twolayer-eps-converted-to.pdf, id=2
+819, 421.575pt x 316.18124pt>
+File: ./waveguide2/out_example2/Out_tran_circle1_twolayer-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use ./waveguide2/out_example2/Out_tran_circle1_twolayer-eps-converted-to.pdf>
+Package pdftex.def Info: ./waveguide2/out_example2/Out_tran_circle1_twolayer-ep
+s-converted-to.pdf used on input line 1677.
+(pdftex.def)             Requested size: 70.67535pt x 53.00229pt.
+
+[59
+
+ <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide2/out_example2/Out
+_tran_pleaf1_impedance-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答�
+��/Thesis_Report/waveguide2/out_example2/Out_tran_square1_impedance-eps-convert
+ed-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/waveguide2/out_ex
+ample2/Out_tran_peanut_impedance-eps-converted-to.pdf> <C:/Users/david/Desktop/
+毕业答辩/Thesis_Report/waveguide2/out_example2/Out_tran_circle1_impedance-e
+ps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report/wavegui
+de2/out_example2/Out_tran_pleaf1_twolayer-eps-converted-to.pdf> <C:/Users/david
+/Desktop/毕业答辩/Thesis_Report/waveguide2/out_example2/Out_tran_square1_tw
+olayer-eps-converted-to.pdf> <C:/Users/david/Desktop/毕业答辩/Thesis_Report
+/waveguide2/out_example2/Out_tran_peanut_twolayer-eps-converted-to.pdf> <C:/Use
+rs/david/Desktop/毕业答辩/Thesis_Report/waveguide2/out_example2/Out_tran_ci
+rcle1_twolayer-eps-converted-to.pdf>]
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.toc) [60
+
+]
+[61
+
+] [62
+
+] [63
+
+]
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.bbl)
+\tf@nav=\write6
+\tf@toc=\write7
+\tf@snm=\write8
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1752.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1752.
+
+(C:\Users\david\Desktop\毕业答辩\Thesis_Report\Thesis_Report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1752.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1752.
+
+Package rerunfilecheck Info: File `Thesis_Report.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 19204 strings out of 495354
+ 363603 string characters out of 3183859
+ 440080 words of memory out of 3000000
+ 21520 multiletter control sequences out of 15000+200000
+ 75434 words of font info for 241 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 49i,20n,64p,403b,1660s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf>{D:/CTEX/MiKTeX/fon
+ts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Windows/Fonts/simkai.ttf><C:/Windows/
+Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/
+Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.
+ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts
+/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windo
+ws/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><
+C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simk
+ai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fo
+nts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Wi
+ndows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.tt
+f><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/s
+imkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows
+/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:
+/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai
+.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Font
+s/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Wind
+ows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf>
+<C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/sim
+kai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/F
+onts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/W
+indows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.t
+tf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/
+simkai.ttf><C:/Windows/Fonts/simkai.ttf><C:/Windows/Fonts/simkai.ttf><D:/CTEX/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmbx5.pfb><D:/CTEX/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx6.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.p
+fb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><D:/CTEX/MiKTe
+X/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><D:/CTEX/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5
+.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/CTEX/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/
+CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/CTEX/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr6.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+7.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/CTEX/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><D:/CTEX/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmsy5.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:
+/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/CTEX/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/sym
+bols/msbm5.pfb><D:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb><D
+:/CTEX/MiKTeX/fonts/type1/public/cm-super/sfsi0500.pfb><D:/CTEX/MiKTeX/fonts/ty
+pe1/public/cm-super/sfsi0700.pfb><D:/CTEX/MiKTeX/fonts/type1/public/cm-super/sf
+ss0500.pfb><D:/CTEX/MiKTeX/fonts/type1/public/cm-super/sfss0700.pfb><D:/CTEX/Mi
+KTeX/fonts/type1/public/cm-super/sfss0800.pfb><D:/CTEX/MiKTeX/fonts/type1/publi
+c/cm-super/sfss1095.pfb>
+Output written on Thesis_Report.pdf (63 pages, 3208940 bytes).
+PDF statistics:
+ 3364 PDF objects out of 3580 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
+ 687 words of extra memory for PDF output out of 10000 (max. 10000000)
+
