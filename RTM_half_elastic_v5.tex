@@ -196,7 +196,7 @@ The equation (\ref{elastic_eq}) is understood as the limit when $x_s\in\R_+^2\bk
 
 The reverse time migration (RTM) method, which consists of back-propagating
 the complex conjugated data into the background medium and computing the crosscorrelation between the incident wave field and the backpropagated field to output the
-final imaging profile, is nowadays widely used in exploration geophysics \cite{baysal1983reverse,berkhout2012seismic,bleistein2013mathematics,chang1987elastic,claerbout1985imaging}. In \cite{chen2013reverse_acou,chen2013reverse_elec,chen2015reverse_elas},
+final imaging profile, is nowadays widely used in exploration geophysics \cite{baysal1983reverse,bleistein2013mathematics,berkhout2012seismic,chang1987elastic,claerbout1985imaging}. In \cite{chen2013reverse_acou,chen2013reverse_elec,chen2015reverse_elas},
 the RTM method for reconstructing extended targets using acoustic, electromagnetic and elastic
 waves at a fixed frequency in the free space is proposed and studied. The resolution
 analysis in \cite{chen2013reverse_acou,chen2013reverse_elec,chen2015reverse_elas} is achieved without using the small inclusion or geometrical optics
@@ -295,7 +295,7 @@ For the sake of completeness, we include a proof here. It is well known that
 \delta(\xi)=(k_s^2-2\xi^2)^2+4\xi^2(k_s^2-\xi^2)^{1/2}(k_p^2-\xi^2)^{1/2}
 \ee
 However, $\delta(\xi)$ is rendered single-valued by selecting
-branch cuts along $k_p<\Re(\xi)<k_s,\Im(\xi)=0$ which is consistent with the convention (\ref{q1}). A simple computation show that $\delta(\pm k_s)>0$ and $\delta(\pm\infty+0\i)<0$. By the continuity of $\delta(\xi)$, we can obtain that it has at least two real zero points which denoted by $\pm k_R$.
+branch cuts along $k_p<\Re(\xi)<k_s,\Im(\xi)=0$ which is consistent with the convention (\ref{convention_1}). A simple computation show that $\delta(\pm k_s)>0$ and $\delta(\pm\infty+0\i)<0$. By the continuity of $\delta(\xi)$, we can obtain that it has at least two real zero points which denoted by $\pm k_R$.
 
 Now it turn to proof that $\delta(\xi)$ has only two roots in the complex plane by the principle of arguement which follows as a theorem of the theory of complex variables\cite{Ahlfors1979Complex}. Now consider the contour $C$ consisting of $\Ga$, and $C_l$ and $C_r$ where $C_r=[k_p+\i0^+,k_s+\i0^+]\cup[k_p+\i0^-,k_s+\i0^-]$ that surround $[k_p,k_s]$, $C_l=[-k_s+\i0^+,-k_p+\i0^+]\cup[-k_s+\i0^-,-k_p+\i0^-]$ that surround $[-k_s,-k_p]$ and $\Ga$ denotes a circle with enough large radius. Since the function $\delta(\xi)$ clears does not have poles in the complex $\xi$-plane and we find that within the contour $C=\Ga\cup C_r\cup C_l$ the number of zeros is given by
 \be \label{zero}
@@ -1064,7 +1064,7 @@ In this section we consider the reconstraction of non-penetrable obstacles with 
 \\ \hspace{-2cm} \sigma(u^s_k(x))\nu+\i\eta(x)u^s_k(x)=-(\sigma(N(x,x_s)e_k)\nu+\i\eta(x)N(x,x_s)e_k)\ \ \mbox{\rm on } \Ga_D, \label{elas_bd2} \\ \hspace{-2cm}
 \sigma(u^s_k)e_2=0 \ \ \ \ \mbox{\rm on} \ \ \ \Ga_0, \label{elas_b02} 
 \ee
-By modifying the argument in Theorem \ref{resolution2}, we can show the following result whose proof is omitted.
+By modifying the argument in Theorem \ref{resolution1}, we can show the following result whose proof is omitted.
 \begin{thm}\label{resolution2}
 	For any $z\in\Omega$, let $\Phi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
 	\ben
@@ -1083,8 +1083,8 @@ For the penetrable obstacle , the measured data $u^s_k(x_r.x_s)=u_k(x_r,x_s)-N(x
 \Delta_e u^s_k(x) + \omega^2n(x) u^s_k(x) =-\om^2(n(x)-1)N(x,x_s)e_k \qquad\mbox{\rm in } \R^2 \label{elas_5}\ \ \ \\
 \sigma(u^s_k)e_2=0 \ \ \ \ \mbox{\rm on} \ \ \ \Ga_0, \label{elas_b03} 
 \ee
-where $n(x)\in L^{\infty}({\R^2})$ is a positive function which is equel to 1 outside $D$. By modifying the argument in Theorem \ref{resolution2}, the following theorem can be proved.
-\begin{thm}\label{resolution2}
+where $n(x)\in L^{\infty}({\R^2})$ is a positive function which is equel to 1 outside $D$. By modifying the argument in Theorem \ref{resolution1}, the following theorem can be proved.
+\begin{thm}\label{resolution3}
 	For any $z\in\Omega$, let $\Psi(y,z)\in\C^{2\times2}$ be the radiation solution of the problem:
 	\ben
 	& & \Delta_e \Psi(y,z)e_j + \omega^2n(y)\Psi e_j= -\omega^2(n(y)-1)\overline{F(z,y)e_j} \ \ \ \ \mbox{\rm in }\R^2
@@ -1428,5 +1428,99 @@ Using Parseval identity combined with above formula and formula \ref{ngreen}, we
 This completes the proof by using lemma \ref{es_diri_neu}.
 \finproof
 \section*{References}
-\bibliography{eee}
+\begin{thebibliography}{99}
+	\bibitem{achenbach1980}
+	J. Achenbach 1980 {\em Wave Propagation in Elastic Solids }(North-Holland)
+	
+	\bibitem{Ahlfors1979Complex}
+	L V. Ahlfors 1979 {\em Complex Analysis: An introduction to the theory of analytic functions of one complex variable }(McGraw-Hill)
+	
+	\bibitem{ammari2013mathematical}
+	H. Ammari, J. Garnier, W. Jing, H. Kang, M. Lim, K. Solna, and H. Wang 2013 {\em Mathematical and Statistical Methods for Multistatic Imaging} (Springer)
+	
+	\bibitem{arens1999}
+	T. Arens 1999 {A New Integral Equation Formulation for the Scattering of Plane Elastic Waves by Diffraction Gratings} {\bf 11} 232-245.
+	
+	\bibitem{baysal1983reverse}
+	Baysal E, Kosloff D D, Sherwood J W C. 1983 {Reverse time migration} {\bf 48} 1514--1524.
+	
+	\bibitem{bleistein2013mathematics}
+	Bleistein N, Cohen J and Stockwell J 2001 {\em Mathematics of Multidimensional Seismic Imaging, Migration, and Inversion} (New York: Springer)
+	
+	\bibitem{berkhout2012seismic}
+	{Berkhout A}  1984 {\em Seismic Migration: Imaging of Acoustic Energy by Wave Field Extrapolation}  (New York: Elsevier)
+	
+	\bibitem{chang1987elastic}
+	Chang W, McMechan G A. 1987 {Elastic reverse-time migration} {\it Geophysics} {\bf 48}  1365-1375
+	
+	\bibitem{chen2013reverse_acou}
+	Chen J,  Chen Z and  Huang G 2013 {Reverse time migration for extended obstacles: acoustic waves}  {\it Inverse Problems} {\bf 29}  085005 (17pp)
+	
+	\bibitem{chen2013reverse_elec}
+	Chen J,  Chen Z and  Huang G 2013 {Reverse time migration for extended obstacles: electromagnetic waves} {\it Inverse Problems}
+	{\bf 29} 085006 (17pp)
+	
+	\bibitem{chen2015reverse_elas}
+	Chen Z  and  Huang G 2014 {Reverse time migration for extended obstacles: Elastic waves} (in Chinese){\it Science China Mathematics} {\bf 45} 1103--1114
+	
+	\bibitem{chen2015reverse_planar}
+	Chen Z  and  Huang G 2014 {Reverse time migration for reconstructing extended obstacles in planar acoustic waveguides} {\it Science China Mathematics} {\bf 58} 1811-1834
+	
+	\bibitem{RTMhalf_aco}
+	Chen Z and  Huang G 2015 {Reverse time migration for reconstructing extended obstacles in the half space}  {\it Inverse Problems} {\bf 31 }  055007 
+	
+	\bibitem{chung2012implementation}
+	Chung W, Pyun S, Bae H S, et al. 2012{Implementation of elastic reverse-time migration using wavefield separation in the frequency domain} {\it Geophysical Journal International} {\bf 189} 1611--1625
+	
+	\bibitem{claerbout1985imaging}
+	{ Claerbout J F } 1985  { \em Imaging the Earth's Interior} (Oxford: Blackwell Scientific Publication)
+	
+	\bibitem{colton-kress}
+	Colton D  and   Kress R 1998 {\em Inverse Acoustic and Electromagnetic Scattering Problems } (Heidelberg: Springer)
+	
+	\bibitem{denli2008elastic}
+	H. Denli, L. Huang 2008
+	{Elastic-wave reverse-time migration with a wavefield-separation imaging condition}
+	{\it 78th Annual International Meeting, SEG, Expanded Abstracts} 2346-2350
+	
+	\bibitem{Yves1988}
+	Y. Dermenjian, J. C. Cuillot 1998
+	{Scattering of elastic waves in a perturbed isotropic half space with a free boundary. The limiting absorption principle}
+	{\it Mathematical Methods in the Applied Sciences} {\bf 10} 87-124
+	
+	\bibitem{nedelec2011}
+	Duran M, Muga I, Nedelec J C. 2011
+	{The outgoing time-harmonic elastic wave in a half-plane with free boundary}
+	{\it SIAM Journal on Applied Mathematics} {\bf 71} 255-277
+	
+	\bibitem{grafakos}
+	{Grafakos L} 2004 {\em Classical and Modern Fourier Analysis } (London: Pearson)
+	
+	\bibitem{Harris2001Linear}
+	J. Harris 2001 {\em Linear elastic waves} {(Cambridge University Press)}
+	
+	\bibitem{kupradze1963progress}
+	Kupradze V D, Dneddon T Nm Hill R. 1963 {\em Progress in solid mechanics: Dynamical problems in elasticity} {(North-Holland Publishing Company)}
+	
+	\bibitem{leis}
+	{Leis R} 1986 {\em Initial Boundary Value Problems in Mathematical Physics} {(Stuttgart: B.G. Teubner)}
+	
+	\bibitem{Guzina2006}
+	Madyarov A I, Guzina B B. 2006 {A Radiation Condition for Layered Elastic Media} {\it Journal of Elasticity} {\bf 82} 73-98
+	
+	\bibitem{sini2004}
+	M Sini  2004 {Absence of positive eigenvalues for the linearized elasticity system} {\bf 49} 255--277
+	
+	\bibitem{wilcox1975}
+	{ Wilcox C H.} 2006 {\em Scattering theory for the d'Alembert equation in exterior domains}  {(Springer)}
+	
+	\bibitem{Zhang08}
+	Zhang Y and Sun J 2009 {Practicle issues in reverse time migration: true amplitude gathers, noise removal and harmonic source encoding}
+	{\it First Break} {\bf 26}  29-35
+	
+	\bibitem{Zhang2007}
+	Zhang Y, Xu S, Bleistein N and Zhang G 2007 {True-amplitude, angle-domain, common-image gathers from one-way wave-equation migration}
+	{\it Geophysics} {\bf 72} S49-S58
+	
+\end{thebibliography}
 \end{document}

@@ -1,0 +1,908 @@
+\documentclass[11pt]{iopart}
+\usepackage{iopams}
+\usepackage{amssymb, epsfig}
+%\usepackage{amsmath, amssymb,epsfig}
+\usepackage{latexsym}
+
+\usepackage[hypertex,hyperindex]{hyperref}
+%\usepackage{showkeys}
+\usepackage{graphicx}
+\usepackage{color}
+
+\newcommand{\pf}{\mbox{pf}}
+
+\begin{document}
+
+\def\debproof{\noindent {\bf Proof.} }
+\def\finproof{\hfill {\small $\Box$} \\}
+\renewcommand{\theequation}
+{\arabic{section}.\arabic{equation}}
+
+
+\title[RTM in the Half Space]{Reverse Time Migration for Reconstructing Extended Obstacles in the Half Space}
+
+\author{ Zhiming Chen,
+Guanghui Huang }
+
+\address{LSEC, Institute of Computational Mathematics, Academy of
+Mathematics and Systems Science, Chinese Academy of Sciences,
+Beijing 100190, China}
+
+\begin{abstract}
+We consider a reverse time migration method for reconstructing extended obstacles in the half space with finite aperture data using acoustic waves at a fixed frequency. We prove the resolution of the reconstruction method in terms of the aperture and the depth of the obstacle embedded in the half space. The resolution analysis implies that the imaginary part of the cross-correlation imaging function always peaks on the illuminated boundary of the obstacle. Numerical experiments are included to illustrate the powerful imaging quality and to confirm our resolution results.
+\end{abstract}
+\maketitle
+
+\newcommand{\RR}{\mathcal{R}}
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{rem}{Remark}[section]
+\newtheorem{alg}{Algorithm}[section]
+\newtheorem{assum}{Assumption}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{exmp}{Example}[section]
+\newtheorem{fig}{Figure}[section]
+
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\uL}{u_{_{\rm L}}}
+\newcommand{\vL}{v_{_{\rm L}}}
+\newcommand{\tuL}{\tilde u_{_{\rm L}}}
+\newcommand{\tvL}{\tilde v_{_{\rm L}}}
+\newcommand{\fL}{f_{_{\rm L}}}
+\newcommand{\gL}{g_{_{\rm L}}}
+\newcommand{\bpL}{\bp_{_{\rm L}}}
+\newcommand{\bqL}{\bq_{_{\rm L}}}
+\newcommand{\tbpL}{\tilde{\bp}_{_{\rm L}}}
+\newcommand{\tbqL}{\tilde{\bq}_{_{\rm L}}}
+\newcommand{\tbpLf}{\tilde{\bp}_{_{\rm L,1}}}
+\newcommand{\tbpLs}{\tilde{\bp}_{_{\rm L,2}}}
+\newcommand{\tbqLf}{\tilde{\bq}_{_{\rm L,1}}}
+\newcommand{\tbqLs}{\tilde{\bq}_{_{\rm L,2}}}
+\newcommand{\bn}{\nu}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\om}{\omega}
+\newcommand{\pa}{\partial}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\lla}{\la{\hskip -2pt}\la}
+\newcommand{\rra}{\ra{\hskip -2pt}\ra}
+\newcommand{\jj}{\|{\hskip -0.8pt} |}
+\newcommand{\al}{\alpha}
+\newcommand{\ze}{\zeta}
+\newcommand{\si}{\sigma}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\na}{\nabla}
+\newcommand{\vp}{\varphi}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\Om}{\Omega}
+\newcommand{\de}{\delta}
+\newcommand{\Th}{\Theta}
+\newcommand{\De}{\Delta}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\lam}{\lambda}
+\newcommand{\tri}{\triangle}
+\newcommand{\lj}{[{\hskip -2pt} [}
+\newcommand{\rj}{]{\hskip -2pt} ]}
+\newcommand{\bks}{\backslash}
+%\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\meas}{\mathrm{meas}}
+\newcommand{\dist}{\mathrm{dist}}
+
+\newcommand{\mL}{\mathscr{L}}
+\newcommand{\cT}{{\cal T}}
+\newcommand{\cM}{{\cal M}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\cB}{{\cal B}}
+\newcommand{\PML}{{\rm PML}}
+\newcommand{\FEM}{{\rm FEM}}
+\newcommand{\rd}{\,\mathrm{d}}
+
+\renewcommand{\i}{\mathbf{i}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\C}{{\mathbb{C}}}
+\renewcommand{\Re}{\mathrm{Re}\,}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\renewcommand{\div}{\mathrm{div}}
+\newcommand{\curl}{\mathrm{curl}}
+\newcommand{\Curl}{\mathbf{curl}}
+
+\def\eps{{\varepsilon}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\ben}{\begin{eqnarray*}}
+\newcommand{\een}{\end{eqnarray*}}
+\newcommand{\bee}{\begin{equation}}
+\newcommand{\eee}{\end{equation}}
+\newcommand{\nn}{\nonumber}
+
+
+\section{Introduction}{\label{section1}}
+In this paper we study a reverse time migration (RTM) algorithm to find the support of an unknown obstacle in the half space from the measurement of scattered waves on the boundary of the half space which is far away from the obstacle. The physical properties of the obstacle such as penetrable
+or non-penetrable, and for non-penetrable obstacles, the type of boundary conditions on the boundary of the obstacle, are not required in the algorithm.
+
+Let the sound soft obstacle occupy a bounded Lipschitz domain $D\subset\R_{+}^2=\{(x_1,x_2)^T: x_1\in\R, x_2>0\}$ with $\nu$ the unit outer normal to its boundary $\Ga_D$.
+We assume the incident wave is emitted by a point source located at $x_s$ on the surface $\Ga_0=\{(x_1,x_2)^T: x_1\in\R, x_2=0\}$ which is far away from the obstacle. The measured scattering data $u$ is the solution of the following acoustic scattering problem in the half space:
+\be
+& &\De u+k^2u= -\de_{x_s}(x)\ \ \ \ \mbox{in }\R_{+}^2\bks\bar{D},\label{p1}\\
+&  & u=0\ \ \ \ \ \mbox{on }\Ga_D , \ \ \ \ \frac{\pa u}{\pa x_2} = 0  \ \ \mbox{on } \Ga_0, \label{p2}\\
+& &r^{1/2}\left(\frac{\pa u}{\pa r}-\i ku\right)\to 0\ \ \mbox{as }r=|x|\to\infty,\label{p3}
+\ee
+where $k>0$ is the probe wave number,  $\de_{x_s}$ is the Dirac source located at $x_s$. In this paper, by the
+scattering problem or scattering solution we always mean the solution satisfies the Sommerfeld radiation
+condition (\ref{p3}).
+
+Let $\Phi(x,y)=\frac\i 4H^{(1)}_0(k|x-y|)$ be the fundamental solution of the Helmholtz equation and $N(x,y)=\Phi(x,y)+\Phi(x,y')$ be the Green function of the Helmholtz equation in the half space satisfying the homogeneous Neumann condition on $\Ga_0$, where $y'=(y_1,-y_2)^T$ is the image point of $y=(y_1,y_2)^T\in\R^2_+$. The solution of (\ref{p1})-(\ref{p3}) is understood as $u(x,x_s)=N(x,x_s)+u^s(x,x_s)$, where $u^s(x,x_s)$ satisfies Helmholtz equation in $\R^2_+\backslash\bar D$, the radiation condition at infinite, $u^s(x,x_s)=-N(x,x_s)$
+on $\Ga_D$, and $\pa u^s(x,x_s)/\pa x_2=0$ on $\Ga_0$.
+
+The reverse time migration (RTM) method, which consists of back-propagating the complex conjugated data into the background medium and computing the cross-correlation between the incident wave field and the backpropagated field to output the final imaging profile, is nowadays widely used in exploration geophysics \cite{ber84, cla85, bcs}. In \cite{cch_a, cch_e}, the RTM method for reconstructing extended targets using acoustic and electromagnetic waves at a fixed frequency in the free space is proposed and studied. The resolution analysis in \cite{cch_a, cch_e} is achieved without using the small inclusion or geometrical optics assumption previously made in the literature (e.g. \cite{ammari, bcs}). In \cite{ch_wg}, a new RTM algorithm is developed for finding extended targets in a planar waveguide which is motivated by the generalized Helmholtz-Kirchhoff identity for scattering problems in waveguides.
+
+In this paper we study a RTM method proposed in \cite{zs09, zs07} for imaging extended obstacles in the half space. This RTM method has the nice feature that it provides true amplitude angle-domain common image gathers. The theoretical study in \cite{zs07} based on the geometric optics approximation shows that the imaging functional gives a direct measurement of the angle-dependent reflection coefficient which is rather desirable for geophysical applications \cite{bcs}.
+
+The purpose of this paper is to provide a new mathematical understanding of the RTM method in \cite{zs09, zs07} for extended obstacles without the assumption of geometric optics approximation. We study the resolution of the RTM method for both penetrable and non-penetrable obstacles by extending the analysis in \cite{cch_a, cch_e} for RTM method in the free space. We introduce the point spread function $J(x,y)$, $x,y\in\R^2_+$, for the half space RTM imaging method and show that this point spread function has the similar features to $J_0(k|x-y|)$, the imaginary part of the fundamental solution of the Helmholtz equation. We also show that the output imaging function is related to the scattering coefficient of the obstacle for incident plane waves.
+
+The rest of this paper is organized as follows. In section 2 we introduce the RTM algorithm. In section 3 we study the point spread function. In section 4 we study the resolution analysis of the RTM method and give the physical interpretation of the imaging function based on the concept of the scattering coefficient. We consider the extension of the resolution results for reconstructing penetrable
+obstacles or non-penetrable obstacles with impedance boundary conditions in section 5.  In section 6 we report extensive numerical experiments to show the competitive performance of the RTM algorithm.
+
+\section{Reverse time migration method}{\label{section2}}
+
+In this section we introduce the RTM method for inverse acoustic scattering problems
+in the half space. Assume that there are $N_s$ sources and $N_r$ receivers uniformly distributed on $\Ga_0^d$, where $\Ga_0^d=\{(x_1,x_2)^T\in\Ga_0: x_1\in [-d,d]\}$, $d>0$ is the aperture. We denote by $\Om$ the sampling domain in which the obstacle is sought. Let $h=\dist(\Om,\Ga_0)$ be the distance of $\Om$ to $\Ga_0$.
+We assume the obstacle $D \subset\Om$ and there exist constants $0<c_0<1, c_1>0$ such that
+\bee\label{cond}
+\qquad |x_1|\le c_0d, \ \ |x_1-y_1|\le c_1 h,\ \ \ \forall x,y\in\Om.
+\eee
+The first condition means that the search domain should not be close to the boundary of the aperture. The second condition is rather mild in practical applications as we are interested in finding extended obstacles
+whose size is comparable or smaller than the probe wavelength and $h$, the distance of the obstacle to $\Ga_0$, is large compared with the probe wavelength, i.e., $kh\gg 1$. In the following we also assume $d\ge h$.
+
+Our RTM algorithm consists of two steps \cite{zs09, zs07}. The first step is the back-propagation in which we back-propagate the complex conjugated data $\overline{u^s(x_r,x_s)}$ as the Dirichlet boundary condition into the domain. The second step is the cross-correlation in which we compute the imaginary part of the cross-correlation of the back-propagated field and the incoming wave which uses the source as the boundary condition on $\Ga_0$.
+
+\begin{alg} {\sc (Reverse time migration)} \\
+Given the data $u^s(x_r,x_s)$ which is the measurement of the scattered field at $x_r=(x_1(x_r),x_2(x_r))^T$ when the source is emitted at $x_s=(x_1(x_s),x_2(x_s))^T$, $s=1,\dots, N_s$, $r=1,\dots,N_r$. \\
+$1^\circ$ Back-propagation: For $s=1,\dots,N_s$, compute the back-propagation field
+\bee\label{back}
+v_b(z,x_s)=\frac{|\Ga_0^d|}{N_r}\sum^{N_r}_{r=1}\frac{\pa \Phi(x_r,z)}{\pa x_2(x_r)}\overline{u^s(x_r,x_s)},\ \ \ \ \forall \ z\in\Om.
+\eee
+$2^\circ$ Cross-correlation: For $z\in\Om$, compute
+\bee\label{cor1}
+I_d(z)=\Im\left\{\frac{|\Ga_0^d|}{N_s}\sum^{N_s}_{s=1} \frac{\pa \Phi(x_s, z)}{\pa x_2(x_s)} v_b(z,x_s)\right\}.
+\eee
+\end{alg}
+
+It is easy to see that
+\bee\label{cor2}
+\fl \qquad I_d(z)=
+\Im\left\{\frac{|\Ga_0^d||\Ga_0^d|}{N_sN_r}\sum^{N_s}_{s=1}\sum^{N_r}_{r=1}\frac{\pa \Phi(x_s, z)}{\pa x_2(x_s)}
+\frac{\pa \Phi(x_r,z)}{\pa x_2(x_r)}\overline{u^s(x_r,x_s)}\right\},\ \ \ \ \forall \ z\in\Om.
+\eee
+This formula is used in all our numerical experiments in section 6. By letting $N_s,N_r\to\infty$, we know that (\ref{cor2}) can be viewed as an approximation of the following continuous integral:
+\bee\label{cord}
+\fl \qquad \hat I_d(z)=\Im\int_{\Ga_0^d}\int_{\Ga_0^d}\frac{\pa \Phi(x_s, z)}{\pa x_2(x_s)}\frac{\pa \Phi(x_r,z)}{\pa x_2(x_r)}\overline{u^s(x_r,x_s)} ds(x_r)ds(x_s),\ \ \ \ \forall \ z\in\Om.
+\eee
+For $x,y\in\R^2_+$, let $G(x,y)=\Phi(x,y)-\Phi(x,y')$ be the Green function of the Helmholtz equation in the half space satisfying the homogeneous Dirichlet condition on $\Ga_0$, where $y'=(y_1,-y_2)^T$ is the image point of $y$. Since $\frac{\pa G(x_s, z)}{\pa x_2(x_s)}=2\frac{\pa \Phi(x_s, z)}{\pa x_2(x_s)}$ and $\frac{\pa G(x_r,z)}{\pa x_2(x_r)}=2\frac{\pa \Phi(x_r,z)}{\pa x_2(x_r)}$ for $x_s,x_r\in\Ga_0$. The imaging function proposed in \cite{zs09, zs07} is exactly the limit of $\hat I_d(z)$ as $d\to\infty$. We will study the resolution of the function $\hat I_d(z)$ in the section 4. To this end we will first consider the resolution of the finite aperture point source function in the next section.
+
+\section{The point spread function}{\label{sectoin3}}
+
+We start by introducing some notation.  For any bounded domain $U\subset \R^2$ with Lipschitz boundary $\Ga$, we will use the weighted $H^1(U)$ norm
+$\|u\|_{H^1(U)}=(\|\na \phi\|_{L^2(U)}^2+d_U^{-2}\|\phi\|_{L^2(U)}^2)^{1/2}$
+and the weighted $H^{1/2}(\Ga)$ norm
+$\|v\|_{H^{1/2}(\Ga)}=(d_U^{-1}\|v\|_{L^2(\Ga)}^2+|v|_{\frac 12,\Ga}^2)^{1/2}$,
+where $d_U$ is the diameter of $U$ and
+\ben
+|v|_{\frac 12,\Ga}=\left(\int_\Ga\int_\Ga\frac{|v(x)-v(y)|^2}{|x-y|^2}ds(x)ds(y)\right)^{1/2}.
+\een
+By the scaling argument and the trace theorem we know that there exist constants $C_1,C_2>0$ independent of $d_U$ such that for any $v\in H^{1/2}(\Ga)$,
+\bee\label{d00}
+C_1\frac{|U|^{\frac 12}}{|\Ga|}\|v\|_{H^{1/2}(\Ga)}\le
+\inf_{{\phi|_{\Ga}=v,\,\phi\in H^1(U)}}\|\phi\|_{H^1(U)}\le C_2\frac{|U|^{\frac 12}}{d_U}\|v\|_{H^{1/2}(\Ga)}.
+\eee
+
+The point spread function measures the resolution for finding a point source  \cite{ammari}.
+We introduce the following point spread function for half space inverse scattering problems:
+\bee\label{J}
+   J(z,y) = \int_{\Ga_0} \frac{\pa G(x,z)}{\pa x_2}\overline{N(x,y)}ds(x), \ \  \forall z,y \in \R_{+}^2.
+\eee
+This point spread function states that for finding the point source $y\in\R^2_{+}$, the received data $\overline{N(x,y)}$, $x\in\Ga_0$, is back-propagated to the domain $\R^2_+$ as the Dirichlet boundary condition. Since $\frac{\pa G(x,z)}{\pa x_2}=2\frac{\pa\Phi(x,z)}{\pa x_2}$ and $N(x,y)=2\Phi(x,y)$ for $x\in\Ga_0$, we have
+\bee\label{JJ}
+J(z,y) = 4\int_{\Ga_0} \frac{\pa \Phi(x,z)}{\pa x_2}\overline{\Phi(x,y)}ds(x), \ \  \forall z,y \in \R_{+}^2.
+\eee
+
+\begin{lem}\label{lem:h1}
+For any $z,y\in\R^2_+$, $J(z,y)=F(z,y)+R(z,y)$, where
+\be
+\hspace{-2cm}F(z,y)&=&-\frac{\i}{2\pi}\int_0^\pi e^{\i k(z_1-y_1)\cos\theta+\i k(z_2-y_2)\sin\theta}d\theta,\label{F}\\
+\hspace{-2cm}R(z,y)&=&\frac{1}{\pi}\int_{k}^{+\infty}\frac{1}{\sqrt{\xi_1^2-k^2}} e^{-\sqrt{\xi_1^2-k^2} (z_2 + y_2)} \cos(\xi_1(z_1-y_1))d\xi_1.\label{RJ}
+\ee
+Moreover, $|R(z,y)|+k^{-1}|\na_y R(z,y)|\le \frac 1{\pi k(z_2+y_2)}$ uniformly for $z,y\in\R^2_+$.
+\end{lem}
+
+\debproof By the limiting absorption principle $\Phi(x,y)$ is the limit of the fundamental solution $\Phi_\eps(x,y)$ of the Helmholtz equation with the complex wave number $k+\i\eps$ as $\eps\to 0$. It is easy to see that \cite[P. 59]{chew}
+\ben
+    \Phi_\eps(x,y) = \frac{1}{2\pi}\int_{-\infty}^{+\infty}\frac{ \i}{2\mu_\eps}e^{\i \mu_\eps |x_2 - y_2| + \i \xi_1(x_1-y_1)}d\xi_1,
+\een
+where $\mu_\eps=((k+\i\eps)^2-\xi_1^2)^{1/2}$. Here we take the branch cut of the complex plane such that $\Re(z^{1/2})\ge 0$ for any $z\in\C\backslash\{0\}$.
+
+Applying the Fourier transformation to the first horizontal variable of $\Phi_\eps(x,y)$,  we have
+\ben
+& &\mathcal{F}[\Phi_\eps](\xi_1,x_2;y_1,y_2) = \frac{ \i}{2\mu_\eps}e^{\i \mu_\eps |x_2 - y_2|} e^{-\i \xi_1 y_1},\\
+& &\mathcal{F}\left[\frac{\pa \Phi_\eps}{\pa x_2}\right](\xi_1,x_2;z_1,z_2) = \frac{ 1}{2 }\mbox{sgn}(z_2-x_2)e^{\i \mu_\eps |x_2 - z_2|} e^{-\i \xi_1 z_1}.
+\een
+Using Parseval identity combined with the above two equations, we know that
+\ben
+J_\eps(z,y):&=&4\int_{-\infty}^{\infty}\left[\frac{\pa\Phi_\eps(x,z)}{\pa x_2}\overline{\Phi_\eps(x,y)} \right]_{x_2=0}dx_1\\
+&=& \frac{2}{\pi}\left\langle \mathcal{F}\left[\frac{\pa\Phi_\eps}{\pa x_2}\right](\cdot,0;z_1,z_2),\mathcal{F}[\Phi_\eps](\cdot,0;y_1,y_2)\right\rangle\\
+    &=&-\frac{\i}{2\pi}\int_{-\infty}^{\infty}\frac{1}{{\bar\mu}_\eps}e^{\i \mu_\eps  z_2 -\i \bar{\mu}_\eps y_2  + \i \xi_1(y_1-z_1)}d\xi_1.
+    \een
+This implies by letting $\eps\to 0$ and using (\ref{JJ}) that
+\ben
+   J(z,y)=-\frac{\i}{2\pi}\int_{-k}^{k}\frac{1}{\mu}e^{\i \mu (z_2 - y_2) -\i \xi_1(z_1-y_1)}d\xi_1+R(z,y),
+\een
+where $\mu=(k^2-\xi_1^2)^{1/2}$. Finally, it is easy to check that
+\ben
+|R(z,y)|\leq\frac 1{\pi k (z_2+y_2)},\ \ \left|\frac{\pa R(z,y)}{\pa y_j}\right|\le\frac 1{\pi(z_2+y_2)},\ \ j=1,2,
+\een
+for any $z,y\in\R^2_+$. This completes the proof.
+\finproof
+
+Figure \ref{circle_sta3} shows the surface plot of the point spread function $J(z,y)$. Lemma \ref{lem:h1} indicates that for $z,y$ far away from $\Ga_0$, the main contribution to the point spread function is from
+$F(z,y)$. Our next goal is to show that $F(z,y)$ has the similar decay behavior to the Bessel function $J_0(k|z-y|)$ as $|z-y|\to\infty$. We need the following slight generalization of Van der Corput lemma for the oscillatory integral \cite[P.152]{grafakos}.
+
+\begin{lem}\label{lem:4.6}
+Let $-\infty<a<b<\infty$, $\lam>0$, and $u$ is a $C^2$ function in $]a,b[$. \\
+$1^\circ$ If $|u''(t)|\ge 1$ for $t\in ]a,b[$, then there exists a constant $C$ independent of $\lam, a,b, u$ such that $|\int^b_a e^{\i\lambda u(t)}dt|\le C\lam^{-1/2}$. \\
+$2^\circ$ If $|u'(t)|\ge 1$ for $t\in ]a,b[$ and $u'$ is monotone in $]a,b[$, then
+$|\int^b_a e^{\i\lambda u(t)}dt|\le 3\lambda^{-1}$.
+\end{lem}
+
+\debproof The assertion $1^\circ$ is in \cite[Exercise 2.6.1]{grafakos} which can be proved by extending the
+argument for the case $u''(t)\ge 1$ of the Van der Corput lemma. The assertion $2^\circ$ can be proved
+by extending the argument for the case $u'(t)\ge 1$ of the Van der Corput lemma. Here we omit the details.
+\finproof
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{./eps/Jxy_mesh1.eps}
+    \caption{The surface plot of the point spread imaging function~$J(z,y)~(z\in[-2,2]\times[0,4],y=(0,2)^T)$ for $k=2\pi$: real part (left) and imaginary part (right). }\label{circle_sta3}
+\end{figure}
+
+\begin{lem}\label{lem:h2} For any $z,y\in\R^2_+$, $F(z,y)=-\i/2$ when $z=y$ and for $z\not=y$,
+\ben
+|F(z,y)|\le C\left[(k|z-y|)^{-1/2}+(k|z-y|)^{-1}\right].
+\een
+where the constant $C$ is independent of $k, |z-y|$.
+\end{lem}
+
+\debproof It is obvious that $F(z,y)=-\i/2$ when $z=y$. For $z\not=y$, we denote $y-z=|y-z|(\cos\phi,\sin\phi)^T$ for some $0\leq\phi<2\pi$. Then it is easy to see that
+\ben
+F(z,y)=-\frac{\i}{2\pi}\int^\pi_0e^{\i k|z-y|\cos(\theta-\phi)}d\theta.
+\een
+The phase function $f(\theta)=\cos(\theta-\phi)$ satisfies $f'(\theta)=-\sin(\theta-\phi)$, $f''(\theta)=-\cos(\theta-\phi)$. For any given $0\leq\phi<2\pi$, we can decompose $]0,\pi[$ into several intervals such that in each interval either $|f''(\theta)|\ge 1/2$ or $|f'(\theta)|\ge 1/2$ and $f'(\theta)$ is monotone. The estimate for $F(z,y)$ follows by using Lemma \ref{lem:4.6}. \finproof
+
+The following consequence of Lemma \ref{lem:h1} and Lemma \ref{lem:h2} will be used in the next section.
+
+\begin{cor}\label{cor:3.1} There exists a constant $C$ independent of $k$,$h$ such that
+\ben
+& &\|F(z,\cdot)\|_{H^{1/2}(\Ga_D)}+\|\pa F(z,\cdot)/\pa\nu\|_{H^{-1/2}(\Ga_D)}\le C(1+kd_D),\\
+& &\|R(z,\cdot)\|_{H^{1/2}(\Ga_D)}+\|\pa R(z,\cdot)/\pa\nu\|_{H^{-1/2}(\Ga_D)}\le C(1+kd_D)(kh)^{-1},
+\een
+uniformly for $z\in\Om$, where $d_D$ is the diameter of the obstacle $D$.
+\end{cor}
+
+\debproof We first observe that for any function $\phi\in H^1(D)$, by (\ref{d00}),
+\bee\label{y1}
+\fl\quad\|\phi\|_{H^{1/2}(\Ga_D)}\le C(d_D^{-1}\|\phi\|_{L^2(D)}+\|\na\phi\|_{L^2(D)})\le C\max_{x\in D}(|\phi(x)|+d_D|\na\phi(x)|).
+\eee
+Next by the definition of the $H^{-1/2}(\Ga_D)$ norm we have
+\bee\label{y2}
+\|\pa \phi/\pa\nu\|_{H^{-1/2}(\Ga_D)}\le Cd_D^{1/2}\|\pa\phi/\pa\nu\|_{L^2(\Ga_D)}\le Cd_D\max_{x\in D}|\na\phi(x)|.
+\eee
+Now the estimate for $F(z,\cdot)$ follows from the fact that $|F(z,y)|\le 1/2, |\na_y F(z,y)|\le k/2$ for any $z,y\in\Om$. The estimate for $R(z,\cdot)$ follows from Lemma \ref{lem:h1}.
+\finproof
+
+Now we consider the finite aperture point spread function ${J}_d(z,y)$:
+\bee\label{y3}
+J_d(z,y)=\int_{-d}^{d}\left[\frac{\pa G(x,z)}{\pa x_2}\overline{N(x,y)}\right]_{x_2=0} dx_1.
+\eee
+Our aim is to estimate the difference $J(z,y)-J_d(z,y)$. We first recall the following estimate for the
+first kind Hankel function \cite[(1.22)-(1.23)]{cg09}.
+
+\begin{lem}\label{lem:hankel} For any $t>0$, we have \ben
+|H^{(1)}_0(t)|\le \left(\frac 2{\pi t}\right)^{1/2}, |H^{(1)}_1(t)|\le \left(\frac 2{\pi t}\right)^{1/2}+\frac 2{\pi t}.\een
+\end{lem}
+
+\begin{thm}\label{Jd}
+Assume $d\ge h$, for any $z,y\in\Om$, we have
+\ben
+|J(z,y)-J_d(z,y)|+k^{-1}|\na_y(J(z,y)-J_d(z,y))|\leq C \bigg(\frac{h}{d}\bigg),
+\een
+where the constant $C$ is independent  of $k, h, d$.
+\end{thm}
+\debproof By definition we have
+    \bee \label{jd1}
+\fl\qquad        J(z,y)-J_d(z,y) = 4\int_{(-\infty,-d)\cup(d,+\infty)}\left[\frac{\pa\Phi(x,z)}{\pa x_2}\overline{\Phi(x,y)}\right]_{x_2=0} dx_1.
+    \eee
+Notice that for any $z\in\R^2_+$, $x\in\Ga_0$,
+    \bee\label{jd2}
+        \frac{\pa\Phi(x,z)}{\pa x_2}  = \frac{\i  }{4}H_{1}^{(1)}(k|x-z|)\frac{ kz_2}{|x-z|}.
+    \eee
+By Lemma~\ref{lem:hankel}, we have
+    \ben
+        &&\left|\int_{d}^{+\infty} \left[\frac{\pa\Phi(x,z)}{\pa x_2} \overline{\Phi(x,y)}  \right]_{x_2=0}dx_1\right| \\
+         &\leq&\int_{d}^{+\infty} \left[\frac{k z_2}{16 |x-z|}\left(\left(\frac{2}{k \pi |x-z| }\right)^{1/2}+\frac{2}{k \pi |x-z| }\right) \left(\frac{2}{k \pi |x-y| }\right)^{1/2}\,\right]_{x_2=0}\  dx_1 \\
+        &\leq&   C\left(\frac{h}{d}\right).
+    \een
+Here we have used the first inequality in (\ref{cond}). Similarly, we can prove that the estimate for the integral in $]-\infty,d[$ in \eref{jd1}. This shows the estimate for $J(z,y)-J_d(z,y)$. The estimate for $\na_y(J(z,y)-J_d(z,y))$ can be proved similarly.
+\finproof
+
+By (\ref{y1})-(\ref{y2}) we obtain the following corollary.
+
+\begin{cor}\label{cor:3.2} There exists a constant $C$ independent of $k$,$h$ such that
+\ben
+\fl \quad \|J(z,\cdot)-J_d(z,\cdot)\|_{H^{1/2}(\Ga_D)}+\|\pa (J(z,\cdot)-J_d(z,\cdot))/\pa\nu\|_{H^{-1/2}(\Ga_D)}\le C(1+kd_D)\left(\frac hd\right).
+\een
+uniformly for $z\in\Om$, where $d_D$ is the diameter of the obstacle $D$.
+\end{cor}
+
+\section{The resolution analysis}{\label{section4}}
+
+In this section we study the imaging resolution of the RTM Algorithm 2.1
+for the sound soft obstacle in the half space.
+We first introduce the
+following stability estimate of the forward acoustic scattering problem in the half space which can be proved by the limiting absorption principle by extending the classical argument in \cite{leis, ch_wg}.
+
+\begin{lem}{\label{lem:4.1}}
+Let~$g \in H^{1/2}(\Ga_D)$, then the scattering problem of Helmholtz equation in the half space
+\be
+\Delta u + k^2 u =0 \ \ \mbox{\rm in } \R_+^2\bks \bar{D}, \ \ \ \ u = g \ \ \mbox{\rm on } \Ga_D,\ \ \ \ \frac{\pa u}{\pa x_2}= 0\ \ \mbox{\rm on } \Ga_0,\ \ \label{ha}
+\ee
+has a unique solution $u \in H^{1}_{\rm loc}(\R_+^2 \backslash \bar D)$. Moreover, there exists a constant $C>0$ such that $\|\pa u/\pa\nu\|_{H^{-1/2}(\Ga_D)}\le C\|g\|_{H^{1/2}(\Ga_D)}$.
+\end{lem}
+
+The following theorem shows that the difference between the half space scattering solution and the full space scattering solution is small if the scatterer is far away from the boundary $\Ga_0$.  The theorem will be proved
+in the appendix of this paper.
+
+\begin{thm}\label{thm:4.1} Let $g\in H^{1/2}(\Ga_D)$ and $u_1, u_2$ be the scattering solutions of following problems:
+\be
+& &\Delta u_1+k^2u_1=0\ \ \mbox{\rm in }\R^2_+\backslash\bar D,\ \ u_1=g\ \ \mbox{\rm on }\Ga_D,\ \ \frac{\pa u_1}{\pa\nu}=0\ \ \mbox{\rm on }\Ga_0,\label{hb1}\\
+& &\Delta u_2+k^2u_2=0\ \ \mbox{\rm in }\R^2\backslash\bar D,\ \ u_2=g\ \ \mbox{\rm on }\Ga_D.\label{hb2}
+\ee
+Then there exists a constant $C$ such that $\|\pa (u_1-u_2)/\pa\nu\|_{H^{-1/2}(\Ga_D)}\le C(1+kd_D)^2 (kh)^{-1/2}\|g\|_{H^{1/2}(\Ga_D)}$.
+\end{thm}
+
+The following theorem is the main result of this section.
+
+\begin{thm}\label{res_ha}
+For any ~$z\in\Om$, let $\psi(y,z)$ be the scattering solution to the following problem:
+\bee
+\fl \qquad\qquad  \De_{y}\psi(y,z)+k^2\psi(y,z)=0\ \ \ \ \mbox{\rm in } \R^2  \bks \bar D ,\ \ \ \
+\psi(y,z)=- \overline{F(z,y)} \ \ \mbox{\rm on } \Ga_D. \label{ps1}
+\eee
+Then, we have
+\bee\label{Iz}
+\hat{I}_d(z)=\frac 14\,\Im \bigg\{ \int_{\Ga_D}\frac{\pa ( F(z,y) +\psi(y,z))}{\pa \nu(y)}\overline{F(z,y)} ds(y)   \bigg\}+W_{\hat I}(z),
+\eee
+where $|W_{\hat I}(z)|\le C(1+kd_D)^4((kh)^{-1/2}+h/d)$ uniformly for $z$ in $\Om$.
+\end{thm}
+
+\debproof
+By the integral representation, we have,
+\ben
+u^s(x_r,x_s)=\int_{\Ga_D}\left(u^s(y,x_s)\frac{\pa N(x_r,y)}{\pa\nu(y)}-\frac{\pa u^s(y,x_s)}{\pa\nu(y)}N(x_r,y)\right)ds(y).
+\een
+From (\ref{y3}) we get for any $z\in\Om$,
+\ben
+& &\int_{\Ga_0^d}\frac{\pa \Phi( x_r,z)}{\pa x_2(x_r)}\overline{u^s(x_r,x_s)}ds(x_r)\\
+&=&\frac 12\int_{\Ga_D}\Big[ \overline{u^s(y,x_s)}\frac{\pa {J_d(z,y)}}{\pa \nu(y)}-\frac{\pa \overline{u^s(y,x_s)}}{\pa\nu(y)}{J_d(z,y)}\Big]ds(y).
+\een
+By the definition of the imaging function $\hat I_d(z)$, we have then
+\bee\label{cor4_ha}
+\hat I_d(z)=\frac 14\,\Im\int_{\Ga_D}\Big[v_s(y,z) \frac{\pa {J_d(z,y)}}{\pa \nu(y)} -\frac{\pa v_s(y,z)}{\pa\nu(y)} {J_d(z,y)}\Big]ds(y),
+\eee
+where $v_s(y,z)=2\int_{\Ga_0^d}\frac{\pa \Phi(x_s,z)}{\pa x_2(x_s)}\overline{u^s(y,x_s)}ds(x_s)$.
+Taking the complex conjugate we get
+\ben
+\overline{v_s(y,z)}=2\int_{\Ga_0^d}\frac{\pa \overline{\Phi(x_s,z)}}{\pa x_2(x_s)}u^s(y,x_s)ds(x_s).
+\een
+Therefore, $\overline{v_s(y,z)}$ can be viewed as the weighted superposition of $u^s(y,x_s)$. Then $\overline{v_s(y,z)}$ satisfies the Helmholtz  equation
+\ben
+\De_y\overline{v_s(y,z)}+k^2\overline{v_s(y,z)}=0\ \ \ \ \mbox{in }\R^2_+\bks\bar D.
+\een
+On the boundary of the obstacle $\Ga_D$, we have
+\ben
+\overline{v_s(y,z)}
+&=&2\int_{\Ga_0^d} \frac{\pa\overline{\Phi(x_s,z)}}{\pa x_2(x_s)} u^s(y,x_s)ds(x_s)\\
+&=&-2\int_{\Ga_0^d}\frac{\pa\overline{\Phi(x_s,z)}}{\pa x_2(x_s)}N(y,x_s)ds(x_s)\\
+&=&- \overline{J_d(z,y)} ,\ \ \ \ \forall y\in\Ga_D.
+\een
+Moreover, $\pa\overline{v_s(y,z)}/{\pa y_2}=0$ on $\Ga_0$ since $\pa u^s(y,x_s)/\pa y_2=0$ on $\Ga_0$. Let $w_d(y,z)$ be the scattering solution of the problem:
+\ben
+& &\De_y w_d(y,z)+k^2w_d(y,z)=0\ \ \mbox{in }\R^2_+\backslash\bar D,\\
+& &w_d(y,z)= \overline{F(z,y)} - \overline{J_d(z,y)} \ \ \mbox{on }\Ga_D,\ \ \ \ \frac{\pa w_d(y,z)}{\pa y_2}=0\ \ \mbox{on }\Ga_0.
+\een
+By Lemma \ref{lem:4.1} and Corollaries \ref{cor:3.1}-\ref{cor:3.2} we have
+\be\label{x2}
+ \|\pa w_d(\cdot,z)/\pa\nu\|_{H^{-1/2}(\Ga_D)}&\le& C\|F(z,\cdot)-J_d(z,\cdot)\|_{H^{1/2}(\Ga_D)} \nonumber \\
+&\le& C(1+kd_D)((kh)^{-1}+h/d).
+\ee
+Let $w(y,z):=\overline{v_s(y,z)}-w_d(y,z)-\psi(y,z)$. Since $\overline{v_s(y,z)}-w_d(y,z)$ satisfies the half-space scattering problem (\ref{hb1}) with $g(y)=-\overline{F(z,y)}$, by using Theorem \ref{thm:4.1} and Corollary \ref{cor:3.1},
+\be \label{x1}
+\|\pa w(\cdot,z)/\pa\nu\|_{H^{-1/2}(\Ga_D)}&\le& C(1+kd_D)^2(kh)^{-1/2}\| F(z, \cdot)\|_{H^{1/2}(\Ga_D)} \nonumber \\
+&\le& C(1+kd_D)^3(kh)^{-1/2}.
+\ee
+Now we substitute $\overline{v_s(y,z)}=\psi(y,z)+w(y,z)+w_d(y,z)$ into
+(\ref{cor4_ha}) to obtain,
+\bee\label{x3}
+\fl \qquad \hat I_d(z)
+=\frac 14\,\Im\left\{\int_{\Ga_D}\left[\overline{\psi(y,z)} \frac{\pa {J_d(z,y)}}{\pa \nu} -\frac{\pa\overline{\psi(y,z)}}{\pa\nu(y)} {J_d(z,y)} \right]ds(y) \right\}+R_{\hat I}(z),
+\eee
+where since $w(y,z)=0$ on $\Ga_D$,
+\ben
+R_{\hat I}(z)&=&-\frac 14\,\Im\int_{\Ga_D}\frac{\pa\overline{w(y,z)}}{\pa\nu(y)}{J_d(z,y)}ds(y)\\
+& &+\frac 14\,\Im\,\int_{\Ga_D}\left[\overline{w_d(y,z)}\frac{\pa {J_d(z,y)}}{\pa\nu(y)}-\frac{\pa\overline{w_d(y,z)}}{\pa\nu(y)}{J_d(z,y)}\right]ds(y).
+\een
+By (\ref{x2})-(\ref{x1}) and Corollaries \ref{cor:3.1}-\ref{cor:3.2} it is easy to see that
+\bee\label{x4}
+|R_{\hat I}(z)|\le C(1+kd_D)^4((kh)^{-1/2}+h/d).
+\eee
+Finally, by \eref{x3} and $\psi(y,z)=-\overline{F(z,y)}$ on $\Ga_D$, we have
+\ben
+\hat I_d(z)=-\frac 14\,\Im \int_{ \Ga_D}\frac{\pa(\overline{F(z,y)} +\psi(y,z))}{\pa \nu(y)}\psi(y,z)ds(y)+R_{\hat I}(z)+w_{\hat I}(z),
+\een
+where
+\ben
+\fl w_{\hat I}(z) = 4\,\Im\int_{\Ga_D}\Big[\overline{\psi(y,z)}\frac{\pa({J_d(z,y)}-{F(z,y)})}{\pa\nu(y)}
+ -\frac{\pa\overline{\psi(y,z)}}{\pa\nu(y)}({J_d(z,y)}-{F(z,y)})\Big]ds(y).
+\een
+By Lemma \ref{lem:4.1}, Corollary \ref{cor:3.1} and Corollary \ref{cor:3.2} we have
+\ben
+|w_{\hat I}(z)|&\le&C(1+kd_D)^4((kh)^{-1/2}+h/d) .
+\een
+This completes the proof by using (\ref{x4}).
+\finproof
+
+By (\ref{F}) we know that for any fixed $z\in\Om$, $\overline{F(z,\cdot)}$ satisfies the Helmholtz equation. Thus $\psi(y,z)$ can be viewed as the scattering solution of the Helmholtz equation with the incident
+wave $\overline{F(z,y)}$. By Lemma \ref{lem:h2} we know that $\overline{F(z,y)}$ decays as $|y-z|$ becomes large. Therefore the imaging function $\hat I_d(z)$ becomes small when
+$z$ moves away from the boundary $\Ga_D$ outside the scatterer $D$ if $kh\gg 1$ and $d\gg h$.
+
+To understand the behavior of the imaging function when $z$ is close to the boundary of the scatterer, we introduce the concept of the scattering coefficient for incident plane waves.
+
+\begin{definition} \label{def:4.1} For any unit vector $\eta\in\R^2$, let $v^i=e^{\i kx\cdot\eta}$ be the incident wave and $v^s=v^s(x,\eta)$ be the
+radiation solution of the Helmholtz equation:
+\ben
+\Delta v^s+k^2v^s=0\ \ \mbox{\rm in }\R^2\backslash\bar D,\ \ v^s=-e^{\i kx\cdot\eta}\ \ \mbox{\rm on }\Ga_D.
+\een
+The scattering coefficient $R(x,\eta)$ for $x\in\Ga_D$ is defined by the relation
+\ben
+\frac{\pa(v^s+v^i)}{\pa\nu}=\i kR(x,\eta)e^{\i kx\cdot\eta}\ \ \ \ \mbox{\rm on }\Ga_D.
+\een
+\end{definition}
+
+It is clear that the scattering coefficient $R(x,\eta)$ is well defined by the uniqueness and existence of the solution of the Helmholtz scattering problems. One can define analogously the scattering coefficients for penetrable scatterers or non-penetrable scatterers with sound hard or impedance boundary conditions. We also remark that the scattering coefficient is closely related to the concept of reflection coefficients that are widely used in the geophysics literature in different context based on geometric optics approximations.
+
+Now we consider the physical interpretation of the imaging function $\hat I_d(z)$ when $z\in\Ga_D$. Since
+\ben
+\overline{F(z,y)}=\frac{\i}{2\pi}\int_0^\pi e^{\i k(y-z)\cdot\eta_\theta}d\theta,\ \ \eta_\theta:=(\cos\theta,\sin\theta)^T,
+\een
+we obtain from Theorem \ref{res_ha} and Definition \ref{def:4.1} that
+\be\label{a1}
+\fl \qquad \hat I_d(z)=-\frac{k}{8\pi}\Im\int_{\Ga_D}\int_0^\pi \overline{F(z,y)}R(y,\eta_\theta)e^{\i k(y-z)\cdot\eta_\theta}d\theta ds(y)+O\left(\frac 1{\sqrt{kh}}+\frac hd\right).
+\ee
+The main contribution in the above integral comes from $y\in\Ga_D$ around $z$ due to the property of the function $\overline{F(z,y)}$ studied in section 3.  This indicates that the imaging function $\hat I_d(z)$ is proportional to the scattering coefficient surrounding $z$ from all directions $\eta_\theta$, $0<\theta<\pi$, that is, the imaging function can be regard as ``blurred scattering coefficient".
+
+Now we consider the high frequency limit when $k\gg 1$ by the method of stationary phase. The following theorem of the stationary phase is well-known, see e.g. in \cite[Theorem 7.7.5]{hor}.
+
+\begin{lem}\label{phase}
+Let $g\in C^2_0(\R)$ and the phase function $f\in C^2(\R)$ has a stationary point at $t_0$ such that $f'(t_0)=0$, $f''(t_0)\not=0$, and $f'(t)\not=0$ for $t\not=t_0$. Then for any $\lam>0$, there is a constant $C$ such that
+\ben
+\left|\int_{\R}g(t)e^{\i\lam f(t)}dt-g(t_0)e^{\i\lam f(t_0)}\left(\frac{\lam f''(t_0)}{2\pi\i}\right)^{-1/2}\right|
+\le C\lam^{-1}\|g''\|_{C(\R)}.
+\een
+\end{lem}
+
+For simplicity we assume $D$ is strictly convex. Let $y(s)$ be the arc length parametrization of the boundary $\Ga_D$, $0<s<L$. The phase function $f(s)= (y(s)-z)\cdot\eta_\theta$ satisfies $f'(s)=y'(s)\cdot\eta_\theta, f''(s)=y''(s) \cdot\eta_\theta$. Let $y_\pm(\eta_\theta)=y(s_\pm)$ be the points on $\Ga_D$ such that $\nu(y(s_\pm))=\pm\eta_\theta$. Clearly we have $f'(s_\pm)=\pm y'(s_\pm)\cdot\nu(y(s_\pm)), f''(s_\pm)=\pm y''(s_\pm)\cdot \nu(y(s_\pm))= \pm\kappa(y(s_\pm))|y'(s_\pm)|^2$, where $\kappa$ is the curvature of $\Ga_D$.
+By using the stationary phase Lemma \ref{phase} we have
+\ben
+& &\int_{\Ga_D}\overline{F(z,y)}R(y,\eta_\theta)e^{\i k(y-z)\cdot\eta_\theta} ds(y)\\
+&\approx&{\overline{F(z,y_+(\eta_\theta))}}R(y_+(\eta_\theta),\eta_\theta)e^{\i k (y_+(\eta_\theta)-z)\cdot \eta_\theta}\left(\frac{k\kappa(y_+(\eta_\theta))}{2\pi \i}\right)^{-1/2}\\
+&+&\overline{F(z,y_-(\eta_\theta))}R(y_-(\eta_\theta),\eta_\theta)e^{\i k (y_-(\eta_\theta)-z)\cdot \eta_\theta}\left(\frac{-k\kappa(y_-(\eta_\theta))}{2\pi \i}\right)^{-1/2}.
+\een
+Thus,
+\ben
+\fl\qquad \hat I_d(z)&\approx&-\Big(\frac{k}{32\pi}\Big)^{1/2}\Im \int_{0}^{\pi}  \frac{\overline{F(z,y_+(\eta_\theta))}R(y_+(\eta_\theta),\eta_\theta)}{\sqrt{\kappa({y_+(\eta_\theta)})}} e^{\i k (y_+(\eta_\theta)-z)\cdot \eta_\theta+\i \frac{\pi}{4}}d\theta\\
+\fl\qquad&&-\Big(\frac{k}{32\pi}\Big)^{1/2}\Im \int_{0}^{\pi}  \frac{\overline{F(z,y_-(\eta_\theta))}R(y_-(\eta_\theta),\eta_\theta)}{\sqrt{\kappa({y_-(\eta_\theta)})}} e^{\i k (y_-(\eta_\theta)-z)\cdot \eta_\theta - \i \frac{\pi}{4}}d\theta.
+\een
+This formula indicates that the imaging function $\hat I_d(z)$ is related to $\frac{R(z,\eta_\theta)}{\sqrt{\kappa(z)}}$, both the scattering coefficient and the curvature at $z$,
+by the property of $\overline{F(z,y)}$ studied in section 3.
+
+In the case of Kirchhoff high frequency approximation, see e.g. \cite{bcs} and the mathematical justification for strictly convex obstacles in \cite{melrose}, the scattering coefficient can be approximated by
+\ben
+R(x,\eta)=\left\{\begin{array}{ll}
+2\nu(x)\cdot\eta & \mbox{If }x\in\pa D_\eta^-:=\{x\in\Ga_D:\nu(x)\cdot\eta<0\},\\
+0 & \mbox{If }x\in\pa D_\eta^+:=\{x\in\Ga_D:\nu(x)\cdot\eta>0\}.\\
+\end{array}\right.
+\een
+Here $\pa D_\eta^-$ and $\pa D^+_\eta$ are respectively the illuminating and shadow region for the incident wave $e^{\i kx\cdot\eta}$. This implies, since $R(y_+(\eta_\theta),\eta_\theta)=0$, $R(y_-(\eta_\theta),\eta)=-2$,
+\ben
+\hat I_d(z) \approx \Big(\frac{k}{8\pi}\Big)^{1/2}\Im \int_{0}^{\pi}  \frac{{F(z,y_-(\eta_\theta))}}{\sqrt{\kappa({y_-(\eta_\theta)})}} e^{\i k (y_-(\eta_\theta)-z)\cdot \eta_\theta - \i \frac{\pi}{4}}d\theta.
+\een
+Now for $z$ in the part of $\Ga_D$ which is back to $\Ga_0$ , i.e. $\nu(z)\cdot\eta_\theta>0$ for any $\theta\in ]0,\pi[$, we know that $z$ and $y_-(\eta_\theta)$ are far away and thus $\hat I_d(z)\approx 0$. This means one cannot image the back part of the obstacle with only the data collected on $\Ga_0$. This is confirmed in our numerical examples in section 6.
+
+\section{Extensions}{\label{section5}}
+
+In this section we consider the reconstruction of non-penetrable obstacles with the impedance boundary condition and penetrable obstacles in the half space
+by our RTM algorithm 2.1.
+For non-penetrable obstacles with the impedance boundary condition on the obstacle, the measured data $u^s(x_r,x_s)=u(x_r,x_s)-N(x_r,x_s)$, where $u^s(x,x_s)$ is the radiation solution of the following problem:
+\be
+& & \Delta u^s + k^2 u^s =0 \qquad \mbox{in } \R^2_{+}\bks\bar D, \label{q1}\\
+& & \frac{\pa u^s}{\pa\nu}+\i k\eta(x)u^s=-\left(\frac{\pa}{\pa\nu}+\i k\eta(x)\right)N(x,x_s) \ \ \quad \mbox{ on } \Ga_D, \label{q2}\\
+& & \frac{\pa u^s}{\pa x_2}= 0\ \ \ \mbox{on }\Ga_0. \label{q3}
+\ee
+ By modifying
+the argument in Theorem \ref{res_ha} we can show the following result whose proof is omitted.
+
+\begin{thm}\label{res_imp}
+ For any $z\in\Om$, let $\psi(y,z)$ be the radiation solution of the problem
+\ben
+& &\De_y\psi(y,z)+k^2\psi(y,z)=0\ \ \ \qquad\qquad\qquad\qquad\qquad\quad\mbox{\rm in }\R_{+}^2\bks\bar D,\\
+& & \frac{\pa\psi(y,z)}{\pa\nu(y)}+\i k\eta(y)\psi(y,z)=-\Big(\frac{\pa}{\pa\nu(y)}+\i k\eta(y)\Big) \overline{F(z,y)}\ \ \ \ \mbox{\rm on }\Ga_D.
+\een
+Then we have, for any $z\in\Om$,
+\ben
+\fl \qquad \hat I_d(z) = -\frac 14\,\Im\int_{\pa D} \Big( \frac{\pa \overline{F(z,y)} }{\pa \nu(y)} + \i k \eta(y)  \overline{F(z,y)} \Big)
+(\psi(y,z) +  \overline{F(z,y)})ds(y)+ W_{\hat I}(z),
+\een
+where  $|W_{\hat I}(z)|\le C(1+kd_D)^4((kh)^{-1/2}+h/d)$ uniformly for $z$ in $\Om$.
+\end{thm}
+
+For the penetrable obstacle, the measured data $u^s(x_r,x_s)=u(x_r,x_s)-N(x_r,x_s)$, where $u^s(x,x_s)$ is the radiation solution of the following problem:
+\be
+& & \Delta u^s + k^2n(x)u^s =-k^2(n(x)-1)N(x,x_s)\qquad \mbox{in } \R^2_+, \label{qq1}\\
+& & \frac{\pa u^s}{\pa x_2}= 0\ \ \quad\mbox{on }\Ga_0,  \label{qq2}
+\ee
+where $n(x)\in L^\infty(\R^2_+)$ is a positive function which is equal to $1$ outside the scatterer $D$.
+ By modifying the argument in Theorem \ref{res_ha}, the following theorem can be proved.
+
+\begin{thm}\label{res_pen}
+For any $z\in\Om$, let $\psi(y,z)$ be the radiation solution of the problem
+\ben
+& &\De_y\psi(y,z)+k^2n(y)\psi(y,z) = -k^2(n(y)-1)\overline{F(z,y)}\ \ \ \ \mbox{\rm in }\R_{+}^2.
+\een
+Then we have, for any $z\in\Om$,
+\ben
+\fl \qquad \hat I_d(z)=-\frac 14\,\Im\int_D k^2 (1-n(y))(\psi(y,z)+ \overline{F(z,y)})\overline{F(z,y)}dy+ W_{\hat I}(z),
+\een
+where  $|W_{\hat I}(z)|\le C(1+kd_D)^4((kh)^{-1/2}+h/d)$ uniformly for $z$ in $\Om$.
+\end{thm}
+
+We remark that for the penetrable scatterers, $\psi(y,z)$ is again the scattering solution with the incoming field $ \overline{F(z,y)}$. Therefore we again expect the imaging function $\hat I_d(z)$ will have contrast on the boundary of the scatterer and decay outside the scatterer if
+$kh\gg 1$ and $d\gg h$.
+
+\section{Numerical experiments}{\label{section6}}
+
+In this section we present several numerical examples to show the effectiveness of our RTM method. To synthesize the scattering data we compute the solution $u^s(x_r,x_s)$ of the scattering problem by representing the ansatz solution as the double layer potential with the Green function $N(x,y)$ as the kernel and discretizing the integral equation by standard Nystr\"{o}m methods \cite{colton-kress}. The boundary integral equations on $\Ga_D$ are solved on a uniform mesh over the boundary with ten points per probe wavelength. The sources and receivers are both placed on the surface $\Ga_0^d$ with equal-distribution, where $d$ is the aperture. In all our numerical examples we choose $h=10$ and $d=50$. The boundaries of the obstacles used in our numerical experiments are parameterized as follows, where $\theta\in [0,2\pi]$,
+\ben
+\fl   &\mbox{Circle:}\ \ \ &x_1=\rho\cos(\theta),\ \ x_2=\rho\sin(\theta);\\
+\fl& \mbox{Penut:}\ \ \ &x_1=\cos(\theta) + 0.2\cos(3\theta),\ \ x_2 = \sin(\theta) + 0.2\sin(3\theta); \\
+\fl&\mbox{Kite:}\ \ \ &x_1=\cos(\theta) + 0.65\cos(2\theta) - 0.65,\ \ x_2=1.5 \sin (\theta);\\
+%&\mbox{$p$-leaf:}\ \ \ &r(\theta)=1+0.2\cos(p\theta),\ \ \theta\in (0,2\pi],\\
+%\fl&\mbox{Rounded Square:} \ \ \ \ &x_1=0.5(\cos^3(\theta) + \cos(\theta)),\   x_2=0.5(\sin^3(\theta) + \sin(\theta)).
+\een
+
+\begin{exmp}
+{\rm We consider imaging of a sound soft, a sound hard, a non-penetrable obstacle with the impedance condition, and a penetrable obstacle. The imaging domain is $\Om=(-2,2)\times(8,12)$ with the sampling grid $201\times201$ and $N_s=N_r=401$. The wavenumber is $k=4\pi$.
+
+The imaging results are shown in Figure \ref{fig1}. It demonstrates clearly that our RTM algorithm can effectively image the upper boundary illuminated by the sources and receivers distributed along the boundary $\Ga_0$ for non-penetrable obstacles. The imaging values decrease on the shadow part of the obstacles and at the points away from the boundary of the obstacle. This confirms with our theoretical results in section 4 and section 5. The last picture shows that our imaging algorithm can also locate part of the lower boundaries for penetrable obstacles.}
+\end{exmp}
+
+\begin{figure}
+    \centering
+%    \includegraphics[width=0.3\textwidth]{./eps/circle_freq2pi2_401s_401r_h10_d50_2.eps}
+    \includegraphics[width=0.24\textwidth]{./eps/peanut_freq2pi2_401s_401r_h10_d50_2.eps}
+%    \includegraphics[width=0.3\textwidth]{./eps/diamond_freq2pi2_401s_401r_h10_d50_2.eps}
+    \includegraphics[width=0.24\textwidth]{./eps/peanut_freq2pi2_d50Ns301Nr301_Nx201Nz201_eta0.eps}
+    \includegraphics[width=0.24\textwidth]{./eps/peanut_freq2pi2_d50Ns301Nr301_Nx201Nz201_eta2.eps}
+    \includegraphics[width=0.24\textwidth]{./eps/peanut_freq2pi2_d50Ns301Nr301_Nx201Nz201_transmission.eps}
+    \caption{From left to right: imaging results of a sound soft, a sound hard, a non-penetrable obstacle with the impedance $\eta(x)=2$, and a penetrable obstacle with the diffractive index $n(x)=0.5$.} \label{fig1}
+\end{figure}
+
+\begin{exmp}
+{\rm We consider the imaging of two sound soft obstacles. The first model consists of two circles along
+horizontal direction and the second one is a circle and a peanut along the vertical direction.
+The wavenumber is $k=4\pi$ for the test of the single frequency and the probed wavenumbers $k=2\pi\times(2+(i-1)/8), i=1,2,...,9$, for the test of multiple frequencies.
+Figure \ref{fig2} shows the imaging result of the first model. The imaging domain is $[-4,4]\times[8,12]$
+with mesh size $401\times 201$ and $N_s=N_r=301$.
+Figure \ref{fig3} shows the imaging result of the second model. The imaging domain is $[-4,4]\times[8,16]$
+with mesh size $201\times 401$ and $N_s=N_r=301$. The multi-frequency RTM imaging results in Figure \ref{fig2} and
+Figure \ref{fig3} are obtained by adding the imaging results from different frequencies and then dividing the number of the used frequencies. 
+We observe from these two figures that imaging results can be greatly improved by stacking the multiple single frequency imaging results.}
+\end{exmp}
+
+\begin{figure}
+    \centering
+ %   \includegraphics[width=0.3\textwidth]{./eps/circle_two_model.eps}
+    \includegraphics[width=0.3\textwidth]{./eps/circle_two_model.eps}
+    \includegraphics[width=0.3\textwidth]{./eps/circle_two_freq2pi2_Ns301Nr301_d50_nx401nz201.eps}
+    \includegraphics[width=0.3\textwidth]{./eps/circle_two_freq2pi2to3per9_Ns301Nr301_d50_nx401nz201.eps}
+    \caption{From left to right, true obstacle model with two circles, the imaging result with single frequency,
+    the imaging result with multiple frequencies.}\label{fig2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.3\textwidth]{./eps/Obstacle_two_model.eps}
+    \includegraphics[width=0.3\textwidth]{./eps/Obstacle_two_freq2pi2_d50Ns301Nr301.eps}
+    \includegraphics[width=0.3\textwidth]{./eps/Obstacle_two_freq2pi2to3per9_d50Ns301Nr301_Nx201Nz401.eps}
+    \caption{From left to right, true obstacle model with one circle and one peanut, the imaging result with single frequency, the imaging result with multiple frequencies.}\label{fig3}
+\end{figure}
+
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=0.3\textwidth]{./eps/circle_kite_model.eps}
+%    \includegraphics[width=0.3\textwidth]{./eps/circle_kite_freq2pi1_d50Ns301Nr301_Nx401Nz201.eps}
+%    \includegraphics[width=0.3\textwidth]{./eps/circle_kite_freq2pipt5to2pt5per9_d50Ns301Nr301_Nx401Nz201.eps}
+%    \caption{From left to right, true obstacle model with one circle and one kite, and imaging results with single $k=2\pi$ and multiple frequencies $k=\pi\times(1+(i-1)/4),i=1,2,...,9$.}\label{fig4}
+%\end{figure}
+
+\begin{exmp}
+{\rm In this example we consider the stability of our half space RTM imaging function with respect to the complex additive Gaussian random noise. We introduce the additive Gaussian noise as follows \cite{cch_a}:
+    \begin{equation*}
+        u_{noise} = u_s + \nu_{\rm noise},
+    \end{equation*}
+where $u_s$ is the synthesized data and $\nu_{\rm noise}$ is the Gaussian white noise with mean zero and standard deviation $\mu$ multiplied by the maximum of  the data $|u_s|$, i.e. $\nu_{\rm noise}=\frac{\mu \max|u_s|}{\sqrt{2}}(\eps_1 + \i \eps_2)$, and $\eps_j ~ \thicksim \mathcal{N}(0,1)$ for the real $(j=1)$ and imaginary part $(j=2)$.
+
+Figure \ref{fig5} shows the imaging results using single frequency data added with additive Gaussian noise.  The imaging quality can be improved by using multi-frequency data as illustrated in Figure \ref{fig6}, in which we show the imaging results added with  the noise level $\mu =10\%, 20\%, 40\%, 60\%$ Gaussian noise by summing the imaging functions for nine probed wavenumbers $k=\pi\times(1+(i-1)/4),i=1,2,...,9$.
+
+The left table in Table \ref{table1} shows the noise level in this case, where $\sigma=\mu \max_{x_r,x_s}|u^s(x_s,x_r)|$, $\|u_s\|_{\ell^2}^2=\frac{1}{N_sN_r}\sum^{N_s,N_r}_{s,r=1}|u^s(x_s,x_r)|^2$, $\|\nu_{\rm noise}\|_{\ell^2}^2 = \frac{1}{N_sN_r}\sum^{N_s,N_r}_{s,r=1}|\nu_{\rm noise}(x_s,x_r)|^2$.
+The right table in Table \ref{table1} shows the noise level in the case of multi-frequency data, where $\sigma$, $\|u_s\|_{\ell^2}$, and $\|\nu_{\rm noise}\|_{\ell^2}$ are the arithmetic mean of the corresponding values for different frequencies, respectively. }
+\end{exmp}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.24\textwidth]{./eps/circle_kite_freq2pi1_d50Ns301Nr301_Nx401Nz201_sigma10.eps}
+    \includegraphics[width=0.24\textwidth]{./eps/circle_kite_freq2pi1_d50Ns301Nr301_Nx401Nz201_sigma20.eps}
+    \includegraphics[width=0.24\textwidth]{./eps/circle_kite_freq2pi1_d50Ns301Nr301_Nx401Nz201_sigma40.eps}
+    \includegraphics[width=0.24\textwidth]{./eps/circle_kite_freq2pi1_d50Ns301Nr301_Nx401Nz201_sigma60.eps}
+    \caption{The imaging results using single frequency data added with additive Gaussian noise and $\mu = 10\%, 20\%, 40\%, 60\%$ from left to right,  respectively. The probe wavenumbers are $k=2\pi$ and $N_s=N_r=301$.}\label{fig5}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.24\textwidth]{./eps/circle_kite_freq2pipt5to2pt5per9_d50Ns301Nr301_Nx401Nz201_sigma10.eps}
+    \includegraphics[width=0.24\textwidth]{./eps/circle_kite_freq2pipt5to2pt5per9_d50Ns301Nr301_Nx401Nz201_sigma20.eps}
+    \includegraphics[width=0.24\textwidth]{./eps/circle_kite_freq2pipt5to2pt5per9_d50Ns301Nr301_Nx401Nz201_sigma40.eps}
+    \includegraphics[width=0.24\textwidth]{./eps/circle_kite_freq2pipt5to2pt5per9_d50Ns301Nr301_Nx401Nz201_sigma60.eps}
+    \caption{The imaging results using multi-frequency data added with additive Gaussian noise and $\mu = 10\%, 20\%, 40\%, 60\%$ from left to right,  respectively. The probe wavenumbers are $k=\pi\times(1+(i-1)/4),i=1,2,...,9$, and $N_s=N_r=301$.}\label{fig6}
+\end{figure}
+
+\begin{table}
+\caption{The signal level and noise level in the case of single frequency data (left) and multi-frequency data (right).}\label{table1}
+
+\begin{center}
+\begin{tabular}{ | c | c| c | c |  }
+\hline
+$\mu$ & $\sigma$ & $\|u_s\|_{\ell^2}$      & $\|\nu_{\rm noise}\|_{\ell^2}$ \\ \hline
+0.1    &    0.0639    & 0.0136    &   0.0522  \\ \hline
+0.2    &    0.1279    & 0.0136    &   0.1045  \\ \hline
+0.4    &    0.2558    & 0.0136    &   0.2086  \\ \hline
+0.6    &    0.3836    & 0.0136    &   0.3127  \\ \hline
+\end{tabular} \ \ \ \
+\begin{tabular}{ | c | c| c | c |  }
+\hline
+$\mu$ & $\sigma$ & $\|u_s\|_{\ell^2}$      & $\|\nu_{\rm noise}\|_{\ell^2}$ \\ \hline
+0.1     &   0.0593      & 0.0126    &   0.0484  \\ \hline
+0.2     &   0.1185      & 0.0126    &   0.0967 \\ \hline
+0.4     &   0.2370      & 0.0126    &   0.1936 \\ \hline
+0.6     &   0.3555      & 0.0126    &   0.2902 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+ \appendix
+\section{The proof of Theorem \ref{thm:4.1}.}
+\renewcommand{\thesection}{A}
+
+We first recall the following Van der Corput lemma, see e.g. in \cite[Corollary 2.6.8]{grafakos}, which is useful to estimate the oscillatory integral around the critical point.
+
+\begin{lem} \label{van}
+There is a constant $C>0$ such that for any $-\infty<a<b<\infty$, for every real-valued $C^2$ function $u$ that
+satisfies $u''(t)\ge 1$ for $t\in ]a,b[$, for any function $\phi$ defined on $]a,b[$ with an integrable derivative, and for any $\lambda>0$,
+\ben
+\left|\int^b_a e^{\i\lambda u(t)}\phi(t)dt\right|\le C\lambda^{-1/2}\left(|\phi(b)|+\int^b_a|\phi'(t)|dt\right),
+\een
+where the constant $C$ is independent of the constants $a,b,\lambda$ and the functions $u,\phi$.
+\end{lem}
+
+\begin{lem}\label{lem:7.1}
+For any $x,y\in\Om$, there exists a constant $C>0$ independent of $k,h$ such that for $m=1,2,3$, $n=1,2$,
+\ben
+&& \Big|\int_{\Ga_0}\Big(\frac{y_2^m}{|\xi-y|^{m+1}} + \frac{(\xi_1-y_1)^2y_2^n  }{|\xi-y|^{n+3}} \Big) e^{\i k(|\xi-x|+|\xi-y|)}ds(\xi)\Big|\le C(kh)^{-1/2}.
+\een
+\end{lem}
+
+\debproof For simplicity, we only prove the estimate when $m=1$. The other estimates
+can be obtained similarly. By the change of variable $t=(\xi_1-y_1)/y_2$ we know that
+\bee\label{t4}
+\int_{\Ga_0}\frac{y_2}{|\xi-y|^2}e^{\i k(|\xi-x|+|\xi-y|)}ds(\xi)=\int^\infty_{-\infty}\frac{1}{1+t^2}e^{\i ky_2f(t)}dt,
+\eee
+where $f(t)=\sqrt{1+t^2}+\sqrt{(t+a)^2+b^2}$, $a=(y_1-x_1)/y_2$, $b=x_2/y_2$. By the second inequality in the assumption (\ref{cond}), $|a|\le c_1b$ for some $c_1>0$.
+Simple calculation shows that
+\ben
+\hskip-1cm f'(t)=\frac{t}{\sqrt{1+t^2}}+\frac{t+a}{\sqrt{(t+a)^2+b^2}},\ \
+f''(t)=\frac 1{(1+t^2)^{3/2}}+\frac{b^2}{((t+a)^2+b^2)^{3/2}}.
+\een
+It is easy to check that $f'(t)$ is strictly increasing and $f'(t_0)=0$, $t_0=-a/(1+b)$. In the interval where $|t+a|<c_1b$ we know that $f''(t)\ge b^{-1}(1+c_1^2)^{-3/2}\ge C$ and thus by Lemma \ref{van}
+\bee\label{t2}
+\left|\int_{-a-c_1b}^{-a+c_1b}\frac{1}{1+t^2}e^{\i ky_2f(t)}dt\right|\le C(kh)^{-1/2}.
+\eee
+In the intervals where $|t+a|\ge c_1b$, since $f'(t)$ is increasing,
+\ben
+|f'(t)|\ge\min(|f'(-a+c_1b)|,|f'(-a-c_1b)|)\ge \frac{c_1}{\sqrt{1+c_1^2}}.
+\een
+Thus by integration by parts one can obtain the following estimate by the standard argument
+\bee\label{t3}
+\left|\int_{(-\infty,-a-c_1b)\cup(-a+c_1b,\infty)}\frac{1}{1+t^2}e^{\i ky_2f(t)}dt\right|\le C(kh)^{-1}.
+\eee
+This completes the proof by substituting (\ref{t2})-(\ref{t3}) into (\ref{t4}).
+\finproof
+
+\begin{lem}\label{lem:7.2}
+For any $x,y\in D$, let
+\ben
+v(x,y)=\int_{\Ga_0}\Phi(x,\xi)\frac{\pa\Phi(\xi,y)}{\pa\xi_2}ds(\xi).
+\een
+Then there exists a constant $C>0$ independent of $k,h$ such that
+\ben
+\fl \ \ |v(x,y)|+k^{-1}|\na_x v(x,y)|+k^{-1}|\na_y v(x,y)|+k^{-2}|\na_x\na_y v(x,y)|\le C(1+kd_D)(kh)^{-1/2},
+\een
+uniformly for $x,y\in D$.
+\end{lem}
+
+\debproof By using the asymptotic formula for the Hankel functions
+\bee
+\fl \quad H^{(1)}_j(t)=\left(\frac 2{\pi t}\right)^{1/2}e^{\i(t-\frac\pi 4-\frac j2\pi)}+R_j(t),\ \ |R_j(t)|\le Ct^{-3/2},\ \ \forall t>0,\  \ j=0,1,\label{s3}
+\eee
+we obtain by using (\ref{jd2})
+\bee\label{t1}
+v(x,y)=-\frac 1{8\pi}\int_{\Ga_0}\frac{y_2}{|\xi-y|^{3/2}|\xi-x|^{1/2}}e^{\i k(|\xi-y|+|\xi-x|)}ds(\xi)+\ga(x,y),
+\eee
+where
+\ben
+\ga(x,y)\le C\int_{\Ga_0}\frac {y_2}{k|\xi-y|^3}ds(\xi)\le C(kh)^{-1}.
+\een
+Notice that $||\xi-y|^{-1/2}-|\xi-x|^{-1/2}|\le C|x-y|/|\xi-y|^3$ for
+any $x,y\in D$, $\xi\in\Ga_0$, we have
+\ben
+& &\left|\int_{\Ga_0}\frac{y_2}{|\xi-y|^{3/2}|\xi-x|^{1/2}}e^{\i k(|\xi-y|+|\xi-x|)}ds(\xi)\right|\\
+&\le&\left|\int_{\Ga_0}\frac{y_2}{|\xi-y|^2}e^{\i k(|\xi-y|+|\xi-x|)}ds(\xi)\right|+C\int_{\Ga_0}\frac{y_2|x-y|}{|\xi-y|^3}ds(\xi).
+\een
+By the change of variable $t=(\xi_1-y_1)/y_2$ we obtain
+\ben
+\fl\qquad \int_{\Ga_0}\frac{y_2|x-y|}{|\xi-y|^3}ds(\xi)=\int^\infty_{-\infty}\frac{|x-y|}{y_2(1+t^2)^{3/2}}dt\le C\frac{|x-y|}{y_2}\le C(kd_D)(kh)^{-1}.
+\een
+This completes the proof of the estimate for $|v(x,y)|$ by using Lemma \ref{lem:7.1}. The other estimates can be proved by a similar argument using Lemma \ref{lem:7.1}. We omit the details.
+\finproof
+
+Now we are ready to prove Theorem \ref{thm:4.1}.
+
+\noindent{\it Proof of Theorem \ref{thm:4.1}.}
+Let $w$ be the radiation solution of the problem:
+\ben
+\Delta w+k^2w=0\ \ \mbox{in }\R^2_+,\ \ \ \ \frac{\pa w}{\pa x_2}=-\frac{\pa u_2}{\pa x_2}\ \ \mbox{on }\Ga_0.
+\een
+Then $u_1-u_2-w$ satisfies (\ref{ha}) with the boundary condition $u_1-u_2-w=-w$ on $\Ga_D$. Thus by
+Lemma \ref{lem:4.1} and (\ref{y1})-(\ref{y2}) we obtain
+\ben
+ \|\pa(u_1-u_2)/\pa\nu\|_{H^{-1/2}(\Ga_D)}
+&\le& C(\|w\|_{H^{1/2}(\Ga_D)}+\|\pa w/\pa\nu\|_{H^{-1/2}(\Ga_D)})\\
+&\le&C\max_{x\in D}(|w(x)|+d_D|\na w(x)|).
+\een
+By the integral representation formula we have for any $\xi\in\Ga_0$
+\ben
+u_2(\xi)=\int_{\Ga_D}\left[u_2(y)\frac{\pa\Phi(y,\xi)}{\pa\nu(y)}-\frac{\pa u_2(y)}{\pa\nu(y)}\Phi(y,\xi)\right]ds(y),
+\een
+which yields by using the integral representation again that for $x\in D$,
+\ben
+w(x)&=&\int_{\Ga_0}N(x,\xi)\frac{\pa u_2(\xi)}{\pa\xi_2}ds(\xi)\\
+&=&2\int_{\Ga_D}\left[u_2(y)\frac{\pa v(x,y)}{\pa\nu(y)}-\frac{\pa u_2(y)}{\pa\nu(y)}v(x,y)\right]ds(y),
+\een
+where we have used the fact that $N(\xi,x)=2\Phi(\xi,x)$ for $\xi\in\Ga_0$.
+Therefore, since $\|\pa u_2/\pa\nu\|_{H^{-1/2}(\Ga_D)}\le C\|g\|_{H^{1/2}(\Ga_D)}$, we obtain by using (\ref{y1}) again
+\ben
+|w(x)|\le C\|g\|_{H^{1/2}(\Ga_D)}\max_{y\in D}(|v(x,y)|+d_D|\na_y v(x,y)|).
+\een
+Similarly, we have
+\ben
+|\na w(x)|\le C\|g\|_{H^{1/2}(\Ga_D)}\max_{y\in D}(|\na_xv(x,y)|+d_D|\na_x\na_y v(x,y)|).
+\een
+This completes the proof by using Lemma \ref{lem:7.2}.
+\finproof
+
+\section*{Acknowledgments} This work is  supported by National Basic Research Project under the grant 2011CB309700 and China NSF under the grants 11021101 and 11321061. The authors would like to thank Dr. Yu Zhang from ConocoPhillips for inspiring discussions and the referees for their helpful comments.
+
+\section*{References}
+
+
+\begin{thebibliography}{99}
+
+\bibitem{ammari}
+H. Ammari, J. Garnier, W. Jing, H. Kang, M. Lim, K. Solna, and H. Wang 2013 {\em Mathematical and Statistical Methods for Multistatic Imaging} (Springer)
+
+\bibitem{bcs}
+Bleistein N, Cohen J and Stockwell J 2001 {\em Mathematics of Multidimensional Seismic Imaging, Migration, and Inversion} (New York: Springer)
+
+\bibitem{ber84}
+{Berkhout A}  1984 {\em Seismic Migration: Imaging of Acoustic Energy by Wave Field Extrapolation}  (New York: Elsevier)
+
+\bibitem{cg09}
+Chandler-Wilde S N,   Graham I G,   Langdon S  and Lindner M 2009  Condition number estimates for combined
+potential boundary integral operators in acoustic scattering {\it J. Integral Equa. Appli.} {\bf 21}  229-279.
+
+\bibitem{cch_a}
+  Chen J,  Chen Z and  Huang G 2013 {Reverse time migration for extended obstacles: acoustic waves}  {\it Inverse Problems} {\bf 29}  085005 (17pp)
+
+\bibitem{cch_e}
+Chen J,  Chen Z and  Huang G 2013 {Reverse time migration for extended obstacles: electromagnetic waves} {\it Inverse Problems}
+{\bf 29} 085006 (17pp)
+
+\bibitem{ch_wg}
+Chen Z  and  Huang G 2014 {Reverse time migration for reconstructing extended obstacles in planar acoustic waveguides} arXiv:1406.4768
+
+\bibitem{chew}
+Chew W C 1990 {\em Waves and Fields in Inhomogeneous Media} (New York: IEEE Press)
+
+\bibitem{cla85}
+{ Claerbout J F } 1985  { \em Imaging the Earth's Interior} (Oxford: Blackwell Scientific Publication)
+
+\bibitem{colton-kress}
+Colton D  and   Kress R 1998 {\em Inverse Acoustic and Electromagnetic Scattering Problems } (Heidelberg: Springer)
+
+\bibitem{dgs}
+Dominguez V, Graham I G  and Smyshlyaev V P 2007
+{A hybrid numerical-asymptotic boundary integral method for high-frequency acoustic scattering}
+{\it Numerische Mathematik} {\bf 106 } 471-510
+
+\bibitem{grafakos}
+{Grafakos L} 2004 {\em Classical and Modern Fourier Analysis } (London: Pearson)
+
+\bibitem{hor}
+H\"ormander L 1983 {\em The Analysis of Linear Partial Differential Operators, I} {(Berlin: Springer)}
+
+\bibitem{leis}
+{Leis R} 1986 {\em Initial Boundary Value Problems in Mathematical Physics} {(Stuttgart: B.G. Teubner)}
+
+\bibitem{melrose}
+Melrose R B and  Taylor M E 1985 {Near peak scattering and the corrected Kirchhoff approximation for a convex obstacle} {\it Advances in Mathematics} {\bf 55} 242-315
+
+\bibitem{stein}
+Stein E  M  and Timothy S  M  1993 {\em Harmonic Analysis: Real-Variable Methods, Orthogonality, and Oscillatory integrals} (Princeton: Princeton University Press)
+
+\bibitem{watson}
+{ Watson G N} 1922 {\em A Treatise on the Theory of Bessel Functions} (Cambridge: Cambridge University Press)
+
+\bibitem{zs09}
+ Zhang Y and Sun J 2009 {Practicle issues in reverse time migration: true amplitude gathers, noise removal and harmonic source encoding}
+ {\it First Break} {\bf 26}  29-35
+
+\bibitem{zs07}
+ Zhang Y, Xu S, Bleistein N and Zhang G 2007 {True-amplitude, angle-domain, common-image gathers from one-way wave-equation migration}
+  {\it Geophysics} {\bf 72} S49-S58
+
+\end{thebibliography}
+
+\end{document} 

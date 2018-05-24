@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  22 MAY 2018 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2017.10.26)  23 MAY 2018 10:08
 entering extended mode
-**./RTM_half_elastic_v4.tex
-(RTM_half_elastic_v4.tex
+**./RTM_half_elastic_v5.tex
+(RTM_half_elastic_v5.tex
 LaTeX2e <2016/03/31>
 Babel <3.9q> and hyphenation patterns for 1 language(s) loaded.
 (iopart.cls
@@ -97,12 +97,8 @@ Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 143.
-) (RTM_half_elastic_v4.aux
-
-LaTeX Warning: Label `resolution2' multiply defined.
-
-)
-\openout1 = `RTM_half_elastic_v4.aux'.
+) (RTM_half_elastic_v5.aux)
+\openout1 = `RTM_half_elastic_v5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -116,7 +112,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
- (C:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
+
+(C:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count89
 \scratchdimen=\dimen109
@@ -209,11 +206,7 @@ Overfull \hbox (9.09196pt too wide) in alignment at lines 239--249
  [] [] [] [] 
  []
 
-[3]
-
-LaTeX Warning: Reference `q1' on page 4 undefined on input line 298.
-
-[4]
+[3] [4]
 Underfull \hbox (badness 10000) in paragraph at lines 314--317
 
  []
@@ -910,50 +903,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 1427--1430
 
  []
 
-(RTM_half_elastic_v4.bbl
-Missing character: There is no ¨ in font cmr10!
-
-Underfull \hbox (badness 1810) in paragraph at lines 83--87
-[]\OT1/cmr/m/n/10 Wookeen Chung, Sukjoon Pyun, Ho Seuk Bae, Changsoo Shin, and 
-Kurt J Marfurt.
- []
-
-[31]
-Missing character: There is no ¨ in font cmr10!
-) [32] (RTM_half_elastic_v4.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[31] [32] (RTM_half_elastic_v5.aux) ) 
 Here is how much of TeX's memory you used:
- 2719 strings out of 495237
- 36579 string characters out of 3182726
- 97876 words of memory out of 3000000
- 5917 multiletter control sequences out of 15000+200000
+ 2714 strings out of 495237
+ 36517 string characters out of 3182726
+ 97844 words of memory out of 3000000
+ 5915 multiletter control sequences out of 15000+200000
  16373 words of font info for 67 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,14n,26p,741b,367s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmbx8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:
-/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/CTEX/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/CTEX/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CT
-EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/CTEX/MiKTeX/fonts/type1/public
-/amsfonts/latxfont/lasy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbo
-ls/msbm10.pfb>
-Output written on RTM_half_elastic_v4.pdf (32 pages, 1011734 bytes).
+<C:/CTEX/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/C
+TEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/CTEX/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmcsc10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/CTEX/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/CT
+EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmti12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/latxfont/lasy10.pfb><C:/CTEX/MiKTe
+X/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on RTM_half_elastic_v5.pdf (32 pages, 1010431 bytes).
 PDF statistics:
  390 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
