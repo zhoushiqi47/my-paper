@@ -418,12 +418,12 @@ where
 \be\hspace{-1.5cm} \label{tgreen}
 \hat
 \T_D(\xi,0;y_2)&=&\frac{1}{\gamma(\xi)}\Bigg[\Bigg(   \begin{array}{cc}
-	\mu_s\mu_p & \xi\mu_p \\
-	\xi\mu_s & \xi^2
-\end{array}		\Bigg)e^{\i\mu_s y_2}+\Bigg(   \begin{array}{cc}
 	\xi^2 & -\xi\mu_p \\
 	-\xi\mu_s & \mu_p\mu_s
-\end{array} \Bigg)e^{\i\mu_p y_2}
+\end{array} \Bigg)e^{\i\mu_p y_2}+\Bigg(   \begin{array}{cc}
+	\mu_s\mu_p & \xi\mu_p \\
+	\xi\mu_s & \xi^2
+\end{array}		\Bigg)e^{\i\mu_s y_2}
 \Bigg]	\\
 &:=&\Tp(\xi)e^{\i\mu_p y_2}+\Ts(\xi)e^{\i\mu_s y_2}
 \ee
@@ -612,7 +612,7 @@ In this section we introduce RTM method for inverse elastic scattering problems 
 \ee
 Before proposing RTM imaging function, we first introduce the point spread function which measures the resolution for finding point source\cite{ammari2013mathematical}. In \cite{RTMhalf_aco}, the point spread function has been defined in the case of acoustic wave. We now define a similar elastic point spread function $\J(z,y)$, a $\mathbb{C}^{2\times2}$ matrix, which back-propagate the conjugated data $\overline{N(x,y)}$ as the Dirichlet boundary condition. Thus, for any $z,y \in \R_+^2$
 \be\nn\hspace{-1cm}
-\J_{ij}(z,y):=e_i\cdot \J(z,y) e_j&=&\int_{\Gamma_0} \ \sigma_x(\D(x,y)e_i)e_2\cdot\overline{\N(x,y)}e_j ds(x) \\ \label{fullpsf}
+\J_{ij}(z,y):=e_i\cdot \J(z,y) e_j&=&\int_{\Gamma_0} \ \sigma_x(\D(x,z)e_i)e_2\cdot\overline{\N(x,y)}e_j ds(x) \\ \label{fullpsf}
 &=&\int_\R \ \sigma_x(\D(x_1,0;z_1,z_2)e_i)e_2\cdot\overline{\N(x_1,0;y_1,y_2)}e_j dx_1
 \ee
 The estimate in lemma \ref{es_dgreen}-\ref{es_ngreen} show that the integral above exists. 
@@ -831,7 +831,7 @@ To understand the behavior of the imaging fuction when $z$ is close to the bound
 	u^s_\alpha + \om^2u^s_\alpha = 0\ \ \mbox{in} \ \  \R^2\bks\bar{D} \\
 	u^s_\alpha =-u^i_\alpha \ \ \mbox{on} \ \ \pa D 
 	\ee
-	The scattering coecient R(x;d) for $x\in\pa D$ is defined by the relation
+	The scattering coeffcient R(x;d) for $x\in\pa D$ is defined by the relation
 	\ben
 	\sigma(u^s_\alpha+u^i_\alpha)\cdot \nu= \i k_\alpha R_\alpha(x;d)e^{\i k_\alpha x\cdot d}  \ \ \ \mbox{on}\ \ \pa D
 	\een
