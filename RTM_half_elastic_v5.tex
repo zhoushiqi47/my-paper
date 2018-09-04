@@ -327,7 +327,7 @@ Denote $B_\sigma^{+(-)}(a)$ the upper(lower) half part of the circle centered at
 \be\hspace{-2.3cm}
 \N(x,y)=\lim_{\ep\to 0^+} \N_\ep(x,y)=\lim_{\ep\to 0^+}\frac{1}{2\pi}\int^{+\infty}_{-\infty}\hat \N_\ep(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}
 =\lim_{\ep\to 0^+}\frac{1}{2\pi}\int_{L_\sigma}\hat \N_\ep(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi=\frac{1}{2\pi}\int_{L_\sigma}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}
-=\lim_{\sigma\to 0^+}\frac{1}{2\pi}\int_{L_\sigma/B_\sigma^{-}(-k_R)\cup B_\sigma^{+}(k_R)}+\int_{B_\sigma^{-}(-k_R)\cup B_\sigma^{+}(k_R)}\hat \N_\ep(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}\label{Ngreen}
+=\lim_{\sigma\to 0^+}\frac{1}{2\pi}\int_{L_\sigma/B_\sigma^{-}(-k_R)\cup B_\sigma^{+}(k_R)}+\int_{B_\sigma^{-}(-k_R)\cup B_\sigma^{+}(k_R)}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}\label{Ngreen}
 = \frac{1}{2\pi}\pv\int_{\R}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi
 -\frac{\i}{2}\frac{\N_\delta(-k_R)}{\delta'(-k_R)}e^{-\i(x_1-y_1)k_R}+\frac{\i}{2}\frac{\N_\delta(k_R)}{\delta'(k_R)}e^{\i(x_1-y_1)k_R}
 \ee
@@ -562,7 +562,7 @@ The proof is similar to lemma \ref{es_dgreen}. Here we only point out the differ
 Notice that, in the present case, the substitution $\xi=k_s \sin t$ , taking $P_\sigma$ in the $\xi$-plane onto $\Ga_\sigma$ in the $t$-plane. The geometry now is depicted in Figure \ref{figure_trans}.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\textwidth,height=0.5\textwidth]{./graphic/transfor2.png}
+	\includegraphics[width=0.8\textwidth,height=0.5\textwidth]{./graphic/transformation4.png}
 	\caption{Transform from $P_\sigma$ in the $\xi$-plane to $\Ga_\sigma$ in the t-plane}\label{figure_trans}
 \end{figure}
 
@@ -663,7 +663,7 @@ Our aim is to estimate the difference $J(z,y)-J_d(z,y)$. It is easy to see that
 
 \be
 \frac{(x_1-z_1)^2}{\rho^2}\geq \frac{(1-c_1)^2}{(1-c_1)^2+c_3^2 (h/d)^2}:=m(h/d)\\
-\frac{z_2^2}{\rho^2}\leq\frac{c_3^2}{(1-c_1)^2(h/d)+c_3^2 }:=M(h/d)
+\frac{z_2^2}{\rho^2}\leq\frac{c_3^2}{(1-c_1)^2(d/h)+c_3^2 }:=M(h/d)
 \ee
 where $\rho=\sqrt{(x_1-z_1)^2+z_2^2}$ and $z\in\Omega,x\in \Gamma_0\bks(-d,d)$.
 In the sebsequent discussions, we assume $m(h/d)>(1+\kappa)^2/4$, $M(h/d)<\kappa^2/4$.
