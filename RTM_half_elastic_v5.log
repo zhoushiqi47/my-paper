@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.30)  6 SEP 2018 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.30)  6 SEP 2018 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -10,17 +9,6 @@ Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (./iopart.cls
 Document Class: iopart 1996/06/10 v0.0 IOP Journals LaTeX article class
 (./iopart12.clo
-=======
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2018.9.4)  4 SEP 2018 21:54
-entering extended mode
-**RTM_half_elastic_v5.tex
-(C:\Users\zhoushiqi\Desktop\github\my-paper\RTM_half_elastic_v5.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for loaded.
-(C:\Users\zhoushiqi\Desktop\github\my-paper\iopart.cls
-Document Class: iopart 1996/06/10 v0.0 IOP Journals LaTeX article class
-(C:\Users\zhoushiqi\Desktop\github\my-paper\iopart12.clo
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 File: iopart12.clo 1997/01/15 v1.0 LaTeX2e file (size option)
 )
 \c@jnl=\count79
@@ -36,7 +24,6 @@ File: iopart12.clo 1997/01/15 v1.0 LaTeX2e file (size option)
 \indentedwidth=\skip43
 \mathindent=\dimen102
 \c@eqnval=\count87
-<<<<<<< HEAD
 ) (./iopams.sty
 Package: iopams 1997/02/13 v1.0
 
@@ -47,31 +34,13 @@ File: amsgen.sty 1999/11/30 v2.0 generic functions
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-=======
-)
-(C:\Users\zhoushiqi\Desktop\github\my-paper\iopams.sty
-Package: iopams 1997/02/13 v1.0
-
-(C:\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks14
-\ex@=\dimen103
-)
-(C:\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-<<<<<<< HEAD
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-=======
-(C:\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
-Package: amssymb 2009/06/22 v3.00
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -80,7 +49,6 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-<<<<<<< HEAD
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -98,42 +66,15 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 96.
-=======
-(C:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks15
-)
-(C:\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\CTEX\MiKTeX\tex\latex\graphics\trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-(C:\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
-)
-Package graphics Info: Driver file: pdftex.def on input line 91.
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-<<<<<<< HEAD
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-=======
-(C:\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
-)
-(C:\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
-Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 )
 \Gread@gobject=\count88
 ))
@@ -147,36 +88,22 @@ Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
-(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-<<<<<<< HEAD
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/showkeys.sty
 Package: showkeys 2014/10/28 v3.17 Show cite and label keys (DPC, MH)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
-=======
-(C:\CTEX\MiKTeX\tex\latex\tools\showkeys.sty
-Package: showkeys 2007/08/07 v3.15 Show cite and label keys (DPC, MH)
-)
-(C:\CTEX\MiKTeX\tex\latex\graphics\color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 144.
 )
-<<<<<<< HEAD
 (./RTM_half_elastic_v5.aux)
 \openout1 = `RTM_half_elastic_v5.aux'.
 
-=======
-Package color Info: Driver file: pdftex.def on input line 130.
-)
-(C:\Users\zhoushiqi\Desktop\github\my-paper\RTM_half_elastic_v5.aux)
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
@@ -203,7 +130,6 @@ LaTeX Font Info:    ... okay on input line 15.
 \MPnumerator=\count93
 \makeMPintoPDFobject=\count94
 \everyMPtoPDFconversion=\toks17
-<<<<<<< HEAD
 ) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -252,9 +178,6 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 [1
-=======
-) [1
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 \c@lem=\count95
@@ -268,7 +191,6 @@ e
 \c@RomanNumber=\count103
 LaTeX Font Info:    Try loading font information for U+msa on input line 174.
 
-<<<<<<< HEAD
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -276,15 +198,6 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 174.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-=======
-(C:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 174.
-
-(C:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 174.
 
@@ -326,11 +239,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 542--547
 
  []
 
-<<<<<<< HEAD
 <./graphic/transformation4.png, id=49, 682.80093pt x 436.63126pt>
-=======
-<./graphic/transformation4.png, id=48, 682.80093pt x 436.63126pt>
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 File: ./graphic/transformation4.png Graphic file (type png)
 
 <use ./graphic/transformation4.png>
@@ -341,12 +250,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 569--572
 
  []
 
-<<<<<<< HEAD
 [10] [11 <./graphic/transformation4.png>] [12] [13] [14] [15]
-=======
-[10] [11 <C:/Users/zhoushiqi/Desktop/github/my-paper/graphic/transformation4.pn
-g>] [12] [13] [14] [15]
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 Overfull \hbox (24.29568pt too wide) in alignment at lines 814--817
  [] [] [] [] 
  []
@@ -409,7 +313,6 @@ Overfull \hbox (13.21774pt too wide) in alignment at lines 1117--1119
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
-<<<<<<< HEAD
 Package epstopdf Info: Source file: <./graphic/peanut_3pi.eps>
 (epstopdf)                    date: 2017-12-12 14:48:11
 (epstopdf)                    size: 58482 bytes
@@ -488,64 +391,10 @@ File: ./graphic/peanut_3pi_transmission-eps-converted-to.pdf Graphic file (type
 Package pdftex.def Info: ./graphic/peanut_3pi_transmission-eps-converted-to.pdf
  used on input line 1129.
 (pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
-=======
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1126 ....24\textwidth]{./graphic/peanut_3pi.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1127 ...width]{./graphic/peanut_3pi_neumann.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1128 ...h]{./graphic/peanut_3pi_impedance_1.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1129 ...]{./graphic/peanut_3pi_transmission.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `figure_1' on page 23 undefined on input line 1133.
-
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
 
-<<<<<<< HEAD
 [23 <./graphic/peanut_3pi-eps-converted-to.pdf> <./graphic/peanut_3pi_neumann-e
 ps-converted-to.pdf> <./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf> <.
 /graphic/peanut_3pi_transmission-eps-converted-to.pdf>]
@@ -771,158 +620,12 @@ File: ./graphic/rectangle-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./graphic/rectangle-eps-converted-to.pdf used on input
  line 1158.
 (pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-=======
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1147 ....32\textwidth]{./graphic/circle_3pi.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1148 ....32\textwidth]{./graphic/circle_5pi.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1149 ...th=0.32\textwidth]{./graphic/circle.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1150 ....32\textwidth]{./graphic/peanut_3pi.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1151 ....32\textwidth]{./graphic/peanut_5pi.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1152 ...th=0.32\textwidth]{./graphic/peanut.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1153 ....32\textwidth]{./graphic/p_leaf_3pi.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1154 ....32\textwidth]{./graphic/p_leaf_5pi.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1155 ...th=0.32\textwidth]{./graphic/p_leaf.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1156 ...\textwidth]{./graphic/rectangle_3pi.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1157 ...\textwidth]{./graphic/rectangle_5pi.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1158 ...0.32\textwidth]{./graphic/rectangle.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
-<<<<<<< HEAD
 Package epstopdf Info: Source file: <./graphic/bi_circle_profile.eps>
 (epstopdf)                    date: 2018-01-15 14:52:08
 (epstopdf)                    size: 13717 bytes
@@ -1175,184 +878,39 @@ pdf used on input line 1208.
 rcle_0_4_peanut_1_profile-eps-converted-to.pdf> <./graphic/circle_0_4_peanut_1_
 3pi_1-eps-converted-to.pdf> <./graphic/circle_0_4_peanut_1_multi_1-eps-converte
 d-to.pdf>]
-=======
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1173 ...height]{./graphic/bi_circle_profile.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1174 ...\textwidth]{./graphic/bi_circle_3pi.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1175 ...0.32\textwidth]{./graphic/bi_circle.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[23]
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1183 ...graphic/circle_0_4_peanut_1_profile.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1184 ..../graphic/circle_0_4_peanut_1_3pi_1.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1185 ...graphic/circle_0_4_peanut_1_multi_1.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1203 ...dth]{./graphic/bi_circle_4pi_error2.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1204 ...dth]{./graphic/bi_circle_4pi_error4.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1205 ...dth]{./graphic/bi_circle_4pi_error6.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1206 .../graphic/bi_circle_multi_2_8_error2.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1207 .../graphic/bi_circle_multi_2_8_error4.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Unknown graphics extension: .eps.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1208 .../graphic/bi_circle_multi_2_8_error6.eps}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[24]
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
 Underfull \hbox (badness 10000) in paragraph at lines 1243--1246
 
  []
 
-
+[26 <./graphic/bi_circle_4pi_error2-eps-converted-to.pdf> <./graphic/bi_circle_
+4pi_error4-eps-converted-to.pdf> <./graphic/bi_circle_4pi_error6-eps-converted-
+to.pdf> <./graphic/bi_circle_multi_2_8_error2-eps-converted-to.pdf> <./graphic/
+bi_circle_multi_2_8_error4-eps-converted-to.pdf> <./graphic/bi_circle_multi_2_8
+_error6-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 1251--1254
 
  []
 
-[25] [26]
+[27] [28]
 Underfull \hbox (badness 10000) in paragraph at lines 1334--1337
 
  []
 
-[27]
+
 Overfull \hbox (37.11182pt too wide) in alignment at lines 1344--1346
  [] [] [] [] 
  []
 
-
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 1366--1369
 
  []
 
-[28]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 1427--1430
 
  []
 
-<<<<<<< HEAD
 [31] [32] (./RTM_half_elastic_v5.aux) ) 
 Here is how much of TeX's memory you used:
  2714 strings out of 493014
@@ -1389,44 +947,6 @@ Output written on RTM_half_elastic_v5.pdf (32 pages, 955056 bytes).
 PDF statistics:
  394 PDF objects out of 1000 (max. 8388607)
  278 compressed objects within 3 object streams
-=======
-[29] [30] (C:\Users\zhoushiqi\Desktop\github\my-paper\RTM_half_elastic_v5.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
-Here is how much of TeX's memory you used:
- 2240 strings out of 495354
- 25158 string characters out of 3183860
- 87025 words of memory out of 3000000
- 5359 multiletter control sequences out of 15000+200000
- 16373 words of font info for 67 fonts, out of 3000000 for 9000
- 14 hyphenation exceptions out of 8191
- 34i,14n,24p,739b,366s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmbx8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:
-/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/CTEX/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/CTEX/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CT
-EX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/CTEX/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/CTEX/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/CTEX/MiKTeX/fonts/type1/public
-/amsfonts/latxfont/lasy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbo
-ls/msbm10.pfb>
-Output written on RTM_half_elastic_v5.pdf (30 pages, 464747 bytes).
-PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
->>>>>>> 865c65808ac0af51db8863bb95c8d2d55a4558bd
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
