@@ -1,5 +1,5 @@
 \documentclass[11pt]{iopart}
-\pdfoutput=1
+%\pdfoutput=1
 \usepackage{iopams}
 \usepackage{amssymb, epsfig}
 %\usepackage{amsmath, amssymb,epsfig}
@@ -323,11 +323,11 @@ When $\ep>0$, the branch point of $\mu_{\alpha,\ep}$ are $\pm k_{\alpha,\ep}$ an
 \begin{lem}\label{root_De2}
 	If the elastic medium has loss that $k_{\alpha,\ep}:=k_\alpha(1+\i\ep),0<\ep<1$ for $\alpha=p,s$, we assert that $\delta_\ep(\xi)=0$ has only two roots in domain $\Omega^c \subset \mathbb{C}$ and exactly they are $\pm k_{R,\ep}$.
 \end{lem}
-Denote $B_\sigma^{+(-)}(a)$ the upper(lower) half part of the circle centered at a of the radius $\sigma$ and let path $L_\sigma =(-\infty,-k_R-\sigma)\cup B_\sigma^{-}(-k_R)\cup(-k_R+\sigma,k_R-\sigma)\cup  B_\sigma^{+}(k_R)\cup(k_R +\sigma,\infty)$. Using Cauchy integral theorem and lemma \ref{root_De2}, we carry out:
+Denote $B_\sigma^{+(-)}(a)$ the upper(lower) half part of the circle centered at $a$ of the radius $\sigma$ and let path $L_\sigma =(-\infty,-k_R-\sigma)\cup B_\sigma^{-}(-k_R)\cup(-k_R+\sigma,k_R-\sigma)\cup  B_\sigma^{+}(k_R)\cup(k_R +\sigma,\infty)$. Using Cauchy integral theorem and lemma \ref{root_De2}, we carry out:
 \be\hspace{-2.3cm}
 \N(x,y)=\lim_{\ep\to 0^+} \N_\ep(x,y)=\lim_{\ep\to 0^+}\frac{1}{2\pi}\int^{+\infty}_{-\infty}\hat \N_\ep(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}
 =\lim_{\ep\to 0^+}\frac{1}{2\pi}\int_{L_\sigma}\hat \N_\ep(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi=\frac{1}{2\pi}\int_{L_\sigma}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}
-=\lim_{\sigma\to 0^+}\frac{1}{2\pi}\int_{L_\sigma/B_\sigma^{-}(-k_R)\cup B_\sigma^{+}(k_R)}+\int_{B_\sigma^{-}(-k_R)\cup B_\sigma^{+}(k_R)}\hat \N_\ep(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}\label{Ngreen}
+=\lim_{\sigma\to 0^+}\frac{1}{2\pi}\int_{L_\sigma/B_\sigma^{-}(-k_R)\cup B_\sigma^{+}(k_R)}+\int_{B_\sigma^{-}(-k_R)\cup B_\sigma^{+}(k_R)}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi \\ \hspace{-2.3cm}\label{Ngreen}
 = \frac{1}{2\pi}\pv\int_{\R}\hat \N(\xi,x_2;y_2) e^{\i(x_1-y_1)\xi} d\xi
 -\frac{\i}{2}\frac{\N_\delta(-k_R)}{\delta'(-k_R)}e^{-\i(x_1-y_1)k_R}+\frac{\i}{2}\frac{\N_\delta(k_R)}{\delta'(k_R)}e^{\i(x_1-y_1)k_R}
 \ee
@@ -562,7 +562,7 @@ The proof is similar to lemma \ref{es_dgreen}. Here we only point out the differ
 Notice that, in the present case, the substitution $\xi=k_s \sin t$ , taking $P_\sigma$ in the $\xi$-plane onto $\Ga_\sigma$ in the $t$-plane. The geometry now is depicted in Figure \ref{figure_trans}.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\textwidth,height=0.5\textwidth]{./graphic/transfor2.png}
+	\includegraphics[width=0.8\textwidth,height=0.5\textwidth]{./graphic/transformation4.png}
 	\caption{Transform from $P_\sigma$ in the $\xi$-plane to $\Ga_\sigma$ in the t-plane}\label{figure_trans}
 \end{figure}
 
@@ -859,7 +859,7 @@ A_s(\theta)=\left\{ \begin{array}{ll}
 	\frac{ k_s^5(1-4\cos^2\theta)\overline{\mu_p(k_s\cos\theta)}\sin\theta}{2\pi\overline{\gamma(k_s\cos\theta)}\delta(k_s\cos\theta)}(\sin\theta,-\cos\theta) \ \ \theta\in(0,\pi)\bks[\arccos(k_p),\arccos(-k_p)]
 \end{array}\right.
 \een
-Let y(s) be the arc length parametrization of the boundry $\Ga_D$ and $y_{\pm}(\eta_\theta)=y(s_{\pm})$ be the pionts such that $\nu(y(s_{\pm}))=\pm\eta_\theta$. By the same procedure used in \cite[p11,12]{RTMhalf_aco}, we can obtain
+Let y(s) be the arc length parametrization of the boundry $\Ga_D$ and $y_{\pm}(\eta_\theta)=y(s_{\pm})$ be the pionts such that normal unit $\nu(y(s_{\pm}))=\pm\eta_\theta$ and $\vartheta(y)$ be the Gauss curvature at $y$. By the same procedure used in \cite[p11,12]{RTMhalf_aco}, we can obtain
 \ben\hspace{-1cm}
 \hat{I}_d(z)&\approx&\sqrt{8\pi k_p}\Im\mathbf{tr} \int_{0}^{\pi}((\lambda+2\mu)A_p(\theta)\eta_\theta e^{\i k_p (y_-(\eta_\theta)-z)\cdot \eta_\theta-\i\frac{\pi}{4}})^T\frac{\overline{F(z,y_-(\eta_\theta))}}{\sqrt{\vartheta(y_-(\eta_\theta))}}d\theta \\
 &+&\sqrt{8\pi k_s}\Im\mathbf{tr} \int_{0}^{\pi}(\mu A_s(\theta)\eta_\theta^\perp e^{\i k_s (y_-(\eta_\theta)-z)\cdot \eta_\theta-\i\frac{\pi}{4}})^T\frac{\overline{F(z,y_-(\eta_\theta))}}{\sqrt{\vartheta(y_-(\eta_\theta))}}d\theta
