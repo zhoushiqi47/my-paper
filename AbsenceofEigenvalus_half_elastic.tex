@@ -1,0 +1,211 @@
+
+\documentclass[12pt]{iopart}
+%\pdfoutput=1
+\usepackage{iopams}
+\usepackage{amssymb, epsfig}
+%\usepackage{amsmath, amssymb,epsfig}
+\usepackage{latexsym}
+
+%\usepackage[hypertex,hyperindex]{hyperref}
+\usepackage{showkeys}
+\usepackage{graphicx}
+\usepackage{color}
+
+\newcommand{\pf}{\mbox{pf}}
+
+\begin{document}
+
+\bibliographystyle{plain}
+\def\debproof{\noindent {\bf Proof.} }
+\def\finproof{\hfill {\small $\Box$} \\}
+%\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+%\tableofcontents
+\makeatletter % `@' now normal "letter"
+\@addtoreset{equation}{section}
+\makeatother  % `@' is restored as "non-letter"
+\renewcommand\theequation{{\thesection}.{\arabic{equation}}}
+
+\title[]{Absense of Positive Eigenvalues for the Linearized Elasticity System in the Half Space}
+\author{ Zhiming Chen, Shiqi Zhou }
+\address{LSEC, Institute of Computational Mathematics, Academy of
+	Mathematics and Systems Science, Chinese Academy of Sciences,
+	Beijing 100190, China}
+
+\begin{abstract}
+	In this paper, we prove the linearized elasticity system in the half-space with traction free boundry has no eigenvalues. We consider the constant Lame confficients and the desity outside the obstacle with different physical properties such as penetrable or non-penetrable, and for non-penetrable obstacles, the type of boundary conditions on the boundary of the obstacle.
+\end{abstract}
+\maketitle
+\newcommand{\eps}{\varepsilon}
+\newcommand{\RR}{\mathcal{R}}
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{rem}{Remark}[section]
+\newtheorem{alg}{Algorithm}[section]
+\newtheorem{assum}{Assumption}[section]
+\newtheorem{definition}{Definition}[section]
+
+
+\newcounter{RomanNumber}
+\newcommand{\MyRoman}[1]{\rm\setcounter{RomanNumber}{#1}\Roman{RomanNumber}}
+
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\uL}{u_{_{\rm L}}}
+\newcommand{\vL}{v_{_{\rm L}}}
+\newcommand{\tuL}{\tilde u_{_{\rm L}}}
+\newcommand{\tvL}{\tilde v_{_{\rm L}}}
+\newcommand{\fL}{f_{_{\rm L}}}
+\newcommand{\gL}{g_{_{\rm L}}}
+\newcommand{\bpL}{\bp_{_{\rm L}}}
+\newcommand{\bqL}{\bq_{_{\rm L}}}
+\newcommand{\tbpL}{\tilde{\bp}_{_{\rm L}}}
+\newcommand{\tbqL}{\tilde{\bq}_{_{\rm L}}}
+\newcommand{\tbpLf}{\tilde{\bp}_{_{\rm L,1}}}
+\newcommand{\tbpLs}{\tilde{\bp}_{_{\rm L,2}}}
+\newcommand{\tbqLf}{\tilde{\bq}_{_{\rm L,1}}}
+\newcommand{\tbqLs}{\tilde{\bq}_{_{\rm L,2}}}
+\newcommand{\bn}{\nu}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\om}{\omega}
+\newcommand{\pa}{\partial}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\lla}{\la{\hskip -2pt}\la}
+\newcommand{\rra}{\ra{\hskip -2pt}\ra}
+\newcommand{\jj}{\|{\hskip -0.8pt} |}
+\newcommand{\al}{\alpha}
+\newcommand{\ze}{\zeta}
+\newcommand{\si}{\sigma}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\na}{\nabla}
+\newcommand{\vp}{\varphi}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\Om}{\Omega}
+\newcommand{\de}{\delta}
+\newcommand{\Th}{\Theta}
+\newcommand{\De}{\Delta}
+\newcommand{\Lam}{\Lambda}
+\newcommand{\lam}{\lambda}
+\newcommand{\tri}{\triangle}
+\newcommand{\lj}{[{\hskip -2pt} [}
+\newcommand{\rj}{]{\hskip -2pt} ]}
+\newcommand{\bks}{\backslash}
+%\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\meas}{\mathrm{meas}}
+\newcommand{\dist}{\mathrm{dist}}
+
+\newcommand{\mL}{\mathscr{L}}
+\newcommand{\cT}{{\cal T}}
+\newcommand{\cM}{{\cal M}}
+\newcommand{\cE}{{\cal E}}
+\newcommand{\cL}{{\cal L}}
+\newcommand{\cF}{{\cal F}}
+\newcommand{\cB}{{\cal B}}
+\newcommand{\PML}{{\rm PML}}
+\newcommand{\FEM}{{\rm FEM}}
+\newcommand{\rd}{\,\mathrm{d}}
+
+\renewcommand{\i}{\mathbf{i}}
+\renewcommand{\v}{\mathbf{v}}
+\renewcommand{\u}{\mathbf{u}}
+\renewcommand{\r}{\mathbf{r}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\A}{{\mathbb{A}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\I}{{\mathbb{I}}}
+\renewcommand{\Re}{\mathrm{Re}\,}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\renewcommand{\div}{\mathrm{div}}
+\newcommand{\curl}{\mathrm{curl}}
+\newcommand{\Curl}{\mathbf{curl}}
+
+\newcommand{\Np}{\mathcal{N}_p}
+\newcommand{\Ns}{\mathcal{N}_s}
+\newcommand{\Tp}{\mathcal{T}_p}
+\newcommand{\Ts}{\mathcal{T}_s}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\ben}{\begin{eqnarray*}}
+\newcommand{\een}{\end{eqnarray*}}
+\newcommand{\nn}{\nonumber}
+
+\section{Introduction}\label{section1}
+In this paper, we consider the linearized and isotropic elasticity system defined on an unbounded domain $\Omega=\R_+^2\bks \bar{D}$ with traction free surface, where $D\subsetneq\R^2_+$ is a bounded Lipschitz domain with the unit outer normal $\nu$ to its boundary $\Gamma_D$.
+We study the eigenvalues of the  following elastic scattering problem in the isotropic homogeneous medium half space with \emph{Lam\'{e}} constant $\lambda$ and $\mu$ and constant density $\rho\equiv1$:
+\be\label{elastic_eq}
+& &\nabla\cdot\sigma(\u) + \rho\omega^2 \u= f \ \ \ \ \mbox{in }\R_+^2\bks \bar{D}\\
+& & \u=0 \ \ \mbox{on} \ \Ga_D  \ \ \mbox{and} \ \ \sigma(\u)\cdot e_2=0 \ \ \mbox{on} \ \Ga_0
+\ee
+together with the constitutive relation (Hookes law)
+\ben
+\sigma(\u) = 2\mu\ep(\u) + \lambda\div \u \I \\
+\ep(\u)=\frac{1}{2}(\na \u +(\na \u)^T)
+\een
+where $\omega$ is the circular frequency, $\u(x_1,x_2)=(u_1(x),u_2(x))^T\in\C^2$ denotes the displacement fields and $\sigma(u)$ is the stress tensor. We also need to define the surface traction $T_x^n (\cdot)$ on the normal direction n,
+\ben
+T_x^n \u(x) := \sigma\cdot n = 2\mu\frac{\pa \u}{\pa n}+\lambda n\div \u + \mu n \times \curl \u
+\een
+For simplicity, let's introduce \emph{Lam\'{e}} operator $\Delta_e$ as
+\ben
+\Delta_e \u = (\lambda+2\mu)\nabla\nabla\cdot \u - \mu\nabla\times\nabla\times u=\nabla\cdot\sigma(\u)
+\een
+  For the elasticity system, the study of eigenvalue is little. To our knowledges. 
+	The layout of the paper is as follows. In section 2 
+
+\section{Absence of Positive Eigenvalues}
+Throughout the paper, we will assume that for $z\in\mathbb{C}$, $z^{1/2}$ is the analytic branch of $\sqrt{z}$ such that $\Im (z^{1/2})\geq0$. This corresponds to the rigt half real axis as the branch cut in the complex plane. For $z=z_1+\i z_2,z_1,z_2\in\mathbb{R}$, we have
+\be \label{convention_1}
+z^{1/2}=sgn(z_2)\sqrt{\frac{|z|+z_1}{2}}+\i\sqrt{\frac{|z|-z_1}{2}}
+\ee
+For $z$ on the right half real axis, we take $z^{1/2}$ as the limit of $(z+\i\ep)^{1/2}$ as $\ep \to 0^+$.
+
+
+By taking the Fourier transform of (\ref{pp1}-\ref{pp2}), we obtain ODEs for $x_2$ in $R_+$
+\be
+& & \mu \frac{d^2\hat u_1}{dx_2^2}+\i(\lambda+\mu)\xi\frac{d\hat u_2}{dx_2}+(\omega^2-(\lambda+2\mu)\xi^2)\hat u_1 =0 \label{pp3}\\
+& & (\lambda+2 \mu)\frac{d^2\hat u_2}{dx_2^2}+\i(\lambda+\mu)\xi\frac{d\hat u_1}{dx_2}+(\omega^2-\mu \xi^2)\hat u_2 = 0 \label{pp4}
+\ee
+and the boundary coditions on $x_2=0$ are
+\be
+& & \mu\frac{d\hat u_1}{dx_2}+\i\mu\xi\hat u_2 = 0\label{pp5}\\
+& & (\lambda+\mu)\frac{d\hat u_2}{dx_2}+\i\lambda\xi\hat u_1 = 0 \label{pp6}
+\ee
+In order to work wth real coefficient, we use the change of variables:
+\ben
+v_1=\i u_1 , \ \ \ \  v_2=u_2,  \ \ \ \  \v=(v_2,v_2)^T
+\een
+\ben
+[\A_1 \frac{d^2}{dx_2^2} +(\A_\xi^2-(\A_\xi^2)^T)\frac{d}{dx_2}-\A^3]\v
+\een
+\ben \hspace{-2.5cm}
+\A^1=\Bigg( \begin{array}{cc}
+\mu &  0\\
+0 & \lambda+2\mu
+\end{array} \Bigg) ,\ \  \ \ \
+\A_\xi^2=\Bigg( \begin{array}{cc}
+ 0 & -(\lambda+\mu)\xi\\
+(\lambda+\mu)\xi & 0
+\end{array} \Bigg), \ \ \ \
+\A^3=\Bigg( \begin{array}{cc}
+	\lambda+2\mu &  0\\
+	0 & \mu
+\end{array} \Bigg)
+\een
+
+
+\section*{References}
+\bibliography{eee}
+\end{document}

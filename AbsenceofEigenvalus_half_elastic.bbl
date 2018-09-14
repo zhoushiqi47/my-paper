@@ -1,0 +1,75 @@
+\begin{thebibliography}{10}
+
+\bibitem{achenbach1980}
+Jan Achenbach.
+\newblock {\em Wave Propagation in Elastic Solids}.
+\newblock North-Holland, 1980.
+
+\bibitem{Ahlfors1979Complex}
+Lars~V Ahlfors.
+\newblock {\em Complex Analysis: An introduction to the theory of analytic
+  functions of one complex variable}.
+\newblock McGraw-Hill, 1979.
+
+\bibitem{ela_reverse}
+Wen~Fong Chang.
+\newblock Elastic reverse-time migration.
+\newblock {\em Geophysical Prospecting}, 37(3):243--256, 1987.
+
+\bibitem{Yves1988}
+Yves Dermenjian and Jean~Claude Guillot.
+\newblock Scattering of elastic waves in a perturbed isotropic half space with
+  a free boundary. the limiting absorption principle.
+\newblock {\em Mathematical Methods in the Applied Sciences}, 10(2):87¨C124,
+  1988.
+
+\bibitem{grafakos}
+Loukas Grafakos.
+\newblock {\em Classical and modern Fourier analysis}.
+\newblock Prentice Hall, 2004.
+
+\bibitem{Harris2001Linear}
+Johng. Harris.
+\newblock {\em Linear elastic waves}.
+\newblock Cambridge University Press, 2001.
+
+\bibitem{kupradze1963progress}
+Viktor~D Kupradze.
+\newblock {\em Progress in solid mechanics. 3. Dynamical problems in
+  elasticity}.
+\newblock North-Holland Publishing Company, 1963.
+
+\bibitem{leis}
+Rolf Leis.
+\newblock {\em Initial Boundary Value Problems in Mathematical Physics}.
+\newblock J. Wiley, 1986.
+
+\bibitem{Guzina2006}
+Andrew~I. Madyarov and Bojan~B. Guzina.
+\newblock A radiation condition for layered elastic media.
+\newblock {\em Journal of Elasticity}, 82(1):73--98, 2006.
+
+\bibitem{sini2004}
+Mourad Sini.
+\newblock Absence of positive eigenvalues for the linearized elasticity system.
+\newblock {\em Integral Equations and Operator Theory}, 49(2):255--277, 2004.
+
+\bibitem{wilcox1975}
+Calvin~H. Wilcox.
+\newblock {\em Scattering Theory for the d'Alembert Equation in Exterior
+  Domains}.
+\newblock PhD thesis, Springer Berlin Heidelberg, 1975.
+
+\bibitem{Zhang08}
+Yu. Zhang and James. Sun.
+\newblock Practical issues of reverse time migration: true amplitude gathers,
+  noise removal and harmonic-source encoding.
+\newblock {\em Aseg Extended Abstracts}, 2009(3):397--398, 2008.
+
+\bibitem{Zhang2007}
+Yu~Zhang, Sheng Xu, Norman Bleistein, and Guanquan Zhang.
+\newblock True-amplitude, angle-domain, common-image gathers from one-way
+  wave-equation migrations.
+\newblock {\em Geophysics}, 72(1):S49--S58, 2007.
+
+\end{thebibliography}
