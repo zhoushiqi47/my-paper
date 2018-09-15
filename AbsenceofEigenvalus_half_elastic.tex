@@ -181,25 +181,28 @@ By taking the Fourier transform of (\ref{pp1}-\ref{pp2}), we obtain ODEs for $x_
 and the boundary coditions on $x_2=0$ are
 \be
 & & \mu\frac{d\hat u_1}{dx_2}+\i\mu\xi\hat u_2 = 0\label{pp5}\\
-& & (\lambda+\mu)\frac{d\hat u_2}{dx_2}+\i\lambda\xi\hat u_1 = 0 \label{pp6}
+& & (\lambda+2\mu)\frac{d\hat u_2}{dx_2}+\i\lambda\xi\hat u_1 = 0 \label{pp6}
 \ee
-In order to work wth real coefficient, we use the change of variables:
+In order to work with real coefficient, we use the change of variables:
 \ben
 v_1=\i u_1 , \ \ \ \  v_2=u_2,  \ \ \ \  \v=(v_2,v_2)^T
 \een
+Then we have the following equations:
 \ben
-[\A_1 \frac{d^2}{dx_2^2} +(\A_\xi^2-(\A_\xi^2)^T)\frac{d}{dx_2}-\A^3]\v
+[\A_1 \frac{d^2}{dx_2^2} +(\A_2-(\A_2)^T)\xi\frac{d}{dx_2}-\A_3\xi^2+\omega^2]\v= \ \ \ \ \ \mbox{in} \ \  \R_+ \\
+(\A_1 \frac{d}{dx_2} +\A_2)\v =0 \ \ \ \mbox{on} \ \ x_2=0
 \een
-\ben \hspace{-2.5cm}
-\A^1=\Bigg( \begin{array}{cc}
+where
+\ben
+\A_1=\Bigg( \begin{array}{cc}
 \mu &  0\\
 0 & \lambda+2\mu
 \end{array} \Bigg) ,\ \  \ \ \
-\A_\xi^2=\Bigg( \begin{array}{cc}
- 0 & -(\lambda+\mu)\xi\\
-(\lambda+\mu)\xi & 0
+\A_2=\Bigg( \begin{array}{cc}
+ 0 & -\mu\\
+\lambda & 0
 \end{array} \Bigg), \ \ \ \
-\A^3=\Bigg( \begin{array}{cc}
+\A_3=\Bigg( \begin{array}{cc}
 	\lambda+2\mu &  0\\
 	0 & \mu
 \end{array} \Bigg)
