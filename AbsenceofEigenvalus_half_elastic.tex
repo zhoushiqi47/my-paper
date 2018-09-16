@@ -32,7 +32,7 @@
 	Beijing 100190, China}
 
 \begin{abstract}
-	In this paper, we prove the linearized elasticity system in the half-space with traction free boundry has no eigenvalues. We consider the constant Lame confficients and the desity outside the obstacle with different physical properties such as penetrable or non-penetrable, and for non-penetrable obstacles, the type of boundary conditions on the boundary of the obstacle.
+	In this paper, we prove that the linearized elasticity system in the half-space with traction free boundry has no eigenvalues. 
 \end{abstract}
 \maketitle
 \newcommand{\eps}{\varepsilon}
@@ -118,6 +118,15 @@
 \renewcommand{\i}{\mathbf{i}}
 \renewcommand{\v}{\mathbf{v}}
 \renewcommand{\u}{\mathbf{u}}
+
+\newcommand{\U}{\mathbf{U}}
+\newcommand{\w}{\mathbf{w}}
+\newcommand{\q}{\mathbf{q}}
+\newcommand{\W}{\mathbf{W}}
+\newcommand{\Q}{\mathbf{Q}}
+
+
+
 \renewcommand{\r}{\mathbf{r}}
 \newcommand{\R}{{\mathbb{R}}}
 \newcommand{\A}{{\mathbb{A}}}
@@ -143,11 +152,11 @@
 \newcommand{\nn}{\nonumber}
 
 \section{Introduction}\label{section1}
-In this paper, we consider the linearized and isotropic elasticity system defined on an unbounded domain $\Omega=\R_+^2\bks \bar{D}$ with traction free surface, where $D\subsetneq\R^2_+$ is a bounded Lipschitz domain with the unit outer normal $\nu$ to its boundary $\Gamma_D$.
+In this paper, we consider the linearized and isotropic elasticity system defined on an unbounded domain $\Omega=\R_+^2\bks \bar{D}$ with traction free surface $\Ga_0=\{(x_1,x_2)^T:x_1\in\R,x_2=0\}$, where $D\subsetneq\R^2_+$ is a bounded Lipschitz domain with the unit outer normal $\nu$ to its boundary $\Gamma_D$.
 We study the eigenvalues of the  following elastic scattering problem in the isotropic homogeneous medium half space with \emph{Lam\'{e}} constant $\lambda$ and $\mu$ and constant density $\rho\equiv1$:
 \be\label{elastic_eq}
-& &\nabla\cdot\sigma(\u) + \rho\omega^2 \u= f \ \ \ \ \mbox{in }\R_+^2\bks \bar{D}\\
-& & \u=0 \ \ \mbox{on} \ \Ga_D  \ \ \mbox{and} \ \ \sigma(\u)\cdot e_2=0 \ \ \mbox{on} \ \Ga_0
+\nabla\cdot\sigma(\u) + \rho\omega^2 \u= f \ \ \ \ &\mbox{in }& \R_+^2\bks \bar{D}\\ \label{elastic_bd}
+ \u=0 \ \ \mbox{on} \ \Ga_D  \ \ \mbox{and} \ \ \sigma(\u)\cdot e_2=0 \  \ \ \ &\mbox{on}& \ \Ga_0
 \ee
 together with the constitutive relation (Hookes law)
 \ben
@@ -162,21 +171,45 @@ For simplicity, let's introduce \emph{Lam\'{e}} operator $\Delta_e$ as
 \ben
 \Delta_e \u = (\lambda+2\mu)\nabla\nabla\cdot \u - \mu\nabla\times\nabla\times u=\nabla\cdot\sigma(\u)
 \een
-  For the elasticity system, the study of eigenvalue is little. To our knowledges. 
+	We remark that the results in
+this paper can be extended to other boundary
+conditions such as Neumann or mixed boundary conditions on $\Ga_D$, or even to penetrable obstacle.
+
+	In order to complete the definition of the proble, we introduce the domain of the operater $\De_e$
+\ben
+\mathcal{D}(\De_e,S)=\{v\in H^1(S): \De_e v\in L^2(S), \sigma(v)e_2=0\ \ \mbox{on }\Ga_0\}
+\een
+where $S$ is an unbounded domain in $\R^2_+$.
+  For the elasticity system, the study of eigenvalue is little.  
 	The layout of the paper is as follows. In section 2 
 
 \section{Absence of Positive Eigenvalues}
-Throughout the paper, we will assume that for $z\in\mathbb{C}$, $z^{1/2}$ is the analytic branch of $\sqrt{z}$ such that $\Im (z^{1/2})\geq0$. This corresponds to the rigt half real axis as the branch cut in the complex plane. For $z=z_1+\i z_2,z_1,z_2\in\mathbb{R}$, we have
+In this section. Throughout the paper, we will assume that for $z\in\mathbb{C}$, $z^{1/2}$ is the analytic branch of $\sqrt{z}$ such that $\Im (z^{1/2})\geq0$. This corresponds to the rigt half real axis as the branch cut in the complex plane. For $z=z_1+\i z_2,z_1,z_2\in\mathbb{R}$, we have
 \be \label{convention_1}
 z^{1/2}=sgn(z_2)\sqrt{\frac{|z|+z_1}{2}}+\i\sqrt{\frac{|z|-z_1}{2}}
 \ee
 For $z$ on the right half real axis, we take $z^{1/2}$ as the limit of $(z+\i\ep)^{1/2}$ as $\ep \to 0^+$.
+\begin{thm}\label{2.1}
+	Let $\om\in \R$ and $\u$ statisfy the equations (\ref{elastic_eq}-\ref{elastic_bd}) in $\mathcal{D}(\De_e,\Om)$,
+	then we assert $\u=0$.
+\end{thm}
+\begin{lem} \label{lem2.1}
+	The Rayleigh equation $\delta(\xi) = 0$ has only two zeros $\pm k_R$, $k_R>k_s$, in the complex plane. 
+\end{lem}
 
-
-By taking the Fourier transform of (\ref{pp1}-\ref{pp2}), we obtain ODEs for $x_2$ in $R_+$
+\begin{lem}\label{lem2.2}
+	Suppose that $f\in L^2(\R^2_+)$ with compact support in $B\subsetneq \R\times(h,+\infty), \ h>0$. Let $\omega\in \R$ and $\u\in \mathcal{D}(\De_e,\R^2_+)$ such that:
+	\be\label{eq2}
+	\De_e \u +\om^2\u = f
+	\ee
+	then we assert $\u=0$ in $(\R\times(h,+\infty))$.
+\end{lem}
+\debproof
+Let $\mathcal{F}_{x_1}(\cdot): L^2(R^2_+) \rightarrow L^2(R^2_+)$ be the Fourier tranfor given by $\hat{g}:=\mathcal{F}_{x_1}(g):=\int_\R g(x_1,x_2)e^{\i x_1\xi}dx_1$.
+By taking the Fourier transform of (\ref{eq2}) and (\ref{elastic_bd}), we obtain ODEs for $x_2$ in $R_+$
 \be
-& & \mu \frac{d^2\hat u_1}{dx_2^2}+\i(\lambda+\mu)\xi\frac{d\hat u_2}{dx_2}+(\omega^2-(\lambda+2\mu)\xi^2)\hat u_1 =0 \label{pp3}\\
-& & (\lambda+2 \mu)\frac{d^2\hat u_2}{dx_2^2}+\i(\lambda+\mu)\xi\frac{d\hat u_1}{dx_2}+(\omega^2-\mu \xi^2)\hat u_2 = 0 \label{pp4}
+& & \mu \frac{d^2\hat u_1}{dx_2^2}+\i(\lambda+\mu)\xi\frac{d\hat u_2}{dx_2}+(\omega^2-(\lambda+2\mu)\xi^2)\hat u_1 =\hat{f_1} \label{pp3}\\
+& & (\lambda+2 \mu)\frac{d^2\hat u_2}{dx_2^2}+\i(\lambda+\mu)\xi\frac{d\hat u_1}{dx_2}+(\omega^2-\mu \xi^2)\hat u_2 = \hat{f_2} \label{pp4}
 \ee
 and the boundary coditions on $x_2=0$ are
 \be
@@ -185,15 +218,16 @@ and the boundary coditions on $x_2=0$ are
 \ee
 In order to work with real coefficient, we use the change of variables:
 \ben
-v_1=\i u_1 , \ \ \ \  v_2=u_2,  \ \ \ \  \v=(v_2,v_2)^T
+v_1=\i \hat{u}_1 , \ \ \ \  v_2=\hat{u}_2,  \ \ \ \  \v=(v_1,v_2)^T \\
+q_1=\i \hat{f}_1 , \ \ \ \  q_2=\hat{f}_2,  \ \ \ \  \q=(q_1,q_2)^T
 \een
 Then we have the following equations:
-\ben
-[\A_1 \frac{d^2}{dx_2^2} +(\A_2-(\A_2)^T)\xi\frac{d}{dx_2}-\A_3\xi^2+\omega^2]\v= \ \ \ \ \ \mbox{in} \ \  \R_+ \\
-(\A_1 \frac{d}{dx_2} +\A_2)\v =0 \ \ \ \mbox{on} \ \ x_2=0
-\een
+\be\label{eq3}
+[\A_1 \frac{d^2}{dx_2^2} +(\A_2-(\A_2)^T)\xi\frac{d}{dx_2}-\A_3\xi^2+\omega^2]\v=\q \ \ \ \ \ &\mbox{in}& \ \  \R_+ \\
+(\A_1 \frac{d}{dx_2} +\A_2\xi) \ \ \v =0 \ \ \ &\mbox{on}& \ \ x_2=0
+\ee
 where
-\ben
+\ben\hspace{-1cm}
 \A_1=\Bigg( \begin{array}{cc}
 \mu &  0\\
 0 & \lambda+2\mu
@@ -207,8 +241,125 @@ where
 	0 & \mu
 \end{array} \Bigg)
 \een
+ Let $\w$ be the solution of the following equations:
 
 
+\ben
+[\A_1 \frac{d^2}{dx_2^2} +(\A_2-(\A_2)^T)\xi\frac{d}{dx_2}-\A_3\xi^2+\omega^2]\w=\q \ \ \ \ \ &\mbox{in}& \ \  (0,h) \\
+\w=0, \ \ \  (\A_1 \frac{d}{dx_2} +\A_2\xi) \ \ \w =0 \ \ \ &\mbox{on}& \ \ x_2=h
+\een
+It is easy to transform above equations into a simpler form by variables substitution $\W=(\w,(\A_1 \frac{d}{dx_2} +\A_2\xi) \w)^T$, $\Q=(0,0,\q)^T$
+\ben
+\frac{d}{dx_2}\W = \A \W +\Q \ \ \ \ \ \mbox{in} \ \  (0,h) \\
+\W=0  \ \ \ \mbox{on} \ \ x_2=h
+\een
+where 
+\ben
+\A=\left(
+\begin{array}{cc}
+ -\A_1^{-1}\A_2\xi & \A_1^{-1} \\
+ -\A_2^T\A_1^{-1}\A_2\xi^2+\A_3\xi^2-\om^2 & \A_2^T\A_1^{-1}\xi
+\end{array}
+\right)
+\een
+By the standard arguments in ODEs, we can obtain
+\ben
+\W(\xi,x_2)=-\Phi(\xi,x_2) \int_{h}^{x_2} \Phi^{-1}(\xi,t)\Q(\xi,t)dt
+\een
+where
+\ben\hspace{-1.5cm}
+\Phi(\xi,t)=\left(\begin{array}{cccc}
+	-\mu_s(\xi) e^{\i \mu_s t} & -\xi e^{\i\mu_p(\xi) t} & -\mu_s(\xi) e^{-\i \mu_s(\xi) t} & \xi e^{-\i\mu_p t}  \\
+	-\i \xi e^{\i \mu_s(\xi) t} & \i\mu_p(\xi) e^{\i\mu_p(\xi) t} & \i \xi e^{-\i \mu_s(\xi) t} & \i\mu_p(\xi)  e^{-\i\mu_p(\xi) t} \\
+	-\i\mu\beta(\xi) e^{\i \mu_s t} & -2\i\mu \xi\mu_p(\xi)  e^{\i\mu_p(\xi) t} & \i\mu\beta(\xi) e^{-\i \mu_s(\xi) t} & -2\i\mu \xi\mu_p(\xi)  e^{-\i\mu_p t} \\
+	2\mu \xi \mu_s(\xi) e^{\i \mu_s t} & -\mu \beta(\xi)  e^{\i\mu_p(\xi) t} & 2\mu \xi \mu_s(\xi) e^{-\i \mu_s t} & \mu \beta(\xi)   e^{-\i\mu_p(\xi) t}
+\end{array}\right)
+\een
+Here $k_p=\omega/\sqrt{\lam+2\mu}, k_s=\omega/\sqrt{\mu}$ are wave number of p-wave and s-wave, and $\mu_\alpha=(k_\alpha^2-\xi^2)^{1/2}$ for $\alpha=s,p$.
+
+We extend $\w(\xi,x_2)$ by zero in $(h,\infty)$. Therefore. $\w(\xi,x_2)$ satisfy equation \ref{eq3} in $\R_+$.
+Since $\Phi(\xi,t)$ are analytic w.r.t $\xi$ in $\R\bks\{k_p,k_s\}$ and f(x) have compact support, we deduce that for almost every $\xi\in \R$ $\w(\xi,x_2)$ are analytic and so $(\A_1 \frac{d}{dx_2} +\A_2\xi) \w$ are.
+
+
+
+We set $\U=\v-\w$ and $\U=(U_1,U_2)^T$. Then $\U$ satify the following Cauchy proble
+\be\label{eq4}
+[\A_1 \frac{d^2}{dx_2^2} +(\A_2-(\A_2)^T)\xi\frac{d}{dx_2}-\A_3\xi^2+\omega^2]\U=0 \ \ \ \ \ &\mbox{in}& \ \  \R_+ \\
+(\A_1 \frac{d}{dx_2} +\A_2\xi)  \U =(\A_1 \frac{d}{dx_2} +\A_2\xi)   \w \ \ \ &\mbox{on}& \ \ x_2=0
+\ee
+Since the coefficients of above equations are constants, we can represent $\U(\xi,x_2)$ in the following form:
+\ben\hspace{-2.5cm}
+\U(\xi,x_2)=c_1(\xi)\left(\begin{array}{l}
+	-\mu_s \\
+	-\i \xi
+\end{array}\right)e^{\i \mu_s x_2}+c_2(\xi)\left(\begin{array}{l}
+-\xi \\
+\i \mu_p
+\end{array}\right)e^{\i \mu_p x_2}+c_3(\xi)\left(\begin{array}{l}
+-\mu_s \\
+\i \xi
+\end{array}\right)e^{-\i \mu_s x_2}+c_4(\xi)\left(\begin{array}{l}
+\xi \\
+\i \mu_p
+\end{array}\right)e^{-\i \mu_p x_2}
+\een
+
+If $\xi^2\leq k^2_p$, then it's simple to see that $\U=0$ in $L^2_{x_2}(\R_+)$. So, for $\xi^2<k^2_p$, $(\A_1 \frac{d}{dx_2} +\A_2\xi)  \U =0$ which implis $(\A_1 \frac{d}{dx_2} +\A_2\xi)   \w =0$. Since $(\A_1 \frac{d}{dx_2} +\A_2\xi)   \w$ are analytic for almost every $\xi \in \R$, we deduce that 
+\be\label{bd_1}
+(\A_1 \frac{d}{dx_2} +\A_2\xi)  \U =0  \ \ \ \ \ \mbox{on} \ \ \ x_2=0
+\ee
+for almost every $\xi \in \R$. Therefore, we can obtain
+
+\ben
+\U(\xi,x_2) = \left\{
+\begin{array}{l}
+	c(\xi)\left(\begin{array}{l}
+		-\xi \\
+		\i \mu_p
+	\end{array}\right)e^{\i \mu_p x_2},     \ \ \ \ \   k_p^2<   \xi^2\leq k_s^2  \\
+c_1(\xi)\left(\begin{array}{l}
+	-\mu_s \\
+	-\i \xi
+\end{array}\right)e^{\i \mu_s x_2}+c_2(\xi)\left(\begin{array}{l} 
+	-\xi \\
+	\i \mu_p
+\end{array}\right)e^{\i \mu_p x_2}, \ \ \xi^2>k_s^2
+\end{array}
+\right.
+\een
+\ben \hspace{-2cm}
+(\A_1 \frac{d}{dx_2} +\A_2\xi)  \U = \left\{
+\begin{array}{l}
+	c(\xi)\left(\begin{array}{l}
+		-2\i\mu\xi\mu_p \\
+		-\mu\beta
+	\end{array}\right)e^{\i \mu_p x_2},     \ \ \ \ \   k_p^2<   \xi^2\leq k_s^2  \\
+	c_1(\xi)\left(\begin{array}{l}
+		-\i\mu\beta \\
+		2\mu\xi\mu_s
+	\end{array}\right)e^{\i \mu_s x_2}+c_2(\xi)\left(\begin{array}{l} 
+		-2\i\mu\xi\mu_p \\
+		-\mu\beta
+	\end{array}\right)e^{\i \mu_p x_2}, \ \ \xi^2>k_s^2
+\end{array}
+\right.
+\een
+By boudary condition \ref{bd_1}, we have $c(\xi)=0$ and 
+\be
+\mathbf{det} \left(\begin{array}{ll}
+	-\i\mu\beta & -2\i\mu\xi\mu_p \\
+	2\mu\xi\mu_s &	-\mu\beta
+\end{array}\right)=-\i\mu(\beta^2+4\xi^2\mu_s\mu_p)=0
+\ee
+
+\finproof
+
+ {\bf proof of Theorem \ref{2.1}:} Since $D\subsetneq\R^2_+$,we can find two concentric circles $B_{R_1},B_{R_2}$ such that $D\subsetneq B_{R_1}\subsetneq B_{R_2}  \subsetneq \R^2_+$. Let $\chi \in C_{0}^{\infty}(\R^2_+)$ be the cut-off function such that $0 \leq \chi \leq 1$, $\chi=0$ in $B_{R_1}$, and $\chi=1$ outside of $B_{R_2}$.
+Let $v=\chi u$.
+Then $v$ satisfies (\ref{eq2}) with
+ $f=\sigma(u)\na\chi+(\lambda+\mu)(\na^2 \chi u+ \na u \na\chi)+\mu\Delta\chi u +\mu\div u\na\chi$, where $\na^2 \chi$ is the Hessian matrix of $\chi$. Clearly $q$ has compact support. By lemme \ref{lem2.2}, we have $u=v=0$ in $\R\times(h,+\infty)$. Finally, the unique continuation principle
+ implies that u=0 in $\R^2_+$. This completes the proof.
+\finproof
 \section*{References}
 \bibliography{eee}
 \end{document}

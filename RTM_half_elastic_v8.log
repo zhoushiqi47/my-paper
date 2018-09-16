@@ -1,82 +1,76 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.30)  10 SEP 2018 10:26
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2018.9.6)  15 SEP 2018 11:41
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
 **RTM_half_elastic_v8.tex
-(./RTM_half_elastic_v8.tex
-LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
-(./iopart.cls
+(C:\Users\zhoushiqi\Desktop\github\my-paper\RTM_half_elastic_v8.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(C:\Users\zhoushiqi\Desktop\github\my-paper\iopart.cls
 Document Class: iopart 1996/06/10 v0.0 IOP Journals LaTeX article class
-(./iopart12.clo
+(C:\Users\zhoushiqi\Desktop\github\my-paper\iopart12.clo
 File: iopart12.clo 1997/01/15 v1.0 LaTeX2e file (size option)
+Requested font "cmr12" at 12.0pt
+ -> cmr12
 )
-\c@jnl=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
+\c@jnl=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \indentedwidth=\skip43
 \mathindent=\dimen102
-\c@eqnval=\count87
-) (./iopams.sty
+\c@eqnval=\count88
+)
+(C:\Users\zhoushiqi\Desktop\github\my-paper\iopams.sty
 Package: iopams 1997/02/13 v1.0
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
+(C:\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+(C:\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(C:\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
+Package: amssymb 2009/06/22 v3.00
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+(C:\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 ))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/epsfig.sty
+(C:\CTEX\MiKTeX\tex\latex\graphics\epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(C:\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+(C:\CTEX\MiKTeX\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
+(C:\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 96.
+Package graphics Info: Driver file: xetex.def on input line 91.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(C:\CTEX\MiKTeX\tex\xelatex\xetex-def\xetex.def
+File: xetex.def 2009/11/22 v0.94 LaTeX color/graphics driver for XeTeX (RRM/JK)
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
@@ -84,30 +78,28 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \epsfxsize=\dimen107
 \epsfysize=\dimen108
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/latexsym.sty
+(C:\CTEX\MiKTeX\tex\latex\base\latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
-(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/showkeys.sty
-Package: showkeys 2014/10/28 v3.17 Show cite and label keys (DPC, MH)
+(C:\CTEX\MiKTeX\tex\latex\tools\showkeys.sty
+Package: showkeys 2007/08/07 v3.15 Show cite and label keys (DPC, MH)
 )
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/05/09 v1.1c Standard LaTeX Color (DPC)
+(C:\CTEX\MiKTeX\tex\latex\graphics\color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
+(C:\CTEX\MiKTeX\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 144.
+Package color Info: Driver file: xetex.def on input line 130.
 )
-(./RTM_half_elastic_v8.aux
+(C:\Users\zhoushiqi\Desktop\github\my-paper\RTM_half_elastic_v8.aux
 
 LaTeX Warning: Label `delta' multiply defined.
 
 )
-\openout1 = `RTM_half_elastic_v8.aux'.
-
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
@@ -120,99 +112,114 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
- (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count89
-\scratchdimen=\dimen109
-\scratchbox=\box26
-\nofMPsegments=\count90
-\nofMParguments=\count91
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count92
-\MPscratchDim=\dimen110
-\MPnumerator=\count93
-\makeMPintoPDFobject=\count94
-\everyMPtoPDFconversion=\toks17
-) (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
-)
+Requested font "cmr17" at 17.28pt
+ -> cmr17
+Requested font "cmbx12" at 17.28pt
+ -> cmbx12
+Requested font "cmbx12" at 12.0pt
+ -> cmbx12
+Requested font "cmbx10" at 10.0pt
+ -> cmbx10
+ [1
 
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
-(/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-[1
-
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-\c@lem=\count95
-\c@prop=\count96
-\c@cor=\count97
-\c@thm=\count98
-\c@rem=\count99
-\c@alg=\count100
-\c@assum=\count101
-\c@definition=\count102
-\c@RomanNumber=\count103
+]
+\c@lem=\count89
+\c@prop=\count90
+\c@cor=\count91
+\c@thm=\count92
+\c@rem=\count93
+\c@alg=\count94
+\c@assum=\count95
+\c@definition=\count96
+\c@RomanNumber=\count97
+Requested font "cmr10" at 10.95pt
+ -> cmr10
+Requested font "cmtt10" at 10.95pt
+ -> cmtt10
+Requested font "cmr8" at 8.0pt
+ -> cmr8
+Requested font "cmr6" at 6.0pt
+ -> cmr6
+Requested font "cmmi12" at 12.0pt
+ -> cmmi12
+Requested font "cmmi8" at 8.0pt
+ -> cmmi8
+Requested font "cmmi6" at 6.0pt
+ -> cmmi6
+Requested font "cmsy10" at 12.0pt
+ -> cmsy10
+Requested font "cmsy8" at 8.0pt
+ -> cmsy8
+Requested font "cmsy6" at 6.0pt
+ -> cmsy6
+Requested font "cmex10" at 12.0pt
+ -> cmex10
+Requested font "cmex8" at 8.0pt
+ -> cmex8
+Requested font "cmex7" at 6.0pt
+ -> cmex7
 LaTeX Font Info:    Try loading font information for U+msa on input line 183.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+ (C:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
+Requested font "msam10" at 12.0pt
+ -> msam10
+Requested font "msam10" at 8.0pt
+ -> msam10
+Requested font "msam7" at 6.0pt
+ -> msam7
 LaTeX Font Info:    Try loading font information for U+msb on input line 183.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+(C:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
+Requested font "msbm10" at 12.0pt
+ -> msbm10
+Requested font "msbm10" at 8.0pt
+ -> msbm10
+Requested font "msbm7" at 6.0pt
+ -> msbm7
 LaTeX Font Info:    Try loading font information for U+lasy on input line 183.
 
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ulasy.fd
+(C:\CTEX\MiKTeX\tex\latex\base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
+Requested font "lasy10" at 12.0pt
+ -> lasy10
+Requested font "lasy8" at 8.0pt
+ -> lasy8
+Requested font "lasy6" at 6.0pt
+ -> lasy6
+Requested font "cmtt10" at 10.0pt
+ -> cmtt10
+Requested font "cmbx8" at 8.0pt
+ -> cmbx8
+Requested font "cmbx6" at 6.0pt
+ -> cmbx6
+
 Underfull \hbox (badness 1533) in paragraph at lines 197--201
 []\OT1/cmr/m/n/12 The equations ([]1.1[])-([]1.2[]) must be complemented by app
 ropriate boundary
  []
 
+Requested font "cmti12" at 12.0pt
+ -> cmti12
 [2] [3] [4]
+Requested font "cmmi10" at 10.95pt
+ -> cmmi10
+Requested font "cmsy10" at 10.95pt
+ -> cmsy10
+Requested font "cmex10" at 10.95pt
+ -> cmex10
+Requested font "cmbx10" at 10.95pt
+ -> cmbx10
+Requested font "msam10" at 10.95pt
+ -> msam10
+Requested font "msbm10" at 10.95pt
+ -> msbm10
+Requested font "lasy10" at 10.95pt
+ -> lasy10
+
 Underfull \hbox (badness 10000) in paragraph at lines 307--312
 
  []
@@ -222,13 +229,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 405--408
 
  []
 
-<./graphic/transformation4.png, id=39, 663.98062pt x 423.83344pt>
-File: ./graphic/transformation4.png Graphic file (type png)
-
-<use ./graphic/transformation4.png>
-Package pdftex.def Info: ./graphic/transformation4.png used on input line 411.
-(pdftex.def)             Requested size: 357.12578pt x 223.2014pt.
- [7] [8 <./graphic/transformation4.png>]
+File: ./graphic/transformation4.png Graphic file (type QTm)
+<use  "./graphic/transformation4.png" >
+Requested font "cmex7" at 7.0pt
+ -> cmex7
+Requested font "cmex7" at 5.0pt
+ -> cmex7
+Requested font "cmbx7" at 7.0pt
+ -> cmbx7
+Requested font "cmbx5" at 5.0pt
+ -> cmbx5
+Requested font "msam10" at 10.0pt
+ -> msam10
+Requested font "msam7" at 7.0pt
+ -> msam7
+Requested font "msam5" at 5.0pt
+ -> msam5
+Requested font "msbm10" at 10.0pt
+ -> msbm10
+Requested font "msbm7" at 7.0pt
+ -> msbm7
+Requested font "msbm5" at 5.0pt
+ -> msbm5
+Requested font "lasy10" at 10.0pt
+ -> lasy10
+Requested font "lasy7" at 7.0pt
+ -> lasy7
+Requested font "lasy5" at 5.0pt
+ -> lasy5
+ [7] [8]
 Underfull \hbox (badness 10000) in paragraph at lines 486--489
 
  []
@@ -310,578 +339,121 @@ Underfull \hbox (badness 10000) in paragraph at lines 916--919
 
  []
 
-[18] [19] [20] [21]
+[18]
+Requested font "cmcsc10" at 12.0pt
+ -> cmcsc10
+ [19] [20] [21]
 Underfull \hbox (badness 10000) in paragraph at lines 1088--1091
 
  []
 
 [22] [23] [24]
-Package epstopdf Info: Source file: <./graphic/peanut_3pi.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 58482 bytes
-(epstopdf)             Output file: <./graphic/peanut_3pi-eps-converted-to.pdf>
+Invalid UTF-8 byte or sequence at line 1215 replaced by U+FFFD.
+File: ./graphic/peanut_3pi.eps Graphic file (type eps)
+ <./graphic/peanut_3pi.eps>
+Invalid UTF-8 byte or sequence at line 1216 replaced by U+FFFD.
+File: ./graphic/peanut_3pi_neumann.eps Graphic file (type eps)
+ <./graphic/peanut_3pi_neumann.eps>
+Invalid UTF-8 byte or sequence at line 1217 replaced by U+FFFD.
+File: ./graphic/peanut_3pi_impedance_1.eps Graphic file (type eps)
 
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 19981 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_3pi-eps-c
-onverted-to.pdf ./graphic/peanut_3pi.eps>
-(epstopdf)             \includegraphics on input line 1215.
-Package epstopdf Info: Output file is already uptodate.
+<./graphic/peanut_3pi_impedance_1.eps>
+Invalid UTF-8 byte or sequence at line 1218 replaced by U+FFFD.
+File: ./graphic/peanut_3pi_transmission.eps Graphic file (type eps)
+ <./graphic/peanut_3pi_transmission.eps>
+[25]
+Invalid UTF-8 byte or sequence at line 1233 replaced by U+FFFD.
+File: ./graphic/circle_3pi.eps Graphic file (type eps)
+ <./graphic/circle_3pi.eps>
+Invalid UTF-8 byte or sequence at line 1234 replaced by U+FFFD.
+File: ./graphic/circle_5pi.eps Graphic file (type eps)
+ <./graphic/circle_5pi.eps>
+Invalid UTF-8 byte or sequence at line 1235 replaced by U+FFFD.
+File: ./graphic/circle.eps Graphic file (type eps)
 
-<./graphic/peanut_3pi-eps-converted-to.pdf, id=103, 418.56375pt x 314.17375pt>
-File: ./graphic/peanut_3pi-eps-converted-to.pdf Graphic file (type pdf)
+<./graphic/circle.eps>
+Invalid UTF-8 byte or sequence at line 1236 replaced by U+FFFD.
+File: ./graphic/peanut_3pi.eps Graphic file (type eps)
+ <./graphic/peanut_3pi.eps>
+Invalid UTF-8 byte or sequence at line 1237 replaced by U+FFFD.
+File: ./graphic/peanut_5pi.eps Graphic file (type eps)
+ <./graphic/peanut_5pi.eps>
+Invalid UTF-8 byte or sequence at line 1238 replaced by U+FFFD.
+File: ./graphic/peanut.eps Graphic file (type eps)
 
-<use ./graphic/peanut_3pi-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/peanut_3pi-eps-converted-to.pdf used on inpu
-t line 1215.
-(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
-Package epstopdf Info: Source file: <./graphic/peanut_3pi_neumann.eps>
-(epstopdf)                    date: 2017-12-21 21:39:55
-(epstopdf)                    size: 59342 bytes
-(epstopdf)             Output file: <./graphic/peanut_3pi_neumann-eps-converted
--to.pdf>
-(epstopdf)                    date: 2017-12-28 21:42:13
-(epstopdf)                    size: 23117 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_3pi_neuma
-nn-eps-converted-to.pdf ./graphic/peanut_3pi_neumann.eps>
-(epstopdf)             \includegraphics on input line 1216.
-Package epstopdf Info: Output file is already uptodate.
+<./graphic/peanut.eps>
+Invalid UTF-8 byte or sequence at line 1239 replaced by U+FFFD.
+File: ./graphic/p_leaf_3pi.eps Graphic file (type eps)
+ <./graphic/p_leaf_3pi.eps>
+Invalid UTF-8 byte or sequence at line 1240 replaced by U+FFFD.
+File: ./graphic/p_leaf_5pi.eps Graphic file (type eps)
+ <./graphic/p_leaf_5pi.eps>
+Invalid UTF-8 byte or sequence at line 1241 replaced by U+FFFD.
+File: ./graphic/p_leaf.eps Graphic file (type eps)
 
-<./graphic/peanut_3pi_neumann-eps-converted-to.pdf, id=104, 418.56375pt x 314.1
-7375pt>
-File: ./graphic/peanut_3pi_neumann-eps-converted-to.pdf Graphic file (type pdf)
+<./graphic/p_leaf.eps>
+Invalid UTF-8 byte or sequence at line 1242 replaced by U+FFFD.
+File: ./graphic/rectangle_3pi.eps Graphic file (type eps)
+ <./graphic/rectangle_3pi.eps>
+Invalid UTF-8 byte or sequence at line 1243 replaced by U+FFFD.
+File: ./graphic/rectangle_5pi.eps Graphic file (type eps)
 
- <use ./graphic/peanut_3pi_neumann-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/peanut_3pi_neumann-eps-converted-to.pdf used
- on input line 1216.
-(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
-Package epstopdf Info: Source file: <./graphic/peanut_3pi_impedance_1.eps>
-(epstopdf)                    date: 2017-12-28 18:50:28
-(epstopdf)                    size: 58248 bytes
-(epstopdf)             Output file: <./graphic/peanut_3pi_impedance_1-eps-conve
-rted-to.pdf>
-(epstopdf)                    date: 2017-12-28 21:42:14
-(epstopdf)                    size: 21957 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_3pi_imped
-ance_1-eps-converted-to.pdf ./graphic/peanut_3pi_impedance_1.eps>
-(epstopdf)             \includegraphics on input line 1217.
-Package epstopdf Info: Output file is already uptodate.
+<./graphic/rectangle_5pi.eps>
+Invalid UTF-8 byte or sequence at line 1244 replaced by U+FFFD.
+File: ./graphic/rectangle.eps Graphic file (type eps)
+ <./graphic/rectangle.eps>
+Invalid UTF-8 byte or sequence at line 1259 replaced by U+FFFD.
+File: ./graphic/bi_circle_profile.eps Graphic file (type eps)
 
-<./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf, id=105, 418.56375pt x 3
-14.17375pt>
-File: ./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf Graphic file (type 
-pdf)
- <use ./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf 
-used on input line 1217.
-(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
-Package epstopdf Info: Source file: <./graphic/peanut_3pi_transmission.eps>
-(epstopdf)                    date: 2017-12-28 18:50:28
-(epstopdf)                    size: 53258 bytes
-(epstopdf)             Output file: <./graphic/peanut_3pi_transmission-eps-conv
-erted-to.pdf>
-(epstopdf)                    date: 2017-12-28 21:42:14
-(epstopdf)                    size: 21134 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_3pi_trans
-mission-eps-converted-to.pdf ./graphic/peanut_3pi_transmission.eps>
-(epstopdf)             \includegraphics on input line 1218.
-Package epstopdf Info: Output file is already uptodate.
+<./graphic/bi_circle_profile.eps>
+Invalid UTF-8 byte or sequence at line 1260 replaced by U+FFFD.
+File: ./graphic/bi_circle_3pi.eps Graphic file (type eps)
+ <./graphic/bi_circle_3pi.eps>
+Invalid UTF-8 byte or sequence at line 1261 replaced by U+FFFD.
+File: ./graphic/bi_circle.eps Graphic file (type eps)
 
-<./graphic/peanut_3pi_transmission-eps-converted-to.pdf, id=106, 418.56375pt x 
-314.17375pt>
-File: ./graphic/peanut_3pi_transmission-eps-converted-to.pdf Graphic file (type
- pdf)
- <use ./graphic/peanut_3pi_transmission-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/peanut_3pi_transmission-eps-converted-to.pdf
- used on input line 1218.
-(pdftex.def)             Requested size: 107.13844pt x 80.41765pt.
+<./graphic/bi_circle.eps> [26]
+Invalid UTF-8 byte or sequence at line 1269 replaced by U+FFFD.
+File: ./graphic/circle_0_4_peanut_1_profile.eps Graphic file (type eps)
+ <./graphic/circle_0_4_peanut_1_profile.eps>
+Invalid UTF-8 byte or sequence at line 1270 replaced by U+FFFD.
+File: ./graphic/circle_0_4_peanut_1_3pi_1.eps Graphic file (type eps)
 
-[25 <./graphic/peanut_3pi-eps-converted-to.pdf> <./graphic/peanut_3pi_neumann-e
-ps-converted-to.pdf> <./graphic/peanut_3pi_impedance_1-eps-converted-to.pdf> <.
-/graphic/peanut_3pi_transmission-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <./graphic/circle_3pi.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 56486 bytes
-(epstopdf)             Output file: <./graphic/circle_3pi-eps-converted-to.pdf>
+<./graphic/circle_0_4_peanut_1_3pi_1.eps>
+Invalid UTF-8 byte or sequence at line 1271 replaced by U+FFFD.
+File: ./graphic/circle_0_4_peanut_1_multi_1.eps Graphic file (type eps)
 
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 19157 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/circle_3pi-eps-c
-onverted-to.pdf ./graphic/circle_3pi.eps>
-(epstopdf)             \includegraphics on input line 1233.
-Package epstopdf Info: Output file is already uptodate.
+<./graphic/circle_0_4_peanut_1_multi_1.eps>
+Invalid UTF-8 byte or sequence at line 1286 replaced by U+FFFD.
+File: ./graphic/bi_circle_4pi_error2.eps Graphic file (type eps)
 
-<./graphic/circle_3pi-eps-converted-to.pdf, id=144, 418.56375pt x 314.17375pt>
-File: ./graphic/circle_3pi-eps-converted-to.pdf Graphic file (type pdf)
+<./graphic/bi_circle_4pi_error2.eps>
+Invalid UTF-8 byte or sequence at line 1287 replaced by U+FFFD.
+File: ./graphic/bi_circle_4pi_error4.eps Graphic file (type eps)
+ <./graphic/bi_circle_4pi_error4.eps>
+Invalid UTF-8 byte or sequence at line 1288 replaced by U+FFFD.
+File: ./graphic/bi_circle_4pi_error6.eps Graphic file (type eps)
 
-<use ./graphic/circle_3pi-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/circle_3pi-eps-converted-to.pdf used on inpu
-t line 1233.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/circle_5pi.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 58287 bytes
-(epstopdf)             Output file: <./graphic/circle_5pi-eps-converted-to.pdf>
+<./graphic/bi_circle_4pi_error6.eps>
+Invalid UTF-8 byte or sequence at line 1289 replaced by U+FFFD.
+File: ./graphic/bi_circle_multi_2_8_error2.eps Graphic file (type eps)
 
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 20264 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/circle_5pi-eps-c
-onverted-to.pdf ./graphic/circle_5pi.eps>
-(epstopdf)             \includegraphics on input line 1234.
-Package epstopdf Info: Output file is already uptodate.
+<./graphic/bi_circle_multi_2_8_error2.eps>
+Invalid UTF-8 byte or sequence at line 1290 replaced by U+FFFD.
+File: ./graphic/bi_circle_multi_2_8_error4.eps Graphic file (type eps)
 
-<./graphic/circle_5pi-eps-converted-to.pdf, id=145, 418.56375pt x 314.17375pt>
-File: ./graphic/circle_5pi-eps-converted-to.pdf Graphic file (type pdf)
+<./graphic/bi_circle_multi_2_8_error4.eps>
+Invalid UTF-8 byte or sequence at line 1291 replaced by U+FFFD.
+File: ./graphic/bi_circle_multi_2_8_error6.eps Graphic file (type eps)
 
-<use ./graphic/circle_5pi-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/circle_5pi-eps-converted-to.pdf used on inpu
-t line 1234.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/circle.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 30590 bytes
-(epstopdf)             Output file: <./graphic/circle-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 11486 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/circle-eps-conve
-rted-to.pdf ./graphic/circle.eps>
-(epstopdf)             \includegraphics on input line 1235.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/circle-eps-converted-to.pdf, id=146, 418.56375pt x 314.17375pt>
-File: ./graphic/circle-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./graphic/circle-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/circle-eps-converted-to.pdf used on input li
-ne 1235.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/peanut_3pi.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 58482 bytes
-(epstopdf)             Output file: <./graphic/peanut_3pi-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 19981 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_3pi-eps-c
-onverted-to.pdf ./graphic/peanut_3pi.eps>
-(epstopdf)             \includegraphics on input line 1236.
-Package epstopdf Info: Output file is already uptodate.
-File: ./graphic/peanut_3pi-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./graphic/peanut_3pi-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/peanut_3pi-eps-converted-to.pdf used on inpu
-t line 1236.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/peanut_5pi.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 60324 bytes
-(epstopdf)             Output file: <./graphic/peanut_5pi-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 21898 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut_5pi-eps-c
-onverted-to.pdf ./graphic/peanut_5pi.eps>
-(epstopdf)             \includegraphics on input line 1237.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/peanut_5pi-eps-converted-to.pdf, id=147, 418.56375pt x 314.17375pt>
-File: ./graphic/peanut_5pi-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./graphic/peanut_5pi-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/peanut_5pi-eps-converted-to.pdf used on inpu
-t line 1237.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/peanut.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 30388 bytes
-(epstopdf)             Output file: <./graphic/peanut-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 11680 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/peanut-eps-conve
-rted-to.pdf ./graphic/peanut.eps>
-(epstopdf)             \includegraphics on input line 1238.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/peanut-eps-converted-to.pdf, id=148, 418.56375pt x 314.17375pt>
-File: ./graphic/peanut-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./graphic/peanut-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/peanut-eps-converted-to.pdf used on input li
-ne 1238.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/p_leaf_3pi.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 58693 bytes
-(epstopdf)             Output file: <./graphic/p_leaf_3pi-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 20429 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_3pi-eps-c
-onverted-to.pdf ./graphic/p_leaf_3pi.eps>
-(epstopdf)             \includegraphics on input line 1239.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/p_leaf_3pi-eps-converted-to.pdf, id=149, 418.56375pt x 314.17375pt>
-File: ./graphic/p_leaf_3pi-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./graphic/p_leaf_3pi-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/p_leaf_3pi-eps-converted-to.pdf used on inpu
-t line 1239.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/p_leaf_5pi.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 60785 bytes
-(epstopdf)             Output file: <./graphic/p_leaf_5pi-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 22157 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf_5pi-eps-c
-onverted-to.pdf ./graphic/p_leaf_5pi.eps>
-(epstopdf)             \includegraphics on input line 1240.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/p_leaf_5pi-eps-converted-to.pdf, id=150, 418.56375pt x 314.17375pt>
-File: ./graphic/p_leaf_5pi-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./graphic/p_leaf_5pi-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/p_leaf_5pi-eps-converted-to.pdf used on inpu
-t line 1240.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/p_leaf.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 33176 bytes
-(epstopdf)             Output file: <./graphic/p_leaf-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 12414 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/p_leaf-eps-conve
-rted-to.pdf ./graphic/p_leaf.eps>
-(epstopdf)             \includegraphics on input line 1241.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/p_leaf-eps-converted-to.pdf, id=151, 350.30875pt x 257.96375pt>
-File: ./graphic/p_leaf-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./graphic/p_leaf-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/p_leaf-eps-converted-to.pdf used on input li
-ne 1241.
-(pdftex.def)             Requested size: 142.85126pt x 105.19505pt.
-Package epstopdf Info: Source file: <./graphic/rectangle_3pi.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 46426 bytes
-(epstopdf)             Output file: <./graphic/rectangle_3pi-eps-converted-to.p
-df>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 16083 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_3pi-ep
-s-converted-to.pdf ./graphic/rectangle_3pi.eps>
-(epstopdf)             \includegraphics on input line 1242.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/rectangle_3pi-eps-converted-to.pdf, id=152, 418.56375pt x 314.17375p
-t>
-File: ./graphic/rectangle_3pi-eps-converted-to.pdf Graphic file (type pdf)
- <use ./graphic/rectangle_3pi-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/rectangle_3pi-eps-converted-to.pdf used on i
-nput line 1242.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/rectangle_5pi.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 50558 bytes
-(epstopdf)             Output file: <./graphic/rectangle_5pi-eps-converted-to.p
-df>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 17029 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle_5pi-ep
-s-converted-to.pdf ./graphic/rectangle_5pi.eps>
-(epstopdf)             \includegraphics on input line 1243.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/rectangle_5pi-eps-converted-to.pdf, id=153, 418.56375pt x 314.17375p
-t>
-File: ./graphic/rectangle_5pi-eps-converted-to.pdf Graphic file (type pdf)
- <use ./graphic/rectangle_5pi-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/rectangle_5pi-eps-converted-to.pdf used on i
-nput line 1243.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/rectangle.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 21709 bytes
-(epstopdf)             Output file: <./graphic/rectangle-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 9122 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/rectangle-eps-co
-nverted-to.pdf ./graphic/rectangle.eps>
-(epstopdf)             \includegraphics on input line 1244.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/rectangle-eps-converted-to.pdf, id=154, 418.56375pt x 314.17375pt>
-File: ./graphic/rectangle-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./graphic/rectangle-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/rectangle-eps-converted-to.pdf used on input
- line 1244.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/bi_circle_profile.eps>
-(epstopdf)                    date: 2018-01-15 14:52:08
-(epstopdf)                    size: 13717 bytes
-(epstopdf)             Output file: <./graphic/bi_circle_profile-eps-converted-
-to.pdf>
-(epstopdf)                    date: 2018-01-15 14:52:08
-(epstopdf)                    size: 7995 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/bi_circle_profil
-e-eps-converted-to.pdf ./graphic/bi_circle_profile.eps>
-(epstopdf)             \includegraphics on input line 1259.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/bi_circle_profile-eps-converted-to.pdf, id=155, 365.365pt x 218.8175
-pt>
-File: ./graphic/bi_circle_profile-eps-converted-to.pdf Graphic file (type pdf)
- <use ./graphic/bi_circle_profile-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/bi_circle_profile-eps-converted-to.pdf used 
-on input line 1259.
-(pdftex.def)             Requested size: 142.84857pt x 107.522pt.
-Package epstopdf Info: Source file: <./graphic/bi_circle_3pi.eps>
-(epstopdf)                    date: 2018-01-15 14:52:08
-(epstopdf)                    size: 107080 bytes
-(epstopdf)             Output file: <./graphic/bi_circle_3pi-eps-converted-to.p
-df>
-(epstopdf)                    date: 2018-01-15 14:52:08
-(epstopdf)                    size: 36365 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/bi_circle_3pi-ep
-s-converted-to.pdf ./graphic/bi_circle_3pi.eps>
-(epstopdf)             \includegraphics on input line 1260.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/bi_circle_3pi-eps-converted-to.pdf, id=156, 418.56375pt x 314.17375p
-t>
-File: ./graphic/bi_circle_3pi-eps-converted-to.pdf Graphic file (type pdf)
- <use ./graphic/bi_circle_3pi-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/bi_circle_3pi-eps-converted-to.pdf used on i
-nput line 1260.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/bi_circle.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 77364 bytes
-(epstopdf)             Output file: <./graphic/bi_circle-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 24580 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/bi_circle-eps-co
-nverted-to.pdf ./graphic/bi_circle.eps>
-(epstopdf)             \includegraphics on input line 1261.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/bi_circle-eps-converted-to.pdf, id=157, 418.56375pt x 314.17375pt>
-File: ./graphic/bi_circle-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./graphic/bi_circle-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/bi_circle-eps-converted-to.pdf used on input
- line 1261.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
- [26 <./graphic/circle_3pi-eps-converted-to.pdf> <./graphic/circle_5pi-eps-conv
-erted-to.pdf> <./graphic/circle-eps-converted-to.pdf> <./graphic/peanut_5pi-eps
--converted-to.pdf> <./graphic/peanut-eps-converted-to.pdf> <./graphic/p_leaf_3p
-i-eps-converted-to.pdf> <./graphic/p_leaf_5pi-eps-converted-to.pdf> <./graphic/
-p_leaf-eps-converted-to.pdf> <./graphic/rectangle_3pi-eps-converted-to.pdf> <./
-graphic/rectangle_5pi-eps-converted-to.pdf> <./graphic/rectangle-eps-converted-
-to.pdf>]
-Package epstopdf Info: Source file: <./graphic/circle_0_4_peanut_1_profile.eps>
-
-(epstopdf)                    date: 2018-01-15 14:52:08
-(epstopdf)                    size: 13498 bytes
-(epstopdf)             Output file: <./graphic/circle_0_4_peanut_1_profile-eps-
-converted-to.pdf>
-(epstopdf)                    date: 2018-01-15 14:52:08
-(epstopdf)                    size: 7088 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/circle_0_4_peanu
-t_1_profile-eps-converted-to.pdf ./graphic/circle_0_4_peanut_1_profile.eps>
-(epstopdf)             \includegraphics on input line 1269.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/circle_0_4_peanut_1_profile-eps-converted-to.pdf, id=228, 365.365pt 
-x 218.8175pt>
-File: ./graphic/circle_0_4_peanut_1_profile-eps-converted-to.pdf Graphic file (
-type pdf)
- <use ./graphic/circle_0_4_peanut_1_profile-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/circle_0_4_peanut_1_profile-eps-converted-to
-.pdf used on input line 1269.
-(pdftex.def)             Requested size: 142.84857pt x 107.522pt.
-Package epstopdf Info: Source file: <./graphic/circle_0_4_peanut_1_3pi_1.eps>
-(epstopdf)                    date: 2018-01-15 14:52:08
-(epstopdf)                    size: 93894 bytes
-(epstopdf)             Output file: <./graphic/circle_0_4_peanut_1_3pi_1-eps-co
-nverted-to.pdf>
-(epstopdf)                    date: 2018-01-15 14:52:08
-(epstopdf)                    size: 27990 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/circle_0_4_peanu
-t_1_3pi_1-eps-converted-to.pdf ./graphic/circle_0_4_peanut_1_3pi_1.eps>
-(epstopdf)             \includegraphics on input line 1270.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/circle_0_4_peanut_1_3pi_1-eps-converted-to.pdf, id=229, 418.56375pt 
-x 314.17375pt>
-File: ./graphic/circle_0_4_peanut_1_3pi_1-eps-converted-to.pdf Graphic file (ty
-pe pdf)
- <use ./graphic/circle_0_4_peanut_1_3pi_1-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/circle_0_4_peanut_1_3pi_1-eps-converted-to.p
-df used on input line 1270.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/circle_0_4_peanut_1_multi_1.eps>
-
-(epstopdf)                    date: 2018-01-15 14:52:08
-(epstopdf)                    size: 51713 bytes
-(epstopdf)             Output file: <./graphic/circle_0_4_peanut_1_multi_1-eps-
-converted-to.pdf>
-(epstopdf)                    date: 2018-01-15 14:52:08
-(epstopdf)                    size: 18225 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/circle_0_4_peanu
-t_1_multi_1-eps-converted-to.pdf ./graphic/circle_0_4_peanut_1_multi_1.eps>
-(epstopdf)             \includegraphics on input line 1271.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/circle_0_4_peanut_1_multi_1-eps-converted-to.pdf, id=230, 418.56375p
-t x 314.17375pt>
-File: ./graphic/circle_0_4_peanut_1_multi_1-eps-converted-to.pdf Graphic file (
-type pdf)
-
-<use ./graphic/circle_0_4_peanut_1_multi_1-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/circle_0_4_peanut_1_multi_1-eps-converted-to
-.pdf used on input line 1271.
-(pdftex.def)             Requested size: 142.85126pt x 107.22034pt.
-Package epstopdf Info: Source file: <./graphic/bi_circle_4pi_error2.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 112501 bytes
-(epstopdf)             Output file: <./graphic/bi_circle_4pi_error2-eps-convert
-ed-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 39746 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/bi_circle_4pi_er
-ror2-eps-converted-to.pdf ./graphic/bi_circle_4pi_error2.eps>
-(epstopdf)             \includegraphics on input line 1286.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/bi_circle_4pi_error2-eps-converted-to.pdf, id=231, 421.575pt x 317.1
-85pt>
-File: ./graphic/bi_circle_4pi_error2-eps-converted-to.pdf Graphic file (type pd
-f)
- <use ./graphic/bi_circle_4pi_error2-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/bi_circle_4pi_error2-eps-converted-to.pdf us
-ed on input line 1286.
-(pdftex.def)             Requested size: 142.85126pt x 107.47847pt.
-Package epstopdf Info: Source file: <./graphic/bi_circle_4pi_error4.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 113428 bytes
-(epstopdf)             Output file: <./graphic/bi_circle_4pi_error4-eps-convert
-ed-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 40130 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/bi_circle_4pi_er
-ror4-eps-converted-to.pdf ./graphic/bi_circle_4pi_error4.eps>
-(epstopdf)             \includegraphics on input line 1287.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/bi_circle_4pi_error4-eps-converted-to.pdf, id=232, 421.575pt x 317.1
-85pt>
-File: ./graphic/bi_circle_4pi_error4-eps-converted-to.pdf Graphic file (type pd
-f)
- <use ./graphic/bi_circle_4pi_error4-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/bi_circle_4pi_error4-eps-converted-to.pdf us
-ed on input line 1287.
-(pdftex.def)             Requested size: 142.85126pt x 107.47847pt.
-Package epstopdf Info: Source file: <./graphic/bi_circle_4pi_error6.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 115601 bytes
-(epstopdf)             Output file: <./graphic/bi_circle_4pi_error6-eps-convert
-ed-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 42377 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/bi_circle_4pi_er
-ror6-eps-converted-to.pdf ./graphic/bi_circle_4pi_error6.eps>
-(epstopdf)             \includegraphics on input line 1288.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/bi_circle_4pi_error6-eps-converted-to.pdf, id=233, 421.575pt x 317.1
-85pt>
-File: ./graphic/bi_circle_4pi_error6-eps-converted-to.pdf Graphic file (type pd
-f)
- <use ./graphic/bi_circle_4pi_error6-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/bi_circle_4pi_error6-eps-converted-to.pdf us
-ed on input line 1288.
-(pdftex.def)             Requested size: 142.85126pt x 107.47847pt.
-Package epstopdf Info: Source file: <./graphic/bi_circle_multi_2_8_error2.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 86853 bytes
-(epstopdf)             Output file: <./graphic/bi_circle_multi_2_8_error2-eps-c
-onverted-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 30270 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/bi_circle_multi_
-2_8_error2-eps-converted-to.pdf ./graphic/bi_circle_multi_2_8_error2.eps>
-(epstopdf)             \includegraphics on input line 1289.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/bi_circle_multi_2_8_error2-eps-converted-to.pdf, id=234, 421.575pt x
- 317.185pt>
-File: ./graphic/bi_circle_multi_2_8_error2-eps-converted-to.pdf Graphic file (t
-ype pdf)
- <use ./graphic/bi_circle_multi_2_8_error2-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/bi_circle_multi_2_8_error2-eps-converted-to.
-pdf used on input line 1289.
-(pdftex.def)             Requested size: 142.85126pt x 107.47847pt.
-Package epstopdf Info: Source file: <./graphic/bi_circle_multi_2_8_error4.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 95828 bytes
-(epstopdf)             Output file: <./graphic/bi_circle_multi_2_8_error4-eps-c
-onverted-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 32025 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/bi_circle_multi_
-2_8_error4-eps-converted-to.pdf ./graphic/bi_circle_multi_2_8_error4.eps>
-(epstopdf)             \includegraphics on input line 1290.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/bi_circle_multi_2_8_error4-eps-converted-to.pdf, id=235, 421.575pt x
- 317.185pt>
-File: ./graphic/bi_circle_multi_2_8_error4-eps-converted-to.pdf Graphic file (t
-ype pdf)
- <use ./graphic/bi_circle_multi_2_8_error4-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/bi_circle_multi_2_8_error4-eps-converted-to.
-pdf used on input line 1290.
-(pdftex.def)             Requested size: 142.85126pt x 107.47847pt.
-Package epstopdf Info: Source file: <./graphic/bi_circle_multi_2_8_error6.eps>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 102386 bytes
-(epstopdf)             Output file: <./graphic/bi_circle_multi_2_8_error6-eps-c
-onverted-to.pdf>
-(epstopdf)                    date: 2017-12-12 14:48:11
-(epstopdf)                    size: 33634 bytes
-(epstopdf)             Command: <repstopdf --outfile=./graphic/bi_circle_multi_
-2_8_error6-eps-converted-to.pdf ./graphic/bi_circle_multi_2_8_error6.eps>
-(epstopdf)             \includegraphics on input line 1291.
-Package epstopdf Info: Output file is already uptodate.
-
-<./graphic/bi_circle_multi_2_8_error6-eps-converted-to.pdf, id=236, 421.575pt x
- 317.185pt>
-File: ./graphic/bi_circle_multi_2_8_error6-eps-converted-to.pdf Graphic file (t
-ype pdf)
- <use ./graphic/bi_circle_multi_2_8_error6-eps-converted-to.pdf>
-Package pdftex.def Info: ./graphic/bi_circle_multi_2_8_error6-eps-converted-to.
-pdf used on input line 1291.
-(pdftex.def)             Requested size: 142.85126pt x 107.47847pt.
-
-[27 <./graphic/bi_circle_profile-eps-converted-to.pdf> <./graphic/bi_circle_3pi
--eps-converted-to.pdf> <./graphic/bi_circle-eps-converted-to.pdf> <./graphic/ci
-rcle_0_4_peanut_1_profile-eps-converted-to.pdf> <./graphic/circle_0_4_peanut_1_
-3pi_1-eps-converted-to.pdf> <./graphic/circle_0_4_peanut_1_multi_1-eps-converte
-d-to.pdf>] [28 <./graphic/bi_circle_4pi_error2-eps-converted-to.pdf> <./graphic
-/bi_circle_4pi_error4-eps-converted-to.pdf> <./graphic/bi_circle_4pi_error6-eps
--converted-to.pdf> <./graphic/bi_circle_multi_2_8_error2-eps-converted-to.pdf> 
-<./graphic/bi_circle_multi_2_8_error4-eps-converted-to.pdf> <./graphic/bi_circl
-e_multi_2_8_error6-eps-converted-to.pdf>] [29]
+<./graphic/bi_circle_multi_2_8_error6.eps> [27] [28] [29]
 Underfull \hbox (badness 10000) in paragraph at lines 1384--1387
 
  []
 
-[30] [31] (./RTM_half_elastic_v8.aux)
+Requested font "cmti10" at 10.0pt
+ -> cmti10
+[30] [31] (C:\Users\zhoushiqi\Desktop\github\my-paper\RTM_half_elastic_v8.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -894,40 +466,12 @@ LaTeX Warning: There were multiply-defined labels.
 ### simple group (level 1) entered at line 1079 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2719 strings out of 493014
- 37857 string characters out of 6133350
- 103786 words of memory out of 5000000
- 6181 multiletter control sequences out of 15000+600000
- 16373 words of font info for 67 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 38i,13n,26p,1436b,364s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
-.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.p
-fb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on RTM_half_elastic_v8.pdf (31 pages, 957895 bytes).
-PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
- 0 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1709 strings out of 430478
+ 16983 string characters out of 3191503
+ 75245 words of memory out of 3000000
+ 4808 multiletter control sequences out of 15000+200000
+ 16373 words of font info for 67 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 32i,13n,24p,1436b,363s stack positions out of 5000i,500n,10000p,200000b,50000s
 
+Output written on RTM_half_elastic_v8.pdf (31 pages).
