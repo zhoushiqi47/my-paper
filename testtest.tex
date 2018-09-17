@@ -1,6 +1,6 @@
 
 \documentclass[12pt]{iopart}
-\pdfoutput=1
+%\pdfoutput=1
 \usepackage{iopams}
 \usepackage{amssymb, epsfig}
 %\usepackage{amsmath, amssymb,epsfig}
@@ -24,6 +24,8 @@
 \@addtoreset{equation}{section}
 \makeatother  % `@' is restored as "non-letter"
 \renewcommand\theequation{{\thesection}.{\arabic{equation}}}
+
+
 
 \title[]{Absense of Positive Eigenvalues for the Linearized Elasticity System in the Half Space}
 \author{ Zhiming Chen, Shiqi Zhou }
@@ -116,6 +118,7 @@
 \newcommand{\rd}{\,\mathrm{d}}
 
 \renewcommand{\i}{\mathbf{i}}
+\renewcommand{\i}{\mathbf{i}}
 \renewcommand{\v}{\mathbf{v}}
 \renewcommand{\u}{\mathbf{u}}
 
@@ -127,9 +130,9 @@
 
 
 
+\newcommand{\A}{{\mathbb{A}}}
 \renewcommand{\r}{\mathbf{r}}
 \newcommand{\R}{{\mathbb{R}}}
-\newcommand{\A}{{\mathbb{A}}}
 \newcommand{\Z}{{\mathbb{Z}}}
 \newcommand{\C}{{\mathbb{C}}}
 \newcommand{\I}{{\mathbb{I}}}
@@ -151,12 +154,14 @@
 \newcommand{\een}{\end{eqnarray*}}
 \newcommand{\nn}{\nonumber}
 
+
+
 \section{Introduction}\label{section1}
 In this paper, we consider the linearized and isotropic elasticity system defined on an unbounded domain $\Omega=\R_+^2\bks \bar{D}$ with traction free surface $\Ga_0=\{(x_1,x_2)^T:x_1\in\R,x_2=0\}$, where $D\subsetneq\R^2_+$ is a bounded Lipschitz domain with the unit outer normal $\nu$ to its boundary $\Gamma_D$.
 We study the eigenvalues of the  following elastic scattering problem in the isotropic homogeneous medium half space with \emph{Lam\'{e}} constant $\lambda$ and $\mu$ and constant density $\rho\equiv1$:
 \be\label{elastic_eq}
 \nabla\cdot\sigma(\u) + \rho\omega^2 \u= f \ \ \ \ &\mbox{in }& \R_+^2\bks \bar{D}\\ \label{elastic_bd}
- \u=0 \ \ \mbox{on} \ \Ga_D  \ \ \mbox{and} \ \ \sigma(\u)\cdot e_2=0 \  \ \ \ &\mbox{on}& \ \Ga_0
+\u=0 \ \ \mbox{on} \ \Ga_D  \ \ \mbox{and} \ \ \sigma(\u)\cdot e_2=0 \  \ \ \ &\mbox{on}& \ \Ga_0
 \ee
 together with the constitutive relation (Hookes law)
 \ben
@@ -171,17 +176,17 @@ For simplicity, let's introduce \emph{Lam\'{e}} operator $\Delta_e$ as
 \ben
 \Delta_e \u = (\lambda+2\mu)\nabla\nabla\cdot \u - \mu\nabla\times\nabla\times u=\nabla\cdot\sigma(\u)
 \een
-	We remark that the results in
+We remark that the results in
 this paper can be extended to other boundary
 conditions such as Neumann or mixed boundary conditions on $\Ga_D$, or even to penetrable obstacle.
 
-	In order to complete the definition of the proble, we introduce the domain of the operater $\De_e$
+In order to complete the definition of the proble, we introduce the domain of the operater $\De_e$
 \ben
 \mathcal{D}(\De_e,S)=\{v\in H^1(S): \De_e v\in L^2(S), \sigma(v)e_2=0\ \ \mbox{on }\Ga_0\}
 \een
 where $S$ is an unbounded domain in $\R^2_+$.
-  For the elasticity system, the study of eigenvalue is little.  
-	The layout of the paper is as follows. In section 2 
+For the elasticity system, the study of eigenvalue is little.  
+The layout of the paper is as follows. In section 2 
 
 \section{Absence of Positive Eigenvalues}
 In this section. Throughout the paper, we will assume that for $z\in\mathbb{C}$, $z^{1/2}$ is the analytic branch of $\sqrt{z}$ such that $\Im (z^{1/2})\geq0$. This corresponds to the rigt half real axis as the branch cut in the complex plane. For $z=z_1+\i z_2,z_1,z_2\in\mathbb{R}$, we have
@@ -229,19 +234,19 @@ Then we have the following equations:
 where
 \ben\hspace{-1cm}
 \A_1=\Bigg( \begin{array}{cc}
-\mu &  0\\
-0 & \lambda+2\mu
+	\mu &  0\\
+	0 & \lambda+2\mu
 \end{array} \Bigg) ,\ \  \ \ \
 \A_2=\Bigg( \begin{array}{cc}
- 0 & -\mu\\
-\lambda & 0
+	0 & -\mu\\
+	\lambda & 0
 \end{array} \Bigg), \ \ \ \
 \A_3=\Bigg( \begin{array}{cc}
 	\lambda+2\mu &  0\\
 	0 & \mu
 \end{array} \Bigg)
 \een
- Let $\w$ be the solution of the following equations:
+Let $\w$ be the solution of the following equations:
 
 
 \ben
@@ -257,8 +262,8 @@ where
 \ben
 \A=\left(
 \begin{array}{cc}
- -\A_1^{-1}\A_2\xi & \A_1^{-1} \\
- -\A_2^T\A_1^{-1}\A_2\xi^2+\A_3\xi^2-\om^2 & \A_2^T\A_1^{-1}\xi
+	-\A_1^{-1}\A_2\xi & \A_1^{-1} \\
+	-\A_2^T\A_1^{-1}\A_2\xi^2+\A_3\xi^2-\om^2 & \A_2^T\A_1^{-1}\xi
 \end{array}
 \right)
 \een
@@ -293,14 +298,14 @@ Since the coefficients of above equations are constants, we can represent $\U(\x
 	-\mu_s \\
 	-\i \xi
 \end{array}\right)e^{\i \mu_s x_2}+c_2(\xi)\left(\begin{array}{l}
--\xi \\
-\i \mu_p
+	-\xi \\
+	\i \mu_p
 \end{array}\right)e^{\i \mu_p x_2}+c_3(\xi)\left(\begin{array}{l}
--\mu_s \\
-\i \xi
+	-\mu_s \\
+	\i \xi
 \end{array}\right)e^{-\i \mu_s x_2}+c_4(\xi)\left(\begin{array}{l}
-\xi \\
-\i \mu_p
+	\xi \\
+	\i \mu_p
 \end{array}\right)e^{-\i \mu_p x_2}
 \een
 
@@ -317,13 +322,13 @@ for almost every $\xi \in \R$. Therefore, we can obtain
 		-\xi \\
 		\i \mu_p
 	\end{array}\right)e^{\i \mu_p x_2},     \ \ \ \ \   k_p^2<   \xi^2\leq k_s^2  \\
-c_1(\xi)\left(\begin{array}{l}
-	-\mu_s \\
-	-\i \xi
-\end{array}\right)e^{\i \mu_s x_2}+c_2(\xi)\left(\begin{array}{l} 
-	-\xi \\
-	\i \mu_p
-\end{array}\right)e^{\i \mu_p x_2}, \ \ \xi^2>k_s^2
+	c_1(\xi)\left(\begin{array}{l}
+		-\mu_s \\
+		-\i \xi
+	\end{array}\right)e^{\i \mu_s x_2}+c_2(\xi)\left(\begin{array}{l} 
+		-\xi \\
+		\i \mu_p
+	\end{array}\right)e^{\i \mu_p x_2}, \ \ \xi^2>k_s^2
 \end{array}
 \right.
 \een
@@ -351,17 +356,18 @@ By boudary condition \ref{bd_1}, we have $c(\xi)=0$ for $k_p^2<   \xi^2\leq k_s^
 	-\i\mu\beta & -2\i\mu\xi\mu_p \\
 	2\mu\xi\mu_s &	-\mu\beta
 \end{array}\right)=-\i\mu(\beta^2+4\xi^2\mu_s\mu_p)=0
- \ \ \ \  \mbox{for} \ \ \xi^2>k_s^2
+\ \ \ \  \mbox{for} \ \ \xi^2>k_s^2
 \ee
-Therefore, by lemma \ref{lem2.1} we have $\U(\xi,x_2)=0$ for almost every $\xi\in\R$ which implis $\v(\xi,x_2)=0$  for almost every $\xi\in\R$ and $x_2\in(h,+\inftyï¼‰$. This completes the proof by taking the inverse Fourier tranformation of $\hat{\u}(\xi,x_2)$. 
+Therefore, by lemma \ref{lem2.1} we have $\U(\xi,x_2)=0$ for almost every $\xi\in\R$ which implis $\v(\xi,x_2)=0$  for almost every $\xi\in\R$ and $x_2\in(h,+\infty£©$. This completes the proof by taking the inverse Fourier tranformation of $\hat{\u}(\xi,x_2)$. 
 \finproof
 
- {\bf proof of Theorem \ref{2.1}:} Since $D\subsetneq\R^2_+$,we can find two concentric circles $B_{R_1},B_{R_2}$ such that $D\subsetneq B_{R_1}\subsetneq B_{R_2}  \subsetneq \R^2_+$. Let $\chi \in C_{0}^{\infty}(\R^2_+)$ be the cut-off function such that $0 \leq \chi \leq 1$, $\chi=0$ in $B_{R_1}$, and $\chi=1$ outside of $B_{R_2}$.
+{\bf proof of Theorem \ref{2.1}:} Since $D\subsetneq\R^2_+$,we can find two concentric circles $B_{R_1},B_{R_2}$ such that $D\subsetneq B_{R_1}\subsetneq B_{R_2}  \subsetneq \R^2_+$. Let $\chi \in C_{0}^{\infty}(\R^2_+)$ be the cut-off function such that $0 \leq \chi \leq 1$, $\chi=0$ in $B_{R_1}$, and $\chi=1$ outside of $B_{R_2}$.
 Let $v=\chi u$.
 Then $v$ satisfies (\ref{eq2}) with
- $f=\sigma(u)\na\chi+(\lambda+\mu)(\na^2 \chi u+ \na u \na\chi)+\mu\Delta\chi u +\mu\div u\na\chi$, where $\na^2 \chi$ is the Hessian matrix of $\chi$. Clearly $q$ has compact support. By lemme \ref{lem2.2}, we have $u=v=0$ in $\R\times(h,+\infty)$. Finally, the unique continuation principle
- implies that u=0 in $\R^2_+$. This completes the proof.
+$f=\sigma(u)\na\chi+(\lambda+\mu)(\na^2 \chi u+ \na u \na\chi)+\mu\Delta\chi u +\mu\div u\na\chi$, where $\na^2 \chi$ is the Hessian matrix of $\chi$. Clearly $q$ has compact support. By lemme \ref{lem2.2}, we have $u=v=0$ in $\R\times(h,+\infty)$. Finally, the unique continuation principle
+implies that u=0 in $\R^2_+$. This completes the proof.
 \finproof
+
 \section*{References}
 \bibliography{eee}
 \end{document}

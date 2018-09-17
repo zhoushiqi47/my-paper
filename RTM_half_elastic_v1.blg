@@ -1,6 +1,48 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: RTM_half_elastic_v1.aux
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: RTM_half_elastic_v1.aux
 The style file: plain.bst
 Database file #1: eee.bib
 Warning--empty journal in claerbout1985imaging
-Warning--empty journal in denli2008elastic
-(There were 2 warnings)
+You've used 29 entries,
+            2118 wiz_defined-function locations,
+            679 strings with 8399 characters,
+and the built_in function-call counts, 8625 in all, are:
+= -- 820
+> -- 385
+< -- 4
++ -- 156
+- -- 124
+* -- 605
+:= -- 1484
+add.period$ -- 86
+call.type$ -- 29
+change.case$ -- 137
+chr.to.int$ -- 0
+cite$ -- 30
+duplicate$ -- 322
+empty$ -- 712
+format.name$ -- 124
+if$ -- 1767
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 37
+newline$ -- 147
+num.names$ -- 58
+pop$ -- 158
+preamble$ -- 1
+purify$ -- 119
+quote$ -- 0
+skip$ -- 206
+stack$ -- 0
+substring$ -- 530
+swap$ -- 32
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 96
+warning$ -- 1
+while$ -- 81
+width$ -- 31
+write$ -- 310
+(There was 1 warning)
