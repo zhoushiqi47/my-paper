@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2018.9.4)  16 SEP 2018 17:23
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2018.9.4)  17 SEP 2018 16:57
 entering extended mode
 **AbsenceofEigenvalus_half_elastic.tex
 
@@ -171,28 +171,43 @@ Overfull \hbox (2.81674pt too wide) in alignment at lines 330--346
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+Missing character: There is no ï in font cmr12!
+Missing character: There is no ¼ in font cmr12!
+Missing character: There is no ‰ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--363
+Underfull \hbox (badness 10000) in paragraph at lines 359--365
 
  []
 
 
 (C:\Users\zhoushiqi\Desktop\github\my-paper\AbsenceofEigenvalus_half_elastic.bb
 l
-Missing character: There is no ¨ in font cmr10!
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \end{thebibliography}
+                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 ) [5]
 (C:\Users\zhoushiqi\Desktop\github\my-paper\AbsenceofEigenvalus_half_elastic.au
 x) ) 
 Here is how much of TeX's memory you used:
- 2085 strings out of 495354
- 23513 string characters out of 3183860
- 84951 words of memory out of 3000000
- 5238 multiletter control sequences out of 15000+200000
- 13436 words of font info for 53 fonts, out of 3000000 for 9000
+ 2070 strings out of 495354
+ 23324 string characters out of 3183860
+ 84908 words of memory out of 3000000
+ 5224 multiletter control sequences out of 15000+200000
+ 13090 words of font info for 52 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  34i,18n,24p,493b,194s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/f
@@ -205,14 +220,13 @@ iKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmr6.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb
 ><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/font
 s/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmti10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/C
-TEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/CTEX/MiKTeX/fonts/type
-1/public/amsfonts/latxfont/lasy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb>
-Output written on AbsenceofEigenvalus_half_elastic.pdf (5 pages, 241574 bytes).
+s/cm/cmti12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/C
+TEX/MiKTeX/fonts/type1/public/amsfonts/latxfont/lasy10.pfb><C:/CTEX/MiKTeX/font
+s/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on AbsenceofEigenvalus_half_elastic.pdf (5 pages, 211091 bytes).
 
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

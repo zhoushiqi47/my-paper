@@ -22,8 +22,8 @@ Habib Ammari, Josselin Garnier, Wenjia Jing, Hyeonbae Kang, Mikyoung Lim, Knut
 T.~Arens.
 \newblock A new integral equation formulation for the scattering of plane
   elastic waves by diffraction gratings.
-\newblock {\em Journal of Integral Equations and Applications}, 11(3):232¨C245,
-  1999.
+\newblock {\em Journal of Integral Equations and Applications},
+  11(3):232Â¨C245, 1999.
 
 \bibitem{baysal1983reverse}
 Edip Baysal, Dan~D Kosloff, and John~WC Sherwood.
@@ -100,13 +100,14 @@ David Colton and Rainer Kress.
 H~Denli and L~Huang.
 \newblock Elastic-wave reverse-time migration with a wavefield-separation
   imaging condition: 78th annual international meeting, seg, expanded
-  abstracts, 2346--2350, 2008.
+  abstracts, 2346--2350.
+\newblock 2008.
 
 \bibitem{Yves1988}
 Yves Dermenjian and Jean~Claude Guillot.
 \newblock Scattering of elastic waves in a perturbed isotropic half space with
   a free boundary. the limiting absorption principle.
-\newblock {\em Mathematical Methods in the Applied Sciences}, 10(2):87¨C124,
+\newblock {\em Mathematical Methods in the Applied Sciences}, 10(2):87Â¨C124,
   1988.
 
 \bibitem{nedelec2011}

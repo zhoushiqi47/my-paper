@@ -1,6 +1,6 @@
 
 \documentclass[12pt]{iopart}
-%\pdfoutput=1
+\pdfoutput=1
 \usepackage{iopams}
 \usepackage{amssymb, epsfig}
 %\usepackage{amsmath, amssymb,epsfig}
@@ -205,7 +205,7 @@ For $z$ on the right half real axis, we take $z^{1/2}$ as the limit of $(z+\i\ep
 	then we assert $\u=0$ in $(\R\times(h,+\infty))$.
 \end{lem}
 \debproof
-Let $\mathcal{F}_{x_1}(\cdot): L^2(R^2_+) \rightarrow L^2(R^2_+)$ be the Fourier tranfor given by $\hat{g}:=\mathcal{F}_{x_1}(g):=\int_\R g(x_1,x_2)e^{\i x_1\xi}dx_1$.
+Let $\mathcal{F}_{x_1}(\cdot): L^2(R^2_+) \rightarrow L^2(R^2_+)$ be the partial Fourier tranfor given by $\hat{g}:=\mathcal{F}_{x_1}(g):=\int_\R g(x_1,x_2)e^{\i x_1\xi}dx_1$.
 By taking the Fourier transform of (\ref{eq2}) and (\ref{elastic_bd}), we obtain ODEs for $x_2$ in $R_+$
 \be
 & & \mu \frac{d^2\hat u_1}{dx_2^2}+\i(\lambda+\mu)\xi\frac{d\hat u_2}{dx_2}+(\omega^2-(\lambda+2\mu)\xi^2)\hat u_1 =\hat{f_1} \label{pp3}\\
@@ -278,11 +278,11 @@ where
 Here $k_p=\omega/\sqrt{\lam+2\mu}, k_s=\omega/\sqrt{\mu}$ are wave number of p-wave and s-wave, and $\mu_\alpha=(k_\alpha^2-\xi^2)^{1/2}$ for $\alpha=s,p$.
 
 We extend $\w(\xi,x_2)$ by zero in $(h,\infty)$. Therefore. $\w(\xi,x_2)$ satisfy equation \ref{eq3} in $\R_+$.
-Since $\Phi(\xi,t)$ are analytic w.r.t $\xi$ in $\R\bks\{k_p,k_s\}$ and f(x) have compact support, we deduce that for almost every $\xi\in \R$ $\w(\xi,x_2)$ are analytic and so $(\A_1 \frac{d}{dx_2} +\A_2\xi) \w$ are.
+Since $\Phi(\xi,t)$ are analytic w.r.t $\xi$ in $\R\bks\{k_p,k_s\}$ and f(x) have compact support, we deduce that for almost every $\xi\in \R$, $\w(\xi,x_2)$ are analytic and so $(\A_1 \frac{d}{dx_2} +\A_2\xi) \w$ are.
 
 
 
-We set $\U=\v-\w$ and $\U=(U_1,U_2)^T$. Then $\U$ satify the following Cauchy proble
+We set $\U=\v-\w$ and $\U=(U_1,U_2)^T$. Then $\U$ satify the following Cauchy problem:
 \be\label{eq4}
 [\A_1 \frac{d^2}{dx_2^2} +(\A_2-(\A_2)^T)\xi\frac{d}{dx_2}-\A_3\xi^2+\omega^2]\U=0 \ \ \ \ \ &\mbox{in}& \ \  \R_+ \\
 (\A_1 \frac{d}{dx_2} +\A_2\xi)  \U =(\A_1 \frac{d}{dx_2} +\A_2\xi)   \w \ \ \ &\mbox{on}& \ \ x_2=0
@@ -344,14 +344,16 @@ c_1(\xi)\left(\begin{array}{l}
 \end{array}
 \right.
 \een
-By boudary condition \ref{bd_1}, we have $c(\xi)=0$ and 
-\be
+By boudary condition \ref{bd_1}, we have $c(\xi)=0$ for $k_p^2<   \xi^2\leq k_s^2$ and 
+
+\be\hspace{-2cm}
 \mathbf{det} \left(\begin{array}{ll}
 	-\i\mu\beta & -2\i\mu\xi\mu_p \\
 	2\mu\xi\mu_s &	-\mu\beta
 \end{array}\right)=-\i\mu(\beta^2+4\xi^2\mu_s\mu_p)=0
+ \ \ \ \  \mbox{for} \ \ \xi^2>k_s^2
 \ee
-
+Therefore, by lemma \ref{lem2.1} we have $\U(\xi,x_2)=0$ for almost every $\xi\in\R$ which implis $\v(\xi,x_2)=0$  for almost every $\xi\in\R$ and $x_2\in(h,+\infty）$. This completes the proof by taking the inverse Fourier tranformation of $\hat{\u}(\xi,x_2)$. 
 \finproof
 
  {\bf proof of Theorem \ref{2.1}:} Since $D\subsetneq\R^2_+$,we can find two concentric circles $B_{R_1},B_{R_2}$ such that $D\subsetneq B_{R_1}\subsetneq B_{R_2}  \subsetneq \R^2_+$. Let $\chi \in C_{0}^{\infty}(\R^2_+)$ be the cut-off function such that $0 \leq \chi \leq 1$, $\chi=0$ in $B_{R_1}$, and $\chi=1$ outside of $B_{R_2}$.
