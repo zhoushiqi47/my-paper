@@ -1,14 +1,14 @@
 \begin{thebibliography}{1}
 
-\bibitem{Ahlfors1979Complex}
-Lars~V Ahlfors.
-\newblock {\em Complex Analysis: An introduction to the theory of analytic
-  functions of one complex variable}.
-\newblock McGraw-Hill, 1979.
+\bibitem{Morassi2001STRONG}
+Antonino Morassi.
+\newblock Strong unique continuation for the lam… system of elasticity.
+\newblock {\em Communications in Partial Differential Equations},
+  26(9-10):1787--1810, 2001.
 
-\bibitem{Evans2010}
-Lawrence~C Evans.
-\newblock {\em Partial differential equations. 2nd ed}.
-\newblock Marcel Dekker, 2010.
+\bibitem{sini2004}
+Mourad Sini.
+\newblock Absence of positive eigenvalues for the linearized elasticity system.
+\newblock {\em Integral Equations and Operator Theory}, 49(2):255--277, 2004.
 
 \end{thebibliography}

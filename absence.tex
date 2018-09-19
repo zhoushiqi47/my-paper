@@ -32,7 +32,7 @@
 	Beijing 100190, China}
 
 \begin{abstract}
-	In this paper, we prove that the linearized elasticity system in the half-space with traction free boundry has no eigenvalues. 
+	In this paper, we prove that the linearized elasticity system in the half-space with traction free boundry has no eigenvalues. ....
 \end{abstract}
 	\maketitle
 	\newcommand{\eps}{\varepsilon}
@@ -177,12 +177,12 @@
 	this paper can be extended to other boundary
 	conditions such as Neumann or mixed boundary conditions on $\Ga_D$, or even to penetrable obstacle.
 	
-	In order to complete the definition of the proble, we introduce the domain of the operater $\De_e$
+	In order to complete the definition of the problem, we introduce the domain of the operater $\De_e$
 	\ben
 	\mathcal{D}(\De_e,S)=\{v\in H^1(S): \De_e v\in L^2(S), \sigma(v)e_2=0\ \ \mbox{on }\Ga_0\}
 	\een
 	where $S$ is an unbounded domain in $\R^2_+$.
-	For the elasticity system, the study of eigenvalue is little.  
+	For the elasticity system, the study of eigenvalue is little \cite{sini2004}.  
 	The layout of the paper is as follows. In section 2 
 	
 	\section{Absence of Positive Eigenvalues}
@@ -195,11 +195,9 @@
 		Let $\om\in \R$ and $\u$ statisfy the equations (\ref{elastic_eq}-\ref{elastic_bd}) in $\mathcal{D}(\De_e,\Om)$,
 		then we assert $\u=0$.
 	\end{thm}
-	\begin{lem} \label{lem2.1}
-		The Rayleigh equation $\delta(\xi) = 0$ has only two zeros $\pm k_R$, $k_R>k_s$, in the complex plane. 
-	\end{lem}
+
 	
-	\begin{lem}\label{lem2.2}
+	\begin{lem}\label{lem2.1}
 		Suppose that $f\in L^2(\R^2_+)$ with compact support in $B\subsetneq \R\times(h,+\infty), \ h>0$. Let $\omega\in \R$ and $\u\in \mathcal{D}(\De_e,\R^2_+)$ such that:
 		\be\label{eq2}
 		\De_e \u +\om^2\u = f
@@ -207,7 +205,8 @@
 		then we assert $\u=0$ in $(\R\times(h,+\infty))$.
 	\end{lem}
 	\debproof
-	Let $\mathcal{F}_{x_1}(\cdot): L^2(R^2_+) \rightarrow L^2(R^2_+)$ be the partial Fourier tranfor given by $\hat{g}:=\mathcal{F}_{x_1}(g):=\int_\R g(x_1,x_2)e^{\i x_1\xi}dx_1$.
+	Let $\mathcal{F}_{x_1}(\cdot): L^2(R^2_+) \rightarrow L^2(R^2_+)$ be the partial Fourier tranforn
+ given by $\hat{g}:=\mathcal{F}_{x_1}(g):=\int_\R g(x_1,x_2)e^{\i x_1\xi}dx_1$.
 	By taking the Fourier transform of (\ref{eq2}) and (\ref{elastic_bd}), we obtain ODEs for $x_2$ in $R_+$
 	\be
 	& & \mu \frac{d^2\hat u_1}{dx_2^2}+\i(\lambda+\mu)\xi\frac{d\hat u_2}{dx_2}+(\omega^2-(\lambda+2\mu)\xi^2)\hat u_1 =\hat{f_1} \label{pp3}\\
@@ -355,18 +354,37 @@
 	\end{array}\right)=-\i\mu(\beta^2+4\xi^2\mu_s\mu_p)=0
 	\ \ \ \  \mbox{for} \ \ \xi^2>k_s^2
 	\ee
-	Therefore, by lemma \ref{lem2.1} we have $\U(\xi,x_2)=0$ for almost every $\xi\in\R$ which implis $\v(\xi,x_2)=0$  for almost every $\xi\in\R$ and $x_2\in(h,+\infty£©$. This completes the proof by taking the inverse Fourier tranformation of $\hat{\u}(\xi,x_2)$. 
+	Therefore, by the next lemma \ref{lem2.2} we have $\U(\xi,x_2)=0$ for almost every $\xi\in\R$ which implis $\v(\xi,x_2)=0$  for almost every $\xi\in\R$ and $x_2\in(h,+\infty)$. This completes the proof by taking the inverse Fourier tranformation of $\hat{\u}(\xi,x_2)$. 
 	\finproof
-	
+		\begin{lem} \label{lem2.2}
+		The Rayleigh equation $\beta(\xi)^2+4\xi^2\mu_s(\xi)\mu_p(\xi) = 0$ has only two zeros $\pm k_R$, $k_R>k_s$, in the complex plane. 
+	\end{lem}
+
+
 	{\bf proof of Theorem \ref{2.1}:} Since $D\subsetneq\R^2_+$,we can find two concentric circles $B_{R_1},B_{R_2}$ such that $D\subsetneq B_{R_1}\subsetneq B_{R_2}  \subsetneq \R^2_+$. Let $\chi \in C_{0}^{\infty}(\R^2_+)$ be the cut-off function such that $0 \leq \chi \leq 1$, $\chi=0$ in $B_{R_1}$, and $\chi=1$ outside of $B_{R_2}$.
 	Let $v=\chi u$.
 	Then $v$ satisfies (\ref{eq2}) with
-	$f=\sigma(u)\na\chi+(\lambda+\mu)(\na^2 \chi u+ \na u \na\chi)+\mu\Delta\chi u +\mu\div u\na\chi$, where $\na^2 \chi$ is the Hessian matrix of $\chi$. Clearly $q$ has compact support. By lemme \ref{lem2.2}, we have $u=v=0$ in $\R\times(h,+\infty)$. Finally, the unique continuation principle
-	implies that u=0 in $\R^2_+$. This completes the proof. \cite{Ahlfors1979Complex}
+	$f=\sigma(u)\na\chi+(\lambda+\mu)(\na^2 \chi u+ \na u \na\chi)+\mu\Delta\chi u +\mu\div u\na\chi$, where $\na^2 \chi$ is the Hessian matrix of $\chi$. Clearly $q\in L^2(\R^2_+)$ has compact support. By lemme \ref{lem2.2}, we have $u=v=0$ in $\R\times(h,+\infty)$. Finally, the unique continuation principle \cite{Morassi2001STRONG}
+	implies that u=0 in $\R^2_+$. This completes the proof. 
 	\finproof
 	
-
+\begin{thm}\label{2.2}
+	Let $\om\in \R$ and $\u$ statisfy the equations (\ref{elastic_eq} in $\mathcal{D}(\De_e,\Om)$, if $u$ satisfies the following boundary conditions
+	\ben
+	\sigma(\u)\nu +\i\eta(x) \u =0
+	\een
+	where $\eta(x)$ is a bounded function on $\Ga_D$,
+	then we assert $\u=0$.
+\end{thm}
 	
+\begin{thm}\label{2.3}
+	Let $\om\in \R$ and $\u\in\mathcal{D}(\De_e,\R^2_+)$, if $u$ satisfies the following equations:
+	\ben
+	\De_e \u + \om^2 (1+n(x)) \u =0
+	\een
+	where $n(x)\in L^{\infty}(D)$ is a positive scalar function supported in $D$,
+	then we assert $\u=0$.
+\end{thm}
 	\section*{References}
 	\bibliography{eee}
 \end{document}

@@ -1,0 +1,183 @@
+
+\documentclass[12pt]{iopart}
+%\pdfoutput=1
+\usepackage{iopams}
+\usepackage{amssymb, epsfig}
+%\usepackage{amsmath, amssymb,epsfig}
+\usepackage{latexsym}
+
+%\usepackage[hypertex,hyperindex]{hyperref}
+\usepackage{showkeys}
+\usepackage{graphicx}
+\usepackage{color}
+
+\newcommand{\pf}{\mbox{pf}}
+
+\begin{document}
+	
+	\bibliographystyle{plain}
+	\def\debproof{\noindent {\bf Proof.} }
+	\def\finproof{\hfill {\small $\Box$} \\}
+	%\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+	%\tableofcontents
+	\makeatletter % `@' now normal "letter"
+	\@addtoreset{equation}{section}
+	\makeatother  % `@' is restored as "non-letter"
+	\renewcommand\theequation{{\thesection}.{\arabic{equation}}}
+	
+\title[]{Solution of Ali Math Competition}
+\author{ Shiqi Zhou }
+\address{LSEC, Institute of Computational Mathematics, Academy of
+	Mathematics and Systems Science, Chinese Academy of Sciences,
+	Beijing 100190, China}
+
+
+
+	\maketitle
+	\newcommand{\eps}{\varepsilon}
+	\newcommand{\RR}{\mathcal{R}}
+	\newtheorem{lem}{Lemma}[section]
+	\newtheorem{prop}{Proposition}[section]
+	\newtheorem{cor}{Corollary}[section]
+	\newtheorem{thm}{Theorem}[section]
+	\newtheorem{rem}{Remark}[section]
+	\newtheorem{alg}{Algorithm}[section]
+	\newtheorem{assum}{Assumption}[section]
+	\newtheorem{definition}{Definition}[section]
+	
+	
+	\newcounter{RomanNumber}
+	\newcommand{\MyRoman}[1]{\rm\setcounter{RomanNumber}{#1}\Roman{RomanNumber}}
+	
+	\newcommand{\bL}{\mathbf{L}}
+	\newcommand{\bH}{\mathbf{H}}
+	\newcommand{\bW}{\mathbf{W}}
+	\newcommand{\bP}{\mathbf{P}}
+	\newcommand{\bQ}{\mathbf{Q}}
+	\newcommand{\bp}{\mathbf{p}}
+	\newcommand{\bq}{\mathbf{q}}
+	\newcommand{\uL}{u_{_{\rm L}}}
+	\newcommand{\vL}{v_{_{\rm L}}}
+	\newcommand{\tuL}{\tilde u_{_{\rm L}}}
+	\newcommand{\tvL}{\tilde v_{_{\rm L}}}
+	\newcommand{\fL}{f_{_{\rm L}}}
+	\newcommand{\gL}{g_{_{\rm L}}}
+	\newcommand{\bpL}{\bp_{_{\rm L}}}
+	\newcommand{\bqL}{\bq_{_{\rm L}}}
+	\newcommand{\tbpL}{\tilde{\bp}_{_{\rm L}}}
+	\newcommand{\tbqL}{\tilde{\bq}_{_{\rm L}}}
+	\newcommand{\tbpLf}{\tilde{\bp}_{_{\rm L,1}}}
+	\newcommand{\tbpLs}{\tilde{\bp}_{_{\rm L,2}}}
+	\newcommand{\tbqLf}{\tilde{\bq}_{_{\rm L,1}}}
+	\newcommand{\tbqLs}{\tilde{\bq}_{_{\rm L,2}}}
+	\newcommand{\bn}{\nu}
+	\newcommand{\bv}{\mathbf{v}}
+	\newcommand{\om}{\omega}
+	\newcommand{\pa}{\partial}
+	\newcommand{\la}{\langle}
+	\newcommand{\ra}{\rangle}
+	\newcommand{\lla}{\la{\hskip -2pt}\la}
+	\newcommand{\rra}{\ra{\hskip -2pt}\ra}
+	\newcommand{\jj}{\|{\hskip -0.8pt} |}
+	\newcommand{\al}{\alpha}
+	\newcommand{\ze}{\zeta}
+	\newcommand{\si}{\sigma}
+	\newcommand{\ep}{\varepsilon}
+	\newcommand{\na}{\nabla}
+	\newcommand{\vp}{\varphi}
+	\newcommand{\ga}{\gamma}
+	\newcommand{\Ga}{\Gamma}
+	\newcommand{\Om}{\Omega}
+	\newcommand{\de}{\delta}
+	\newcommand{\Th}{\Theta}
+	\newcommand{\De}{\Delta}
+	\newcommand{\Lam}{\Lambda}
+	\newcommand{\lam}{\lambda}
+	\newcommand{\tri}{\triangle}
+	\newcommand{\lj}{[{\hskip -2pt} [}
+	\newcommand{\rj}{]{\hskip -2pt} ]}
+	\newcommand{\bks}{\backslash}
+	%\newcommand{\diag}{\mathrm{diag}}
+	\newcommand{\diam}{\mathrm{diam}}
+	\newcommand{\osc}{\mathrm{osc}}
+	\newcommand{\meas}{\mathrm{meas}}
+	\newcommand{\dist}{\mathrm{dist}}
+	
+	\newcommand{\mL}{\mathscr{L}}
+	\newcommand{\cT}{{\cal T}}
+	\newcommand{\cM}{{\cal M}}
+	\newcommand{\cE}{{\cal E}}
+	\newcommand{\cL}{{\cal L}}
+	\newcommand{\cF}{{\cal F}}
+	\newcommand{\cB}{{\cal B}}
+	\newcommand{\PML}{{\rm PML}}
+	\newcommand{\FEM}{{\rm FEM}}
+	\newcommand{\rd}{\,\mathrm{d}}
+	
+	\renewcommand{\i}{\mathbf{i}}
+	\renewcommand{\v}{\mathbf{v}}
+	\renewcommand{\u}{\mathbf{u}}
+
+	\newcommand{\U}{\mathbf{U}}
+	\newcommand{\w}{\mathbf{w}}
+	\newcommand{\q}{\mathbf{q}}
+	\newcommand{\W}{\mathbf{W}}
+	\newcommand{\Q}{\mathbf{Q}}
+
+
+
+\newcommand{\A}{{\mathbb{A}}}
+	\renewcommand{\r}{\mathbf{r}}
+	\newcommand{\R}{{\mathbb{R}}}
+	\newcommand{\Z}{{\mathbb{Z}}}
+	\newcommand{\C}{{\mathbb{C}}}
+	\newcommand{\I}{{\mathbb{I}}}
+	\renewcommand{\Re}{\mathrm{Re}\,}
+	\renewcommand{\Im}{\mathrm{Im}\,}
+	\renewcommand{\div}{\mathrm{div}}
+	\newcommand{\curl}{\mathrm{curl}}
+	\newcommand{\Curl}{\mathbf{curl}}
+	
+	\newcommand{\Np}{\mathcal{N}_p}
+	\newcommand{\Ns}{\mathcal{N}_s}
+	\newcommand{\Tp}{\mathcal{T}_p}
+	\newcommand{\Ts}{\mathcal{T}_s}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\newcommand{\be}{\begin{eqnarray}}
+		\newcommand{\ee}{\end{eqnarray}}
+	\newcommand{\ben}{\begin{eqnarray*}}
+		\newcommand{\een}{\end{eqnarray*}}
+	\newcommand{\nn}{\nonumber}
+
+\section{problem 1.1}
+
+
+
+We can buy earphone with another good which is worth 50. Then we should only pay  300-60-5*5= 215. For the audio, we should pay 600-5*10-60=490. So, all we should pay is 215+490=705.
+
+\section{problem 1.2}
+
+1)If we buy earphone with another good which is worth 49, we should pay 299-60-x.
+Then 299-60-x = 215-1 which implies x=25.
+\\
+2) 299-60-x+600-60-x= 705-1 which implies x=37.5.
+
+\section{problem 1.3}
+ 
+1)The profit $t_i=p_i- c_i$, then the expect of profit is $\int_{p_i}^{u_i}\frac{p_i-c_i}{u_i}=\frac{(u_i-p_i)(p_i-c_i)}{u_i}$. It is easy to see that the best price $p_i=\frac{u_i+c_i}{2}$ and the corresponding profit expect is $\frac{(u_i-c_i)^2}{4 u_i}$
+\\
+2)The expect of profit is $\int_{p_{12}\leq t_1+t_2\leq u_1+u_2}\frac{p_{12}-c_{12}}{u_1 u_2}dt_1dt_2=$
+\section{problem 3.2}
+By the assumption of problem, it is easy to see that $HH^T= n I$. Therefore the singular value of H is $\sqrt{n}$. Let M be the submatrix $a\times b $ of H such that all elements are 1. Then the rank of $MM^T$ is 1 which implies that $MM^T$ has only one nonezero eigenvalue. Sine the sum of all eigenvalues is equal to the trace. Then we can obtain the singular value of M is $\sqrt{ab}$. By the definition of singular value of H that $\sigma(H)=\max_{\|x\|\leq1,\|y\|\leq1}x^T Hy$, we can assert that the singular value of submatrix can not be larger than the singular value of H. Therefore $ab\leq n$. This completes the proof.
+
+
+
+
+\section{problem 3.3}
+Since $F$ has finite elements, let $F=\{h_1,h_2,\cdots h_k\},k>0$ satisfies $h_i^{m_i}=e, \ m_i\geq1, \ 1\leq i\leq k$. By choosing any $g\in G$, it is easy to see that 
+\ben
+(g^{-1} h_i g)^{m_i} =g^{-1}h_i^{m_i}g=e
+\een
+Let $F_g:=\{g^{-1}h_i g , \ 1\leq i\leq k\}$, then we have $F_g=F$. Let $\sigma_g $ be the permutation on $F$ such that $\sigma_g(h_i)=g^{-1}h_i g$. Therefore, we can find integer n, for any $g\in G$ , $(\sigma_g)^n$ is a identity permutation which implies $(g^{-n}hg^n)=h$. This completes the proof.
+\end{document}
