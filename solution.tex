@@ -150,31 +150,51 @@
 		\newcommand{\een}{\end{eqnarray*}}
 	\newcommand{\nn}{\nonumber}
 
-\section{problem 1.1}
+\section{problem 1.a}
 
 
 
 We can buy earphone with another good which is worth 50. Then we should only pay  300-60-5*5= 215. For the audio, we should pay 600-5*10-60=490. So, all we should pay is 215+490=705.
 
-\section{problem 1.2}
+\section{problem 1.b}
 
 1)If we buy earphone with another good which is worth 49, we should pay 299-60-x.
 Then 299-60-x = 215-1 which implies x=25.
 \\
 2) 299-60-x+600-60-x= 705-1 which implies x=37.5.
 
-\section{problem 1.3}
+\section{problem 1.c}
  
-1)The profit $t_i=p_i- c_i$, then the expect of profit is $\int_{p_i}^{u_i}\frac{p_i-c_i}{u_i}=\frac{(u_i-p_i)(p_i-c_i)}{u_i}$. It is easy to see that the best price $p_i=\frac{u_i+c_i}{2}$ and the corresponding profit expect is $\frac{(u_i-c_i)^2}{4 u_i}$
+1)The profit $a_i=p_i- c_i$, then the expect of profit is $\int_{p_i}^{u_i}\frac{p_i-c_i}{u_i}dt=\frac{(u_i-p_i)(p_i-c_i)}{u_i}$. It is easy to see that the best price $p_i=\frac{u_i+c_i}{2}$ and the corresponding profit expect is $\frac{(u_i-c_i)^2}{4 u_i}$
 \\
-2)The expect of profit is $\int_{p_{12}\leq t_1+t_2\leq u_1+u_2}\frac{p_{12}-c_{12}}{u_1 u_2}dt_1dt_2=$
-\section{problem 3.2}
+2)The expect of profit is 
+\ben
+\int_{p_{12}\leq t_1+t_2}\frac{p_{12}-c_{12}}{u_1 u_2}dt_1dt_2= \left\{\begin{array}{l}
+	\frac{(2u_1u_2-p_{12}^2)(p_12-c_12)}{2u_1u_2}, \ \ \ p_{12}\leq \min\{u_1,u_2\}\\
+	\frac{(2u_1+u_2-2p_{12})u_2(p_12-c_12)}{2u_1u_2} ,\ \ \  \min\{u_1,u_2\}< p_{12}<\max\{u_1,u_2\}\\
+	\frac{(u_1+u_2-p_{12})^2(p_{12}-c_{12})}{2u_1u_2}, \ \ \ 
+	p_{12}>\max\{u_1,u_2\}
+\end{array}\right.
+\een
+ 
+\section{problem 2.a}
+The path: 2 3 4 15 14 13 12 9 5 6 7 8 11 \\
+The length: 17
+\section{problem 2.b}
+1)$\sum_{k=1}^{m}\sum_{\{i_1,\cdots,i_k\}\subset\{1,\cdots,m\}}P_{i_1}\cdots P_{i_k}$
+\\
+2) $1-(1-P_1)\cdots(1-P_m)$
+
+
+
+
+\section{problem 3.b}
 By the assumption of problem, it is easy to see that $HH^T= n I$. Therefore the singular value of H is $\sqrt{n}$. Let M be the submatrix $a\times b $ of H such that all elements are 1. Then the rank of $MM^T$ is 1 which implies that $MM^T$ has only one nonezero eigenvalue. Sine the sum of all eigenvalues is equal to the trace. Then we can obtain the singular value of M is $\sqrt{ab}$. By the definition of singular value of H that $\sigma(H)=\max_{\|x\|\leq1,\|y\|\leq1}x^T Hy$, we can assert that the singular value of submatrix can not be larger than the singular value of H. Therefore $ab\leq n$. This completes the proof.
 
 
 
 
-\section{problem 3.3}
+\section{problem 3.c}
 Since $F$ has finite elements, let $F=\{h_1,h_2,\cdots h_k\},k>0$ satisfies $h_i^{m_i}=e, \ m_i\geq1, \ 1\leq i\leq k$. By choosing any $g\in G$, it is easy to see that 
 \ben
 (g^{-1} h_i g)^{m_i} =g^{-1}h_i^{m_i}g=e
